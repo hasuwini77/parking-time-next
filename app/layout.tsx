@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
     <html lang="en">
       <body className="light">
         <Providers>
-          <div className="relative flex flex-col h-screen">
+          <div className="flex flex-col h-screen">
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
