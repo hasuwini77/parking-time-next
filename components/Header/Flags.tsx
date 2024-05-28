@@ -11,9 +11,9 @@ export default function MyFlags() {
           <Avatar
             isBordered
             as="button"
-            className="transition-transform"
+            className="transition-transform rounded-full h-[40px] w-[40px] bg-green"
             size="sm"
-            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            src="/images/flags.png"
             alt="swedish-flag"
           />
         </DropdownTrigger>

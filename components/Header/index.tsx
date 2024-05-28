@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <Navbar isBordered className="bg-primary">
       <NavbarBrand>
-       <Image src="/images/logo-1.png" alt="logo" width={100} height={100}/> 
+       <Image src="/images/logo-1.png" alt="logo" width={60} height={60}/> 
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4 justify-center">
         <NavbarItem isActive>
