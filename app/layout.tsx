@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Providers } from "./providers";
+import Header from "@/components/Header";
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <Providers>
           <div className="flex flex-col h-screen bg-background">
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+              <Header/> 
               {children}
             </main>
           </div>
