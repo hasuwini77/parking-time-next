@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
+import DownloadButton from "../DownloadButton";
+import ContactButton from "../ContactButton";
 
 const HomeHero: React.FC = () => {
   const { language } = useLanguage();
@@ -62,7 +64,7 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 sm:mt-6 w-full flex flex-col sm:flex-row ">
-          <motion.button
+          {/* <motion.button
             className="rounded-3xl sm:w-48 w-full px-5 py-2 sm:py-2 bg-white text-black mb-2 sm:mb-0 sm:me-3 custom-hover-home-hero-contact-us-button "
             variants={{
               hidden: { opacity: 0, scale: 0.5 },
@@ -80,8 +82,9 @@ const HomeHero: React.FC = () => {
             ) : (
               <Link href="/contact">Kontakta oss</Link>
             )}
-          </motion.button>
-          <motion.button
+          </motion.button> */}
+          <ContactButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
+          {/* <motion.button
             className="rounded-3xl sm:w-48 w-full px-5 py-2 sm:py-2 bg-black text-white custom-hover-home-hero-download-button"
             variants={{
               hidden: { opacity: 0, scale: 0.5 },
@@ -99,7 +102,12 @@ const HomeHero: React.FC = () => {
             ) : (
               <Link href="/contact">Ladda ner app</Link>
             )}
-          </motion.button>
+          </motion.button> */}
+          <DownloadButton
+            linkHref="https://play.google.com/store/games"
+            SWtext="Ladda ner app"
+            ENtext="Download app"
+          />
         </div>
       </div>
       <div className="absolute p-1 sm:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
