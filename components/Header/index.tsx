@@ -17,7 +17,6 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -34,8 +33,6 @@ const Header: React.FC = () => {
     };
   }, [isMobileMenuOpen]);
 
-
-  // Close mobile menu when switching to desktop view
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isMobileMenuOpen) {
@@ -52,43 +49,57 @@ const Header: React.FC = () => {
 
   return (
     <div className='mx-0'>
-  {/* Mobile Header */}
-<div className="sm:hidden bg-primary flex flex-row">
-  <Navbar className="bg-primary">
-    {/* Navbar Brand */}
-    <NavbarContent style={{ justifyContent: 'flex-start', paddingLeft: '0', marginLeft: '-8%' }}>
-      <NavbarItem style={{ padding: '0', margin: '0' }}>
-        <Link href="/" className="cursor-pointer" style={{ padding: '0', margin: '0' }}>
-          <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
-        </Link>
-      </NavbarItem>
-    </NavbarContent>
-    {/* Navbar Hamburger Button */}
-    <NavbarContent className="flex-end">
-      <NavbarItem>
-        <MyFlags />
-      </NavbarItem>
-      <NavbarItem className="w-[30px]">
-        <Button
-          className="text-white bg-primary size-2 h-[50px] w-[30px] border-1"
-          onClick={toggleMobileMenu}
-        >
-          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </Button>
-      </NavbarItem>
-    </NavbarContent>
-  </Navbar>
-</div>
+      {/* Mobile Header */}
+      <div className="sm:hidden bg-primary relative flex items-center h-16 z-50">
+        {/* Navbar Brand */}
+        <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+          <Link href="/" className="cursor-pointer p-0 m-0">
+            <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
+          </Link>
+        </div>
+        {/* Navbar Hamburger Button */}
+        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
+          <Button
+            className="text-white bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
+            onClick={toggleMobileMenu}
+          >
+            <AnimatePresence mode="wait">
+              {isMobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ opacity: 0, rotate: 90 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: 90 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaTimes size={30} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ opacity: 0, rotate: -90 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  exit={{ opacity: 0, rotate: -90 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaBars size={30} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </Button>
+        </div>
+      </div>
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <div ref={menuRef} className="fixed top-0 left-0 w-full h-[40%] bg-primary">
+          <div ref={menuRef} className="fixed top-0 left-0 w-full h-[50%] bg-primary z-40">
             <motion.div
               initial={{ y: '-100%' }}
               animate={{ y: 0 }}
-              exit={{ y: '-100%', transition: { duration: 0.3 } }} // Added exit animation
+              exit={{ y: '-100%', transition: { duration: 0.3 } }}
               transition={{ type: 'tween', duration: 0.6 }}
-              className="h-[70%] flex flex-col justify-center items-center"
+              className="h-full flex flex-col justify-center items-center"
             >
               <Navbar className="bg-primary">
                 <NavbarContent className="flex flex-col gap-4">
