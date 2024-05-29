@@ -24,11 +24,11 @@ const MyFlags: React.FC = () => {
             alt="flag"
           />
         </DropdownTrigger>
-        <DropdownMenu aria-label="Language Selection" variant="flat">
-          <DropdownItem key="swedish" className="h-14 gap-2" onClick={() => handleLanguageChange("swedish")}>
+        <DropdownMenu aria-label="Language Selection" variant="flat" className="w-max-[100px] p-2">
+          <DropdownItem key="swedish" className="h-[32px] md:h-[40px] gap-2" onClick={() => handleLanguageChange("swedish")}>
             <p className="font-semibold">Swedish</p>
           </DropdownItem>
-          <DropdownItem key="english" className="h-14 gap-2" onClick={() => handleLanguageChange("english")}>
+          <DropdownItem key="english" className="h-[32px] md:h-[40px] gap-2" onClick={() => handleLanguageChange("english")}>
             <p className="font-semibold">English</p>
           </DropdownItem>
         </DropdownMenu>
