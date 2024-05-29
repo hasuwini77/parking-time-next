@@ -51,33 +51,34 @@ const Header: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <div>
-      {/* Mobile Header */}
-      <div className="sm:hidden bg-primary flex flex-row">
-        <Navbar className="bg-primary">
-          {/* Navbar Brand */}
-          <NavbarContent>
-            <Link href="/" className="cursor-pointer m-0">
-              <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
-            </Link>
-          </NavbarContent>
-          {/* Navbar Hamburger Button */}
-          <NavbarContent className="flex-end">
-            <NavbarItem>
-            <MyFlags />
-            </NavbarItem>
-            <NavbarItem>
-              <Button
-                className="text-white bg-primary size-2 h-[50px] w-[30px] border-1"
-                onClick={toggleMobileMenu}
-              >
-                {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-              </Button>
-            </NavbarItem>
-          </NavbarContent>
-        </Navbar>
-      </div>
-
+    <div className='mx-0'>
+  {/* Mobile Header */}
+<div className="sm:hidden bg-primary flex flex-row">
+  <Navbar className="bg-primary">
+    {/* Navbar Brand */}
+    <NavbarContent style={{ justifyContent: 'flex-start', paddingLeft: '0', marginLeft: '-8%' }}>
+      <NavbarItem style={{ padding: '0', margin: '0' }}>
+        <Link href="/" className="cursor-pointer" style={{ padding: '0', margin: '0' }}>
+          <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
+        </Link>
+      </NavbarItem>
+    </NavbarContent>
+    {/* Navbar Hamburger Button */}
+    <NavbarContent className="flex-end">
+      <NavbarItem>
+        <MyFlags />
+      </NavbarItem>
+      <NavbarItem className="w-[30px]">
+        <Button
+          className="text-white bg-primary size-2 h-[50px] w-[30px] border-1"
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </Button>
+      </NavbarItem>
+    </NavbarContent>
+  </Navbar>
+</div>
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
