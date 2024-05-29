@@ -63,8 +63,8 @@ module.exports = {
             background: "#ECF2F1",
           },
           fontFamily: {
-            sans: ["Lato", "var(--font-sans)"],
-            mono: ["Roboto", "var(--font-geist-mono)"],
+            sans: ["Lato", "sans-serif"],
+            mono: ["Roboto", "monospace"],
           },
         },
       },
