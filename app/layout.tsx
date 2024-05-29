@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import { Providers } from "./providers";
+import Header from "@/components/Header";
+import { LanguageProvider } from '../context/LanguageContext';
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
@@ -10,11 +12,14 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
       </head>
       <body className="light font-sans">
         <Providers>
+          <LanguageProvider> 
           <div className="flex flex-col h-screen bg-background">
+          <Header/> 
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
           </div>
+          </LanguageProvider>
         </Providers>
       </body>
     </html>
