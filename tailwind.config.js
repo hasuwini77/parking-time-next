@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Lato", "var(--font-sans)"],
-        mono: ["Roboto", "var(--font-geist-mono)"],
+        sans: ["Lato", "sans-serif"],
+        mono: ["Roboto", "monospace"],
       },
       colors: {
         primary: "#06433E",
