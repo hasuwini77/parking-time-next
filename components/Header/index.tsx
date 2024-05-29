@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <div ref={menuRef} className="fixed top-0 left-0 w-full h-[50%] bg-primary z-40">
+          <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40">
             <motion.div
               initial={{ y: '-100%' }}
               animate={{ y: 0 }}
@@ -101,27 +101,34 @@ const Header: React.FC = () => {
               transition={{ type: 'tween', duration: 0.6 }}
               className="h-full flex flex-col justify-center items-center"
             >
-              <Navbar className="bg-primary">
-                <NavbarContent className="flex flex-col gap-4">
+              <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
+                <NavbarContent className="flex flex-col items-center gap-4">
                   <NavbarItem>
-                    <Link href="/" className="text-white" onClick={toggleMobileMenu}>
+                    <Link href="/" className="text-white text-buttonText" onClick={toggleMobileMenu}>
                       {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Link href="/about" className="text-white" onClick={toggleMobileMenu}>
+                    <Link href="/about" className="text-white text-buttonText" onClick={toggleMobileMenu}>
                       {language === 'english' ? 'About us' : 'Om oss'}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Link href="/news" className="text-white" onClick={toggleMobileMenu}>
+                    <Link href="/news" className="text-white text-buttonText" onClick={toggleMobileMenu}>
                       {language === 'english' ? 'News' : 'Nyheter'}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Link href="/contact" className="text-white" onClick={toggleMobileMenu}>
+                    <Link href="/#" className="text-white text-buttonText" onClick={toggleMobileMenu}>
+                      {language === 'english' ? 'FAQ' : 'FAQ'}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Button className='rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white'>
+                    <Link href="/contact" className="text-black hover:text-white text-buttonText" onClick={toggleMobileMenu}>
                       {language === 'english' ? 'Contact us' : 'Kontakta oss'}
                     </Link>
+                    </Button>
                   </NavbarItem>
                 </NavbarContent>
               </Navbar>
