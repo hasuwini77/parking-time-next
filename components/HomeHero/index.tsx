@@ -1,7 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 const HomeHero: React.FC = () => {
+  const { language } = useLanguage();
+
+  console.log(language);
+
   return (
     <div className="relative w-screen bg-cover bg-center bg-home-hero custom-height-home-hero ">
       <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start top-20 sm:top-1/4 sm:items-start p-3 sm:p-7">
@@ -18,7 +24,15 @@ const HomeHero: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          What time is it? <br /> Parking time!
+          {language === "english" ? (
+            <span>
+              What time is it? <br /> Parking time!
+            </span>
+          ) : (
+            <span>
+              Vad är klockan? <br /> Parkeringstid!
+            </span>
+          )}
         </motion.h1>
         <motion.p
           className="text-lg sm:text-2xl font-mono mt-1"
@@ -33,8 +47,19 @@ const HomeHero: React.FC = () => {
           initial="hidden"
           animate="visible"
         >
-          Digital parking disc - directly on your mobile. <br className="hidden sm:inline-block" />{" "}
-          A winning concepts in a new, digitalized format
+          {language === "english" ? (
+            <span>
+              Digital parking disc - directly on your mobile.{" "}
+              <br className="hidden sm:inline-block" /> A winning concepts in a new, digitalized
+              format
+            </span>
+          ) : (
+            <span>
+              Digital parkeringsskiva - direkt på din mobil.{" "}
+              <br className="hidden sm:inline-block" />
+              Ett vinnande koncept i ett nytt, digitaliserat format
+            </span>
+          )}
         </motion.p>
         <div className="mt-14 sm:mt-6 w-full flex flex-col sm:flex-row ">
           <motion.button
@@ -50,7 +75,11 @@ const HomeHero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            Contact us
+            {language === "english" ? (
+              <Link href="/contact">Contact us</Link>
+            ) : (
+              <Link href="/contact">Kontakta oss</Link>
+            )}
           </motion.button>
           <motion.button
             className="rounded-3xl sm:w-48 w-full px-5 py-2 sm:py-2 bg-black text-white custom-hover-home-hero-download-button"
@@ -65,7 +94,11 @@ const HomeHero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            Download app
+            {language === "english" ? (
+              <Link href="/contact">Download app</Link>
+            ) : (
+              <Link href="/contact">Ladda ner app</Link>
+            )}
           </motion.button>
         </div>
       </div>
