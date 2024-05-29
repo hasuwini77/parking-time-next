@@ -72,12 +72,68 @@ const HomeHero: React.FC = () => {
       <div className="absolute p-1 sm:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
         <ul className="flex flex-col sm:flex-row gap-2 list-disc">
           <div className="flex justify-around basis-1/2">
-            <li className="text-white text-start">Easy to use</li>
-            <li className="text-white text-start">Convenience</li>
+            <motion.li
+              className="text-white text-start"
+              variants={{
+                hidden: { opacity: 0, y: "35px" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", delay: 0.3, duration: 1.3 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+            >
+              Easy to use
+            </motion.li>
+            <motion.li
+              className="text-white text-start"
+              variants={{
+                hidden: { opacity: 0, y: "35px" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", delay: 0.3, duration: 1.3 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+            >
+              Convenience
+            </motion.li>
           </div>
           <div className="flex justify-around basis-1/2">
-            <li className="text-white text-start">Free to download</li>
-            <li className="text-white text-start">Increased Revenue</li>
+            <motion.li
+              className="text-white text-start"
+              variants={{
+                hidden: { opacity: 0, y: "35px" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", delay: 0.3, duration: 1.3 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+            >
+              Free to download
+            </motion.li>
+            <motion.li
+              className="text-white text-start"
+              variants={{
+                hidden: { opacity: 0, y: "35px" },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "spring", delay: 0.3, duration: 1.3 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+            >
+              Increased Revenue
+            </motion.li>
           </div>
         </ul>
       </div>
