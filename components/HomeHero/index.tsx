@@ -88,7 +88,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              Easy to use
+              {language === "english" ? "Easy to use" : "Lätt att använda"}
             </motion.li>
             <motion.li
               className="text-white text-start"
@@ -103,7 +103,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              Convenience
+              {language === "english" ? "Convenience" : "Bekvämlighet"}
             </motion.li>
           </div>
           <div className="flex justify-around basis-1/2">
@@ -120,7 +120,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              Free to download
+              {language === "english" ? "Free to download" : "Gratis att ladda ner"}
             </motion.li>
             <motion.li
               className="text-white text-start"
@@ -135,7 +135,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              Increased Revenue
+              {language === "english" ? "Increased Revenue" : "Ökad intäkt"}
             </motion.li>
           </div>
         </ul>
