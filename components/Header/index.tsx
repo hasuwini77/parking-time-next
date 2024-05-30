@@ -130,6 +130,9 @@ const Header: React.FC = () => {
                     </Link>
                     </Button>
                   </NavbarItem>
+                  <NavbarItem>
+          <MyFlags />
+        </NavbarItem>
                 </NavbarContent>
               </Navbar>
             </motion.div>
