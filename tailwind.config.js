@@ -54,6 +54,10 @@ module.exports = {
       backgroundImage: {
         "home-hero": "url('/images/temp.png')",
       },
+      screens: {
+        short: { raw: "(max-height: 400px)" },
+        tall: { raw: "(min-height: 700px)" },
+      },
     },
   },
   darkMode: "class",
