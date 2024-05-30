@@ -1,0 +1,25 @@
+@keyframes slide  {
+    from { 
+        transform: translateX(0);
+    } to { 
+        transform: translateX(-100%)
+    }
+}
+.logos { 
+  display: flex;
+  flex-direction: row;
+    overflow: hidden;
+    padding: 70px 0;
+    background-color: white;
+    width: 100vw;
+    white-space: nowrap;
+}
+
+.logoSlide { 
+    display: flex;
+    animation: 5s slide infinite linear;
+}
+
+.logosImg { 
+  margin: 0 40px;
+}
