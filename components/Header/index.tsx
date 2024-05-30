@@ -92,15 +92,15 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40">
-            <motion.div
-              initial={{ y: '-100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '-100%', transition: { duration: 0.3 } }}
-              transition={{ type: 'tween', duration: 0.6 }}
-              className="h-full flex flex-col justify-center items-center"
-            >
+  {isMobileMenuOpen && (
+    <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40 overflow-y-auto max-h-[100vh]">
+      <motion.div
+        initial={{ y: '-100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '-100%', transition: { duration: 0.3 } }}
+        transition={{ type: 'tween', duration: 0.6 }}
+        className="h-full flex flex-col justify-center items-center"
+      >
               <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
                 <NavbarContent className="flex flex-col items-center gap-4">
                   <NavbarItem>
