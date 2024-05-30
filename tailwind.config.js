@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Lato", "var(--font-sans)"],
-        mono: ["Roboto", "var(--font-geist-mono)"],
+        sans: ["Lato", "sans-serif"],
+        mono: ["Roboto", "monospace"],
       },
       colors: {
         primary: "#06433E",
@@ -50,6 +50,9 @@ module.exports = {
         buttonText: ["16px", { lineHeight: "auto" }],
         paragraph1: ["16px", { lineHeight: "26px" }],
         paragraph2: ["16px", { lineHeight: "26px" }],
+      },
+      backgroundImage: {
+        "home-hero": "url('/images/temp.png')",
       },
     },
   },
