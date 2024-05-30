@@ -21,7 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LanguageProvider>
             <div className="flex flex-col h-screen bg-background">
               <Header />
-              <main className="container mx-auto max-w-7xl px-6 flex-grow">{children}</main>
+              {/* I deleted "container mx-auto max-w-7xl px-6" classes in main. Because they are breaking my CARDS code */}
+              <main className=" flex-grow">{children}</main>
             </div>
           </LanguageProvider>
         </Providers>
