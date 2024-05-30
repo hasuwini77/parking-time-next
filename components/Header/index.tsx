@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40">
+          <div ref={menuRef} className="fixed top-0 left-0 w-full h-[60%] bg-primary z-40">
             <motion.div
               initial={{ y: '-100%' }}
               animate={{ y: 0 }}
