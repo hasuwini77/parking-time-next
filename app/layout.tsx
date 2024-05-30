@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
           <LanguageProvider> 
           <div className="flex flex-col h-screen bg-background">
           <Header/> 
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="pt-16 flex-grow">
               {children}
             </main>
           </div>
