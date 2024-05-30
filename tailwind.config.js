@@ -51,6 +51,9 @@ module.exports = {
         paragraph1: ["16px", { lineHeight: "26px" }],
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
+      backgroundImage: {
+        "home-hero": "url('/images/temp.png')",
+      },
     },
   },
   darkMode: "class",

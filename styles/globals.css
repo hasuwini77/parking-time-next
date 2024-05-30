@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tehe are Bedir's costum classes for Home-Hero aria */
+.custom-height-home-hero {
+  height: calc(100vh - 4rem);
+}
+
+.custom-hover-home-hero-contact-us-button {
+  transition: all 0.2s ease;
+}
+
+.custom-hover-home-hero-contact-us-button:hover {
+  background-color: #06433e;
+  color: #fff;
+  box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
+}
+.custom-hover-home-hero-download-button {
+  transition: all 0.2s ease;
+}
+
+.custom-hover-home-hero-download-button:hover {
+  background-color: #868686;
+  color: #fff;
+  box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
+}
+/* Tehe are Bedir's costum classes for Home-Hero aria */
