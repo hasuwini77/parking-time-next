@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import styles from '.TrustedLogo.module.css'
 
 const TrustedLogo: React.FC = () => {
   return (
     <>
-<div className="w-full inline-flex flex-nowrap bg-white p-4 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)">
+<div className="w-full inline-flex flex-nowrap bg-white p-4 overflow-hidden ">
     <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         <li>
             <Image src="/images/BrandedLogos/almi.svg" alt="almi" width={100} height={100}/>
