@@ -1,5 +1,0 @@
-@media screen and (min-width: 768px) {
-    .container {
-        flex: 0 0 calc(50% - 24px / 2);
-    }
-}
