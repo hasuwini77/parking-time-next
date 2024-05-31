@@ -141,7 +141,7 @@ const Header: React.FC = () => {
       </AnimatePresence>
 {/* Desktop Header */}
 <div className="hidden sm:block w-full bg-primary">
-  <div className="w-full px-2 flex justify-center">
+  <div className="w-full flex justify-center">
     <Navbar isBordered className="bg-primary w-full max-w-screen-xl flex items-center justify-between">
       {/* Logo Section */}
       <div className="flex items-center">
