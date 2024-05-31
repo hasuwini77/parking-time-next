@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
-import { IconType } from "react-icons";
 import * as Icons from "react-icons/fa"; // Tüm iconları içe aktarın
 
 interface HowCardsProps {
