@@ -139,22 +139,21 @@ const Header: React.FC = () => {
           </div>
         )}
       </AnimatePresence>
-
-    {/* Desktop Header */}
-<div className="hidden sm:block flex items-center justify-between">
-  <Navbar isBordered className="bg-primary">
-  {/* Logo Section */}
-<div className="flex items-center">
-  <NavbarBrand className="pl-0 ml-2 fixed left-0">
-    <Link href="/" className='cursor-pointer'>
-      <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
-    </Link>
-  </NavbarBrand>
-</div>
+{/* Desktop Header */}
+<div className="hidden sm:block w-full" >
+  <Navbar isBordered className="bg-primary w-full flex items-center justify-between">
+    {/* Logo Section */}
+    <div className="flex items-center">
+      <NavbarBrand className="">
+        <Link href="/" className="cursor-pointer">
+          <Image src="/images/logo-1.png" alt="logo" width={60} height={60} className="min-w-[60px] min-h-[60px] sm:min-w-[60px] sm:min-h-[60px]"  />
+        </Link>
+      </NavbarBrand>
+    </div>
 
     {/* Main Navigation */}
     <div className="flex flex-row items-center justify-end">
-      <NavbarContent className="gap-4 ">
+      <NavbarContent className="gap-4">
         <NavbarItem isActive>
           <Link href="/" aria-current="page" className="text-white">
             {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
@@ -187,6 +186,7 @@ const Header: React.FC = () => {
     </div>
   </Navbar>
 </div>
+
     </div>
   );
 };
