@@ -37,10 +37,6 @@ module.exports = {
         9: "96px",
         10: "120px",
       },
-      screens: {
-        md: "1440px",
-        sm: "768px",
-      },
       fontSize: {
         heading1: ["64px", { lineHeight: "80px" }],
         heading2: ["48px", { lineHeight: "40px" }],
