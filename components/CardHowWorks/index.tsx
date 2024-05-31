@@ -24,11 +24,11 @@ const CardHowWorks: React.FC<HowCardsProps> = ({ title, text, number, icon }) =>
           {number}
         </span>
       </CardHeader>
-      <CardBody className="pb-1 pt-4">
-        <h3 className="text-2xl">{title}</h3>
+      <CardBody className="pb-1 pt-3">
+        <h3 className="text-2xl min-h-[57px]">{title}</h3>
       </CardBody>
       <CardFooter className="text-small text-default-400 pb-2">
-        <p className="">{text}</p>
+        <p className="min-h-fit	">{text}</p>
       </CardFooter>
     </Card>
   );
