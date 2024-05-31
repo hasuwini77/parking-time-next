@@ -18,21 +18,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="light font-sans">
         <Providers>
-<<<<<<< HEAD
           <LanguageProvider>
             <div className="flex flex-col h-screen bg-background">
               <Header />
               <main className=" flex-grow">{children}</main>
             </div>
-=======
-          <LanguageProvider> 
-          <div className="flex flex-col h-screen bg-background">
-          <Header/> 
-            <main className="flex-grow">
-              {children}
-            </main>
-          </div>
->>>>>>> feature-12-home-trusted-logos
           </LanguageProvider>
         </Providers>
       </body>
