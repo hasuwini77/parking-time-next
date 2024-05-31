@@ -30,7 +30,7 @@ const HomeStatistics: React.FC = () => {
         <span className="text-4xl me-3 text-[#F85252]">
           <FaDownload />
         </span>
-        <div className="w-[180px] text-start">
+        <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
             <CountUp end={5340} separator="" duration={4} />+
           </p>
@@ -48,7 +48,7 @@ const HomeStatistics: React.FC = () => {
         <span className="text-4xl me-3 text-[#F85252]">
           <FaParking />
         </span>
-        <div className="w-[180px] text-start">
+        <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
             <CountUp end={4321} separator="" duration={4} />+
           </p>
@@ -68,7 +68,7 @@ const HomeStatistics: React.FC = () => {
         <span className="text-4xl me-3 text-[#F85252]">
           <FaMap />
         </span>
-        <div className="w-[180px] text-start">
+        <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
             <CountUp end={30} separator="" duration={7} />+
           </p>
