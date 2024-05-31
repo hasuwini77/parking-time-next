@@ -50,7 +50,7 @@ const Header: React.FC = () => {
   return (
     <div className='mx-0'>
       {/* Mobile Header */}
-      <div className="sm:hidden bg-primary relative flex items-center h-16 z-50">
+      <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
         {/* Navbar Brand */}
         <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
           <Link href="/" className="cursor-pointer p-0 m-0">
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
 {/* Desktop Header */}
-<div className="hidden sm:block w-full bg-primary">
+<div className="hidden md:block w-full bg-primary">
   <div className="w-full flex justify-center">
     <Navbar isBordered className="bg-primary w-full max-w-screen-xl flex items-center justify-between">
       {/* Logo Section */}
