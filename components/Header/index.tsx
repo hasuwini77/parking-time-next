@@ -50,7 +50,7 @@ const Header: React.FC = () => {
   return (
     <div className='mx-0'>
       {/* Mobile Header */}
-      <div className="sm:hidden bg-primary relative flex items-center h-16 z-50">
+      <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
         {/* Navbar Brand */}
         <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
           <Link href="/" className="cursor-pointer p-0 m-0">
@@ -140,51 +140,53 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
 {/* Desktop Header */}
-<div className="hidden sm:block w-full" >
-  <Navbar isBordered className="bg-primary w-full flex items-center justify-between">
-    {/* Logo Section */}
-    <div className="flex items-center">
-      <NavbarBrand className="">
-        <Link href="/" className="cursor-pointer">
-          <Image src="/images/logo-1.png" alt="logo" width={60} height={60} className="min-w-[60px] min-h-[60px] sm:min-w-[60px] sm:min-h-[60px]"  />
-        </Link>
-      </NavbarBrand>
-    </div>
+<div className="hidden md:block w-full bg-primary">
+  <div className="w-full flex justify-center">
+    <Navbar isBordered className="bg-primary w-full max-w-screen-xl flex items-center justify-between">
+      {/* Logo Section */}
+      <div className="flex items-center">
+        <NavbarBrand>
+          <Link href="/" className="cursor-pointer">
+            <Image src="/images/logo-1.png" alt="logo" width={60} height={60} className="min-w-[60px] min-h-[60px]" />
+          </Link>
+        </NavbarBrand>
+      </div>
 
-    {/* Main Navigation */}
-    <div className="flex flex-row items-center justify-end">
-      <NavbarContent className="gap-4">
-        <NavbarItem isActive>
-          <Link href="/" aria-current="page" className="text-white">
-            {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-white" href="/about">
-            {language === 'english' ? 'About us' : 'Om oss'}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-white" href="/news">
-            {language === 'english' ? 'News' : 'Nyheter'}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-white" href="#">
-            {language === 'english' ? 'FAQ' : 'Vanliga frågor'}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} href="/contact" className="bg-white text-black size-2 h-5 w-[120px]">
-            {language === 'english' ? 'Contact us' : 'Kontakta oss'}
-          </Button>
-        </NavbarItem>
-        <NavbarItem>
-          <MyFlags />
-        </NavbarItem>
-      </NavbarContent>
-    </div>
-  </Navbar>
+      {/* Main Navigation */}
+      <div className="flex flex-row items-center justify-end">
+        <NavbarContent className="gap-4">
+          <NavbarItem isActive>
+            <Link href="/" aria-current="page" className="text-white">
+              {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link className="text-white" href="/about">
+              {language === 'english' ? 'About us' : 'Om oss'}
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link className="text-white" href="/news">
+              {language === 'english' ? 'News' : 'Nyheter'}
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link className="text-white" href="#">
+              {language === 'english' ? 'FAQ' : 'Vanliga frågor'}
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Button as={Link} href="/contact" className="bg-white text-black size-2 h-5 w-[120px]">
+              {language === 'english' ? 'Contact us' : 'Kontakta oss'}
+            </Button>
+          </NavbarItem>
+          <NavbarItem>
+            <MyFlags />
+          </NavbarItem>
+        </NavbarContent>
+      </div>
+    </Navbar>
+  </div>
 </div>
 
     </div>
