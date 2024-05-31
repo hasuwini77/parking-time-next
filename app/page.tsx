@@ -8,12 +8,8 @@ export default function Home() {
     <section className="">
       <HomeHero />
       <HomeHowWorks />
-<<<<<<< HEAD
       <HomeStatistics />
       <TrustedLogo />
-=======
-     <TrustedLogo/>
->>>>>>> feature-12-home-trusted-logos
     </section>
   );
 }
