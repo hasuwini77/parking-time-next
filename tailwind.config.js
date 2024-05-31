@@ -51,6 +51,13 @@ module.exports = {
         paragraph1: ["16px", { lineHeight: "26px" }],
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
+      backgroundImage: {
+        "home-hero": "url('/images/temp.png')",
+      },
+      screens: {
+        short: { raw: "(max-height: 400px)" },
+        tall: { raw: "(min-height: 700px)" },
+      },
     },
   },
   darkMode: "class",
@@ -63,8 +70,8 @@ module.exports = {
             background: "#ECF2F1",
           },
           fontFamily: {
-            sans: ["Lato", "var(--font-sans)"],
-            mono: ["Roboto", "var(--font-geist-mono)"],
+            sans: ["Lato", "sans-serif"],
+            mono: ["Roboto", "monospace"],
           },
         },
       },
