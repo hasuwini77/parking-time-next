@@ -8,8 +8,6 @@ import ContactButton from "../ContactButton";
 const HomeHero: React.FC = () => {
   const { language } = useLanguage();
 
-  console.log(language);
-
   return (
     <div className="relative w-screen bg-cover bg-center bg-home-hero custom-height-home-hero ">
       <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] sm:items-start p-3 sm:p-7">

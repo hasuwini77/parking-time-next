@@ -51,8 +51,9 @@ module.exports = {
         "home-hero": "url('/images/temp.png')",
       },
       screens: {
-        short: { raw: "(max-height: 400px)" },
+        short: { raw: "(max-height: 480px)" },
         tall: { raw: "(min-height: 700px)" },
+        middleWidth: { raw: "(min-width: 1024px)" },
       },
     },
   },
