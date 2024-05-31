@@ -1,14 +1,20 @@
 import "@/styles/globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/Header";
-import { LanguageProvider } from '../context/LanguageContext';
+import { LanguageProvider } from "../context/LanguageContext";
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="light font-sans">
         <Providers>
