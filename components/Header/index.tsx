@@ -92,15 +92,15 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40">
-            <motion.div
-              initial={{ y: '-100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '-100%', transition: { duration: 0.3 } }}
-              transition={{ type: 'tween', duration: 0.6 }}
-              className="h-full flex flex-col justify-center items-center"
-            >
+  {isMobileMenuOpen && (
+    <div ref={menuRef} className="fixed top-0 left-0 w-full h-full bg-primary z-40 overflow-y-auto max-h-[100vh]">
+      <motion.div
+        initial={{ y: '-100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '-100%', transition: { duration: 0.3 } }}
+        transition={{ type: 'tween', duration: 0.6 }}
+        className="h-full flex flex-col justify-center items-center"
+      >
               <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
                 <NavbarContent className="flex flex-col items-center gap-4">
                   <NavbarItem>
@@ -130,6 +130,9 @@ const Header: React.FC = () => {
                     </Link>
                     </Button>
                   </NavbarItem>
+                  <NavbarItem>
+          <MyFlags />
+        </NavbarItem>
                 </NavbarContent>
               </Navbar>
             </motion.div>
@@ -137,48 +140,53 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Desktop Header */}
-      <div className="hidden sm:block">
-        <Navbar isBordered className="bg-primary">
-          <NavbarBrand>
-            <Link href="/" className='cursor-pointer'> 
-              <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
-            </Link>
-          </NavbarBrand>
-          <NavbarContent className="gap-4 justify-center">
-            <NavbarItem isActive>
-              <Link href="/" aria-current="page" className="text-white">
-                {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link className="text-white" href="/about">
-                {language === 'english' ? 'About us' : 'Om oss'}
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link className="text-white" href="/news">
-                {language === 'english' ? 'News' : 'Nyheter'}
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link className="text-white" href="#">
-                {language === 'english' ? 'FAQ' : 'Vanliga frågor'}
-              </Link>
-            </NavbarItem>
-          </NavbarContent>
-          <NavbarContent className="justify-end">
-            <NavbarItem>
-              <Button as={Link} href="/contact" className="bg-white text-black size-2 h-5">
-                {language === 'english' ? 'Contact us' : 'Kontakta oss'}
-              </Button>
-            </NavbarItem>
-            <NavbarItem>
-              <MyFlags />
-            </NavbarItem>
-          </NavbarContent>
-        </Navbar>
-      </div>
+    {/* Desktop Header */}
+<div className="hidden sm:block flex items-center justify-between">
+  <Navbar isBordered className="bg-primary">
+  {/* Logo Section */}
+<div className="flex items-center">
+  <NavbarBrand className="pl-0 ml-2 fixed left-0">
+    <Link href="/" className='cursor-pointer'>
+      <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
+    </Link>
+  </NavbarBrand>
+</div>
+
+    {/* Main Navigation */}
+    <div className="flex flex-row items-center justify-end">
+      <NavbarContent className="gap-4 ">
+        <NavbarItem isActive>
+          <Link href="/" aria-current="page" className="text-white">
+            {language === 'english' ? 'Why Parking Time?' : 'Varför Parking Time?'}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-white" href="/about">
+            {language === 'english' ? 'About us' : 'Om oss'}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-white" href="/news">
+            {language === 'english' ? 'News' : 'Nyheter'}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-white" href="#">
+            {language === 'english' ? 'FAQ' : 'Vanliga frågor'}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} href="/contact" className="bg-white text-black size-2 h-5 w-[120px]">
+            {language === 'english' ? 'Contact us' : 'Kontakta oss'}
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+          <MyFlags />
+        </NavbarItem>
+      </NavbarContent>
+    </div>
+  </Navbar>
+</div>
     </div>
   );
 };
