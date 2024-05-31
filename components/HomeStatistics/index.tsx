@@ -17,10 +17,10 @@ const HomeStatistics: React.FC = () => {
   return (
     <section
       ref={ref1}
-      className="flex flex-col sm:flex-row justify-around items-center min-h[193px] w-[90%] mx-auto px-1 py-14 bg-white rounded-lg my-8"
+      className="flex flex-col md:flex-row justify-around items-center min-h[193px] w-[90%] mx-auto px-1 py-14 bg-white rounded-lg my-8"
     >
       <motion.div
-        className="flex justify-between sm:ms-4 items-center max-h-10 mb-8 sm:mb-0"
+        className="flex justify-between md:ms-4 items-center max-h-10 mb-8 md:mb-0"
         style={{
           transform: isInWiew1 ? "none" : "translateY(-300px)",
           opacity: isInWiew1 ? 1 : 0,
@@ -38,7 +38,7 @@ const HomeStatistics: React.FC = () => {
         </div>
       </motion.div>
       <motion.div
-        className="flex justify-between items-center max-h-10 mb-8 sm:mb-0"
+        className="flex justify-between items-center max-h-10 mb-8 md:mb-0"
         style={{
           transform: isInWiew1 ? "none" : "translateY(-300px)",
           opacity: isInWiew1 ? 1 : 0,
