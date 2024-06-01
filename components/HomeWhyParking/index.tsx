@@ -65,38 +65,38 @@ const HomeWhyParking: React.FC = () => {
 
   return (
     <section className="px-3 py-8 text-white bg-[#06433E] flex flex-col items-center ">
-      <h1 className="text-2xl mb-2">{usedData?.mainTitle}</h1>
+      <h1 className="text-3xl mb-6">{usedData?.mainTitle}</h1>
       <div className="flex md:flex-row flex-col items-center justify-center mb-4">
         <div>
-          <div className="sm:min-w-64 min-h-68 sm:min-h-[300px] max-w-[530px] sm:mb-2 w-full p-3 flex flex-col items-start justify-between">
+          <div className="sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start justify-between">
             <div className="text-3xl min-h-[36px] text-[#F85252] mb-2">
               <FaMoneyBillTrendUp />
             </div>
             <h3 className="text-2xl min-h-[36px]  mb-2">{usedData?.subtitle1}</h3>
-            <p className="text-lg min-h-[188px] ">{usedData?.text1}</p>
+            <p className="text-base min-h-[150px] ">{usedData?.text1}</p>
           </div>
-          <div className="sm:min-w-64 min-h-68 sm:min-h-[300px] max-w-[530px] sm:mb-2 w-full p-3 flex flex-col items-start justify-between">
+          <div className="sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start justify-between">
             <div className="text-3xl min-h-[36px] text-[#F85252]  mb-2">
               <FaDesktop />
             </div>
             <h3 className="text-2xl min-h-[36px]  mb-2">{usedData?.subtitle3} </h3>
-            <p className="text-lg min-h-[188px] ">{usedData?.text3}</p>
+            <p className="text-base min-h-[150px] ">{usedData?.text3}</p>
           </div>
         </div>
         <div>
-          <div className="sm:min-w-64 min-h-68 sm:min-h-[300px] max-w-[530px] sm:mb-2 w-full p-3 flex flex-col items-start justify-between">
+          <div className="sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start justify-between">
             <div className="text-3xl min-h-[36px] text-[#F85252]  mb-2">
               <BsPhoneFill />
             </div>
             <h3 className="text-2xl min-h-[36px]  mb-2">{usedData?.subtitle2}</h3>
-            <p className="text-lg min-h-[188px] ">{usedData?.text2}</p>
+            <p className="text-base min-h-[150px] ">{usedData?.text2}</p>
           </div>{" "}
-          <div className="sm:min-w-64 min-h-68 sm:min-h-[300px] max-w-[530px] sm:mb-2 w-full p-3 flex flex-col items-start justify-between">
+          <div className="sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start justify-between">
             <div className="text-3xl min-h-[36px] text-[#F85252]  mb-2">
               <PiBuildingApartmentFill />
             </div>
             <h3 className="text-2xl min-h-[36px]  mb-2">{usedData?.subtitle4}</h3>
-            <p className="text-lg min-h-[188px] ">{usedData?.text4}</p>
+            <p className="text-base min-h-[150px] ">{usedData?.text4}</p>
           </div>
         </div>
       </div>

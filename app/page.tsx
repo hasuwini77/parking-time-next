@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <section className="">
       <HomeHero />
-      <HomeWhyParking />
       <HomeHowWorks />
+      <HomeWhyParking />
       <HomeStatistics />
     </section>
   );
