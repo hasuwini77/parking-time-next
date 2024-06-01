@@ -17,10 +17,10 @@ const HomeStatistics: React.FC = () => {
   return (
     <section
       ref={ref1}
-      className="flex flex-col sm:flex-row justify-around items-center min-h[193px] w-[90%] mx-auto px-1 py-14 bg-white rounded-lg my-8"
+      className="flex flex-col md:flex-row justify-around items-center min-h[193px] w-[90%] mx-auto px-1 py-14 bg-white rounded-lg my-8"
     >
       <motion.div
-        className="flex justify-between sm:ms-4 items-center max-h-10 mb-8 sm:mb-0"
+        className="flex justify-between md:ms-4 items-center max-h-10 mb-8 md:mb-0"
         style={{
           transform: isInWiew1 ? "none" : "translateY(-300px)",
           opacity: isInWiew1 ? 1 : 0,
@@ -32,13 +32,13 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={5340} separator="" duration={4} />+
+            <CountUp end={5340} separator="" duration={4} delay={1.7} />+
           </p>
           <p className="text-xl">{language === "english" ? "Downloads" : "Nedladdningar"} </p>
         </div>
       </motion.div>
       <motion.div
-        className="flex justify-between items-center max-h-10 mb-8 sm:mb-0"
+        className="flex justify-between items-center max-h-10 mb-8 md:mb-0"
         style={{
           transform: isInWiew1 ? "none" : "translateY(-300px)",
           opacity: isInWiew1 ? 1 : 0,
@@ -50,7 +50,7 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={4321} separator="" duration={4} />+
+            <CountUp end={4321} separator="" duration={4} delay={1.7} />+
           </p>
           <p className="text-xl">
             {language === "english" ? "Parking sessions" : "Parkeringstillfällen"}
@@ -70,7 +70,7 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={30} separator="" duration={7} />+
+            <CountUp end={30} separator="" duration={7} delay={1.7} />+
           </p>
           <p className="text-xl">{language === "english" ? "Parking zones" : "Parkeringszoner"}</p>
         </div>
