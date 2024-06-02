@@ -1,9 +1,9 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
-import matilda from "../../public/images/matilda.png"
-import Link from "next/link";
+import matilda from "../../public/images/matilda.png";
 import styles from './HomeKnow.module.css'
 
 const HomeKnow: React.FC = () => {
@@ -16,7 +16,7 @@ const HomeKnow: React.FC = () => {
                     <Image src={matilda} alt="A image of Matilda CEO"/>
                     
                     {language === "english" ? (
-                        <span>
+                        <span className={styles.title}>
                             Matilda Öhman, CEO <br/>
                         </span>
                     ) : (

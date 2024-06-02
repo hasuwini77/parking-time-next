@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <LanguageProvider>
             <div className="flex flex-col h-screen bg-background">
-              <Header />
+            <Header />
               <main className=" flex-grow">{children}</main>
             </div>
           </LanguageProvider>

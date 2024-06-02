@@ -3,20 +3,28 @@
     background-color: #06433E;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     color: white;
 }
 .mainContent {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 112px 24px;
-    box-sizing: border-box;
+    padding: 24px;
+    padding-top: 120px;
+    flex-wrap: wrap;
 }
 
-.leftContent {
-    box-sizing: border-box;
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.title {
+    font-size: 1.5rem;
+}
+
 
 @media screen and (min-width: 768px) {
     .container {
