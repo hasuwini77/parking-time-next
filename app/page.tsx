@@ -9,15 +9,13 @@ import TrustedLogo from "@/components/TrustedLogo";
 export default function Home() {
   return (
     <section className="">
-    <section className="">
       <HomeHero />
+      <SmartParking />
       <HomeHowWorks />
       <HomeWhyParking />
       <HomeStatistics />
       <TrustedLogo />
       <Footer />
     </section>
-      <SmartParking />
-    </section> 
   );
 }
