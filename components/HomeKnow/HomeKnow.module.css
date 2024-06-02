@@ -2,36 +2,45 @@
     background-color: #06433E;
     display: flex;
     flex-direction: column;
-    color: white;
-}
-.mainContent {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 24px;
-    padding-top: 120px;
-    flex-wrap: wrap;
-}
-
-.img {
-    display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
-.title {
-    font-size: 1.5rem;
+.profile, .moreinfo {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
 }
 
+.profile img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+.profilename  {
+    font-size: 18pt;
+}
 
 @media screen and (min-width: 768px) {
     .container {
         flex-direction: row;
-
     }
-    .mainContent {
-        max-width: 1280px;
-        margin: 0 auto;
+
+    .profile, .moreinfo {
+        flex: 1;
+        max-width: none;
+    }
+
+    .moreinfo {
+        align-items: flex-start;
+        text-align: left;
     }
 }
