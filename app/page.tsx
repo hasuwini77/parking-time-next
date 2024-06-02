@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import HomeHero from "@/components/HomeHero";
 import HomeHowWorks from "@/components/HomeHowWorks";
 import HomeStatistics from "@/components/HomeStatistics";
@@ -9,7 +10,8 @@ export default function Home() {
       <HomeHero />
       <HomeHowWorks />
       <HomeStatistics />
-      <TrustedLogo/>
+      <TrustedLogo />
+      <Footer />
     </section>
   );
 }
