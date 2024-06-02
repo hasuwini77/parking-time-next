@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 12px;
     text-align: center;
 }
 
@@ -43,8 +43,12 @@
     font-weight: 600;
 }
 
+.subTitle {
+    padding-bottom: 18px;
+}
+
 .buttonContainer {
-    padding-top: 48px;
+    padding-top: 28px;
 }
 
 .buttonContainer button:hover {

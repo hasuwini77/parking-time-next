@@ -38,11 +38,11 @@ const HomeKnow: React.FC = () => {
                     )}
 
                 {language === "english" ? (
-                        <span>
+                        <span className={styles.subTitle}>
                             Contact us to find out more about our solution and <br/> how we can implement it in your municipality. <br/>
                         </span>
                     ) : (
-                        <span>
+                        <span className={styles.subTitle}>
                             Kontakta oss för att få veta mer om vår lösning och <br/> hur vi kan implementera det i din kommun.
                         </span>
                     )}
