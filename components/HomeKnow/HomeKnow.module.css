@@ -22,7 +22,7 @@
 .profile img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .profile {
@@ -30,7 +30,8 @@
 }
 
 .profilename  {
-    font-size: 18pt;
+    font-size: 23px;
+    font-weight: 600;
 }
 
 .moreinfo {
@@ -38,7 +39,8 @@
 }
 
 .moreinfo .title {
-    font-size: 30pt;
+    font-size: 36px;
+    font-weight: 600;
 }
 
 .buttonContainer {
@@ -57,10 +59,16 @@
     .profile, .moreinfo {
         flex: 1;
         max-width: none;
+        padding-top: 24px;
     }
 
     .moreinfo {
         align-items: flex-start;
         text-align: left;
+        padding-top: 24px;
+    }
+
+    .title {
+        padding: 48px 0 18px;
     }
 }
