@@ -64,6 +64,7 @@
         flex: 1;
         max-width: none;
         padding-top: 24px;
+        padding-bottom: 48px;
     }
 
     .moreinfo {
@@ -74,5 +75,9 @@
 
     .title {
         padding: 48px 0 18px;
+    }
+
+    .buttonContainer {
+
     }
 }
