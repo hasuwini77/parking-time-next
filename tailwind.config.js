@@ -9,9 +9,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
       fontFamily: {
-        sans: ["Lato", "var(--font-sans)"],
-        mono: ["Roboto", "var(--font-geist-mono)"],
+        sans: ["Lato", "sans-serif"],
+        mono: ["Roboto", "monospace"],
       },
       colors: {
         primary: "#06433E",
@@ -37,10 +46,6 @@ module.exports = {
         9: "96px",
         10: "120px",
       },
-      screens: {
-        md: "1440px",
-        sm: "768px",
-      },
       fontSize: {
         heading1: ["64px", { lineHeight: "80px" }],
         heading2: ["48px", { lineHeight: "40px" }],
@@ -50,6 +55,14 @@ module.exports = {
         buttonText: ["16px", { lineHeight: "auto" }],
         paragraph1: ["16px", { lineHeight: "26px" }],
         paragraph2: ["16px", { lineHeight: "26px" }],
+      },
+      backgroundImage: {
+        "home-hero": "url('/images/temp.png')",
+      },
+      screens: {
+        short: { raw: "(max-height: 480px)" },
+        tall: { raw: "(min-height: 700px)" },
+        middleWidth: { raw: "(min-width: 1024px)" },
       },
     },
   },
@@ -63,8 +76,8 @@ module.exports = {
             background: "#ECF2F1",
           },
           fontFamily: {
-            sans: ["Lato", "var(--font-sans)"],
-            mono: ["Roboto", "var(--font-geist-mono)"],
+            sans: ["Lato", "sans-serif"],
+            mono: ["Roboto", "monospace"],
           },
         },
       },
