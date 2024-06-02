@@ -10,7 +10,7 @@ const HomeKnow: React.FC = () => {
     const { language } = useLanguage();
 
     return (
-        <div className={styles.container}>
+        <div className="bg-primary md:flex-col flex flex-row text-white ">
             <div className={styles.mainContent}>
                 <div className={styles.leftContent}>
                     <Image src={matilda} alt="A image of Matilda CEO"/>
