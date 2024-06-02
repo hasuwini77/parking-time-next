@@ -28,11 +28,11 @@ const HomeKnow: React.FC = () => {
             </div>
             <div className={styles.moreinfo}>
                 {language === "english" ? (
-                        <span>
+                        <span className={styles.title}>
                             Want to know more? <br/>
                         </span>
                     ) : (
-                        <span>
+                        <span  className={styles.title}>
                             Vill du veta mer? <br/>
                         </span>
                     )}
@@ -43,14 +43,14 @@ const HomeKnow: React.FC = () => {
                         </span>
                     ) : (
                         <span>
-                            Kontakta oss för att få veta mer om vår lösning och <br/> hur vi kan implementera det i din kommun.<br/>
+                            Kontakta oss för att få veta mer om vår lösning och <br/> hur vi kan implementera det i din kommun.
                         </span>
                     )}
-                        <span className="mt-8">
+                        <span className={styles.buttonContainer}>
                             <ContactButton 
                             linkHref="/contact" 
                             SWtext="Kontakta oss" 
-                            ENtext="Contact us" 
+                            ENtext="Contact us"
                         />
                 </span>
             </div>

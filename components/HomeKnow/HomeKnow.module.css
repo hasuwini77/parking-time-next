@@ -23,10 +23,30 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
-  }
+}
+
+.profile {
+    margin-top: 48px;
+}
 
 .profilename  {
     font-size: 18pt;
+}
+
+.moreinfo {
+    margin-bottom: 48px;
+}
+
+.moreinfo .title {
+    font-size: 30pt;
+}
+
+.buttonContainer {
+    padding-top: 48px;
+}
+
+.buttonContainer button:hover {
+    background-color: grey;
 }
 
 @media screen and (min-width: 768px) {
