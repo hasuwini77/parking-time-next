@@ -50,7 +50,7 @@ const Faq: React.FC = () => {
 
     return (
         <>
-            <div className="container w-full min-w-full py-28 md:py-44 px-4 md:px-20 flex flex-col justify-center items-center text-center">
+            <div className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center">
                 <h5 className="mb-2">FAQ</h5>
                 <h1 className="text-4xl">
                     {language === "english" ? "Do you have a question?" : "Har du någon fråga?"}
