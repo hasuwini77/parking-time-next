@@ -8,13 +8,11 @@ import ContactButton from "../ContactButton";
 const HomeHero: React.FC = () => {
   const { language } = useLanguage();
 
-  console.log(language);
-
   return (
     <div className="relative w-screen bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] sm:items-start p-3 sm:p-7">
+      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7">
         <motion.h1
-          className="font-bold text-4xl sm:text-7xl mb-4 short:text-5xl"
+          className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
             hidden: { opacity: 0, x: "-80px" },
             visible: {
@@ -37,7 +35,7 @@ const HomeHero: React.FC = () => {
           )}
         </motion.h1>
         <motion.p
-          className="text-lg sm:text-2xl font-mono mt-1 short:hidden"
+          className="text-lg md:text-2xl font-mono mt-1 short:hidden"
           variants={{
             hidden: { opacity: 0, x: "-80px" },
             visible: {
@@ -52,18 +50,18 @@ const HomeHero: React.FC = () => {
           {language === "english" ? (
             <span>
               Digital parking disc - directly on your mobile.{" "}
-              <br className="hidden sm:inline-block" /> A winning concepts in a new, digitalized
+              <br className="hidden md:inline-block" /> A winning concepts in a new, digitalized
               format
             </span>
           ) : (
             <span>
               Digital parkeringsskiva - direkt på din mobil.{" "}
-              <br className="hidden sm:inline-block" />
+              <br className="hidden md:inline-block" />
               Ett vinnande koncept i ett nytt, digitaliserat format
             </span>
           )}
         </motion.p>
-        <div className="mt-14 short:mt-2 sm:mt-6 w-full flex flex-col sm:flex-row ">
+        <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
           <ContactButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
           <DownloadButton
             linkHref="https://play.google.com/store/games"
@@ -72,8 +70,8 @@ const HomeHero: React.FC = () => {
           />
         </div>
       </div>
-      <div className="absolute short:p-1 p-1 sm:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
-        <ul className="flex flex-col sm:flex-row gap-2 list-disc">
+      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
+        <ul className="flex flex-col md:flex-row gap-2 list-disc">
           <div className="flex justify-around basis-1/2">
             <motion.li
               className="text-white text-start"

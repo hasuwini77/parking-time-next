@@ -13,7 +13,7 @@ const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) =
 
   return (
     <motion.button
-      className="rounded-3xl sm:w-48 w-full px-5 py-2 sm:py-2 bg-black text-white custom-hover-home-hero-download-button"
+      className="rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 bg-black text-white custom-hover-home-hero-download-button"
       variants={{
         hidden: { opacity: 0, scale: 0.5 },
         visible: {
