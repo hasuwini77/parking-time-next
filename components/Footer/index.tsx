@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="flex flex-col justify-between items-center py-6 px-3 bg-[#06433E] text-white">
-      <div className="flex flex-col md:flex-row justify-between items-start ps-3 sm:ps-0 w-full border-b-4	pb-3 mb-3">
+      <div className="flex flex-col forFooter:flex-row justify-between items-start ps-3 sm:ps-0 w-full border-b-4	pb-3 mb-3">
         <div className="left mb-3 sm:mb-3 flex flex-col sm:flex-row justify-between items-start ">
           <Image width={60} height={60} src={logo} alt="logo" className="mb-2 sm:mb-0" />
           <div className="flex flex-col items-start justify-between sm:px-3">
