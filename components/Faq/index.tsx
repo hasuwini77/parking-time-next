@@ -58,21 +58,21 @@ const Faq: React.FC = () => {
                 <p className="text-paragraph1 py-2 mb-2">
                     {language === "english" ? "Here are some common questions answered?" : "Här är några vanliga frågor besvarade?"}
                 </p>
-                <Accordion variant="splitted" className="max-w-[430px] flex flex-col justify-start md:max-w-[70rem]">
-                    <AccordionItem isCompact={true} key="1" aria-label="Accordion 1" title={content.Accordion1Title} classNames={{ title: 'font-bold' }}>
-                        {content?.Accordion1}
+                <Accordion variant="splitted" className="max-w-[430px] text-start md:max-w-[70rem]">
+                    <AccordionItem isCompact={true} key="1" aria-label="Accordion 1" title={content.Accordion1Title} classNames={{ title: 'font-bold' }} className="p-1.5" >
+                        <span className="my-2 text-start">{content?.Accordion1}</span> 
                     </AccordionItem>
-                    <AccordionItem isCompact={true} key="2" aria-label="Accordion 2" title={content.Accordion2Title} classNames={{ title: 'font-bold' }}>
-                        {content?.Accordion2}
+                    <AccordionItem isCompact={true} key="2" aria-label="Accordion 2" title={content.Accordion2Title} classNames={{ title: 'font-bold' }} className="p-1.5" >
+                    <span className="my-2 text-start">{content?.Accordion2}</span> 
                     </AccordionItem>
-                    <AccordionItem isCompact={true} key="3" aria-label="Accordion 3" title={content.Accordion3Title} classNames={{ title: 'font-bold' }}>
-                        {content?.Accordion3}
+                    <AccordionItem isCompact={true} key="3" aria-label="Accordion 3" title={content.Accordion3Title} classNames={{ title: 'font-bold' }} className="p-1.5">
+                    <span className="my-2 text-start">{content?.Accordion3}</span> 
                     </AccordionItem>
-                    <AccordionItem isCompact={true} key="4" aria-label="Accordion 4" title={content.Accordion4Title} classNames={{ title: 'font-bold' }}>
-                        {content?.Accordion4}
+                    <AccordionItem isCompact={true} key="4" aria-label="Accordion 4" title={content.Accordion4Title} classNames={{ title: 'font-bold' }} className="p-1.5">
+                    <span className="my-2 text-start">{content?.Accordion4}</span> 
                     </AccordionItem>
-                    <AccordionItem isCompact={true} key="5" aria-label="Accordion 5" title={content.Accordion5Title} classNames={{ title: 'font-bold' }}>
-                        {content?.Accordion5}
+                    <AccordionItem isCompact={true} key="5" aria-label="Accordion 5" title={content.Accordion5Title} classNames={{ title: 'font-bold'}} className="p-1.5">
+                    <span className="my-2 text-start">{content?.Accordion5}</span> 
                     </AccordionItem>
                 </Accordion>
                 <h3 className="text-3xl pt-4"> {language === "english" ? "Still have a question?" : "Har du fortfarande mer frågor?"}</h3>
