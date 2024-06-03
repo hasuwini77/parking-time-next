@@ -1,8 +1,10 @@
-import React from 'react'
+import HomeNewsCard from "../HomeNewsCard"
 
 const HomeNews: React.FC = () => {
   return (
-    <div>index</div>
+    <section>
+        <HomeNewsCard />
+    </section>
   )
 }
 
