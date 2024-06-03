@@ -11,10 +11,10 @@ const Faq: React.FC = () => {
     <>
       <div className="container w-full min-w-full py-32 md:py-44 px-4 md:px-20 flex flex-col justify-center items-center text-center">
         <h5>FAQ</h5>
-        <h1 className="mb-8 text-4xl">Do you have a question?</h1>
-        <p className="text-paragraph1">Here are some common questions answered</p>
+        <h1 className="text-4xl">Do you have a question?</h1>
+        <p className="text-paragraph1 py-2">Here are some common questions answered</p>
 
-        <Accordion variant="splitted" className="w-full">
+        <Accordion variant="splitted" className="max-w-[430px] md:max-w-[70rem]">
   <AccordionItem isCompact={true} key="1" aria-label="Accordion 1" title="Accordion 1">
     {defaultContent}
   </AccordionItem>
@@ -31,7 +31,7 @@ const Faq: React.FC = () => {
     {defaultContent}
   </AccordionItem>
 </Accordion>
-        <h3 className="mb-8 text-3xl pt-4">Still have a question?</h3>
+        <h3 className="text-3xl pt-4">Still have a question?</h3>
         <p className="m-0 py-2 text-paragraph1">Feel free to contact us if you have any questions.</p>
         <ContactButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
       </div>
