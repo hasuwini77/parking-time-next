@@ -3,16 +3,32 @@ import { FaDownload, FaParking, FaMap } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import CountUp from "react-countup";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const HomeStatistics: React.FC = () => {
   const { language } = useLanguage();
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
-  const isInWiew1 = useInView(ref1, { once: true });
-  const isInWiew2 = useInView(ref2, { once: true });
-  const isInWiew3 = useInView(ref3, { once: true });
+  const isInView1 = useInView(ref1, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const isInView3 = useInView(ref3, { once: true });
+
+  const [startCount1, setStartCount1] = useState(false);
+  const [startCount2, setStartCount2] = useState(false);
+  const [startCount3, setStartCount3] = useState(false);
+
+  useEffect(() => {
+    if (isInView1) setStartCount1(true);
+  }, [isInView1]);
+
+  useEffect(() => {
+    if (isInView2) setStartCount2(true);
+  }, [isInView2]);
+
+  useEffect(() => {
+    if (isInView3) setStartCount3(true);
+  }, [isInView3]);
 
   return (
     <section
@@ -22,8 +38,8 @@ const HomeStatistics: React.FC = () => {
       <motion.div
         className="flex justify-between md:ms-4 items-center max-h-10 mb-8 md:mb-0"
         style={{
-          transform: isInWiew1 ? "none" : "translateY(-300px)",
-          opacity: isInWiew1 ? 1 : 0,
+          transform: isInView1 ? "none" : "translateY(-300px)",
+          opacity: isInView1 ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
@@ -32,16 +48,17 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[180px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={5340} separator="" duration={4} delay={1.7} />+
+            <CountUp start={startCount1 ? 0 : undefined} end={5340} separator="" duration={4} delay={0.3} />+
           </p>
           <p className="text-xl">{language === "english" ? "Downloads" : "Nedladdningar"} </p>
         </div>
       </motion.div>
       <motion.div
+        ref={ref2}
         className="flex justify-between items-center max-h-10 mb-8 md:mb-0"
         style={{
-          transform: isInWiew1 ? "none" : "translateY(-300px)",
-          opacity: isInWiew1 ? 1 : 0,
+          transform: isInView2 ? "none" : "translateY(-300px)",
+          opacity: isInView2 ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
@@ -50,7 +67,7 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[180px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={4321} separator="" duration={4} delay={1.7} />+
+            <CountUp start={startCount2 ? 0 : undefined} end={4321} separator="" duration={4} delay={0.3} />+
           </p>
           <p className="text-xl">
             {language === "english" ? "Parking sessions" : "Parkeringstillfällen"}
@@ -58,10 +75,11 @@ const HomeStatistics: React.FC = () => {
         </div>
       </motion.div>
       <motion.div
-        className="flex justify-between items-center max-h-10 "
+        ref={ref3}
+        className="flex justify-between items-center max-h-10"
         style={{
-          transform: isInWiew1 ? "none" : "translateY(-300px)",
-          opacity: isInWiew1 ? 1 : 0,
+          transform: isInView3 ? "none" : "translateY(-300px)",
+          opacity: isInView3 ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
@@ -70,7 +88,7 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[180px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp end={30} separator="" duration={7} delay={1.7} />+
+            <CountUp start={startCount3 ? 0 : undefined} end={30} separator="" duration={7} delay={0.3} />+
           </p>
           <p className="text-xl">{language === "english" ? "Parking zones" : "Parkeringszoner"}</p>
         </div>
