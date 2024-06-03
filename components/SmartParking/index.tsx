@@ -3,15 +3,22 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext'; 
 import DownloadButton from '../DownloadButton';
+import Image from 'next/image';
 
 const SmartParking: React.FC = () => {
     const { language } = useLanguage();
 
     return (
-        <section className="bg-white">
-            <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4 '>
+        <section className="md:py-8 bg-white">
+            <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4'>
                 <div className="mb-5 px-1 md:w-1/2">
-                    <img src="/images/smartparking.png" alt="Smart Parking" className="max-w-full" />
+                <Image
+                    src="/images/smartparking.png"
+                    alt="Smart Parking"
+                    width={700}
+                    height={700}
+                    layout="responsive"
+                />
                 </div>
                 <div className='px-3 md:w-1/2'>
                     <div className="max-w-xl">
