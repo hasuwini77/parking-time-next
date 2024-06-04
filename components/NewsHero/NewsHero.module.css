@@ -1,0 +1,40 @@
+.NewsHero {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('/images/newsHero.png');
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.NewsHero .overlay {
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(3px); /* Blur effect */
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+}
+
+.overlay ul {
+    list-style-type: disc;
+    color: red;
+    font-size: 18px;
+}
+
+.overlay ul li span {
+    color: white;
+}
+
+.overlay .title {
+    font-size: 42px;
+    color: white;
+}

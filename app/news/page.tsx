@@ -1,7 +1,8 @@
+import NewsHero from "@/components/NewsHero";
 export default function NewsPage() {
     return (
       <div>
-        <h1>News</h1>
+        <NewsHero/>
       </div>
     );
   }
