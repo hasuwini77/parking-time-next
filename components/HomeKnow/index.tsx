@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import matilda from "../../public/images/matilda.png";
@@ -11,8 +10,8 @@ const HomeKnow: React.FC = () => {
     const { language } = useLanguage();
 
     return (
-        <div className={styles.container}>
-            <div className={styles.profile}>
+        <div className="bg-primary flex flex-col items-center justify-center text text-white md:flex-row">
+            <div className="mt-12 w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-3 text-center md:flex-1 md:max-w-none md:pt-6 md:pb-12">
                 <Image src={matilda} alt="A image of Matilda CEO"/>
                 
                 {language === "english" ? (
@@ -26,7 +25,7 @@ const HomeKnow: React.FC = () => {
                 )}
                     <span>Matilda@parkingtime.se</span>
             </div>
-            <div className={styles.moreinfo}>
+            <div className="w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-3 text-center mb-12">
                 {language === "english" ? (
                         <span className={styles.title}>
                             Want to know more? <br/>
@@ -52,7 +51,7 @@ const HomeKnow: React.FC = () => {
                             SWtext="Kontakta oss" 
                             ENtext="Contact us"
                         />
-                </span>
+                        </span>
             </div>
         </div>
     );

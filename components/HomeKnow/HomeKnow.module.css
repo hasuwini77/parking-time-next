@@ -1,13 +1,20 @@
-.container {
+ /*.container {
     background-color: #06433E;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-}
+}*/
+/*
+bg-primary
+flex
+flex-col
+items-center
+text-darkblue1
 
-.profile, .moreinfo {
+
+.moreinfo {
     width: 100%;
     max-width: 300px;
     margin: 10px;
@@ -17,25 +24,45 @@
     align-items: center;
     padding: 12px;
     text-align: center;
+    margin-bottom: 48px;
 }
+
+
+w-full, w-[10vw], w-screen h-screen, h-[100px]
+max-w-[300px]
+m-1,2,3,4,
+mx-[3%]
+justify-between
+justify-center
+justify-around
+py-[22px]
+sm:py-[44px]
+md:py-[66px]
+*/
 
 .profile img {
     max-width: 100%;
     height: auto;
     margin-bottom: 18px;
 }
-
+/*
 .profile {
     margin-top: 48px;
-}
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+}*/
+
 
 .profilename  {
     font-size: 23px;
     font-weight: 600;
-}
-
-.moreinfo {
-    margin-bottom: 48px;
 }
 
 .moreinfo .title {
@@ -56,28 +83,28 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container {
+   /*.container {
         flex-direction: row;
     }
 
-    .profile, .moreinfo {
+    .profile {
         flex: 1;
         max-width: none;
         padding-top: 24px;
         padding-bottom: 48px;
-    }
+    }*/ 
 
     .moreinfo {
         align-items: flex-start;
         text-align: left;
         padding-top: 24px;
+        flex: 1;
+        max-width: none;
+        padding-bottom: 48px;
     }
 
     .title {
         padding: 48px 0 18px;
     }
 
-    .buttonContainer {
-
-    }
 }
