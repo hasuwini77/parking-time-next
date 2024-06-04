@@ -38,14 +38,14 @@ justify-around
 py-[22px]
 sm:py-[44px]
 md:py-[66px]
-*/
+
 
 .profile img {
     max-width: 100%;
     height: auto;
     margin-bottom: 18px;
 }
-/*
+
 .profile {
     margin-top: 48px;
     width: 100%;
@@ -57,7 +57,7 @@ md:py-[66px]
     align-items: center;
     padding: 12px;
     text-align: center;
-}*/
+}
 
 
 .profilename  {
@@ -72,11 +72,13 @@ md:py-[66px]
 
 .subTitle {
     padding-bottom: 18px;
-}
+}*/
 
 .buttonContainer {
     padding-top: 28px;
 }
+
+.buttonContainer button
 
 .buttonContainer button:hover {
     background-color: grey;
