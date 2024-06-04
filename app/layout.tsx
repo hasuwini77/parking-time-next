@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/Header";
 import { LanguageProvider } from "../context/LanguageContext";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex flex-col h-screen bg-background">
               <Header />
               <main className=" flex-grow">{children}</main>
+              <Footer />
             </div>
           </LanguageProvider>
         </Providers>

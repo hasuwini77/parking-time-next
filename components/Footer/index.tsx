@@ -44,7 +44,7 @@ export default function Footer() {
           <p className="mb-1 font-bold">{language == "english" ? "Links:" : "Länkar:"}</p>
           <ul className="flex flex-col sm:flex-row justify-between sm:items-center">
             <li className="sm:pe-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
-              <Link href="/support">{language == "english" ? "Support" : "Support"}</Link>
+              <Link href="/contact">{language == "english" ? "Support" : "Support"}</Link>
             </li>
             <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
               <Link href="/contact">{language == "english" ? "Contact" : "Kontakt"}</Link>
@@ -69,13 +69,13 @@ export default function Footer() {
           </Link>
           <Link
             className="underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
-            href="/service"
+            href="/contact"
           >
             {language == "english" ? "Terms of Service" : "Användarvillkor"}
           </Link>
           <Link
             className="underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
-            href="/cookies"
+            href="/policy"
           >
             {language == "english" ? "Cookies Settings" : "Cookie-inställningar"}
           </Link>
