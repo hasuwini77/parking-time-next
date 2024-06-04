@@ -5,21 +5,11 @@ import TrustedLogo from "@/components/TrustedLogo";
 import Faq from "@/components/Faq";
 import SmartParking from "@/components/SmartParking";
 import HomeWhyParking from "@/components/HomeWhyParking";
-import OurNews from "@/components/NewsApi";
-import { Entry , EntrySkeletonType} from 'contentful';
+import OurNews from "@/components/OurNews";
 
-interface NewsPostFields extends EntrySkeletonType {
-  title: string;
-  body: string;
-}
-
-interface HomeProps {
-  newsPost: Entry<NewsPostFields>[];
-}
-
-const Home: React.FC<HomeProps> = ({ newsPost }) => {
+export default function Home() {
   return (
-    <section className=""> 
+    <section className="">
       <HomeHero />
       <HomeHowWorks />
       <HomeWhyParking />
@@ -27,9 +17,7 @@ const Home: React.FC<HomeProps> = ({ newsPost }) => {
       <SmartParking />
       <TrustedLogo />
       <Faq />
-      <OurNews newsPost={newsPost || []} />
+      <OurNews/>
     </section>
   );
 }
-
-export default Home;
