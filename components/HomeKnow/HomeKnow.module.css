@@ -92,7 +92,7 @@ md:py-[66px]
         max-width: none;
         padding-top: 24px;
         padding-bottom: 48px;
-    }*/ 
+    }
 
     .moreinfo {
         align-items: flex-start;
@@ -101,7 +101,7 @@ md:py-[66px]
         flex: 1;
         max-width: none;
         padding-bottom: 48px;
-    }
+    }*/ 
 
     .title {
         padding: 48px 0 18px;

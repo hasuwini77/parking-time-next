@@ -25,7 +25,7 @@ const HomeKnow: React.FC = () => {
                 )}
                     <span>Matilda@parkingtime.se</span>
             </div>
-            <div className="w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-3 text-center mb-12">
+            <div className="w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-3 text-center mb-12 md:items-start md:text-left md:pt-3 md:flex-1 md:max-w-none md:pb-12">
                 {language === "english" ? (
                         <span className={styles.title}>
                             Want to know more? <br/>
