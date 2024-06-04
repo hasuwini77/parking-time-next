@@ -24,7 +24,7 @@ const HomeKnow: React.FC = () => {
                         Matilda Öhman, VD <br/>
                     </span>
                 )}
-                    <span className="text-base">Matilda@parkingtime.se</span>
+                    <span className="text-base"><a href="mailto:Matilda@parkingtime.se">Matilda@parkingtime.se</a></span>
             </div>
             <div className="w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-1 text-center mb-12 md:items-start md:text-left md:pt-5 md:flex-1 md:max-w-none md:pb-12">
                 {language === "english" ? (
@@ -46,7 +46,7 @@ const HomeKnow: React.FC = () => {
                             Kontakta oss för att få veta mer om vår lösning och hur vi kan implementera det i din kommun.
                         </span>
                     )}
-                        <span className={styles.buttonContainer}>
+                        <span className="w-full sm:max-w-[460px] text-center pt-3 md:text-left">
                             <ContactButton 
                             linkHref="/contact" 
                             SWtext="Kontakta oss" 
