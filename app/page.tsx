@@ -12,12 +12,12 @@ export default function Home() {
     <section className="">
       <HomeHero />
       <HomeHowWorks />
-      <HomeWhyParking />
-      <HomeStatistics />
-      <SmartParking />
+      <HomeWhyParking />      
+      <HomeStatistics />      
+      <SmartParking />      
       <TrustedLogo />
-      <Faq />
       <HomeDownload />
+      <Faq />      
     </section>
   );
 }
