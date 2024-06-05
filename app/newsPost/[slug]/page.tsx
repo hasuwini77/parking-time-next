@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { notFound } from "next/navigation";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
+import Image from "next/image";
 
 const fetchNewsPost = async (slug: string) => {
   try {
@@ -15,18 +16,18 @@ const fetchNewsPost = async (slug: string) => {
 };
 
 const NewsDetail = ({ params }: { params: { slug: string } }) => {
-  const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [post, setPost] = useState<any>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const postData = await fetchNewsPost(params.slug);
         if (postData) {
-          setPost(postData.fields);
+          setPost(postData);
         } else {
-          notFound(); // Next.js built-in 404
+          notFound();
         }
       } catch (err) {
         setError("Failed to fetch news post.");
@@ -46,15 +47,42 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
     return <div>{error}</div>;
   }
 
+  if (!post) {
+    return <p>Post not found</p>;
+  }
+
   return (
     <div>
-      {post ? (
-        <>
-          <h1>{post.title}</h1>
-        </>
-      ) : (
-        <p>Post not found</p>
-      )}
+      <div className="mb-4">
+        {post.fields.avatar ? (
+          <Image
+            src={`https:${post.fields.avatar.fields.file.url}`}
+            alt={post.fields.title}
+            width={60}
+            height={60}
+            className="rounded-full"
+            style={{ width: "auto", height: "auto" }}
+          />
+        ) : (
+          <p>No Avatar available.</p>
+        )}
+      </div>
+      <div className="mb-4">
+        {post.fields.featuredImage ? (
+          <Image
+            src={`https:${post.fields.featuredImage.fields.file.url}`}
+            alt={post.fields.title}
+            width={1000}
+            height={600}
+            style={{ width: "auto", height: "auto" }}
+            priority
+          />
+        ) : (
+          <p>No Featured Image available.</p>
+        )}
+      </div>
+      <h1>{post.fields.title}</h1>
+      <p>{post.fields.paragraph1}</p>
     </div>
   );
 };

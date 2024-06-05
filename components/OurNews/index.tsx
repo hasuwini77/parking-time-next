@@ -7,7 +7,11 @@ import { Image } from "@nextui-org/image";
 interface NewsPost {
   id: string;
   title: string;
-  body: string;
+  bigTitle: string;
+  avatar: string;
+  author: string;
+  paragraph1: string;
+  featuredImage?: string;
   thumbnail?: string;
   readingTime?: number;
   slug?: string;
@@ -22,13 +26,20 @@ const OurNews: React.FC = () => {
     const fetchData = async () => {
       try {
         const posts = await fetchNewsPosts();
-        // Assuming fetchNewsPosts returns data in the expected structure
         const formattedPosts = posts.map((post: any) => ({
           id: post.sys.id,
           title: post.fields.title,
-          body: post.fields.body,
+          bigTitle: post.fields.bigTitle,
+          avatar: post.fields.avatar?.fields?.file?.url
+            ? `https:${post.fields.avatar.fields.file.url}`
+            : "https://via.placeholder.com/60", // default placeholder or empty string
+          author: post.fields.author,
+          paragraph1: post.fields.paragraph1,
           thumbnail: post.fields.thumbnail?.fields?.file?.url
             ? `https:${post.fields.thumbnail.fields.file.url}`
+            : undefined,
+          featuredImage: post.fields.featuredImage?.fields?.file?.url
+            ? `https:${post.fields.featuredImage.fields.file.url}`
             : undefined,
           readingTime: post.fields.readingTime,
           slug: post.fields.slug,
@@ -62,23 +73,24 @@ const OurNews: React.FC = () => {
             key={post.id}
             className="shadow-md border-2 p-3 rounded-lg w-full md:w-1/3"
           >
-            {post.thumbnail ? (
-              <Image
-                isBlurred
-                isZoomed
-                src={post.thumbnail}
-                alt={post.title}
-                width={600}
-                height={400}
-                className="w-full h-auto rounded-t-lg min-h-[304px] md:min-h-[340px] md:max-h-[340px] object-cover"
-              />
-            ) : (
-              <p className="p-4">No Image available.</p>
-            )}
+            <Link href={`/newsPost/${post.slug ?? "nodata"}`}>
+              {post.thumbnail ? (
+                <Image
+                  isBlurred
+                  isZoomed
+                  src={post.thumbnail}
+                  alt={post.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-t-lg min-h-[304px] md:min-h-[340px] md:max-h-[340px] object-cover"
+                />
+              ) : (
+                <p className="p-4">No Image available.</p>
+              )}
+            </Link>
             <div className="mt-3 px-2 py-2">
               <h2 className="text-xl">{post.title}</h2>
               <p className="text-base my-2">{`This is ${post.readingTime ?? "No content available."} min Read`}</p>
-              <p>{post.body}</p>
               <Link href={`/newsPost/${post.slug ?? "nodata"}`}>Read more</Link>
             </div>
           </div>
