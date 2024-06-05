@@ -1,20 +1,20 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { Entry, EntrySkeletonType } from 'contentful';
 import { fetchNewsPosts } from '@/utils/fetchContentful';
 import Link from 'next/link';
 import Image from 'next/image';
 
-interface NewsPostFields extends EntrySkeletonType {
+interface NewsPost {
+  id: string;
   title: string;
   body: string;
-  thumbnail?: { fields: { file: { url: string } } }; // Adjusting to match Contentful asset structure
+  thumbnail?: string;
   readingTime?: number;
   slug?: string;
 }
 
 const OurNews: React.FC = () => {
-  const [newsPosts, setNewsPosts] = useState<Entry<NewsPostFields>[]>([]);
+  const [newsPosts, setNewsPosts] = useState<NewsPost[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -22,8 +22,17 @@ const OurNews: React.FC = () => {
     const fetchData = async () => {
       try {
         const posts = await fetchNewsPosts();
-        setNewsPosts(posts);
-        console.log(posts)
+        // Assuming fetchNewsPosts returns data in the expected structure
+        const formattedPosts = posts.map((post: any) => ({
+          id: post.sys.id,
+          title: post.fields.title,
+          body: post.fields.body,
+          thumbnail: post.fields.thumbnail?.fields?.file?.url ? `https:${post.fields.thumbnail.fields.file.url}` : undefined,
+          readingTime: post.fields.readingTime,
+          slug: post.fields.slug,
+        }));
+        setNewsPosts(formattedPosts);
+        console.log(formattedPosts);
       } catch (err) {
         setError('Failed to fetch news posts.');
       } finally {
@@ -46,23 +55,21 @@ const OurNews: React.FC = () => {
     <div className='container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center'>
       <h1 className='text-4xl'>Our News</h1>
       {newsPosts.map((post) => (
-        <div key={post.sys.id}>
-          <h2>{typeof post.fields.title === 'string' ? post.fields.title : 'Untitled'}</h2>
-          {/* Uncomment and use if you want to include the image */}
-          {(post.fields.thumbnail as NewsPostFields['thumbnail'])?.fields?.file?.url ? (
-  <Image
-  src={`https:${(post.fields.thumbnail as NewsPostFields['thumbnail'] | undefined)?.fields?.file?.url || ''}`}
-    alt={typeof post.fields.title === 'string' ? post.fields.title : 'News image'}
-    width={600}
-    height={400}
-  />
-) : (
-  <p>No Image available.</p>
-)}
-
-          <p>{`This is ${typeof post.fields.readingTime === 'number' ? post.fields.readingTime : 'No content available.'} min Read`}</p>
-          <p>{typeof post.fields.body === 'string' ? post.fields.body : 'No content available.'}</p>
-          <Link href={`/newsPost/${typeof post.fields.slug === 'string' ? post.fields.slug : 'nodata'}`}>
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          {post.thumbnail ? (
+            <Image
+              src={post.thumbnail}
+              alt={post.title}
+              width={600}
+              height={400}
+            />
+          ) : (
+            <p>No Image available.</p>
+          )}
+          <p>{`This is ${post.readingTime ?? 'No content available.'} min Read`}</p>
+          <p>{post.body}</p>
+          <Link href={`/newsPost/${post.slug ?? 'nodata'}`}>
             Read more
           </Link>
         </div>
