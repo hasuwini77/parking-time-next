@@ -1,13 +1,23 @@
+import HomeHero from "@/components/HomeHero";
+import HomeHowWorks from "@/components/HomeHowWorks";
+import HomeStatistics from "@/components/HomeStatistics";
+import TrustedLogo from "@/components/TrustedLogo";
+import Faq from "@/components/Faq";
+import SmartParking from "@/components/SmartParking";
+import HomeWhyParking from "@/components/HomeWhyParking";
 import HomeDownload from "@/components/Home-Download";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center">
-      <div className="text-center justify-center">
-        <h1 className="text-heading1"> Welcome to Parking Time!</h1>
-        <p className="text-paragraph1 font-mono">This is a paragraph</p>
-        <HomeDownload />
-       </div> 
-       </section> 
+    <section className="">
+      <HomeHero />
+      <HomeHowWorks />
+      <HomeWhyParking />
+      <HomeStatistics />
+      <SmartParking />
+      <TrustedLogo />
+      <Faq />
+      <HomeDownload />
+    </section>
   );
 }
