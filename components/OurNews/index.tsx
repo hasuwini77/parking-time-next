@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Link from "next/link";
-import Image from "next/image";
+import { Image } from "@nextui-org/image";
 
 interface NewsPost {
   id: string;
@@ -64,6 +64,8 @@ const OurNews: React.FC = () => {
           >
             {post.thumbnail ? (
               <Image
+                isBlurred
+                isZoomed
                 src={post.thumbnail}
                 alt={post.title}
                 width={600}
