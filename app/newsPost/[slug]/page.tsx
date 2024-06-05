@@ -15,6 +15,12 @@ const fetchNewsPost = async (slug: string) => {
   }
 };
 
+const getFormattedDate = (date: string) => {
+  const options: Intl.DateTimeFormatOptions = { day: "numeric", month: "long" };
+  const formattedDate = new Date(date).toLocaleDateString("en-US", options);
+  return formattedDate.replace(/(\d)(st|nd|rd|th)/, "$1<sup>$2</sup>");
+};
+
 const NewsDetail = ({ params }: { params: { slug: string } }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -24,6 +30,7 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
     const fetchData = async () => {
       try {
         const postData = await fetchNewsPost(params.slug);
+        console.log("Post data:", postData);
         if (postData) {
           setPost(postData);
         } else {
@@ -52,21 +59,28 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <div>
-      <div className="mb-4">
+    <div className="container mx-auto w-full max-w-screen-lg flex flex-col justify-center items-start text-start py-3">
+      <div className="mb-4 flex flex-row items-center justify-start">
         {post.fields.avatar ? (
-          <Image
-            src={`https:${post.fields.avatar.fields.file.url}`}
-            alt={post.fields.title}
-            width={60}
-            height={60}
-            className="rounded-full"
-            style={{ width: "auto", height: "auto" }}
-          />
+          <div className="rounded-full overflow-hidden mr-2 ml-1">
+            <Image
+              src={`https:${post.fields.avatar.fields.file.url}`}
+              alt={post.fields.title}
+              width={60}
+              height={60}
+            />
+          </div>
         ) : (
           <p>No Avatar available.</p>
         )}
+        <div className="flex flex-col">
+          {post.fields.author && <p className="mb-1">{post.fields.author}</p>}
+          {post.fields.date && (
+            <p className="text-grey1">{getFormattedDate(post.fields.date)}</p>
+          )}
+        </div>
       </div>
+      <h1 className="text-3xl font-bold mb-4 p-2">{post.fields.bigTitle}</h1>
       <div className="mb-4">
         {post.fields.featuredImage ? (
           <Image
@@ -74,15 +88,13 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
             alt={post.fields.title}
             width={1000}
             height={600}
-            style={{ width: "auto", height: "auto" }}
-            priority
+            className="p-3"
           />
         ) : (
           <p>No Featured Image available.</p>
         )}
       </div>
-      <h1>{post.fields.title}</h1>
-      <p>{post.fields.paragraph1}</p>
+      <p className="p-3 font-sans text-lg">{post.fields.paragraph1}</p>
     </div>
   );
 };

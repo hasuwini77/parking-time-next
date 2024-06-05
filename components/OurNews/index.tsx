@@ -15,6 +15,7 @@ interface NewsPost {
   thumbnail?: string;
   readingTime?: number;
   slug?: string;
+  date?: string;
 }
 
 const OurNews: React.FC = () => {
@@ -43,6 +44,7 @@ const OurNews: React.FC = () => {
             : undefined,
           readingTime: post.fields.readingTime,
           slug: post.fields.slug,
+          date: post.fields.date,
         }));
         setNewsPosts(formattedPosts);
         console.log(formattedPosts);
@@ -90,8 +92,13 @@ const OurNews: React.FC = () => {
             </Link>
             <div className="mt-3 px-2 py-2">
               <h2 className="text-xl">{post.title}</h2>
-              <p className="text-base my-2">{`This is ${post.readingTime ?? "No content available."} min Read`}</p>
-              <Link href={`/newsPost/${post.slug ?? "nodata"}`}>Read more</Link>
+              <p className="text-base text-grey1 my-2">{`${post.readingTime ?? "No content available."} min Read`}</p>
+              <Link
+                href={`/newsPost/${post.slug ?? "nodata"}`}
+                className=" hover:text-darkblue1"
+              >
+                Read more
+              </Link>
             </div>
           </div>
         ))}
