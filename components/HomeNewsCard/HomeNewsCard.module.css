@@ -1,0 +1,59 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .description {
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .footer {
+    font-size: 0.875rem;
+    color: #888;
+    margin: 8px 0;
+  }
+  
+  .readMore {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .readMore:hover {
+    text-decoration: underline;
+  }
+  
+  .viewAllNews {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0070f3;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .viewAllNews:hover {
+    background-color: #005bb5;
+  }
+  
