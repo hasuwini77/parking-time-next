@@ -6,6 +6,7 @@ import HomeKnow from "@/components/HomeKnow";
 import Faq from "@/components/Faq";
 import SmartParking from "@/components/SmartParking";
 import HomeWhyParking from "@/components/HomeWhyParking";
+import OurNews from "@/components/OurNews";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <HomeStatistics />
       <TrustedLogo />
       <HomeKnow />
-      <Faq/>
+      <Faq />
+      <OurNews />
     </section>
   );
 }
