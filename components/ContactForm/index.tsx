@@ -3,8 +3,8 @@ import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
 
 const ContactForm: React.FC = () => {
   return (
-    <section className="md:py-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4">
-        <div className="p-4">
+    <section className="md:py-4 max-w-7xl lg:max-w-3xl md:max-w-2xl mx-auto flex flex-col xl:flex-row items-center pt-5 pb-4">
+        <div className="p-4 align-self">
             <h1 className="font-bold text-5xl md:text-heading2 mb-3">Contact Us</h1>
             <p className="mb-4 font-mono text-base font-[500]">Whether you have a question, feedback, or need assistance, please fill out the form below, and our team will get back to you as soon as possible.</p>
             <ul className="list-none">
