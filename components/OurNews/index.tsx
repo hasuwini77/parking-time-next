@@ -1,8 +1,8 @@
-'use client'
-import React, { useEffect, useState } from 'react';
-import { fetchNewsPosts } from '@/utils/fetchContentful';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import React, { useEffect, useState } from "react";
+import { fetchNewsPosts } from "@/utils/fetchContentful";
+import Link from "next/link";
+import Image from "next/image";
 
 interface NewsPost {
   id: string;
@@ -27,14 +27,16 @@ const OurNews: React.FC = () => {
           id: post.sys.id,
           title: post.fields.title,
           body: post.fields.body,
-          thumbnail: post.fields.thumbnail?.fields?.file?.url ? `https:${post.fields.thumbnail.fields.file.url}` : undefined,
+          thumbnail: post.fields.thumbnail?.fields?.file?.url
+            ? `https:${post.fields.thumbnail.fields.file.url}`
+            : undefined,
           readingTime: post.fields.readingTime,
           slug: post.fields.slug,
         }));
         setNewsPosts(formattedPosts);
         console.log(formattedPosts);
       } catch (err) {
-        setError('Failed to fetch news posts.');
+        setError("Failed to fetch news posts.");
       } finally {
         setLoading(false);
       }
@@ -52,29 +54,32 @@ const OurNews: React.FC = () => {
   }
 
   return (
-    <div className='container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center'>
-      <h1 className='text-4xl'>Our News</h1>
-      {newsPosts.map((post) => (
-        <div key={post.id}>
-          <h2>{post.title}</h2>
-          {post.thumbnail ? (
-            <Image
-              src={post.thumbnail}
-              alt={post.title}
-              width={600}
-              height={400}
-            />
-          ) : (
-            <p>No Image available.</p>
-          )}
-          <p>{`This is ${post.readingTime ?? 'No content available.'} min Read`}</p>
-          <p>{post.body}</p>
-          <Link href={`/newsPost/${post.slug ?? 'nodata'}`}>
-            Read more
-          </Link>
-        </div>
-      ))}
-    </div>
+    <section className="py-28">
+      <h1 className="text-4xl text-center mb-6">Our News</h1>
+      <div className="container w-full min-w-full  md:py-38 px-4 md:px-20 flex flex-col sm:flex-row gap-3 justify-center items-center sm:items-start text-start">
+        {newsPosts.map((post) => (
+          <div key={post.id} className="shadow-md border-2 rounded-lg">
+            {post.thumbnail ? (
+              <Image
+                src={post.thumbnail}
+                alt={post.title}
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-t-lg min-h-[240px]"
+              />
+            ) : (
+              <p>No Image available.</p>
+            )}
+            <div className="mt-3 px-2 py-2">
+              <h2 className="text-xl">{post.title}</h2>
+              <p className="text-base my-2">{`This is ${post.readingTime ?? "No content available."} min Read`}</p>
+              <p>{post.body}</p>
+              <Link href={`/newsPost/${post.slug ?? "nodata"}`}>Read more</Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

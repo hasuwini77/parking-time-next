@@ -1,8 +1,11 @@
-const myPost = () => { 
-    return ( 
+import OurNews from "@/components/OurNews";
 
-        <div> <h1>Detailed Post </h1> </div>
-    )
-}
+const myPost = () => {
+  return (
+    <div>
+      <OurNews />
+    </div>
+  );
+};
 
-export default myPost
+export default myPost;
