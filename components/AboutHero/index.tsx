@@ -21,7 +21,7 @@ const AboutHero: React.FC = () => {
                         </span>
                     ) : (
                         <span className="text-5xl font-[530]">
-                            Parkeringstid Sverige
+                            Parking Time Sverige
                         </span>
                     )}
                 {language === "english" ? (
@@ -30,7 +30,7 @@ const AboutHero: React.FC = () => {
                         </p>
                     ) : (
                         <p className="font-mono leading-7 pt-4">
-                            Parking Time Sweden är ett teknik-startup som syftar till att revolutionera parkeringsupplevelsen för samtliga parter - parkören, parkeringsvakten, kommunen och (eller) fastighetsägaren.
+                            Vi är ett teknik-startup som syftar till att revolutionera parkeringsupplevelsen för samtliga parter - parkören, parkeringsvakten, kommunen och (eller) fastighetsägaren.
                         </p>
                     )} 
                 </span>
