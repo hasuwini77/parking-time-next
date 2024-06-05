@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <section className="">
       <HomeHero />
+      <SmartParking />
       <HomeHowWorks />
       <HomeWhyParking />
       <HomeStatistics />
       <TrustedLogo />
       <Faq/>
-      <SmartParking />
     </section>
   );
 }
