@@ -47,7 +47,6 @@ const OurNews: React.FC = () => {
           date: post.fields.date,
         }));
         setNewsPosts(formattedPosts);
-        console.log(formattedPosts);
       } catch (err) {
         setError("Failed to fetch news posts.");
       } finally {

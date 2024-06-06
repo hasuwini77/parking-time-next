@@ -32,7 +32,7 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
     const fetchData = async () => {
       try {
         const postData = await fetchNewsPost(params.slug);
-        console.log("Post data:", postData);
+        // console.log("Post data:", postData);
         if (postData) {
           setPost(postData);
         } else {
