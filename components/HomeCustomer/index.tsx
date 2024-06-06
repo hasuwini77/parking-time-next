@@ -66,7 +66,7 @@ const HomeCustomer: React.FC = () => {
       >
       {testimonials.map((testimonial) => (
         <SwiperSlide key={testimonial.id} className="p-3">
-          <Card key={testimonial.id} className="w-[350px] md:w-full h-full md:h-full md:rounded-[32px]">
+          <Card key={testimonial.id} className="w-[350px] md:w-4/5 h-full md:h-full md:rounded-[32px]">
             <CardHeader>
               <Image
                 alt={testimonial.imgAlt}
