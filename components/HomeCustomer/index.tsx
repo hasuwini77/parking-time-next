@@ -45,8 +45,9 @@ const HomeCustomer: React.FC = () => {
       <h2 className="text-4xl font-bold">Customer testimonials</h2>
       <p className="py-3">Hear from some of our clients.</p>
     </div>
+    <div className="overflow-x-auto scrollbar-hide flex gap-4 py-4 max-w-screen-lg">
     {testimonials.map((testimonial) => (
-      <Card key={testimonial.id} className="max-w-[350px] md:max-w-[500px] md:rounded-[32px] mb-8">
+      <Card key={testimonial.id} className="w-[350px] md:w-[500px] md:rounded-[32px] mb-8">
         <CardHeader className="flex gap-3">
           <Image
             alt={testimonial.imgAlt}
@@ -77,6 +78,7 @@ const HomeCustomer: React.FC = () => {
         </CardFooter>
       </Card>
     ))}
+    </div>
   </div>
   );
 };
