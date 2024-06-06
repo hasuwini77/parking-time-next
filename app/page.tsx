@@ -19,9 +19,9 @@ export default function Home() {
       <HomeCustomer />
       <TrustedLogo />
       <HomeStatistics />
+      <OurNews />
       <HomeKnow />
       <Faq />
-      <OurNews />
     </section>
   );
 }
