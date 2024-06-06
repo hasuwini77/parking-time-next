@@ -5,6 +5,7 @@ import TrustedLogo from "@/components/TrustedLogo";
 import Faq from "@/components/Faq";
 import SmartParking from "@/components/SmartParking";
 import HomeWhyParking from "@/components/HomeWhyParking";
+import HomeCustomer from "@/components/HomeCustomer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeWhyParking />
       <HomeStatistics />
       <SmartParking />
+      <HomeCustomer />
       <TrustedLogo />
       <Faq />
     </section>
