@@ -6,7 +6,11 @@ import HomeKnow from "@/components/HomeKnow";
 import Faq from "@/components/Faq";
 import SmartParking from "@/components/SmartParking";
 import HomeWhyParking from "@/components/HomeWhyParking";
+<<<<<<< HEAD
 import HomeCustomer from "@/components/HomeCustomer";
+=======
+import OurNews from "@/components/OurNews";
+>>>>>>> feature-38-home-news-CMS-API
 
 export default function Home() {
   return (
@@ -20,6 +24,7 @@ export default function Home() {
       <HomeStatistics />
       <HomeKnow />
       <Faq />
+      <OurNews/>
     </section>
   );
 }
