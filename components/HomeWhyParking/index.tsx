@@ -64,7 +64,10 @@ const HomeWhyParking: React.FC = () => {
   }, [language]);
 
   return (
-    <section className="px-3 py-8 text-white bg-[#06433E] flex flex-col items-center ">
+    <section
+      className="px-3 py-8 text-white bg-[#06433E] flex flex-col items-center "
+      id="whyparking"
+    >
       <h1 className="text-3xl mb-6">{usedData?.mainTitle}</h1>
       <div className="flex md:flex-row flex-col items-center justify-center mb-4">
         <div className="mb-4 sm:mb-0 min-h-[580px] md:min-h-[640px]">
