@@ -49,8 +49,12 @@ const HomeCustomer: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center my-8">
       <div>
-        <h2 className="text-4xl font-bold mx-3">Customer testimonials</h2>
-        <p className="font-mono text-base pt-3 mx-3">Hear from some of our clients.</p>
+        <h2 className="text-4xl font-bold mx-3">
+          {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
+        </h2>
+        <p className="font-mono text-base pt-3 mx-3">
+          {language === "english" ? ("Hear from some of our clients.") : ("Hör från några av våra kunder.")}
+        </p>
       </div>
       <Swiper
         breakpoints={{
