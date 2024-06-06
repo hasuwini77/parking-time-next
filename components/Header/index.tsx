@@ -137,7 +137,7 @@ const Header: React.FC = () => {
                   </NavbarItem>
                   <NavbarItem>
                     <Link
-                      href="/news"
+                      href="/newsPost"
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
                     >
@@ -213,7 +213,7 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Link className="text-white" href="/news">
+                    <Link className="text-white" href="/newsPost">
                       {language === "english" ? "News" : "Nyheter"}
                     </Link>
                   </NavbarItem>
