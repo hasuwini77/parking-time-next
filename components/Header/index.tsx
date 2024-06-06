@@ -54,7 +54,7 @@ const Header: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="mx-0">
+    <div className="mx-0 fixed w-full top-0 z-[9999]">
       {/* Mobile Header */}
       <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
         {/* Navbar Brand */}
@@ -175,14 +175,14 @@ const Header: React.FC = () => {
       </AnimatePresence>
       {/* Desktop Header */}
       <div className="hidden md:block w-full bg-primary">
-        <div className="w-full flex justify-center">
+        <div className="w-full md:px-0">
           <Navbar
             isBordered
-            className="bg-primary w-full max-w-screen-xl flex items-center justify-between"
+            className="bg-primary w-full flex justify-center items-center"
           >
             {/* Logo Section */}
-            <div className="flex items-center">
-              <NavbarBrand>
+            <div className="w-full flex justify-between items-center">
+              <NavbarBrand className="abc">
                 <Link href="/" className="cursor-pointer">
                   <Image
                     src="/images/logo-1.png"
@@ -193,50 +193,49 @@ const Header: React.FC = () => {
                   />
                 </Link>
               </NavbarBrand>
-            </div>
-
-            {/* Main Navigation */}
-            <div className="flex flex-row items-center justify-end">
-              <NavbarContent className="gap-4">
-                <NavbarItem isActive>
-                  <Link
-                    href="/#whyparking"
-                    aria-current="page"
-                    className="text-white"
-                  >
-                    {language === "english"
-                      ? "Why Parking Time?"
-                      : "Varför Parking Time?"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="/about">
-                    {language === "english" ? "About us" : "Om oss"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="/news">
-                    {language === "english" ? "News" : "Nyheter"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="/#faq">
-                    {language === "english" ? "FAQ" : "Vanliga frågor"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Button
-                    as={Link}
-                    href="/contact"
-                    className="bg-white text-black size-2 h-5 w-[120px]"
-                  >
-                    {language === "english" ? "Contact us" : "Kontakta oss"}
-                  </Button>
-                </NavbarItem>
-                <NavbarItem>
-                  <MyFlags />
-                </NavbarItem>
-              </NavbarContent>
+              {/* Main Navigation */}
+              <div className="flex flex-row items-center justify-end">
+                <NavbarContent className="gap-4">
+                  <NavbarItem isActive>
+                    <Link
+                      href="/#whyparking"
+                      aria-current="page"
+                      className="text-white"
+                    >
+                      {language === "english"
+                        ? "Why Parking Time?"
+                        : "Varför Parking Time?"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="/about">
+                      {language === "english" ? "About us" : "Om oss"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="/news">
+                      {language === "english" ? "News" : "Nyheter"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="#faq">
+                      {language === "english" ? "FAQ" : "Vanliga frågor"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Button
+                      as={Link}
+                      href="/contact"
+                      className="bg-white text-black size-2 h-5 w-[120px]"
+                    >
+                      {language === "english" ? "Contact us" : "Kontakta oss"}
+                    </Button>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <MyFlags />
+                  </NavbarItem>
+                </NavbarContent>
+              </div>
             </div>
           </Navbar>
         </div>
