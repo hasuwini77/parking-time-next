@@ -7,6 +7,7 @@ import Faq from "@/components/Faq";
 import SmartParking from "@/components/SmartParking";
 import HomeWhyParking from "@/components/HomeWhyParking";
 import OurNews from "@/components/OurNews";
+import HomeCustomer from "@/components/HomeCustomer";
 
 export default function Home() {
   return (
@@ -15,11 +16,12 @@ export default function Home() {
       <SmartParking />
       <HomeHowWorks />
       <HomeWhyParking />
-      <HomeStatistics />
+      <HomeCustomer />
       <TrustedLogo />
+      <HomeStatistics />
+      <OurNews />
       <HomeKnow />
       <Faq />
-      <OurNews />
     </section>
   );
 }
