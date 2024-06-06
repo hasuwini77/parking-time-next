@@ -1,13 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Button,
-} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
 import Link from "next/link";
 import MyFlags from "./Flags";
 import Image from "next/image";
@@ -54,7 +48,7 @@ const Header: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="mx-0">
+    <div className="mx-0 fixed w-full top-0 z-[9999]">
       {/* Mobile Header */}
       <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
         {/* Navbar Brand */}
@@ -110,10 +104,7 @@ const Header: React.FC = () => {
               transition={{ type: "tween", duration: 0.6 }}
               className="h-full flex flex-col justify-center items-center"
             >
-              <Navbar
-                isBordered={!isMobileMenuOpen}
-                className="bg-primary mb-10"
-              >
+              <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
                 <NavbarContent className="flex flex-col items-center gap-4">
                   <NavbarItem>
                     <Link
@@ -121,9 +112,7 @@ const Header: React.FC = () => {
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
                     >
-                      {language === "english"
-                        ? "Why Parking Time?"
-                        : "Varför Parking Time?"}
+                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
@@ -137,7 +126,7 @@ const Header: React.FC = () => {
                   </NavbarItem>
                   <NavbarItem>
                     <Link
-                      href="/newsPost"
+                      href="/news"
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
                     >
@@ -175,14 +164,11 @@ const Header: React.FC = () => {
       </AnimatePresence>
       {/* Desktop Header */}
       <div className="hidden md:block w-full bg-primary">
-        <div className="w-full flex justify-center">
-          <Navbar
-            isBordered
-            className="bg-primary w-full max-w-screen-xl flex items-center justify-between"
-          >
+        <div className="w-full md:px-0">
+          <Navbar isBordered className="bg-primary w-full flex justify-center items-center">
             {/* Logo Section */}
-            <div className="flex items-center">
-              <NavbarBrand>
+            <div className="w-full flex justify-between items-center">
+              <NavbarBrand className="abc">
                 <Link href="/" className="cursor-pointer">
                   <Image
                     src="/images/logo-1.png"
@@ -193,46 +179,43 @@ const Header: React.FC = () => {
                   />
                 </Link>
               </NavbarBrand>
-            </div>
-
-            {/* Main Navigation */}
-            <div className="flex flex-row items-center justify-end">
-              <NavbarContent className="gap-4">
-                <NavbarItem isActive>
-                  <Link href="/" aria-current="page" className="text-white">
-                    {language === "english"
-                      ? "Why Parking Time?"
-                      : "Varför Parking Time?"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="/about">
-                    {language === "english" ? "About us" : "Om oss"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="/newsPost">
-                    {language === "english" ? "News" : "Nyheter"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link className="text-white" href="#">
-                    {language === "english" ? "FAQ" : "Vanliga frågor"}
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Button
-                    as={Link}
-                    href="/contact"
-                    className="bg-white text-black size-2 h-5 w-[120px]"
-                  >
-                    {language === "english" ? "Contact us" : "Kontakta oss"}
-                  </Button>
-                </NavbarItem>
-                <NavbarItem>
-                  <MyFlags />
-                </NavbarItem>
-              </NavbarContent>
+              {/* Main Navigation */}
+              <div className="flex flex-row items-center justify-end">
+                <NavbarContent className="gap-4">
+                  <NavbarItem isActive>
+                    <Link href="/" aria-current="page" className="text-white">
+                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="/about">
+                      {language === "english" ? "About us" : "Om oss"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="/news">
+                      {language === "english" ? "News" : "Nyheter"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link className="text-white" href="#">
+                      {language === "english" ? "FAQ" : "Vanliga frågor"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Button
+                      as={Link}
+                      href="/contact"
+                      className="bg-white text-black size-2 h-5 w-[120px]"
+                    >
+                      {language === "english" ? "Contact us" : "Kontakta oss"}
+                    </Button>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <MyFlags />
+                  </NavbarItem>
+                </NavbarContent>
+              </div>
             </div>
           </Navbar>
         </div>
