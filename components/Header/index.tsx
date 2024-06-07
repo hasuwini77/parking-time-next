@@ -1,13 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Button,
-} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
 import Link from "next/link";
 import MyFlags from "./Flags";
 import Image from "next/image";
@@ -110,10 +104,7 @@ const Header: React.FC = () => {
               transition={{ type: "tween", duration: 0.6 }}
               className="h-full flex flex-col justify-center items-center"
             >
-              <Navbar
-                isBordered={!isMobileMenuOpen}
-                className="bg-primary mb-10"
-              >
+              <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
                 <NavbarContent className="flex flex-col items-center gap-4">
                   <NavbarItem>
                     <Link
@@ -121,9 +112,7 @@ const Header: React.FC = () => {
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
                     >
-                      {language === "english"
-                        ? "Why Parking Time?"
-                        : "Varför Parking Time?"}
+                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
@@ -176,10 +165,7 @@ const Header: React.FC = () => {
       {/* Desktop Header */}
       <div className="hidden md:block w-full bg-primary">
         <div className="w-full md:px-0">
-          <Navbar
-            isBordered
-            className="bg-primary w-full flex justify-center items-center"
-          >
+          <Navbar isBordered className="bg-primary w-full flex justify-center items-center">
             {/* Logo Section */}
             <div className="w-full flex justify-between items-center">
               <NavbarBrand className="abc">
@@ -197,14 +183,8 @@ const Header: React.FC = () => {
               <div className="flex flex-row items-center justify-end">
                 <NavbarContent className="gap-4">
                   <NavbarItem isActive>
-                    <Link
-                      href="/#whyparking"
-                      aria-current="page"
-                      className="text-white"
-                    >
-                      {language === "english"
-                        ? "Why Parking Time?"
-                        : "Varför Parking Time?"}
+                    <Link href="/#whyparking" aria-current="page" className="text-white">
+                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
