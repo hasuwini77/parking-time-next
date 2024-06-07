@@ -17,7 +17,6 @@ const SmartParking: React.FC = () => {
                     alt="Smart Parking"
                     width={700}
                     height={700}
-                    layout="responsive"
                 />
                 </div>
                 <div className='px-3 md:w-1/2'>
