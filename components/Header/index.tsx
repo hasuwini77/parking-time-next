@@ -117,6 +117,15 @@ const Header: React.FC = () => {
                   </NavbarItem>
                   <NavbarItem>
                     <Link
+                      href="/"
+                      className="text-white text-buttonText"
+                      onClick={toggleMobileMenu}
+                    >
+                      {language === "english" ? "Home" : "Hem"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                    <Link
                       href="/about"
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
@@ -135,7 +144,7 @@ const Header: React.FC = () => {
                   </NavbarItem>
                   <NavbarItem>
                     <Link
-                      href="/#faq"
+                      href="/faq"
                       className="text-white text-buttonText"
                       onClick={toggleMobileMenu}
                     >
@@ -188,6 +197,11 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
+                    <Link className="text-white" href="/">
+                      {language === "english" ? "Home" : "Hem"}
+                    </Link>
+                  </NavbarItem>
+                  <NavbarItem>
                     <Link className="text-white" href="/about">
                       {language === "english" ? "About us" : "Om oss"}
                     </Link>
@@ -198,7 +212,7 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Link className="text-white" href="#faq">
+                    <Link className="text-white" href="/faq">
                       {language === "english" ? "FAQ" : "Vanliga frågor"}
                     </Link>
                   </NavbarItem>
