@@ -35,3 +35,15 @@ const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) =
 };
 
 export default DownloadButton;
+
+
+
+
+
+
+
+
+
+
+
+
