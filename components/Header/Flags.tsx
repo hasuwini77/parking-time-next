@@ -6,7 +6,6 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-  Avatar,
 } from "@nextui-org/react";
 import { useLanguage } from "@/context/LanguageContext";
 import ukflag from "@/public/images/flags-uk.png";
@@ -26,7 +25,7 @@ const MyFlags: React.FC = () => {
         <DropdownTrigger>
           <Image
             className="transition-transform rounded-full h-[40px] w-[40px] bg-green border"
-            src={abc}
+            src={language === "english" ? ukflag : sweflag}
             alt="flag"
           />
         </DropdownTrigger>
