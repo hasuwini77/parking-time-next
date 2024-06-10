@@ -7,7 +7,7 @@ import visionImg from '../../public/images/vision.png';
 
 const AboutVision = () => {
     return (
-        <div className="">
+        <div className="bg-white">
             <div>
                 <h2>Our Vision</h2>
                 <p>Parking Time Sweden is a tech startup aiming to revolutionize the parking experience for all parties involved – the parker, the parking attendant, the municipality, and the property owner. 
