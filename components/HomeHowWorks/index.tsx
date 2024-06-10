@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import CardHowWorks from "../CardHowWorks";
-import { FaArrowRight } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa6";
 import DownloadButton from "../DownloadButton";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -62,7 +62,7 @@ const HomeHowWorks = () => {
           number="01"
           icon={content.card1.icon}
         />
-        <FaArrowRight
+        <FaAngleRight
           className="rotate-90 middleWidth:rotate-0 my-4 md:mx-3 text-red"
           size={30}
         />
@@ -72,7 +72,7 @@ const HomeHowWorks = () => {
           number="02"
           icon={content.card2.icon}
         />
-        <FaArrowRight
+        <FaAngleRight
           className="rotate-90 middleWidth:rotate-0 my-4 md:mx-3 text-red"
           size={30}
         />
