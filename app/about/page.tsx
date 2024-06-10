@@ -1,7 +1,9 @@
+import AboutKnow from "@/components/AboutKnow";
+
 export default function AboutPage() {
   return (
     <div>
-      <h1>About</h1>
+      <AboutKnow />
     </div>
   );
 }
