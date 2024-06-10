@@ -132,11 +132,13 @@ import { useForm } from 'react-hook-form';
 import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
 import SendEmailButton from "../SendEmailButton";
 import { sendEmail } from '@/utils/send-email';
+import styles from './ContactForm.module.css'
 
 export type FormData = {
   name: string;
   jobtitle: string;
   email: string;
+  phone: number;
   reason: string;
   subject: string;
   terms: boolean;
@@ -206,13 +208,26 @@ const ContactForm: FC = () => {
               Email
             </label>
             <input
-              type="email"
+              type="text"
               id="email"
               placeholder="ex. name@email.com"
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('email', { required: true })}
             />
             {errors.email && <span className="text-red-500 text-sm">This field is required</span>}
+          </div>
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              Phone number
+            </label>
+            <input
+              type="number"
+              id="phone"
+              placeholder="+46708123456"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              {...register('phone', { required: true })}
+            />
+            {errors.name && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">

@@ -26,3 +26,15 @@
   box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
 }
 /* Tehe are Bedir's costum classes for Home-Hero aria */
+
+/* Hide the spin buttons in the number input field */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Hide the spin buttons in Firefox */
+}
+
