@@ -83,7 +83,7 @@ const HomeHowWorks = () => {
           icon={content.card3.icon}
         />
       </div>
-      <span className="mt-8">
+      <span className="mt-8 w-full text-center">
         <DownloadButton
           linkHref="https://play.google.com/store/games"
           SWtext={textContent.swedish.downloadButton}
