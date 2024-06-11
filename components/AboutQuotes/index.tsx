@@ -6,11 +6,11 @@ const Quotes: React.FC = () => {
     const { language } = useLanguage();
     return(
         <>
-        <section>
+        <section className= "w-full flex justify-center items-center md:w-full md:flex md:justify-center">
         {language === "english" ? (                    
-                    <span>
+                    <span className="w-4/5 flex justify-center items-center m-5 text-center md:flex md:justify-center md:w-2/4">
                         “Of all the things you need to think about during the day, parking should be one of the least. Parking should be so seamless that you hardly need to think about it; it should just work. We call this Smart Parking." 
-                        - Matilda, CEO and Founder.
+                        <br/> - Matilda, CEO and Founder.
                     </span>
                 ) : (
                     <span> 
