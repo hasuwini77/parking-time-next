@@ -17,7 +17,7 @@ const ContactHero: React.FC = () => {
                 <span className="text-5xl font-[530] leading-tight pt-3">
                 {language === "english" ? (
                         <span>
-                            We would love to <br className="hidden md:"/>
+                            We would love to <br className="hidden:md"/>
                             hear from you!
                         </span>
                     ) : (
