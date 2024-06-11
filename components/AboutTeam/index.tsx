@@ -22,16 +22,16 @@ const AboutTeam = () => {
             alt="Matilda Öhman"
             className="object-cover"
             height={350}
-            src="https://nextui.org/images/hero-card.jpeg"
+            src="/images/mathildaohman.jpeg"
             width={350}
           />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
             <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
               Matilda Öhman
             </p>
             <Link href="/contact">
               <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-1 mt-[2px] h-4"
+                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
                 variant="flat"
                 color="default"
                 radius="lg"
@@ -51,13 +51,13 @@ const AboutTeam = () => {
             src="https://nextui.org/images/hero-card.jpeg"
             width={350}
           />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
             <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
               Johan E. Bengtsson
             </p>
             <Link href="/contact">
               <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-1 mt-[2px] h-4"
+                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
                 variant="flat"
                 color="default"
                 radius="lg"
@@ -77,13 +77,13 @@ const AboutTeam = () => {
             src="https://nextui.org/images/hero-card.jpeg"
             width={350}
           />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
             <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
               Ingemar Öhman
             </p>
             <Link href="/contact">
               <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-1 mt-[2px] h-4"
+                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
                 variant="flat"
                 color="default"
                 radius="lg"
@@ -103,13 +103,13 @@ const AboutTeam = () => {
             src="https://nextui.org/images/hero-card.jpeg"
             width={350}
           />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
             <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
               Fredrik Jodstam
             </p>
             <Link href="/contact">
               <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-1 mt-[2px] h-4"
+                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
                 variant="flat"
                 color="default"
                 radius="lg"
