@@ -1,11 +1,10 @@
-/* 'use client';
+'use client';
 
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
 import SendEmailButton from "../SendEmailButton";
 import { sendEmail } from '@/utils/send-email';
-import styles from './ContactForm.module.css'
 
 export type FormData = {
   name: string;
@@ -155,11 +154,10 @@ const ContactForm: FC = () => {
 
 export default ContactForm;
 
- */
 
 
 
-'use client';
+/* 'use client';
 
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
@@ -167,7 +165,6 @@ import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
 import SendEmailButton from "../SendEmailButton";
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import styles from './ContactForm.module.css';
 
 export type FormData = {
   name: string;
@@ -320,4 +317,4 @@ const ContactForm: FC = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm; */
