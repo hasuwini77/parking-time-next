@@ -319,7 +319,7 @@ const PrivatePolicy: React.FC = () => {
                   continuously send and publish information and marketing via
                   various digital channels based on your profile. You may opt
                   out of receiving marketing communications from us at any time
-                  by clicking "unsubscribe" in the email or SMS communication
+                  by clicking unsubscribe in the email or SMS communication
                   that we send you. You can also contact Parking Time via
                   matildaohman@parkingtime.se for assistance in declining our
                   communication.
@@ -336,7 +336,7 @@ const PrivatePolicy: React.FC = () => {
                   marknadsföring via olika digitala kanaler baserat på din
                   profil. Du kan när som helst välja att avstå från att ta emot
                   marknadsföringskommunikation från oss genom att klicka på
-                  "avregistrera" i det e-postmeddelande eller SMS som vi skickar
+                  avregistrera i det e-postmeddelande eller SMS som vi skickar
                   till dig. Du kan också kontakta Parking Time via
                   matildaohman@parkingtime.se för hjälp med att avböja vår
                   kommunikation.
@@ -466,7 +466,7 @@ const PrivatePolicy: React.FC = () => {
                   statutory rights as an individual in relation to the personal
                   data we process about you. If you encounter information about
                   yourself or related individuals that you for any reason do not
-                  want to be published on Parking Time&apos;s website, we appreciate
+                  want to be published on Parking Timeapos;s website, we appreciate
                   it if you contact us via matildaohman@parkingtime.se
                 </p>
                 <p className="m-2.5">
