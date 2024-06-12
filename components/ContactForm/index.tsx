@@ -67,11 +67,11 @@ const ContactForm: FC = () => {
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('name', { required: true })}
             />
-            {errors.name && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.name && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="job" className="block text-sm font-medium text-gray-700">
-              Job title <span className='ps-1 text-[12px] text-grey1'>(optional)</span>
+              Job title <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
             </label>
             <input
               type="text"
@@ -80,11 +80,11 @@ const ContactForm: FC = () => {
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('jobtitle', { required: false })}
             />
-            {errors.jobtitle && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.jobtitle && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
+              Email <span className='text-red text-bold text-md'>*</span>
             </label>
             <input
               type="email"
@@ -93,37 +93,37 @@ const ContactForm: FC = () => {
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('email', { required: true })}
             />
-            {errors.email && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.email && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-              Phone number
+              Phone number <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
             </label>
             <input
               type="number"
               id="phone"
               placeholder="+46708123456"
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              {...register('phone', { required: true })}
+              {...register('phone', { required: false })}
             />
-            {errors.phone && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.phone && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
-              Reason for contact <span className='ps-1 text-[12px] text-grey1'>(optional)</span>
+              Reason for contact <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
             </label>
             <input
               type="text"
               id="reason"
               placeholder="Reason for contact"
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              {...register('reason', { required: true })}
+              {...register('reason', { required: false })}
             />
-            {errors.reason && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.reason && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              Write us a message
+              Write us a message <span className='text-red text-bold text-md'>*</span>
             </label>
             <textarea
               id="message"
@@ -132,7 +132,7 @@ const ContactForm: FC = () => {
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 h-48 resize-y"
               {...register('message', { required: true })}
             ></textarea>
-            {errors.message && <span className="text-red-500 text-sm">This field is required</span>}
+            {errors.message && <span className="text-red text-sm">This field is required</span>}
           </div>
           <div className="flex items-center">
             <input
@@ -144,7 +144,7 @@ const ContactForm: FC = () => {
             <label htmlFor="terms" className="mr-2 text-sm font-medium text-gray-700">
               I accept the terms 
             </label>
-            {errors.terms && <span className="text-red-500 text-sm">You must accept the terms!</span>}
+            {errors.terms && <span className="text-red text-sm">You must accept the terms!</span>}
           </div>
           <div>
             <SendEmailButton SWtext="Skicka meddelande" ENtext="Send message" />
