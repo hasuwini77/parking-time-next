@@ -68,7 +68,7 @@ const OurNews: React.FC = () => {
   return (
     <section className="py-28">
       <h1 className="text-4xl text-center mb-6">Our News</h1>
-      <div className="container w-full min-w-full md:py-38 px-4 md:px-20 flex flex-col md:flex-row gap-3 justify-center items-center text-start">
+      <div className="container w-full min-w-full md:py-38 px-4 flex flex-col md:flex-row gap-3 justify-center items-center text-start">
         {newsPosts.map((post) => (
           <div
             key={post.id}
