@@ -21,7 +21,7 @@ const PrivatePolicy: React.FC = () => {
     </div>    
     <section>
             {language === "english" ? (                    
-                <span className="flex justify-center flex-col m-2.5 p-2.5">
+                <span className="flex justify-center flex-col m-2.5 p-2.5 md:flex md:justify-center">
                     <b className="text-2xl m-2.5">Private Policy</b>
                     <b className="m-2.5">This policy applies to all websites of Parking Time Sweden AB. The personal data policy applies to Parking Time in connection with services and products related to purchases, customer service matters, other contact with Parking Time, and visits to the website. Your personal data is important to us.</b>
                 </span>
