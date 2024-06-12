@@ -26,3 +26,21 @@
   box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
 }
 /* Tehe are Bedir's costum classes for Home-Hero aria */
+
+.bg-radial-gradient {
+  background-image: radial-gradient(circle, #45f8a4,  #00301e);
+}
+
+.scale-animation {
+  animation: scaleCycle 3s infinite linear;
+  display: inline-block; 
+}
+
+@keyframes scaleCycle {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
