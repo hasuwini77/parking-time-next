@@ -54,8 +54,8 @@ const ContactForm: FC = () => {
           </li>
         </ul>
       </div>
-      <div className="container mx-auto p-4 rounded-lg">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <div className="container mx-auto p-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               First and last name <span className='text-red text-bold text-md'>*</span>
@@ -64,7 +64,7 @@ const ContactForm: FC = () => {
               type="text"
               id="name"
               placeholder="First and last name"
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('name', { required: true })}
             />
             {errors.name && <span className="text-red text-sm">This field is required</span>}
@@ -77,12 +77,11 @@ const ContactForm: FC = () => {
               type="text"
               id="job"
               placeholder="Job title"
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('jobtitle', { required: false })}
             />
             {errors.jobtitle && <span className="text-red text-sm">This field is required</span>}
           </div>
-
 
           <div className='items-center hidden xl:flex'>
             <div className='mr-2 lg:w-8/12'>
@@ -93,7 +92,7 @@ const ContactForm: FC = () => {
                 type="email"
                 id="email"
                 placeholder="ex. name@email.com"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 {...register('email', { required: true })}
               />
               {errors.email && <span className="text-red text-sm">This field is required</span>}
@@ -106,14 +105,12 @@ const ContactForm: FC = () => {
                 type="number"
                 id="phone"
                 placeholder="+46708123456"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 {...register('phone', { required: false })}
               />
               {errors.phone && <span className="text-red text-sm">This field is required</span>}
             </div>
           </div>
-
-
 
             <div className='xl:mr-2 xl:w-8/12 xl:hidden'>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -123,7 +120,7 @@ const ContactForm: FC = () => {
                 type="email"
                 id="email"
                 placeholder="ex. name@email.com"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 {...register('email', { required: true })}
               />
               {errors.email && <span className="text-red text-sm">This field is required</span>}
@@ -136,14 +133,11 @@ const ContactForm: FC = () => {
                 type="number"
                 id="phone"
                 placeholder="+46708123456"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 {...register('phone', { required: false })}
               />
               {errors.phone && <span className="text-red text-sm">This field is required</span>}
             </div>
-
-
-
 
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
@@ -153,7 +147,7 @@ const ContactForm: FC = () => {
               type="text"
               id="reason"
               placeholder="Reason for contact"
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500"
               {...register('reason', { required: false })}
             />
             {errors.reason && <span className="text-red text-sm">This field is required</span>}
@@ -166,12 +160,12 @@ const ContactForm: FC = () => {
               id="message"
               rows={4}
               placeholder="Type your message..."
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 h-48 resize-y"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:border-blue-500 focus:ring-blue-500 h-48 resize-y"
               {...register('message', { required: true })}
             ></textarea>
             {errors.message && <span className="text-red text-sm">This field is required</span>}
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center !mt-[10px]">
             <input
               type="checkbox"
               id="terms"
