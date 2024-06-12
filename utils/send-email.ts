@@ -1,4 +1,4 @@
-import { FormData } from '@/components/ContactForm';
+/* import { FormData } from '@/components/ContactForm';
 
 export function sendEmail(data: FormData) {
   const apiEndpoint = '/api/email';
@@ -14,4 +14,4 @@ export function sendEmail(data: FormData) {
     .catch((err) => {
       alert(err);
     });
-}
+} */
