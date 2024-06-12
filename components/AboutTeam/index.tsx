@@ -50,7 +50,7 @@ const AboutTeam: React.FC = () => {
       key={member.name}
       isFooterBlurred
       radius="md"
-      className="border-none max-w-xs"
+      className="border-none max-w-xs mx-auto"
     >
       <Image
         alt={member.name}
@@ -90,17 +90,19 @@ const AboutTeam: React.FC = () => {
       </p>
 
       {/* Swiper for mobile view */}
-      <div className="block md:hidden w-full py-3 relative">
-        <Swiper
-          pagination={{ clickable: true }}
-          className="mySwiper"
-          style={{ paddingBottom: "50px" }} // Adjust this value as needed
-        >
-          {teamMembers.map((member, index) => (
-            <SwiperSlide key={index}>{renderCard(member)}</SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="swiper-pagination absolute bottom-[10px] left-0 right-0 flex justify-center"></div>
+      <div className="flex flex-col justify-center">
+        <div className="block md:hidden w-full py-3 relative">
+          <Swiper
+            pagination={{ clickable: true }}
+            className="mySwiper"
+            style={{ paddingBottom: "50px" }} // Adjust this value as needed
+          >
+            {teamMembers.map((member, index) => (
+              <SwiperSlide key={index}>{renderCard(member)}</SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-pagination absolute bottom-[10px] left-0 right-0 flex justify-center"></div>
+        </div>
       </div>
 
       {/* Original layout for larger screens */}
