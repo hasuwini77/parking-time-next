@@ -42,17 +42,17 @@ const AboutVision: React.FC = () => {
     }, [language]);
 
     return (
-        <div className="bg-white flex flex-col md:flex-row items-center justify-center w-full px-3 lg:px-7 md:p-1">
-            <div className="w-full md:max-w-2xl mt-12 flex flex-col md:px-3 md:pl-5 md:pr-1">
-                <h2 className="text-4xl font-semibold md:text-xl lg:text-3xl">{usedData?.title1}</h2>
-                <p className="text-lg pt-2 font-mono md:text-xs lg:text-base">{usedData?.text1}</p>
-                <p className="text-lg pt-3 lg:pt-4 font-mono md:text-xs lg:text-base">{usedData?.text1_2}</p>
+        <div className="bg-white flex flex-col lg:flex-row items-center justify-center w-full px-5 lg:px-7 md:p-1">
+            <div className="w-full md:max-w-2xl mt-12 flex flex-col md:px-3 md:pl-4 md:pr-1">
+                <h2 className="text-4xl font-semibold">{usedData?.title1}</h2>
+                <p className="text-base pt-2 font-mono">{usedData?.text1}</p>
+                <p className="text-base pt-3 lg:pt-4 font-mono">{usedData?.text1_2}</p>
                 
 
-                <h2 className="text-4xl font-semibold pt-4 md:text-xl lg:text-3xl">{usedData?.title2}</h2>
-                <p className="text-lg pt-2 font-mono md:text-xs lg:text-base">{usedData?.text2}</p>
+                <h2 className="text-4xl font-semibold pt-4">{usedData?.title2}</h2>
+                <p className="text-base pt-2 font-mono">{usedData?.text2}</p>
 
-                <span className="text-center p-3 py-7 md:p-0 md:py-4 md:text-left">
+                <span className="text-center p-3 py-6 md:p-0 md:py-4 md:text-left">
                     <DownloadButton 
                     linkHref="/contact" 
                     SWtext="Boka ett möte" 
@@ -61,7 +61,7 @@ const AboutVision: React.FC = () => {
                 </span>
             </div>
             <div className="w-full md:max-w-2xl flex justify-center">
-                <Image src={visionImg} alt="A picture of a parking" className="hidden md:inline-block"/>
+                <Image src={visionImg} alt="A picture of a parking" className="hidden lg:inline-block"/>
             </div>
         </div>
     );
