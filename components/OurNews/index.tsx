@@ -92,7 +92,7 @@ const OurNews: React.FC = () => {
                 <p className="text-base text-grey1 my-2 max-w-[90%]">{`${(post.paragraph1 ?? "No content available.").split(" ").slice(0, 18).join(" ")} ...`}</p>
                 <Link
                   href={`/newsPost/${post.slug ?? "nodata"}`}
-                  className="hover:text-darkblue1"
+                  className="hover:text-grey1 underline"
                 >
                   Read more
                 </Link>
