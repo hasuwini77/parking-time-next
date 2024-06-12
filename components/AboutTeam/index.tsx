@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Pagination } from "swiper/modules";
 
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -59,7 +60,7 @@ const AboutTeam: React.FC = () => {
         src={member.imgSrc}
         width={350}
       />
-      <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
+      <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute bottom-0 right-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
         <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
           {member.name}
         </p>
@@ -90,19 +91,17 @@ const AboutTeam: React.FC = () => {
       </p>
 
       {/* Swiper for mobile view */}
-      <div className="flex flex-col justify-center">
-        <div className="block md:hidden w-full py-3 relative">
-          <Swiper
-            pagination={{ clickable: true }}
-            className="mySwiper"
-            style={{ paddingBottom: "50px" }} // Adjust this value as needed
-          >
-            {teamMembers.map((member, index) => (
-              <SwiperSlide key={index}>{renderCard(member)}</SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="swiper-pagination absolute bottom-[10px] left-0 right-0 flex justify-center"></div>
-        </div>
+      <div className="block md:hidden w-full py-3 relative">
+        <Swiper
+          pagination={{ clickable: true }}
+          className="mySwiper"
+          style={{ paddingBottom: "50px" }}
+        >
+          {teamMembers.map((member, index) => (
+            <SwiperSlide key={index}>{renderCard(member)}</SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="swiper-pagination absolute bottom-[10px] left-0 right-0 flex justify-center"></div>
       </div>
 
       {/* Original layout for larger screens */}
