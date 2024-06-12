@@ -1,10 +1,82 @@
 "use client";
+import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Card, CardFooter, Image, Button } from "@nextui-org/react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
+import { Pagination } from "swiper/modules";
 
-const AboutTeam = () => {
+import "swiper/css";
+import "swiper/css/pagination";
+
+SwiperCore.use([Pagination]);
+
+// Define the type for a team member
+interface TeamMember {
+  name: string;
+  role: string;
+  imgSrc: string;
+}
+
+const AboutTeam: React.FC = () => {
   const { language } = useLanguage();
+
+  const teamMembers: TeamMember[] = [
+    {
+      name: "Matilda Öhman",
+      role: "CEO",
+      imgSrc: "/images/mathildaohman.jpeg",
+    },
+    {
+      name: "Johan E. Bengtsson",
+      role: "Chief Technical Officer",
+      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+    },
+    {
+      name: "Ingemar Öhman",
+      role: "Accountant",
+      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+    },
+    {
+      name: "Fredrik Jodstam",
+      role: "Business Strategist",
+      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+    },
+  ];
+
+  const renderCard = (member: TeamMember) => (
+    <Card
+      key={member.name}
+      isFooterBlurred
+      radius="md"
+      className="border-none max-w-xs"
+    >
+      <Image
+        alt={member.name}
+        className="object-cover"
+        height={350}
+        src={member.imgSrc}
+        width={350}
+      />
+      <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
+        <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
+          {member.name}
+        </p>
+        <Link href="/contact">
+          <Button
+            className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
+            variant="flat"
+            color="default"
+            radius="lg"
+            size="sm"
+          >
+            <span>{member.role}</span>
+          </Button>
+        </Link>
+      </CardFooter>
+    </Card>
+  );
 
   return (
     <div className="w-full py-3 flex flex-col px-4 md:px-20 md:py-2 justify-between items-center">
@@ -16,110 +88,20 @@ const AboutTeam = () => {
           ? "Each member brings a unique blend of expertise, passion and forward-thinking mindset."
           : "Varje medlem tar med sig en unik blandning av expertis, passion och framåtanda."}
       </p>
-      <div className="card-container flex flex-col gap-4 md:flex-row md:flex-wrap justify-center">
-        <Card isFooterBlurred radius="md" className="border-none max-w-xs">
-          <Image
-            alt="Matilda Öhman"
-            className="object-cover"
-            height={350}
-            src="/images/mathildaohman.jpeg"
-            width={350}
-          />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
-            <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
-              Matilda Öhman
-            </p>
-            <Link href="/contact">
-              <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                <span>CEO</span>
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
 
-        <Card isFooterBlurred radius="md" className="border-none max-w-xs">
-          <Image
-            alt="Johan E. Bengtsson"
-            className="object-cover"
-            height={350}
-            src="https://nextui.org/images/hero-card.jpeg"
-            width={350}
-          />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
-            <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
-              Johan E. Bengtsson
-            </p>
-            <Link href="/contact">
-              <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                <span>Chief Technical Officer</span>
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
+      {/* Swiper for mobile view */}
+      <div className="block md:hidden w-full py-3">
+        <Swiper pagination={{ clickable: true }} className="mySwiper">
+          {teamMembers.map((member, index) => (
+            <SwiperSlide key={index}>{renderCard(member)}</SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="swiper-pagination mb-[22px] flex justify-center"></div>
+      </div>
 
-        <Card isFooterBlurred radius="md" className="border-none max-w-xs">
-          <Image
-            alt="Ingemar Öhman"
-            className="object-cover"
-            height={350}
-            src="https://nextui.org/images/hero-card.jpeg"
-            width={350}
-          />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
-            <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
-              Ingemar Öhman
-            </p>
-            <Link href="/contact">
-              <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                <span>Accountant</span>
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
-
-        <Card isFooterBlurred radius="md" className="border-none max-w-xs">
-          <Image
-            alt="Fredrik Jodstam"
-            className="object-cover"
-            height={350}
-            src="https://nextui.org/images/hero-card.jpeg"
-            width={350}
-          />
-          <CardFooter className="flex flex-col items-start h-20 justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-2 absolute before:rounded-xl rounded-large bottom-0 w-[calc(100% - 12px)] shadow-small ml-[-2px] z-10">
-            <p className="text-md lg:text-sm text-white/80 md:text-xs p-[2px]">
-              Fredrik Jodstam
-            </p>
-            <Link href="/contact">
-              <Button
-                className="text-xs md:text-sm lg:text-sm text-white bg-black/20 py-0 mb-[6px] mt-[0px] h-4"
-                variant="flat"
-                color="default"
-                radius="lg"
-                size="sm"
-              >
-                <span>Business Strategist</span>
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
+      {/* Original layout for larger screens */}
+      <div className="hidden md:flex card-container flex-col gap-4 md:flex-row md:flex-wrap justify-center">
+        {teamMembers.map((member, index) => renderCard(member))}
       </div>
     </div>
   );
