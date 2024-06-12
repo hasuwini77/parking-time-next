@@ -82,32 +82,69 @@ const ContactForm: FC = () => {
             />
             {errors.jobtitle && <span className="text-red text-sm">This field is required</span>}
           </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email <span className='text-red text-bold text-md'>*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="ex. name@email.com"
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              {...register('email', { required: true })}
-            />
-            {errors.email && <span className="text-red text-sm">This field is required</span>}
+
+
+          <div className='items-center hidden xl:flex'>
+            <div className='mr-2 lg:w-8/12'>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                Email <span className='text-red text-bold text-md'>*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="ex. name@email.com"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                {...register('email', { required: true })}
+              />
+              {errors.email && <span className="text-red text-sm">This field is required</span>}
+            </div>
+            <div className='lg:w-4/12'>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                Phone number <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
+              </label>
+              <input
+                type="number"
+                id="phone"
+                placeholder="+46708123456"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                {...register('phone', { required: false })}
+              />
+              {errors.phone && <span className="text-red text-sm">This field is required</span>}
+            </div>
           </div>
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-              Phone number <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
-            </label>
-            <input
-              type="number"
-              id="phone"
-              placeholder="+46708123456"
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              {...register('phone', { required: false })}
-            />
-            {errors.phone && <span className="text-red text-sm">This field is required</span>}
-          </div>
+
+
+
+            <div className='xl:mr-2 xl:w-8/12 xl:hidden'>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                Email <span className='text-red text-bold text-md'>*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="ex. name@email.com"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                {...register('email', { required: true })}
+              />
+              {errors.email && <span className="text-red text-sm">This field is required</span>}
+            </div>
+            <div className='xl:w-4/12 xl:hidden'>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                Phone number <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>
+              </label>
+              <input
+                type="number"
+                id="phone"
+                placeholder="+46708123456"
+                className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                {...register('phone', { required: false })}
+              />
+              {errors.phone && <span className="text-red text-sm">This field is required</span>}
+            </div>
+
+
+
+
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
               Reason for contact <span className='ps-[4px] text-[12px] text-grey1'>(optional)</span>

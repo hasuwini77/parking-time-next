@@ -4,8 +4,8 @@ import ContactHero from "@/components/ContactHero";
 export default function ContactPage() {
   return (
     <div>
-      <ContactForm />
       <ContactHero />
+      <ContactForm />
     </div>
   );
 } 
