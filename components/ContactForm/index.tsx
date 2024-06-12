@@ -83,7 +83,8 @@ const ContactForm: FC = () => {
             {errors.jobtitle && <span className="text-red text-sm">This field is required</span>}
           </div>
 
-          <div className='items-center hidden xl:flex'>
+          {/* email & phone on the same line, min-width 1280px */}
+          <div className='hidden xl:flex'>
             <div className='mr-2 lg:w-8/12'>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email <span className='text-red text-bold text-md'>*</span>
