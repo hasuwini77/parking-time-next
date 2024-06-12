@@ -5,24 +5,32 @@ import { useLanguage } from "@/context/LanguageContext";
 const PrivatePolicy: React.FC = () => {
     const { language } = useLanguage();
     return(
-    <>
-    <div className="m-2.5 p-2.5">
+        
+        <> 
+          <div className="m-2.5 p-2.5 md:py-5 md:flex md:flex-col md:items-start">
             {language === "english" ? (                    
                 <span>
-                    <b className="text-4xl">Private Policy</b>
-                    <p>Effective date: April 3, 2023</p>
+                    <b className="text-4xl md:m-2.5 md:text-left md:ml-4">Private Policy</b>
+                    <p className="text-grey1 md:m-2.5 md:text-left md:ml-4">Effective date: April 3, 2023</p>
                 </span>
             ) : (
                 <span> 
-                    <h1 className="text-4xl">Integritetspolicy</h1>
-                    <p>Gäller från: 3 april 2023</p>
+                    <h1 className="text-4xl md:m-2.5 md:text-left md:ml-4">Integritetspolicy</h1>
+                    <p className="text-grey1 md:m-2.5 md:text-left md:ml-4">Gäller från: 3 april 2023</p>
                 </span>
-            )}        
+            )}    
+           
+                
     </div>    
+      
+    <section className="md:w-full md:flex md:flex-col md:justify-center md:items-center">
+      
+    <div className="max-w-full p-[8px] md:max-w-[50%] md:flex: md:justify-center">
+    
     <section>
             {language === "english" ? (                    
-                <span className="flex justify-center flex-col m-2.5 p-2.5 md:flex md:justify-center">
-                    <b className="text-2xl m-2.5">Private Policy</b>
+                <span className="flex justify-center flex-col m-2.5 p-2.5">
+                    <b className="text-2xl">Private Policy</b>
                     <b className="m-2.5">This policy applies to all websites of Parking Time Sweden AB. The personal data policy applies to Parking Time in connection with services and products related to purchases, customer service matters, other contact with Parking Time, and visits to the website. Your personal data is important to us.</b>
                 </span>
             ) : (
@@ -225,76 +233,70 @@ const PrivatePolicy: React.FC = () => {
                 <span className="flex justify-center flex-col m-2.5 p-2.5">
                     <b className="text-2xl m-2.5">Purpose and legal basis for processing your personal data</b>
                     <p className="m-2.5">Purpose and Legal Basis for Processing Your Personal Data. The processing of your personal data serves specific purposes, grounded in legal bases as outlined below. Additionally, we elucidate how your personal data is processed for marketing purposes.</p>
-                    <b>Purpose</b>
-                    <b>Legal Basis</b>
-                    <p className="m-2.5">Fulfillment of Orders for Services and Subscriptions</p>
+                    <b className="m-2.5">Purpose</b>
+                    <b className="m-2.5">Legal Basis</b>
+                    <br />
+                    <b className="m-2.5">Fulfillment of Orders for Services and Subscriptions</b>
                     <li className="m-2.5">Legal Basis: Performance of a contract of which you are a party</li>
                     <br />
-
                     <b className="m-2.5">Targeted Marketing</b>
                     <li>Upon your consent, we send newsletters</li>
                     <li>Legal Basis</li>
                     <li>Consent provided by you for this type of processing</li>
                     <li>Balancing of interests</li>
                     <br />
-
                     <b className="m-2.5">Correspondence Regarding Inquiries</b>
                     <li>Handling queries directed to Parking Time via matildaohman@parkingtime.se or to other responsible persons at Parking Time, received through email, telephone, or digital channels, including all social platforms</li>
                     <li>Legal Basis: Balancing of interests</li>
                     <br />
-
                     <b className="m-2.5">Investigation of Complaints</b>
                     <li>Handling complaints received through email, telephone, or other digital channels, including social media</li>
                     <li>Legal Basis</li>
                     <li>Performance of a contract of which you are a party</li>
                     <li>Balancing of interests</li>
                     <br />
-
                     <b className="m-2.5">Financial Management, Accounting, and Reporting</b>
                     <li>Utilization of your transactions for our accounting and reporting purposes</li>
                     <li>Legal Basis: Fulfillment of legal obligations</li>
                     <br />
-
-                    <p className="m-2.5">For each purpose, a distinct legal basis is identified, ensuring compliance with relevant legal requirements. These purposes are clearly delineated to facilitate transparency and accountability in the processing of personal data by Parking Time Sweden AB</p>
+                    <p className="m-2.5 md:pb-4">For each purpose, a distinct legal basis is identified, ensuring compliance with relevant legal requirements. These purposes are clearly delineated to facilitate transparency and accountability in the processing of personal data by Parking Time Sweden AB</p>
 
                 </span>
             ) : (
                 <span className="flex justify-center flex-col m-2.5 p-2.5"> 
-                    <b className="text-2xl m-2.5">Syfte och laglig grund för behandling av dina personuppgifter</b>
+                    <b className="text-2xl md:py-2">Syfte och laglig grund för behandling av dina personuppgifter</b>
                     <p>Syfte och laglig grund för behandling av dina personuppgifter. Behandlingen av dina personuppgifter tjänar specifika ändamål, förankrade i lagliga grunder som beskrivs nedan. Dessutom förklarar vi hur dina personuppgifter behandlas för marknadsföringsändamål.</p>
                     <b>Ändamål</b>  
                     <b>Laglig grund</b>
-                    <p>Uppfyllande av beställningar för tjänster och prenumerationer</p>
+                    <br />
+                    <b>Uppfyllande av beställningar för tjänster och prenumerationer</b>
                     <li>Laglig grund: Uppfyllelse av ett avtal där du är en part</li>
                     <br />
-
                     <b>Riktad marknadsföring</b>
                     <li>Vid ditt samtycke skickar vi nyhetsbrev</li>
                     <li>Rättslig grund</li>
                     <li>Samtycke som du har lämnat för denna typ av behandling</li>
                     <li>Avvägning av intressen</li>
                     <br />
-
                     <b>Korrespondens angående förfrågningar</b>
                     <li>Hantering av förfrågningar riktade till Parking Time via matildaohman@parkingtime.se eller till andra ansvariga personer på Parking Time, mottagna via e-post, telefon eller digitala kanaler, inklusive alla sociala plattformar</li>
                     <li>Rättslig grund: Avvägning av intressen</li>
                     <br />
-
                     <b>Utredning av klagomål</b>
                     <li>Hantering av klagomål mottagna via e-post, telefon eller andra digitala kanaler, inklusive sociala medier</li>
                     <li>Rättslig grund</li>
                     <li>Uppfyllelse av ett avtal där du är en part</li>
                     <li>Avvägning av intressen</li>
                     <br />
-
                     <b>Finansiell förvaltning, redovisning och rapportering</b>
                     <li>Användning av dina transaktioner för våra redovisnings- och rapporteringsändamål</li>
                     <li>Rättslig grund: Uppfyllelse av lagliga förpliktelser</li>
                     <br />
-
                     <p>För varje ändamål identifieras en tydlig rättslig grund, vilket säkerställer efterlevnad av relevanta lagkrav. Dessa ändamål är tydligt avgränsade för att underlätta transparens och ansvarsskyldighet vid behandlingen av personuppgifter av Parking Time Sweden AB.</p>
                 </span>
             )}
+    </section>
+    </div>
     </section>
     </>
     )
