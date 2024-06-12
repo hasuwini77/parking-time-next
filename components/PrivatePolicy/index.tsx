@@ -231,9 +231,9 @@ const PrivatePolicy: React.FC = () => {
                   Personal data we collect about you if we require them
                 </b>
                 <li className="m-2.5">First and last name</li>
-                <li className="m-2.5">User's vehicle registration number</li>
+                <li className="m-2.5">User&apos;s vehicle registration number</li>
                 <li className="m-2.5">
-                  User's GPS location at the time of parking
+                  User&apos;s GPS location at the time of parking
                 </li>
                 <li className="m-2.5">
                   Contact information (address, email, and phone number)
@@ -259,7 +259,7 @@ const PrivatePolicy: React.FC = () => {
               <span className="flex justify-center flex-col m-2.5 p-2.5">
                 <b className="text-2xl m-2.5">Cookies</b>
                 <p className="m-2.5">
-                  In a cookie, it is possible to track a user's browsing
+                  In a cookie, it is possible to track a user&apos;s browsing
                   activity. Cookies are used to provide you as a visitor with
                   access to various features and to customize content in
                   newsletters. We use cookies to tailor content in our
@@ -354,7 +354,7 @@ const PrivatePolicy: React.FC = () => {
                   need to keep it to fulfill the purposes for which the data was
                   collected. Parking Time may retain the data longer if
                   necessary to comply with legal requirements or to protect
-                  Parking Time's legal interests, such as during a legal
+                  Parking Time&apos;s legal interests, such as during a legal
                   process.
                 </p>
               </span>
@@ -381,9 +381,9 @@ const PrivatePolicy: React.FC = () => {
                 </b>
                 <p className="m-2.5">
                   Your personal data may be shared with other companies. These
-                  are Parking Time's data processors. A data processor is a
+                  are Parking Time&apos;s data processors. A data processor is a
                   company that processes information on our behalf and according
-                  to our instructions. Parking Time's data processors perform
+                  to our instructions. Parking Time&apos;s data processors perform
                   services on our behalf, such as sending newsletters or
                   delivering ordered goods. All disclosures will be made in
                   accordance with the law, and your personal data will not be
@@ -394,7 +394,7 @@ const PrivatePolicy: React.FC = () => {
                   requirements as well as limitations and requirements regarding
                   the international transfer of personal data. When your
                   personal data is shared with a company that is an independent
-                  data controller, the counterparty's privacy policy and data
+                  data controller, the counterparty&apos;s privacy policy and data
                   processing apply. We share your personal data with certain
                   companies that are independent data controllers. Examples of
                   independent data controllers with whom we share your personal
@@ -466,7 +466,7 @@ const PrivatePolicy: React.FC = () => {
                   statutory rights as an individual in relation to the personal
                   data we process about you. If you encounter information about
                   yourself or related individuals that you for any reason do not
-                  want to be published on Parking Time's website, we appreciate
+                  want to be published on Parking Time&apos;s website, we appreciate
                   it if you contact us via matildaohman@parkingtime.se
                 </p>
                 <p className="m-2.5">
