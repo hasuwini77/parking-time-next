@@ -5,9 +5,9 @@ import Quotes from "@/components/AboutQuotes";
 export default function AboutPage() {
   return (
     <div>
-      <AboutKnow />
       <AboutHero />
       <Quotes />
+      <AboutKnow />
     </div>
   );
 }
