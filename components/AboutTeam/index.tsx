@@ -12,8 +12,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 SwiperCore.use([Pagination]);
-
-// Define the type for a team member
 interface TeamMember {
   name: string;
   role: string;
@@ -32,17 +30,20 @@ const AboutTeam: React.FC = () => {
     {
       name: "Johan E. Bengtsson",
       role: "Chief Technical Officer",
-      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+      imgSrc:
+        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
     },
     {
       name: "Ingemar Öhman",
       role: "Accountant",
-      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+      imgSrc:
+        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
     },
     {
       name: "Fredrik Jodstam",
       role: "Business Strategist",
-      imgSrc: "https://nextui.org/images/hero-card.jpeg",
+      imgSrc:
+        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
     },
   ];
 
