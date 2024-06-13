@@ -1,7 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Button,
+} from "@nextui-org/react";
 import Link from "next/link";
 import MyFlags from "./Flags";
 import Image from "next/image";
@@ -104,55 +110,60 @@ const Header: React.FC = () => {
               transition={{ type: "tween", duration: 0.6 }}
               className="h-full flex flex-col justify-center items-center"
             >
-              <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
+              <Navbar
+                isBordered={!isMobileMenuOpen}
+                className="bg-primary mb-10"
+              >
                 <NavbarContent className="flex flex-col items-center gap-4">
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/#whyparking"
-                      className="text-white text-buttonText"
+                      className="text-white text-buttonText  hover:text-green2"
                       onClick={toggleMobileMenu}
                     >
-                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
+                      {language === "english"
+                        ? "Why Parking Time?"
+                        : "Varför Parking Time?"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/"
-                      className="text-white text-buttonText"
+                      className="text-white text-buttonText  hover:text-green2"
                       onClick={toggleMobileMenu}
                     >
                       {language === "english" ? "Home" : "Hem"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/about"
-                      className="text-white text-buttonText"
+                      className="text-white text-buttonText  hover:text-green2"
                       onClick={toggleMobileMenu}
                     >
                       {language === "english" ? "About us" : "Om oss"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/newsPost"
-                      className="text-white text-buttonText"
+                      className="text-white text-buttonText  hover:text-green2"
                       onClick={toggleMobileMenu}
                     >
                       {language === "english" ? "News" : "Nyheter"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-white text-buttonText"
+                      className="text-white text-buttonText hover:text-green2"
                       onClick={toggleMobileMenu}
                     >
                       {language === "english" ? "FAQ" : "FAQ"}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white">
+                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
                       <Link
                         href="/contact"
                         className="text-black hover:text-white text-buttonText"
@@ -174,7 +185,10 @@ const Header: React.FC = () => {
       {/* Desktop Header */}
       <div className="hidden md:block w-full bg-primary">
         <div className="w-full md:px-0">
-          <Navbar isBordered className="bg-primary w-full flex justify-center items-center">
+          <Navbar
+            isBordered
+            className="bg-primary w-full flex justify-center items-center"
+          >
             {/* Logo Section */}
             <div className="w-full flex justify-between items-center">
               <NavbarBrand className="abc">
@@ -191,36 +205,77 @@ const Header: React.FC = () => {
               {/* Main Navigation */}
               <div className="flex flex-row items-center justify-end">
                 <NavbarContent className="gap-4">
-                  <NavbarItem isActive>
-                    <Link href="/#whyparking" aria-current="page" className="text-white">
-                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
+                  <NavbarItem
+                    isActive
+                    className="transition-colors duration-500"
+                  >
+                    <Link
+                      href="/#whyparking"
+                      aria-current="page"
+                      className="relative text-white hover:text-green2"
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                    >
+                      {language === "english"
+                        ? "Why Parking Time?"
+                        : "Varför Parking Time?"}
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/">
+                  <NavbarItem className="transition-colors duration-500">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className="relative text-white hover:text-green2"
+                      href="/"
+                    >
                       {language === "english" ? "Home" : "Hem"}
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/about">
+                  <NavbarItem className="transition-colors duration-500">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className="relative text-white hover:text-green2"
+                      href="/about"
+                    >
                       {language === "english" ? "About us" : "Om oss"}
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/newsPost">
+                  <NavbarItem className="transition-colors duration-500">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className="relative text-white hover:text-green2"
+                      href="/newsPost"
+                    >
                       {language === "english" ? "News" : "Nyheter"}
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/faq">
+                  <NavbarItem className="transition-colors duration-500">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className="relative text-white hover:text-green2"
+                      href="/faq"
+                    >
                       {language === "english" ? "FAQ" : "Vanliga frågor"}
+                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className=" transform transition-transform duration-500 hover:scale-105">
                     <Button
                       as={Link}
                       href="/contact"
-                      className="bg-white text-black size-2 h-5 w-[120px]"
+                      className="bg-white text-black h-5 w-[120px]  hover:bg-black hover:text-white"
                     >
                       {language === "english" ? "Contact us" : "Kontakta oss"}
                     </Button>
