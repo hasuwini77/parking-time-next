@@ -1,9 +1,11 @@
 import Faq from "@/components/Faq";
+import FaqHero from "@/components/FaqHero/FaqHero";
 import React from "react";
 
 const FaqPage = () => {
   return (
-    <div className="-pt-2">
+    <div>
+      <FaqHero />
       <Faq />
     </div>
   );
