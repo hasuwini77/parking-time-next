@@ -37,8 +37,8 @@ const HomeDownload: React.FC = () => {
                     ) }
                     <div className="flex flex-row justify-center w-full"><a href="https://app.parkingtime.se/" target='_blank' rel="noopener noreferrer">
                         <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={AppStore} alt="appstore"/>
-                        </a>                         
-                        <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={GooglePlay} alt="goggleStore" /><a href="https://app.parkingtime.se/" target='_blank'rel="noopener noreferrer">
+                        </a> <a href="https://app.parkingtime.se/" target='_blank'rel="noopener noreferrer">
+                        <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={GooglePlay} alt="goggleStore" />
                         </a>
                     </div>                                  
                     <Image className="hidden md:block md:max-w-[100px] md:ml-2" src={QR} alt="qr-code" />
