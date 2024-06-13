@@ -30,20 +30,17 @@ const AboutTeam: React.FC = () => {
     {
       name: "Johan E. Bengtsson",
       role: "Chief Technical Officer",
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
+      imgSrc: "/images/placeholderavatar1.png",
     },
     {
       name: "Ingemar Öhman",
       role: "Accountant",
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
+      imgSrc: "/images/placeholderavatar1.png",
     },
     {
       name: "Fredrik Jodstam",
       role: "Business Strategist",
-      imgSrc:
-        "https://cdn.pixabay.com/photo/2018/11/13/22/01/avatar-3814081_1280.png",
+      imgSrc: "/images/placeholderavatar1.png",
     },
   ];
 
