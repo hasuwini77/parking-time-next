@@ -44,3 +44,14 @@
     transform: scale(1.1);
   }
 }
+/* Hide the spin buttons in the number input field */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Hide the spin buttons in Firefox */
+}
+
