@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext"
 import Image from 'next/image';
 import Box from '@public/images/aboutBox.png'
 import Check from '@public/images/aboutHuman.png'
