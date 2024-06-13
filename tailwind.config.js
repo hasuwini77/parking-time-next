@@ -69,6 +69,7 @@ module.exports = {
         middleWidth: { raw: "(min-width: 1024px)" },
         forFooter: { raw: "(min-width: 800px)" },
         betweenS: { raw: "(min-width: 768px) and (max-width: 920px)" },
+        wideShort: { raw: "(min-width: 1024px) and (max-height: 768px)" },
       },
     },
   },
