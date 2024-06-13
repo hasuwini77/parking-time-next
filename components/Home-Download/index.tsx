@@ -35,9 +35,9 @@ const HomeDownload: React.FC = () => {
                         Appen är gratis att ladda ner för dig som användare. Din kommun måste dock vara registrerad som kund hos oss för att vår app ska vara giltig i ditt område. Om vår app inte är tillgänglig i din kommun är du välkommen att kontakta oss eller föreslå oss till din kommun!
                     </span>           
                     ) }
-                    <div className="flex flex-row justify-center w-full"><a href="https://app.parkingtime.se/" target='_blank'>
+                    <div className="flex flex-row justify-center w-full"><a href="https://app.parkingtime.se/" target='_blank' rel="noopener noreferrer">
                         <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={AppStore} alt="appstore"/>
-                        </a> <a href="https://app.parkingtime.se/" target='_blank'>
+                        </a> <a href="https://app.parkingtime.se/" target='_blank'rel="noopener noreferrer">
                         <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={GooglePlay} alt="goggleStore" />
                         </a>
                     </div>                                  
