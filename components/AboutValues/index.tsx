@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { useLanguage } from "@/context/LanguageContext";
+import Image from 'next/image';
 import Box from '@public/images/aboutBox.png'
 import Check from '@public/images/aboutHuman.png'
 import Light from '@public/images/aboutLight.png'
@@ -27,46 +28,46 @@ const Values: React.FC = () => {
             </div>
             <div>
                 <div>
-                    <img src="" alt="" />
+                <Image src={Box} alt="Box" />  
                     {language === "english" ? (                    
                     <span>
-                        <p></p>
-                        <p></p>
+                        <p>Simplicity</p>
+                        <p>We are striving to create simple and smooth experiences.</p>
                     </span>
                 ) : (
                     <span> 
-                        <p></p>
-                        <p></p>
+                        <p>Enkelhet</p>
+                        <p>Vi strävar efter att skapa enkla och smidiga upplevelser.</p>
                     </span>
                 )}
                 </div>
 
                 <div>
-                    <img src="" alt="" />
+                    <Image src={Check} alt="check" />
                     {language === "english" ? (                    
                     <span>
-                        <p></p>
-                        <p></p>
+                        <p>Innovation</p>
+                        <p>Always trying to improve and making our app a leader in its field.</p>
                     </span>
                 ) : (
                     <span> 
-                        <p></p>
-                        <p></p>
+                        <p>Innovation</p>
+                        <p>Alltid sträva efter att förbättra och göra vår app ledande inom sitt område.</p>
                     </span>
                 )}    
                 </div>
 
                 <div>
-                    <img src="" alt="" />
+                    <Image src="Light" alt="light" />
                     {language === "english" ? (                    
                     <span>
-                        <p></p>
-                        <p></p>
+                        <p>User friendly</p>
+                        <p>It's crucial that our service meets users' needs and enhances their parking experience.</p>
                     </span>
                 ) : (
                     <span> 
-                        <p></p>
-                        <p></p>
+                        <p>Användarvänlig</p>
+                        <p>Det är avgörande att vår tjänst möter användarnas behov och förbättrar deras parkeringsupplevelse.</p>
                     </span>
                 )}
                 </div>
