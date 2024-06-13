@@ -59,6 +59,10 @@ module.exports = {
       backgroundImage: {
         "home-hero": "url('/images/temp.png')",
       },
+      backgroundPosition: {
+        "custom-center-50": "center 50%",
+        "custom-center-70": "center 70%",
+      },
       screens: {
         short: { raw: "(max-height: 480px)" },
         tall: { raw: "(min-height: 700px)" },
