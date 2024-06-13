@@ -205,7 +205,10 @@ const Header: React.FC = () => {
               {/* Main Navigation */}
               <div className="flex flex-row items-center justify-end">
                 <NavbarContent className="gap-4">
-                  <NavbarItem isActive>
+                  <NavbarItem
+                    isActive
+                    className="transition-colors duration-400"
+                  >
                     <Link
                       href="/#whyparking"
                       aria-current="page"
@@ -217,7 +220,7 @@ const Header: React.FC = () => {
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       className="relative text-white hover:text-green2 transition-colors duration-300"
                       href="/"
@@ -226,7 +229,7 @@ const Header: React.FC = () => {
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       className="relative text-white hover:text-green2 transition-colors duration-300"
                       href="/about"
@@ -235,7 +238,7 @@ const Header: React.FC = () => {
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       className="relative text-white hover:text-green2 transition-colors duration-300"
                       href="/newsPost"
@@ -244,7 +247,7 @@ const Header: React.FC = () => {
                       <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       className="relative text-white hover:text-green2 transition-colors duration-300"
                       href="/faq"
