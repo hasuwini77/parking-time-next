@@ -137,7 +137,7 @@ const PrivatePolicy: React.FC = () => {
               </span>
             ) : (
               <span className="flex justify-center flex-col m-2.5 p-2.5">
-                <b className="text-2xl m-2.5">vad är personlig data?</b>
+                <b className="text-2xl m-2.5">Vad är personlig data?</b>
                 <p className="m-2.5">
                   Personuppgifter är all typ av information som direkt eller
                   indirekt kan hänföras till en levande individ. Exempel på
