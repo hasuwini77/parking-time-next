@@ -28,6 +28,7 @@ module.exports = {
         red: "#F85252",
         background: "#ECF2F1",
         green: "#48937E",
+        green2: "#80da5f",
         darkblue1: "#14243C",
         darkblue2: "#2A394E",
         grey1: "#868686",
@@ -59,12 +60,17 @@ module.exports = {
       backgroundImage: {
         "home-hero": "url('/images/temp.png')",
       },
+      backgroundPosition: {
+        "custom-center-50": "center 50%",
+        "custom-center-70": "center 70%",
+      },
       screens: {
         short: { raw: "(max-height: 480px)" },
         tall: { raw: "(min-height: 700px)" },
         middleWidth: { raw: "(min-width: 1024px)" },
         forFooter: { raw: "(min-width: 800px)" },
         betweenS: { raw: "(min-width: 768px) and (max-width: 920px)" },
+        wideShort: { raw: "(min-width: 1024px) and (max-height: 768px)" },
       },
     },
   },
