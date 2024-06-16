@@ -205,22 +205,21 @@ const Header: React.FC = () => {
               {/* Main Navigation */}
               <div className="flex flex-row items-center justify-end">
                 <NavbarContent className="gap-4">
-                  <NavbarItem
-                    isActive
-                    className="transition-colors duration-500"
-                  >
+                  <NavbarItem className="transition-colors duration-500">
                     <Link
                       href="/#whyparking"
                       aria-current="page"
-                      className="relative text-white hover:text-green2"
+                      className="relative text-white"
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
                     >
-                      {language === "english"
-                        ? "Why Parking Time?"
-                        : "Varför Parking Time?"}
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                      <span className="group">
+                        {language === "english"
+                          ? "Why Parking Time?"
+                          : "Varför Parking Time?"}
+                        <span className="absolute left-0 top-3 w-full h-[2px] bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      </span>
                     </Link>
                   </NavbarItem>
                   <NavbarItem className="transition-colors duration-500">
@@ -228,11 +227,13 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className="relative text-white hover:text-green2"
+                      className="relative text-white"
                       href="/"
                     >
-                      {language === "english" ? "Home" : "Hem"}
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                      <span className="group">
+                        {language === "english" ? "Home" : "Hem"}
+                        <span className="absolute left-0 top-3 w-full h-[2px] bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      </span>
                     </Link>
                   </NavbarItem>
                   <NavbarItem className="transition-colors duration-500">
@@ -240,11 +241,13 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className="relative text-white hover:text-green2"
+                      className="relative text-white"
                       href="/about"
                     >
-                      {language === "english" ? "About us" : "Om oss"}
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                      <span className="group">
+                        {language === "english" ? "About us" : "Om oss"}
+                        <span className="absolute left-0 top-3 w-full h-[2px] bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      </span>
                     </Link>
                   </NavbarItem>
                   <NavbarItem className="transition-colors duration-500">
@@ -252,11 +255,13 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className="relative text-white hover:text-green2"
+                      className="relative text-white"
                       href="/newsPost"
                     >
-                      {language === "english" ? "News" : "Nyheter"}
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                      <span className="group">
+                        {language === "english" ? "News" : "Nyheter"}
+                        <span className="absolute left-0 top-3 w-full h-[2px] bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      </span>
                     </Link>
                   </NavbarItem>
                   <NavbarItem className="transition-colors duration-500">
@@ -264,11 +269,13 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className="relative text-white hover:text-green2"
+                      className="relative text-white"
                       href="/faq"
                     >
-                      {language === "english" ? "FAQ" : "Vanliga frågor"}
-                      <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gray-400 scale-x-0 hover:scale-x-100 origin-left transition-transform duration-300"></span>
+                      <span className="group">
+                        {language === "english" ? "FAQ" : "Vanliga frågor"}
+                        <span className="absolute left-0 top-3 w-full h-[2px] bg-white transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      </span>
                     </Link>
                   </NavbarItem>
                   <NavbarItem className=" transform transition-transform duration-500 hover:scale-105">
