@@ -1,11 +1,21 @@
 'use client'
 import { useLanguage } from "@/context/LanguageContext"
+import Image from "next/image";
 
 const ContactHero: React.FC = () => {
     const { language } = useLanguage();
     return (
-        <section className="hidden w-full min-h-[60vh] relative bg-cover bg-[50%_50%] bg-[url('/images/contactHero.png')] xl:flex overflow-hidden">
-            <div className="w-full md:w-[44%] min-h-[60vh] lg:w-2/5 h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[2px] md:backdrop-blur-[10px] p-5 pl-24 flex flex-col justify-center items-start text-white">
+        <section className="w-full min-h-[50vh] relative hidden xl:flex overflow-hidden">
+            <Image
+                src="/images/contactHero.png"
+                alt="Contact Hero"
+                fill={true}
+                style={{objectFit: "cover"}}
+                quality={75}
+                priority
+                className="z-0"
+            />
+            <div className="w-full md:w-2/5 min-h-[50vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] p-5 pl-20 flex flex-col justify-center items-start text-white">
                 <span className="list-disc text-xl list-inside pl-0 ml-0">
                     {language === "english" ? (
                         "Contact"
