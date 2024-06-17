@@ -10,8 +10,8 @@ const HomeKnow: React.FC = () => {
 
     return (
         <div className="bg-primary text-white flex justify-center">
-            <div className="flex flex-col items-center justify-center md:flex-row w-full md:max-w-[1800px] px-3 py-8 md:py-7">
-                <div className="mt-12 w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-2 text-center md:flex-1 md:max-w-none md:pt-6 md:pb-12">
+            <div className="flex flex-col items-center justify-center md:flex-row w-full md:max-w-[1440px] px-3 py-8 md:py-7">
+                <div className="mt-12 w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-2 text-center md:flex-1 md:max-w-none md:pt-6 md:pb-12 md:m-0">
                     <div className="max-w-full h-auto mb-2">
                         <Image src={matilda} alt="A image of Matilda CEO" />
                     </div>
@@ -26,7 +26,7 @@ const HomeKnow: React.FC = () => {
                     )}
                         <span className="text-base"><a href="mailto:Matilda@parkingtime.se">Matilda@parkingtime.se</a></span>
                 </div>
-                <div className="w-full flex flex-col justify-center items-center text-center mb-12 md:items-start md:text-left md:pt-5 md:flex-1 md:max-w-none md:pb-12">
+                <div className="w-full flex flex-col justify-center items-center text-center mb-12 md:items-start p-2 md:mb-0 md:text-left md:pt-5 md:flex-1 md:max-w-none md:pb-12">
                     {language === "english" ? (
                         <span className="text-4xl font-semibold pb-3 md:text-[44px] md:pt-4 md:pb-5 md:pr-3">
                             Want to know more? <br/>
