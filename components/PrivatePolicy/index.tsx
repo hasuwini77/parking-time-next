@@ -33,7 +33,7 @@ const PrivatePolicy: React.FC = () => {
           <section>
             {language === "english" ? (
               <span className="flex justify-center flex-col m-2.5 p-2.5">
-                <b className="text-2xl">Private Policy</b>
+                <b className="text-2xl m-2.5">Private Policy</b>
                 <b className="m-2.5">
                   This policy applies to all websites of Parking Time Sweden AB.
                   The personal data policy applies to Parking Time in connection
@@ -509,7 +509,7 @@ const PrivatePolicy: React.FC = () => {
                 </p>
               </span>
             ) : (
-              <span className="flex justify-center flex-col m-2.5 p-2.5">
+              <span className="flex justify-center flex-col m-2.5 p-2.5">   
                 <b className="text-2xl m-2.5">Dina rättigheter</b>
                 <p className="m-2.5">
                   Enligt EU dataskyddslagstiftning har du vissa lagstadgade
@@ -600,35 +600,35 @@ const PrivatePolicy: React.FC = () => {
             )}
 
             {language === "english" ? (
-              <span className="flex justify-center flex-col m-2.5 p-2.5">
+              <span className="flex justify-center flex-col m-2.5 p-2.5 md:m-2.5">  
                 <b className="text-2xl m-2.5">
                   Purpose and legal basis for processing your personal data
                 </b>
-                <p className="m-2.5">
+                <p>
                   Purpose and Legal Basis for Processing Your Personal Data. The
                   processing of your personal data serves specific purposes,
                   grounded in legal bases as outlined below. Additionally, we
                   elucidate how your personal data is processed for marketing
                   purposes.
                 </p>
-                <b className="m-2.5">Purpose</b>
-                <b className="m-2.5">Legal Basis</b>
+                <b>Purpose</b>
+                <b>Legal Basis</b>
                 <br />
-                <b className="m-2.5">
+                <b>
                   Fulfillment of Orders for Services and Subscriptions
                 </b>
-                <li className="m-2.5">
+                <li>
                   Legal Basis: Performance of a contract of which you are a
                   party
                 </li>
                 <br />
-                <b className="m-2.5">Targeted Marketing</b>
+                <b>Targeted Marketing</b>
                 <li>Upon your consent, we send newsletters</li>
                 <li>Legal Basis</li>
                 <li>Consent provided by you for this type of processing</li>
                 <li>Balancing of interests</li>
                 <br />
-                <b className="m-2.5">Correspondence Regarding Inquiries</b>
+                <b>Correspondence Regarding Inquiries</b>
                 <li>
                   Handling queries directed to Parking Time via
                   matildaohman@parkingtime.se or to other responsible persons at
@@ -637,7 +637,7 @@ const PrivatePolicy: React.FC = () => {
                 </li>
                 <li>Legal Basis: Balancing of interests</li>
                 <br />
-                <b className="m-2.5">Investigation of Complaints</b>
+                <b>Investigation of Complaints</b>
                 <li>
                   Handling complaints received through email, telephone, or
                   other digital channels, including social media
@@ -646,7 +646,7 @@ const PrivatePolicy: React.FC = () => {
                 <li>Performance of a contract of which you are a party</li>
                 <li>Balancing of interests</li>
                 <br />
-                <b className="m-2.5">
+                <b>
                   Financial Management, Accounting, and Reporting
                 </b>
                 <li>
@@ -655,7 +655,7 @@ const PrivatePolicy: React.FC = () => {
                 </li>
                 <li>Legal Basis: Fulfillment of legal obligations</li>
                 <br />
-                <p className="m-2.5 md:pb-4">
+                <p>
                   For each purpose, a distinct legal basis is identified,
                   ensuring compliance with relevant legal requirements. These
                   purposes are clearly delineated to facilitate transparency and
@@ -665,7 +665,7 @@ const PrivatePolicy: React.FC = () => {
               </span>
             ) : (
               <span className="flex justify-center flex-col m-2.5 p-2.5">
-                <b className="text-2xl md:py-2">
+                <b className="text-2xl ">
                   Syfte och laglig grund för behandling av dina personuppgifter
                 </b>
                 <p>
