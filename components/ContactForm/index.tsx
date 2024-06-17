@@ -89,7 +89,7 @@ const ContactForm: FC = () => {
 
           {/* email & phone on the same line, min-width 1280px */}
           <div className="flex flex-col xl:flex-row gap-2">
-            <div className="flex-grow lg:w-8/12">
+            <div className="xl:w-8/12">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 {language === "english" ? "Email" : "E-post"} <span className='text-red text-bold text-md'>*</span>
               </label>
@@ -102,7 +102,7 @@ const ContactForm: FC = () => {
               />
               {errors.email && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
             </div>
-            <div className="flex-grow lg:w-4/12">
+            <div className="xl:w-4/12">
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                 {language === "english" ? "Phone number" : "Telefonnummer"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
               </label>
