@@ -3,6 +3,7 @@ import { Providers } from "./providers";
 import Header from "@/components/Header";
 import { LanguageProvider } from "../context/LanguageContext";
 import Footer from "@/components/Footer";
+import Popup from "@/components/Popup";
 import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <LanguageProvider>
             <div className="flex flex-col h-screen bg-background">
+            <Popup />
               <Header />
               <main className="pt-[64px] flex-grow">{children}</main>
               <Footer />
