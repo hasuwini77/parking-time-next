@@ -15,7 +15,7 @@ const ContactHero: React.FC = () => {
                 priority
                 className="z-0"
             />
-            <div className="w-full md:w-2/5 min-h-[50vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] p-5 pl-20 flex flex-col justify-center items-start text-white">
+            <div className="w-full md:w-2/5 min-h-[50vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] p-5 pl-28 flex flex-col justify-center items-start text-white">
                 <span className="list-disc text-xl list-inside pl-0 ml-0">
                     {language === "english" ? (
                         "Contact"

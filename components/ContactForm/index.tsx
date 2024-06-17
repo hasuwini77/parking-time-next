@@ -119,12 +119,12 @@ const ContactForm: FC = () => {
 
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "Reason for contact" : "Kontaktorsak"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
+              {language === "english" ? "Reason for contact" : "Orsak till kontakt"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
               type="text"
               id="reason"
-              placeholder={language === "english" ? "Reason for contact" : "Kontaktorsak"}
+              placeholder={language === "english" ? "Reason for contact" : "Orsak till kontakt"}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('reason', { required: false })}
             />
