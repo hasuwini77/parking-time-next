@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import Swal from 'sweetalert2'
 import { useLanguage } from "@/context/LanguageContext";
 import 'animate.css';
