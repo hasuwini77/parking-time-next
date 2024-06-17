@@ -4,7 +4,7 @@ import { useLanguage } from "@/context/LanguageContext"
 const ContactHero: React.FC = () => {
     const { language } = useLanguage();
     return (
-        <div className="w-full min-h-[60vh] relative bg-cover bg-[50%_50%] bg-[url('/images/contactHero.png')] flex justify-start items-start overflow-hidden">
+        <div className="hidden w-full min-h-[60vh] relative bg-cover bg-[50%_50%] bg-[url('/images/contactHero.png')] xl:flex overflow-hidden">
             <div className="w-full md:w-[44%] min-h-[60vh] lg:w-2/5 h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[2px] md:backdrop-blur-[10px] p-5 flex flex-col justify-center items-start text-white">
                 <span className="list-disc text-xl list-inside pl-0 ml-0">
                     {language === "english" ? (
@@ -21,7 +21,7 @@ const ContactHero: React.FC = () => {
                         </span>
                     ) : (
                         <span>
-                            Vi vill gärna <br />
+                            Vi ser fram emot att <br />
                             höra från dig!
                         </span>
                     )} 

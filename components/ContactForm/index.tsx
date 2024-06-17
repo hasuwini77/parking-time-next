@@ -44,11 +44,11 @@ const ContactForm: FC = () => {
         <ul className="list-none">
           <li className="mb-2 flex items-center">
             <FaEnvelope className="mr-2" />
-            <a href="mailto:info@parkingtime.se" className="text-blue-600 hover:underline">info@parkingtime.se</a>
+            <a href="mailto:info@parkingtime.se" className="underline">info@parkingtime.se</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaPhone className="mr-2" />
-            <a href="tel:+46723991515" className="text-blue-600 hover:underline">+46 72 399 15 15</a>
+            <a href="tel:+46723991515" className="text-blue-600 underline">+46 72 399 15 15</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaLocationDot className="mr-2" />
@@ -68,7 +68,7 @@ const ContactForm: FC = () => {
               type="text"
               id="name"
               placeholder={language === "english" ? "First and last name" : "För- och efternamn"}
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:ring-blue-500"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('name', { required: true })}
             />
             {errors.name && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
