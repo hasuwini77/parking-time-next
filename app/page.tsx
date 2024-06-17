@@ -9,6 +9,7 @@ import HomeWhyParking from "@/components/HomeWhyParking";
 import HomeDownload from "@/components/Home-Download";
 import OurNews from "@/components/OurNews";
 import HomeCustomer from "@/components/HomeCustomer";
+import NewsSubscribe from "@/components/NewsSubscribe";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <HomeWhyParking />      
       <HomeCustomer />
       <TrustedLogo />
-      <HomeStatistics />      
+      <HomeStatistics />
+      <NewsSubscribe />
       <OurNews />      
       <HomeKnow />
       <HomeDownload />
