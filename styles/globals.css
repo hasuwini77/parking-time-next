@@ -55,3 +55,19 @@ input[type='number'] {
   -moz-appearance: textfield; /* Hide the spin buttons in Firefox */
 }
 
+header.z-40 {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 1350px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar-ul-basis {
+flex-basis: auto !important;
+justify-content: center !important;
+}
+
+.left-25 {
+left: -18px !important;
+}
