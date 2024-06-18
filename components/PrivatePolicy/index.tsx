@@ -18,9 +18,9 @@ const PrivatePolicy: React.FC = () => {
           </span>
         ) : (
           <span>
-            <h1 className="text-4xl md:m-2.5 md:text-left md:ml-4">
+            <b className="text-4xl md:m-2.5 md:text-left md:ml-4">
               Integritetspolicy
-            </h1>
+            </b>
             <p className="text-grey1 md:m-2.5 md:text-left md:ml-4">
               Gäller från: 3 april 2023
             </p>
@@ -33,7 +33,7 @@ const PrivatePolicy: React.FC = () => {
           <section>
             {language === "english" ? (
               <span className="flex justify-center flex-col m-2.5 p-2.5">
-                <b className="text-2xl">Private Policy</b>
+                <b className="text-2xl m-2.5">Private Policy</b>
                 <b className="m-2.5">
                   This policy applies to all websites of Parking Time Sweden AB.
                   The personal data policy applies to Parking Time in connection
@@ -509,7 +509,7 @@ const PrivatePolicy: React.FC = () => {
                 </p>
               </span>
             ) : (
-              <span className="flex justify-center flex-col m-2.5 p-2.5">
+              <span className="flex justify-center flex-col m-2.5 p-2.5">   
                 <b className="text-2xl m-2.5">Dina rättigheter</b>
                 <p className="m-2.5">
                   Enligt EU dataskyddslagstiftning har du vissa lagstadgade
@@ -600,123 +600,123 @@ const PrivatePolicy: React.FC = () => {
             )}
 
             {language === "english" ? (
-              <span className="flex justify-center flex-col m-2.5 p-2.5">
+              <span className="flex justify-center flex-col m-2.5 p-2.5 md:m-2.5">  
                 <b className="text-2xl m-2.5">
                   Purpose and legal basis for processing your personal data
                 </b>
-                <p className="m-2.5">
+                <p className="ml-2.5">
                   Purpose and Legal Basis for Processing Your Personal Data. The
                   processing of your personal data serves specific purposes,
                   grounded in legal bases as outlined below. Additionally, we
                   elucidate how your personal data is processed for marketing
                   purposes.
                 </p>
-                <b className="m-2.5">Purpose</b>
-                <b className="m-2.5">Legal Basis</b>
+                <b className="ml-2.5">Purpose</b>
+                <b className="ml-2.5">Legal Basis</b>
                 <br />
-                <b className="m-2.5">
+                <b className="ml-2.5">
                   Fulfillment of Orders for Services and Subscriptions
                 </b>
-                <li className="m-2.5">
+                <li className="ml-2.5">
                   Legal Basis: Performance of a contract of which you are a
                   party
                 </li>
                 <br />
-                <b className="m-2.5">Targeted Marketing</b>
-                <li>Upon your consent, we send newsletters</li>
-                <li>Legal Basis</li>
-                <li>Consent provided by you for this type of processing</li>
-                <li>Balancing of interests</li>
+                <b className="ml-2.5">Targeted Marketing</b>
+                <li className="ml-2.5">Upon your consent, we send newsletters</li>
+                <li className="ml-2.5">Legal Basis</li>
+                <li className="ml-2.5">Consent provided by you for this type of processing</li>
+                <li className="ml-2.5">Balancing of interests</li>
                 <br />
-                <b className="m-2.5">Correspondence Regarding Inquiries</b>
-                <li>
+                <b className="ml-2.5">Correspondence Regarding Inquiries</b>
+                <li className="ml-2.5">
                   Handling queries directed to Parking Time via
                   matildaohman@parkingtime.se or to other responsible persons at
                   Parking Time, received through email, telephone, or digital
                   channels, including all social platforms
                 </li>
-                <li>Legal Basis: Balancing of interests</li>
+                <li className="ml-2.5">Legal Basis: Balancing of interests</li>
                 <br />
-                <b className="m-2.5">Investigation of Complaints</b>
-                <li>
+                <b className="ml-2.5">Investigation of Complaints</b>
+                <li className="ml-2.5">
                   Handling complaints received through email, telephone, or
                   other digital channels, including social media
                 </li>
-                <li>Legal Basis</li>
-                <li>Performance of a contract of which you are a party</li>
-                <li>Balancing of interests</li>
+                <li className="ml-2.5">Legal Basis</li>
+                <li className="ml-2.5">Performance of a contract of which you are a party</li>
+                <li className="ml-2.5">Balancing of interests</li>
                 <br />
-                <b className="m-2.5">
+                <b className="ml-2.5">
                   Financial Management, Accounting, and Reporting
                 </b>
-                <li>
+                <li className="ml-2.5">
                   Utilization of your transactions for our accounting and
                   reporting purposes
                 </li>
-                <li>Legal Basis: Fulfillment of legal obligations</li>
+                <li className="ml-2.5">Legal Basis: Fulfillment of legal obligations</li>
                 <br />
-                <p className="m-2.5 md:pb-4">
+                <p className="ml-2.5">
                   For each purpose, a distinct legal basis is identified,
                   ensuring compliance with relevant legal requirements. These
                   purposes are clearly delineated to facilitate transparency and
                   accountability in the processing of personal data by Parking
-                  Time Sweden AB
+                  Time Sweden AB.
                 </p>
               </span>
             ) : (
               <span className="flex justify-center flex-col m-2.5 p-2.5">
-                <b className="text-2xl md:py-2">
+                <b className="text-2xl ml-2.5">
                   Syfte och laglig grund för behandling av dina personuppgifter
                 </b>
-                <p>
+                <p className="ml-2.5">
                   Syfte och laglig grund för behandling av dina personuppgifter.
                   Behandlingen av dina personuppgifter tjänar specifika ändamål,
                   förankrade i lagliga grunder som beskrivs nedan. Dessutom
                   förklarar vi hur dina personuppgifter behandlas för
                   marknadsföringsändamål.
                 </p>
-                <b>Ändamål</b>
-                <b>Laglig grund</b>
+                <b className="ml-2.5">Ändamål</b>
+                <b className="ml-2.5">Laglig grund</b>
                 <br />
-                <b>
+                <b className="ml-2.5">
                   Uppfyllande av beställningar för tjänster och prenumerationer
                 </b>
-                <li>
+                <li className="ml-2.5">
                   Laglig grund: Uppfyllelse av ett avtal där du är en part
                 </li>
                 <br />
-                <b>Riktad marknadsföring</b>
-                <li>Vid ditt samtycke skickar vi nyhetsbrev</li>
-                <li>Rättslig grund</li>
-                <li>Samtycke som du har lämnat för denna typ av behandling</li>
-                <li>Avvägning av intressen</li>
+                <b className="ml-2.5">Riktad marknadsföring</b>
+                <li className="ml-2.5">Vid ditt samtycke skickar vi nyhetsbrev</li>
+                <li className="ml-2.5">Rättslig grund</li>
+                <li className="ml-2.5">Samtycke som du har lämnat för denna typ av behandling</li>
+                <li className="ml-2.5">Avvägning av intressen</li>
                 <br />
                 <b>Korrespondens angående förfrågningar</b>
-                <li>
+                <li className="ml-2.5">
                   Hantering av förfrågningar riktade till Parking Time via
                   matildaohman@parkingtime.se eller till andra ansvariga
                   personer på Parking Time, mottagna via e-post, telefon eller
                   digitala kanaler, inklusive alla sociala plattformar
                 </li>
-                <li>Rättslig grund: Avvägning av intressen</li>
+                <li className="ml-2.5">Rättslig grund: Avvägning av intressen</li>
                 <br />
-                <b>Utredning av klagomål</b>
-                <li>
+                <b className="ml-2.5">Utredning av klagomål</b>
+                <li className="ml-2.5">
                   Hantering av klagomål mottagna via e-post, telefon eller andra
                   digitala kanaler, inklusive sociala medier
                 </li>
-                <li>Rättslig grund</li>
-                <li>Uppfyllelse av ett avtal där du är en part</li>
-                <li>Avvägning av intressen</li>
+                <li className="ml-2.5">Rättslig grund</li>
+                <li className="ml-2.5">Uppfyllelse av ett avtal där du är en part</li>
+                <li className="ml-2.5">Avvägning av intressen</li>
                 <br />
-                <b>Finansiell förvaltning, redovisning och rapportering</b>
-                <li>
+                <b className="ml-2.5">Finansiell förvaltning, redovisning och rapportering</b>
+                <li className="ml-2.5">
                   Användning av dina transaktioner för våra redovisnings- och
                   rapporteringsändamål
                 </li>
-                <li>Rättslig grund: Uppfyllelse av lagliga förpliktelser</li>
+                <li className="ml-2.5">Rättslig grund: Uppfyllelse av lagliga förpliktelser</li>
                 <br />
-                <p>
+                <p className="ml-2.5">
                   För varje ändamål identifieras en tydlig rättslig grund,
                   vilket säkerställer efterlevnad av relevanta lagkrav. Dessa
                   ändamål är tydligt avgränsade för att underlätta transparens
