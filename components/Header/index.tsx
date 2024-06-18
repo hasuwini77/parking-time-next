@@ -210,27 +210,26 @@ const Header: React.FC = () => {
       </AnimatePresence>
 
       {/* Desktop Header */}
-      <div className="hidden md:block w-full bg-primary">
+      <div className="hidden md:block w-full bg-primary ">
         <div className="w-full md:px-0">
           <Navbar
             isBordered
-            className="bg-primary w-full flex justify-center items-center"
+            className="bg-primary w-full"
           >
-            <div className="w-full flex justify-between items-center">
-              <NavbarBrand>
+            <div className="w-full flex justify-between items-center ">
+              <NavbarBrand className="grow-0">
                 <Link href="/" className="cursor-pointer">
                   <Image
                     src="/images/logo-1.png"
                     alt="logo"
                     width={60}
                     height={60}
-                    className="min-w-[60px] min-h-[60px]"
+                    className="min-w-[60px] min-h-[60px] "
                   />
                 </Link>
               </NavbarBrand>
-              <div className="flex flex-row items-center justify-end">
-                <NavbarContent className="gap-4">
-                  <NavbarItem className="transition-colors duration-500">
+                <NavbarContent className="flex flex-row justify-between items-center gap-0 navbar-ul-basis">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
                     <Link
                       href="/#whyparking"
                       aria-current="page"
@@ -257,7 +256,7 @@ const Header: React.FC = () => {
                       </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem className="transition-colors duration-500">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
                     <Link
                       style={{
                         transition: "color 0.5s ease-out",
@@ -280,7 +279,7 @@ const Header: React.FC = () => {
                       </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem className="transition-colors duration-500">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
                     <Link
                       style={{
                         transition: "color 0.5s ease-out",
@@ -303,7 +302,7 @@ const Header: React.FC = () => {
                       </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem className="transition-colors duration-500">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
                     <Link
                       style={{
                         transition: "color 0.5s ease-out",
@@ -327,7 +326,7 @@ const Header: React.FC = () => {
                       </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem className="transition-colors duration-500">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
                     <Link
                       style={{
                         transition: "color 0.5s ease-out",
@@ -350,7 +349,7 @@ const Header: React.FC = () => {
                       </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem className=" transform transition-transform duration-500 hover:scale-105">
+                  <NavbarItem className=" transform transition-transform duration-500 px-[12px] hover:scale-105 ">
                     <Button
                       as={Link}
                       href="/contact"
@@ -361,10 +360,9 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <Languages />
                   </NavbarItem>
                 </NavbarContent>
-              </div>
+              <Languages />
             </div>
           </Navbar>
         </div>
