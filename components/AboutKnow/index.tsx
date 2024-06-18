@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import DownloadButton from '../DownloadButton';
+import ContactButton from '../ContactButton';
 
 const AboutKnow: React.FC = () => {
     const { language } = useLanguage();
@@ -25,7 +25,7 @@ const AboutKnow: React.FC = () => {
                 </p>
             </div>
             <div className="p-3 pb-8 w-full sm:max-w-[460px]">
-                <DownloadButton 
+                <ContactButton 
                 linkHref="/contact" 
                 SWtext="Kontakta oss" 
                 ENtext="Contact us"

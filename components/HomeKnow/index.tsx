@@ -3,13 +3,13 @@ import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import matilda from "../../public/images/matilda.png";
-import ContactButton from "../ContactButton";
+import DownloadButton from "../DownloadButton";
 
 const HomeKnow: React.FC = () => {
     const { language } = useLanguage();
 
     return (
-        <div className="bg-primary flex flex-col items-center justify-center text text-white md:flex-row">
+        <div className="bg-gray2 flex flex-col items-center justify-center text text-darkblue1 md:flex-row">
             <div className="mt-12 w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-2 text-center md:flex-1 md:max-w-none md:pt-6 md:pb-12">
                 <div className="max-w-full h-auto mb-2">
                     <Image src={matilda} alt="A image of Matilda CEO" />
@@ -46,7 +46,7 @@ const HomeKnow: React.FC = () => {
                     </span>
                 )}
                     <span className="w-full sm:max-w-[460px] text-center pt-3 md:text-left">
-                        <ContactButton 
+                        <DownloadButton 
                         linkHref="/contact" 
                         SWtext="Kontakta oss" 
                         ENtext="Contact us"

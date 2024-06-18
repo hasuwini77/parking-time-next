@@ -13,7 +13,7 @@ const ContactButton: React.FC<ContactProps> = ({ linkHref, SWtext, ENtext }) => 
 
   return (
     <motion.button
-      className="rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 bg-white text-black mb-2 md:mb-0 md:me-3 custom-hover-home-hero-contact-us-button "
+      className="rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 bg-black text-white mb-2 md:mb-0 md:me-3 custom-hover-home-hero-contact-us-button "
       variants={{
         hidden: { opacity: 0, scale: 0.5 },
         visible: {

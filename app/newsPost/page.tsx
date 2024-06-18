@@ -6,8 +6,8 @@ const myPost = () => {
   return (
     <div>
       <NewsHero />
-      <NewsSubscribe />
       <OurNews />
+      <NewsSubscribe />
     </div>
   );
 };

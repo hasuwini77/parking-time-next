@@ -23,7 +23,7 @@ module.exports = {
         mono: ["Roboto", "monospace"],
       },
       colors: {
-        primary: "#06433E",
+        primary: "#F9F9F9",
         secondary: "#0B051D",
         red: "#F85252",
         background: "#ECF2F1",
@@ -34,6 +34,12 @@ module.exports = {
         grey1: "#868686",
         lightgreyborder: "#E8E8E8",
         grey2: "#F0F0F0",
+
+        white: "#FFFFFF",
+        green3: "#50AA5F",
+        gray2: "#F9F9F9",
+
+
       },
       spacing: {
         1: "8px",
@@ -58,7 +64,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/temp.png')",
+        "home-hero": "url('/images/hero2.webp')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import DownloadButton from '../DownloadButton';
+import ContactButton from '../ContactButton';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
 import visionImg from '../../public/images/vision.png';
@@ -53,7 +53,7 @@ const AboutVision: React.FC = () => {
                 <p className="text-base pt-2 font-mono">{usedData?.text2}</p>
 
                 <span className="text-center p-3 py-6 md:p-0 md:py-4 md:text-left">
-                    <DownloadButton 
+                    <ContactButton
                     linkHref="/contact" 
                     SWtext="Boka ett möte" 
                     ENtext="Book a meeting"

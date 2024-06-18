@@ -49,7 +49,7 @@ const HomeCustomer: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center my-8">
       <div>
-        <h2 className="text-4xl font-bold mx-3">
+        <h2 className="font-bold text-4xl md:text-heading2 mb-3">
           {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
         </h2>
         <p className="font-mono text-base pt-3 mx-3">

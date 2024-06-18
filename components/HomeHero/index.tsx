@@ -10,7 +10,7 @@ const HomeHero: React.FC = () => {
 
   return (
     <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7">
+      <div className="w-full md:w-[50%] min-h-[20vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] justify-center absolute h-full text-[white] flex-grow flex flex-col items-start short:top-[0] short:pt-2  md:items-start p-3 md:p-7">
         <motion.h1
           className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
@@ -26,11 +26,11 @@ const HomeHero: React.FC = () => {
         >
           {language === "english" ? (
             <span>
-              What time is it? <br /> Parking time!
+              We are <br/> Parking Time<br /> Sweden
             </span>
           ) : (
             <span>
-              Vad är klockan? <br /> Parkeringstid!
+              Vi är <br /> Parking Time<br /> Sverige
             </span>
           )}
         </motion.h1>
@@ -70,11 +70,11 @@ const HomeHero: React.FC = () => {
           />
         </div>
       </div>
-      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
-        <ul className="flex flex-col md:flex-row gap-2 list-disc">
+      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-gray2">
+        <ul className="flex flex-col md:flex-row gap-2">
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-white text-start"
+              className="text-green3 text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -89,7 +89,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Easy to use" : "Lätt att använda"}
             </motion.li>
             <motion.li
-              className="text-white text-start"
+              className="text-green3 text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -106,7 +106,7 @@ const HomeHero: React.FC = () => {
           </div>
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-white text-start"
+              className="text-green3 text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -121,7 +121,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Free to download" : "Gratis att ladda ner"}
             </motion.li>
             <motion.li
-              className="text-white text-start"
+              className="text-green3 text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {

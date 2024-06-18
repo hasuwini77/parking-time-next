@@ -54,7 +54,7 @@ const HomeHowWorks = () => {
 
   return (
     <div className="w-full py-32 md:py-44 px-4 md:px-20 flex flex-col justify-between items-center">
-      <h2 className="mb-8 text-4xl">{content.heading}</h2>
+      <h2 className="font-bold text-4xl md:text-heading2 mb-6">{content.heading}</h2>
       <div className="flex flex-col flex-wrap justify-center md:justify-between items-center middleWidth:flex-row">
         <CardHowWorks
           title={content.card1.title}
@@ -83,13 +83,6 @@ const HomeHowWorks = () => {
           icon={content.card3.icon}
         />
       </div>
-      <span className="mt-8 w-full text-center">
-        <DownloadButton
-          linkHref="https://play.google.com/store/games"
-          SWtext={textContent.swedish.downloadButton}
-          ENtext={textContent.english.downloadButton}
-        />
-      </span>
     </div>
   );
 };

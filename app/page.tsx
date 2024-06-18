@@ -21,10 +21,10 @@ export default function Home() {
       <HomeCustomer />
       <TrustedLogo />
       <HomeStatistics />
-      <NewsSubscribe />
-      <OurNews />      
-      <HomeKnow />
       <HomeDownload />
+      <OurNews />
+      <NewsSubscribe />      
+      <HomeKnow />
       <Faq />      
     </section>
   );

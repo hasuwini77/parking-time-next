@@ -65,10 +65,10 @@ const HomeWhyParking: React.FC = () => {
 
   return (
     <section
-      className="px-3 py-8 text-white bg-[#06433E] flex flex-col items-center "
+      className="px-3 py-8 text-darkblue1 bg-gray2 flex flex-col items-center "
       id="whyparking"
     >
-      <h1 className="text-3xl mb-6">{usedData?.mainTitle}</h1>
+      <h1 className="font-bold text-4xl md:text-heading2 mb-7">{usedData?.mainTitle}</h1>
       <div className="flex md:flex-row flex-col items-center justify-center mb-4">
         <div className="mb-4 sm:mb-0 min-h-[580px] md:min-h-[640px]">
           <div className="mb-4 betweenS:min-h-[300px] betweenS:mb-3 sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start ">
