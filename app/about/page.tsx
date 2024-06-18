@@ -14,9 +14,6 @@ export default function AboutPage() {
       <Quotes />
       <AboutTeam />
       <AboutKnow />
-      <Quotes />
-      <AboutKnow />
-      <AboutTeam />
     </div>
   );
 }
