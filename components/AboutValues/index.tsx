@@ -12,7 +12,6 @@ const Values: React.FC = () => {
     return (
         <>
         <section className="flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center"> 
-
                 {language === "english" ? ( 
                 <span className="flex justify-center text-center flex-col mt-8">
                     <b className="text-4xl m-2.5">Our Values</b>
@@ -24,7 +23,6 @@ const Values: React.FC = () => {
                     <p>De saker vi tror på</p>
                 </span>
                 )}    
-
             <div className="flex w-2/4 justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center"> 
 
                     <div className="justify-center items-center md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
@@ -42,7 +40,6 @@ const Values: React.FC = () => {
                     </span>
                 )}                
                     </div> 
-
                     <div className="md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
                     <Image className="md:w-4/5" src={Light} alt="light" />
                     {language === "english" ? (                    
@@ -57,7 +54,6 @@ const Values: React.FC = () => {
                     </span>
                 )}                    
                     </div>
-
                     <div className="md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
                     <Image className="md:w-4/5" src={Check} alt="check" />
                     {language === "english" ? (                    
@@ -72,8 +68,6 @@ const Values: React.FC = () => {
                     </span>
                 )}
                 </div>
-
-
                 </div>
         </section>
         </>
