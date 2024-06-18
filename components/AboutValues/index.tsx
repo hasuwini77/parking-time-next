@@ -26,7 +26,7 @@ const Values: React.FC = () => {
             <div className="flex w-2/4 justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center"> 
 
                     <div className="justify-center items-center md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
-                    <Image className="md:w-4/5" src={Box} alt="Box" /> 
+                    <Image className="md:w-4/5" src={Box} alt="Box" rel="noreferrer"/> 
                     {language === "english" ? (                    
                     <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10">
                         
@@ -41,7 +41,7 @@ const Values: React.FC = () => {
                 )}                
                     </div> 
                     <div className="md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
-                    <Image className="md:w-4/5" src={Light} alt="light" />
+                    <Image className="md:w-4/5" src={Light} alt="light" rel="noreferrer"/>
                     {language === "english" ? (                    
                     <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10">                        
                         <b className="text-xl">Innovation</b>
@@ -55,11 +55,11 @@ const Values: React.FC = () => {
                 )}                    
                     </div>
                     <div className="md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
-                    <Image className="md:w-4/5" src={Check} alt="check" />
+                    <Image className="md:w-4/5" src={Check} alt="check" rel="noreferrer"/>
                     {language === "english" ? (                    
                     <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10">                        
                         <b className="text-xl">User friendly</b>
-                        <p className="md:max-w-[200px]">It's crucial that our service meets users' needs and enhances their parking experience.</p>
+                        <p className="md:max-w-[200px]">It's crucial that our service meets users needs and enhances their parking experience.</p>
                     </span>
                 ) : (
                     <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10"> 
