@@ -44,11 +44,11 @@ const ContactForm: FC = () => {
         <ul className="list-none">
           <li className="mb-2 flex items-center">
             <FaEnvelope className="mr-2" />
-            <a href="mailto:info@parkingtime.se" className="text-blue-600 hover:underline">info@parkingtime.se</a>
+            <a href="mailto:info@parkingtime.se" className="underline">info@parkingtime.se</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaPhone className="mr-2" />
-            <a href="tel:+46723991515" className="text-blue-600 hover:underline">+46 72 399 15 15</a>
+            <a href="tel:+46723991515" className="text-blue-600 underline">+46 72 399 15 15</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaLocationDot className="mr-2" />
@@ -68,7 +68,7 @@ const ContactForm: FC = () => {
               type="text"
               id="name"
               placeholder={language === "english" ? "First and last name" : "För- och efternamn"}
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px] shadow-sm focus:ring-blue-500"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('name', { required: true })}
             />
             {errors.name && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
@@ -89,7 +89,7 @@ const ContactForm: FC = () => {
 
           {/* email & phone on the same line, min-width 1280px */}
           <div className="flex flex-col xl:flex-row gap-2">
-            <div className="flex-grow lg:w-8/12">
+            <div className="xl:w-8/12">
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 {language === "english" ? "Email" : "E-post"} <span className='text-red text-bold text-md'>*</span>
               </label>
@@ -102,7 +102,7 @@ const ContactForm: FC = () => {
               />
               {errors.email && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
             </div>
-            <div className="flex-grow lg:w-4/12">
+            <div className="xl:w-4/12">
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                 {language === "english" ? "Phone number" : "Telefonnummer"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
               </label>
@@ -119,12 +119,12 @@ const ContactForm: FC = () => {
 
           <div>
             <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "Reason for contact" : "Kontaktorsak"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
+              {language === "english" ? "Reason for contact" : "Orsak till kontakt"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
               type="text"
               id="reason"
-              placeholder={language === "english" ? "Reason for contact" : "Kontaktorsak"}
+              placeholder={language === "english" ? "Reason for contact" : "Orsak till kontakt"}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('reason', { required: false })}
             />
