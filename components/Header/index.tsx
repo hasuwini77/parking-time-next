@@ -200,7 +200,6 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    {/* <MyFlags /> */}
                     <Languages />
                   </NavbarItem>
                 </NavbarContent>
@@ -362,7 +361,6 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    {/* <MyFlags /> */}
                     <Languages />
                   </NavbarItem>
                 </NavbarContent>
