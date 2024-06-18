@@ -55,3 +55,7 @@ input[type='number'] {
   -moz-appearance: textfield; /* Hide the spin buttons in Firefox */
 }
 
+
+.left-25 {
+  left: -18px !important;
+  }
