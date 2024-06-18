@@ -20,6 +20,12 @@ const languages = [
     shortName: "SV",
     longName: "swedish",
     avatar: swedishAvatar
+  },
+  {
+    id: 2,
+    shortName: "TR",
+    longName: "Turkhis",
+    avatar: swedishAvatar
   }
 ];
 

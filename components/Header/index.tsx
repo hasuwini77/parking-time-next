@@ -211,13 +211,13 @@ const Header: React.FC = () => {
       </AnimatePresence>
 
       {/* Desktop Header */}
-      <div className="hidden md:block w-full bg-primary">
+      <div className="hidden md:block w-full bg-primary ">
         <div className="w-full md:px-0">
           <Navbar
             isBordered
             className="bg-primary w-full"
           >
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex justify-between items-center ">
               <NavbarBrand className="grow-0">
                 <Link href="/" className="cursor-pointer">
                   <Image
