@@ -20,11 +20,11 @@ export default function Home() {
       <HomeWhyParking />      
       <HomeCustomer />
       <TrustedLogo />
-      <HomeStatistics />
-      <NewsSubscribe />
-      <OurNews />      
-      <HomeKnow />
       <HomeDownload />
+      <HomeStatistics />
+      <OurNews />
+      <NewsSubscribe />      
+      <HomeKnow />
       <Faq />      
     </section>
   );
