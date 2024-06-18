@@ -13,6 +13,7 @@ import MyFlags from "./Flags";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Languages from "./Languages";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
@@ -199,7 +200,7 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <MyFlags />
+                    <Languages />
                   </NavbarItem>
                 </NavbarContent>
               </Navbar>
@@ -360,7 +361,7 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <MyFlags />
+                    <Languages />
                   </NavbarItem>
                 </NavbarContent>
               </div>
