@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Link from "next/link";
 import { Image } from "@nextui-org/image";
+import styles from "./loading.module.css"
 
 interface NewsPost {
   id: string;
@@ -57,8 +58,11 @@ const OurNews: React.FC = () => {
     fetchData();
   }, []);
 
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className={styles.Ring}>Loading
+    <span className={styles.Span}></span>
+  </div>;
   }
 
   if (error) {

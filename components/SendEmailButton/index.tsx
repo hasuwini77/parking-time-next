@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import Link from "next/link";
 
-interface DownloadProps {
-  linkHref: string;
+interface SendEmailButtonProps {
   SWtext: string;
   ENtext: string;
-}
+} 
 
-const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) => {
+const SendEmailButton: React.FC<SendEmailButtonProps> = ({ SWtext, ENtext }) => {
   const { language } = useLanguage();
 
   return (
     <motion.button
-      className="rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 bg-black text-white custom-hover-home-hero-download-button"
+      type="submit"
+      className="rounded-3xl md:w-48 w-full px-3 py-2 md:py-2 bg-black text-white custom-hover-home-hero-download-button"
       variants={{
         hidden: { opacity: 0, scale: 0.5 },
         visible: {
@@ -25,25 +24,9 @@ const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) =
       initial="hidden"
       animate="visible"
     >
-      {language === "english" ? (
-        <Link href={linkHref}>{ENtext}</Link>
-      ) : (
-        <Link href={linkHref}>{SWtext}</Link>
-      )}
+      {language === "english" ? ENtext : SWtext}
     </motion.button>
   );
 };
 
-export default DownloadButton;
-
-
-
-
-
-
-
-
-
-
-
-
+export default SendEmailButton;
