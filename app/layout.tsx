@@ -23,9 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <LanguageProvider>
             <div className="flex flex-col h-screen bg-background">
-            <Popup />
               <Header />
-              <main className="pt-[64px] flex-grow">{children}</main>
+              <main className="pt-[64px] flex-grow relative">{children}</main>
               <Footer />
               <Toaster />
             </div>
