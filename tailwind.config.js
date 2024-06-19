@@ -23,7 +23,7 @@ module.exports = {
         mono: ["Roboto", "monospace"],
       },
       colors: {
-        primary: "#F9F9F9",
+        primary: "#06433E",
         secondary: "#0B051D",
         red: "#F85252",
         background: "#ECF2F1",
@@ -64,7 +64,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/hero2.webp')",
+        "home-hero": "url('/images/babyHero.png')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",

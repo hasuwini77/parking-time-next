@@ -2,8 +2,8 @@
 import React from "react";
 import CardHowWorks from "../CardHowWorks";
 import { FaAngleRight } from "react-icons/fa6";
-import DownloadButton from "../DownloadButton";
 import { useLanguage } from "@/context/LanguageContext";
+import ContactButton from "../ContactButton";
 
 const HomeHowWorks = () => {
   const { language } = useLanguage();
@@ -83,6 +83,14 @@ const HomeHowWorks = () => {
           icon={content.card3.icon}
         />
       </div>
+      <div className="pt-5"> 
+        <ContactButton
+            linkHref="https://play.google.com/store/games"
+            SWtext="Ladda ner app"
+            ENtext="Download app"
+          />
+      </div>
+
     </div>
   );
 };

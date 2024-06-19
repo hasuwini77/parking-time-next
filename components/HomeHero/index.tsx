@@ -9,8 +9,8 @@ const HomeHero: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="w-full md:w-[50%] min-h-[20vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] justify-center absolute h-full text-[white] flex-grow flex flex-col items-start short:top-[0] short:pt-2  md:items-start p-3 md:p-7">
+    <div className="relative w-full bg-cover bg-home-hero custom-height-home-hero">
+      <div className="w-full md:w-[43%] min-h-[20vh] bg-[rgba(0,0,0,0.63)] justify-center absolute h-full text-[white] flex-grow flex flex-col items-start short:top-[0] short:pt-2  md:items-start p-3 md:p-7">
         <motion.h1
           className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
@@ -35,7 +35,7 @@ const HomeHero: React.FC = () => {
           )}
         </motion.h1>
         <motion.p
-          className="text-lg md:text-2xl font-mono mt-1 short:hidden"
+          className="text-lg md:text-2xl font-lato mt-1 short:hidden"
           variants={{
             hidden: { opacity: 0, x: "-80px" },
             visible: {
@@ -101,7 +101,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {language === "english" ? "Convenience" : "Bekvämlighet"}
+              {language === "english" ? "Free to download" : "Gratis att ladda ner"}
             </motion.li>
           </div>
           <div className="flex justify-around basis-1/2">
@@ -118,7 +118,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {language === "english" ? "Free to download" : "Gratis att ladda ner"}
+              {language === "english" ? "Avoid fines" : "Undvik böter"}
             </motion.li>
             <motion.li
               className="text-green3 text-start"
@@ -133,7 +133,7 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {language === "english" ? "Increased Revenue" : "Ökad intäkt"}
+              {language === "english" ? "Reduce stress" : "Minska stress"}
             </motion.li>
           </div>
         </ul>
