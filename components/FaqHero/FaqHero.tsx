@@ -11,7 +11,7 @@ const FaqHero: React.FC = () => {
   return (
     <section className="w-full h-[50vh] short:h-[60vh] relative bg-cover bg-[50%_50%] bg-[url('/images/faqHero.png')] flex justify-start items-start overflow-hidden mb-[-40px]" >
         <div className="w-full sm:w-[45%] md:w-[40%] lg:w-[32%] h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[4px] md:backdrop-blur-[10px] p-5 flex flex-col justify-center items-start text-white z-20" >
-            <p className="text-white text-base w-[200px] flex items-center mb-2"><GoDotFill className="me-2 text-xl text-red"/>{language === "english" ? "FAQ" : "Vanliga frågor"}</p>
+            <p className="text-white text-base w-[200px] flex items-center mb-2">{language === "english" ? "FAQ" : "Vanliga frågor"}</p>
             <h2 className="text-white text-4xl w-[300px]">{language === "english" ? "No questions left unanswered" : "Inga frågor lämnas obesvarade"} </h2>
         </div>
         <Image src={faqHeroGirl} alt="faq hero girl" width={400} height={400} style={{ width: "auto", height: "auto" }} className="absolute bottom-0 right-2"/>

@@ -7,7 +7,6 @@ const AboutHero: React.FC = () => {
         <div className="w-full min-h-[50vh] relative bg-cover bg-[50%_50%] bg-[url('/images/abouthero.png')] flex justify-start items-start overflow-hidden">
             <div className="w-full md:w-2/5 min-h-[50vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] p-5 flex flex-col justify-center items-start text-white">
                 <span className="list-disc text-xl list-inside pl-0 ml-0">
-                    <span className="text-red text-[27px]">&bull;&nbsp;</span>
                     {language === "english" ? (
                         "About us"
                     ) : (
