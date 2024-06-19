@@ -18,11 +18,11 @@ const HomeDownload: React.FC = () => {
             </div>
             <div className="w-4/5 md:w-3/6">
                 {language === "english" ? (                    
-                    <span className="text-4xl w-full flex justify-center font-mono text-center md:w-4/5 md:justify-center md:text-heading2">
+                    <span className="text-4xl font-bold w-full flex justify-center text-center md:w-4/5 md:justify-center md:text-heading2">
                         Download now
                     </span>
                 ) : (
-                    <span className="text-4xl w-full flex justify-center font-mono text-center md:w-4/5 md:justify-center md:text-heading2"> 
+                    <span className="text-4xl font-bold w-full flex justify-center text-center md:w-4/5 md:justify-center md:text-heading2"> 
                         Ladda Ner Nu!
                     </span>
                 )}
