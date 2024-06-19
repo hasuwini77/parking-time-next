@@ -10,7 +10,7 @@ const HomeHero: React.FC = () => {
 
   return (
     <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="w-full md:w-[50%] min-h-[20vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[10px] md:backdrop-blur-[10px] justify-center absolute h-full text-[white] flex-grow flex flex-col items-start short:top-[0] short:pt-2  md:items-start p-3 md:p-7">
+      <div className="w-full md:w-[50%] min-h-[20vh] bg-[rgba(0,0,0,0.2)] backdrop-blur-[1px] md:backdrop-blur-[2px] justify-center absolute h-full text-[white] flex-grow flex flex-col items-start short:top-[0] short:pt-2  md:items-start p-3 md:p-7">
         <motion.h1
           className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
