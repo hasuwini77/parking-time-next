@@ -27,6 +27,9 @@ const OurNews: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+            // 3 saniyelik gecikme eklemek için setTimeout kullanın
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      
         const posts = await fetchNewsPosts();
         const formattedPosts = posts.map((post: any) => ({
           id: post.sys.id,
