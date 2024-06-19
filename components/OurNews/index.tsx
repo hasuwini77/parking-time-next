@@ -28,7 +28,7 @@ const OurNews: React.FC = () => {
     const fetchData = async () => {
       try {
             // 3 saniyelik gecikme eklemek için setTimeout kullanın
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
         const posts = await fetchNewsPosts();
         const formattedPosts = posts.map((post: any) => ({
@@ -64,8 +64,9 @@ const OurNews: React.FC = () => {
 
   if (loading) {
     return <div className={styles.Ring}>Loading
-    <span className={styles.Span}></span>
-  </div>;
+      <span className={styles.Span}></span>
+    </div>
+  ;
   }
 
   if (error) {

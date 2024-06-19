@@ -60,9 +60,12 @@ const Header: React.FC = () => {
     };
   }, [isMobileMenuOpen]);
 
+
+
   useEffect(() => {
     setActiveLink("/");
   }, []);
+
 
   return (
     <div className="mx-0 fixed w-full top-0 z-[9999]">
