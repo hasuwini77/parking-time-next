@@ -83,14 +83,6 @@ const HomeHowWorks = () => {
           icon={content.card3.icon}
         />
       </div>
-      <div className="pt-5"> 
-        <ContactButton
-            linkHref="https://play.google.com/store/games"
-            SWtext="Ladda ner app"
-            ENtext="Download app"
-          />
-      </div>
-
     </div>
   );
 };

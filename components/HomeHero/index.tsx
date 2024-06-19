@@ -74,7 +74,7 @@ const HomeHero: React.FC = () => {
         <ul className="flex flex-col md:flex-row gap-2">
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-green3 text-start"
+              className="text-#06433E text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -89,7 +89,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Easy to use" : "Lätt att använda"}
             </motion.li>
             <motion.li
-              className="text-green3 text-start"
+              className="text-#06433E text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -106,7 +106,7 @@ const HomeHero: React.FC = () => {
           </div>
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-green3 text-start"
+              className="text-#06433E text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -121,7 +121,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Avoid fines" : "Undvik böter"}
             </motion.li>
             <motion.li
-              className="text-green3 text-start"
+              className="text-#06433E text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
