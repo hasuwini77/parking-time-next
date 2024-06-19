@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import DownloadButton from "../DownloadButton";
-import ContactButton from "../ContactButton";
+import WhiteButton from "../WhiteButton";
 
 const HomeHero: React.FC = () => {
   const { language } = useLanguage();
@@ -62,7 +62,7 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ContactButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
+          <WhiteButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
           <DownloadButton
             linkHref="https://play.google.com/store/games"
             SWtext="Ladda ner app"
