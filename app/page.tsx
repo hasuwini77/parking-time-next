@@ -13,7 +13,7 @@ import NewsSubscribe from "@/components/NewsSubscribe";
 
 export default function Home() {
   return (
-    <section className="">
+    <section className="relative">
       <HomeHero />
       <SmartParking />
       <HomeHowWorks />
