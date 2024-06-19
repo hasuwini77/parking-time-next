@@ -32,7 +32,7 @@ const NewsSubscribe = () => {
   }
 
   return (
-    <div className="flex-col flex w-full items-center justify-between py-4 px-2 text-center">
+    <div className="flex-col flex w-full items-center justify-between py-4 px-2 text-center mb-7">
         <p className="text-base">{language === "english" ? "Newsletter" : "Nyhetsbrev"}</p>
         <h2 className="text-heading2 my-4 text-bold">{language === "english" ? "Don't Miss" : "Missar inte"}</h2>
         <p className="text-base">{language === "english" ? "We are expanding rapidly, keep yourself updated via newsletter" : "Vi expanderar snabbt, håll dig uppdaterad via nyhetsbrevet"}</p>
