@@ -102,9 +102,9 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
       </div>
       <p className="p-3 font-sans text-lg">{post.fields.paragraph1}</p>
       <Link href="/newsPost" passHref>
-        <Button className="h-12 px-5 ml-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:from-secondary hover:to-primary transition duration-300">
+        <span className="h-12 px-5 py-[12px] ml-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:from-secondary hover:to-primary transition duration-300">
           See all news
-        </Button>
+        </span>
       </Link>
     </div>
   );
