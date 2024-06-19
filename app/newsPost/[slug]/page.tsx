@@ -5,6 +5,8 @@ import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
+import styles from "../../../components/OurNews/loading.module.css"
+
 
 const fetchNewsPost = async (slug: string) => {
   try {
@@ -49,7 +51,9 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   }, [params.slug]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className={styles.Ring}>Loading
+    <span className={styles.Span}></span>
+  </div>;
   }
 
   if (error) {
