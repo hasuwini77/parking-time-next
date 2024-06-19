@@ -36,8 +36,9 @@ module.exports = {
         grey2: "#F0F0F0",
 
         white: "#FFFFFF",
-        green3: "#50AA5F",
+        green3: "#2E8B57",
         gray2: "#F9F9F9",
+        green4: "#06433E",
 
 
       },
@@ -64,7 +65,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/hero2.webp')",
+        "home-hero": "url('/images/hero3.jpg')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",
