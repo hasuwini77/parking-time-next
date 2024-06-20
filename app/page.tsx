@@ -20,8 +20,8 @@ export default function Home() {
       <HomeWhyParking />      
       <HomeCustomer />
       <TrustedLogo />
-      <HomeDownload />
       <HomeStatistics />
+      <HomeDownload />
       <OurNews />
       <NewsSubscribe />      
       <HomeKnow />
