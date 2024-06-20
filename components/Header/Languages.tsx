@@ -25,8 +25,8 @@ const languages = [
 
 const Languages = () => {
   const { language, setLanguage } = useLanguage();
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
-  const [selectedLanguageId, setSelectedLanguageId] = useState(1);
+  const [selectedLanguage, setSelectedLanguage] = useState("SV");
+  const [selectedLanguageId, setSelectedLanguageId] = useState(2);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedAvatar, setSelectedAvatar] = useState(englishAvatar);
 

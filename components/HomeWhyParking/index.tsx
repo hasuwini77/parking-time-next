@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ContactButton from "../ContactButton";
 import { FaMoneyBillTrendUp, FaDesktop } from "react-icons/fa6";
 import { BsPhoneFill } from "react-icons/bs";
 import { useLanguage } from "@/context/LanguageContext";
 import { PiBuildingApartmentFill } from "react-icons/pi";
+import ButtonEditable from "../ButtonEditable";
 
 // Data types
 interface Data {
@@ -112,7 +112,8 @@ const HomeWhyParking: React.FC = () => {
         </div>
       </div>
       <div className="w-full sm:max-w-[460px] text-center">
-        <ContactButton linkHref="/about" SWtext="Läs mer" ENtext="Learn more" />
+        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-grey1 hover:text-white" />
+
       </div>
     </section>
   );
