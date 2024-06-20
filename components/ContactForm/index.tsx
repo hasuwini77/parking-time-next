@@ -62,12 +62,12 @@ const ContactForm: FC = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "First and last name" : "För- och efternamn"} <span className='text-red text-bold text-md'>*</span>
+              {language === "english" ? "Name" : "Namn"} <span className='text-red text-bold text-md'>*</span>
             </label>
             <input
               type="text"
               id="name"
-              placeholder={language === "english" ? "First and last name" : "För- och efternamn"}
+              placeholder={language === "english" ? "Name" : "Namn"}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('name', { required: true })}
             />
