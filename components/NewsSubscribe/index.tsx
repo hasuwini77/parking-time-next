@@ -7,10 +7,10 @@ import toast from 'react-hot-toast';
 const NewsSubscribe: FC = () => {
   const { language } = useLanguage();
   const [userEmail, setUserEmail] = useState("")
-console.log(userEmail);
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault(); 
+    const emailInput = document.getElementById("email") as HTMLInputElement;
     const defaultEmail = "matilda@parkingtime.se";
     const subject = "Newsletter Subscription";
     const body = language === "english" 
@@ -27,6 +27,8 @@ Min e-post: "${userEmail}"`;
 
     window.location.href = mailtoLink;
     toast.success(language === "english" ? "Opening email client..." : "Öppnar e-postklient...");
+
+    emailInput.value = ""
   };
 
   return (
