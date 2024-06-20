@@ -15,9 +15,8 @@ const testimonials = [
         logoSrc: '/images/falkoping.png',
         text: {
           english:'“Parking Time has significantly improved our parking management and user satisfaction in the city center. The ease of use and intuitive interface have made it simple for residents and visitors to find and manage parking. We highly recommend Parking Time to other municipalities looking for a modern and efficient parking solution.”',
-          swedish: '“Parking Time har avsevärt förbättrat vår parkeringshantering och användartillfredsställelse i stadens centrum. Den användarvänliga och intuitiva gränssnittet har gjort det enkelt för invånare och besökare att hitta och hantera parkering. Vi rekommenderar starkt Parking Time till andra kommuner som letar efter en modern och effektiv parkeringslösning.”'
+          swedish: '“Parking Time har betydligt förbättrat vår parkeringshantering och användarnöjdhet i stadskärnan. Enkelheten och den intuitiva gränssnittet har gjort det enkelt för invånare och besökare att hitta och hantera parkering. Vi rekommenderar starkt Parking Time till andra kommuner som letar efter en modern och effektiv parkeringslösning.”'
         },
-        personImageSrc: '/images/marialundin.png',
         personName: 'Maria Lundin',
         personTitle: {
           english: 'City Architect',
@@ -31,13 +30,12 @@ const testimonials = [
       logoSrc: '/images/nassjokommun.png',
       text: {
         english: '“Implementing Parking Time has been a game-changer for our urban planning efforts. The detailed usage data and behavior patterns provided by the app have given us valuable insights into parking trends and helped us optimize our parking resources. Parking Time has truly revolutionized the way we approach parking and urban development.”',
-        swedish: '“Implementeringen av Parking Time har varit en spelväxlare för våra stadsplaneringsinsatser. De detaljerade användningsdata och beteendemönster som appen tillhandahåller har gett oss värdefulla insikter i parkeringsmönster och hjälpt oss att optimera våra parkeringsresurser. Parking Time har verkligen revolutionerat vårt sätt att närma oss parkering och stadsutveckling.”'
+        swedish: '“Implementeringen av Parking Time har varit en verklig spelväxlare för våra stadsplaneringsinsatser. De detaljerade användningsdata och beteendemönster som appen tillhandahåller har gett oss värdefulla insikter i parkeringsmönster och hjälpt oss att optimera våra parkeringsresurser. Parking Time har verkligen revolutionerat vårt sätt att närma oss parkering och stadsutveckling.”'
       },
-      personImageSrc: '/images/jonaseriksson.png',
       personName: 'Jonas Eriksson',
       personTitle: {
         english: 'Municipal Manager',
-        swedish: 'Kommunchef'
+        swedish: 'Kommunal chef'
       },
       municipality: 'Nässjö Kommun'
     },
@@ -49,10 +47,10 @@ const HomeCustomer: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center my-8">
       <div>
-        <h2 className="text-4xl font-bold mx-3">
+        <h2 className="font-bold text-4xl md:text-heading2 mb-3">
           {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
         </h2>
-        <p className="font-mono text-base pt-3 mx-3">
+        <p className="font-mono text-base mx-3 md:pt-2">
           {language === "english" ? ("Hear from some of our clients.") : ("Hör från några av våra kunder.")}
         </p>
       </div>
@@ -72,7 +70,7 @@ const HomeCustomer: React.FC = () => {
         >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id} className="p-3 flex justify-center h-full">
-            <Card key={testimonial.id} className="w-[350px] md:w-[90%] h-full flex flex-col md:rounded-[32px]">
+            <Card key={testimonial.id} className="w-[350px] md:w-[90%] h-full flex flex-col md:rounded-[32px] md:pl-2 md:pr-2">
               <CardHeader>
                 <Image
                   alt={testimonial.imgAlt}
@@ -87,17 +85,11 @@ const HomeCustomer: React.FC = () => {
               <CardFooter>
                 <div className="flex flex-col md:flex-row items-start md:items-center text-start md:pb-2">
                   <div>
-                    <Image
-                      alt={testimonial.personName}
-                      height={60}
-                      src={testimonial.personImageSrc}
-                      className="rounded-full"
-                    />
                   </div>
-                  <div className="font-mono text-base pt-2 md:p-0 md:pl-2">
+                  <div className="font-mono text-base pt-2 md:p-0">
                     <p className="text-red font-bold">{testimonial.personName}</p>
-                    <p>{testimonial.personTitle[language as keyof typeof testimonial.personTitle]}</p>
-                    <p>{testimonial.municipality}</p>
+                    <p>{testimonial.personTitle[language as keyof typeof testimonial.personTitle]}, {testimonial.municipality}</p>
+                    <p></p>
                   </div>
                 </div>
               </CardFooter>
