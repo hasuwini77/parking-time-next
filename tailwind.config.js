@@ -34,6 +34,8 @@ module.exports = {
         grey1: "#868686",
         lightgreyborder: "#E8E8E8",
         grey2: "#F0F0F0",
+        grey3: "#F9F9F9",
+
       },
       spacing: {
         1: "8px",
@@ -58,7 +60,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/temp.png')",
+        "home-hero": "url('/images/homehero.webp')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",

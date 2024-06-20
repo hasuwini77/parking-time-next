@@ -9,7 +9,7 @@ const HomeHero: React.FC = () => {
 
   return (
     <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7">
+      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7 ">
         <motion.h1
           className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
@@ -66,11 +66,11 @@ const HomeHero: React.FC = () => {
 
         </div>
       </div>
-      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
+      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-grey3">
         <ul className="flex flex-col md:flex-row gap-2 list-disc">
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-white text-start"
+              className="text-primary text-start font-mono font-semibold"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -85,7 +85,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Easy to use" : "Lätt att använda"}
             </motion.li>
             <motion.li
-              className="text-white text-start"
+              className="text-primary text-start font-mono font-semibold"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -102,7 +102,7 @@ const HomeHero: React.FC = () => {
           </div>
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-white text-start"
+              className="text-primary text-start font-mono font-semibold"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -117,7 +117,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Free to download" : "Gratis att ladda ner"}
             </motion.li>
             <motion.li
-              className="text-white text-start"
+              className="text-primary text-start font-mono font-semibold"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
