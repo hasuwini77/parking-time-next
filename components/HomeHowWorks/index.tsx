@@ -2,8 +2,8 @@
 import React from "react";
 import CardHowWorks from "../CardHowWorks";
 import { FaAngleRight } from "react-icons/fa6";
-import DownloadButton from "../DownloadButton";
 import { useLanguage } from "@/context/LanguageContext";
+import ButtonDownload from "../ButtonDownload";
 
 const HomeHowWorks = () => {
   const { language } = useLanguage();
@@ -84,11 +84,7 @@ const HomeHowWorks = () => {
         />
       </div>
       <span className="mt-8 w-full text-center">
-        <DownloadButton
-          linkHref="https://play.google.com/store/games"
-          SWtext={textContent.swedish.downloadButton}
-          ENtext={textContent.english.downloadButton}
-        />
+          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1 hover:text-white" />
       </span>
     </div>
   );
