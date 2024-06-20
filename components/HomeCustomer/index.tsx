@@ -50,7 +50,7 @@ const HomeCustomer: React.FC = () => {
         <h2 className="font-bold text-4xl md:text-heading2 mb-3">
           {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
         </h2>
-        <p className="font-mono text-base mx-3 md:pt-2">
+        <p className="font-mono text-base mx-3 md:pt-2 pb-2">
           {language === "english" ? ("Hear from some of our clients.") : ("Hör från några av våra kunder.")}
         </p>
       </div>
