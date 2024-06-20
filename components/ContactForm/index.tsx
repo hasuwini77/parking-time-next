@@ -44,15 +44,15 @@ const ContactForm: FC = () => {
         <ul className="list-none">
           <li className="mb-2 flex items-center">
             <FaEnvelope className="mr-2" />
-            <a href="mailto:info@parkingtime.se" className="underline">info@parkingtime.se</a>
+            <a href="mailto:info@parkingtime.se" className="hover:underline">info@parkingtime.se</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaPhone className="mr-2" />
-            <a href="tel:+46723991515" className="text-blue-600 underline">+46 72 399 15 15</a>
+            <a href="tel:+46723991515" className="hover:underline">+46 72 399 15 15</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaLocationDot className="mr-2" />
-            <a href="https://maps.google.com/?q=Nyköpingsvägen 52, 611 50 NYKÖPING" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+            <a href="https://maps.google.com/?q=Nyköpingsvägen 52, 611 50 NYKÖPING" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Nyköpingsvägen 52 | 611 50 NYKÖPING
             </a>
           </li>
