@@ -26,14 +26,14 @@ export default function Footer() {
               <Link
                 href="https://www.instagram.com/"
                 target="_blank"
-                className="hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
+                className="hover:text-red hover:scale-125 ease-in-out duration-300"
               >
                 <RiInstagramFill />
               </Link>
               <Link
                 href="https://www.linkedin.com/"
                 target="_blank"
-                className="hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
+                className="hover:text-red hover:scale-125 ease-in-out duration-300"
               >
                 <FaLinkedin />
               </Link>
@@ -43,16 +43,16 @@ export default function Footer() {
         <div className="right flex flex-col item-start justify-start">
           <p className="mb-1 font-bold">{language == "english" ? "Links:" : "Länkar:"}</p>
           <ul className="flex flex-col sm:flex-row justify-between sm:items-center">
-            <li className="sm:pe-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
+            <li className="sm:pe-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
               <Link href="/contact">{language == "english" ? "Support" : "Support"}</Link>
             </li>
-            <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
+            <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
               <Link href="/contact">{language == "english" ? "Contact" : "Kontakt"}</Link>
             </li>
-            <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
+            <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
               <Link href="/about">{language == "english" ? "About us" : "Om oss"}</Link>
             </li>
-            <li className="sm:ps-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300">
+            <li className="sm:ps-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
               <Link href="/news">{language == "english" ? "News" : "Nyheter"}</Link>
             </li>
           </ul>
@@ -62,23 +62,17 @@ export default function Footer() {
         <p className="mt-4 sm:mt-0">&copy; 2024 Parking Time AB</p>
         <div className="flex flex-col sm:flex-row gap-2">
           <Link
-            className="underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
+            className="underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300"
             href="/policy"
           >
             {language == "english" ? "Privacy Policy" : "Integritetspolicy"}
           </Link>
-          <Link
-            className="underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
+          {/* <Link
+            className="underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300"
             href="/contact"
           >
             {language == "english" ? "Terms of Service" : "Användarvillkor"}
-          </Link>
-          <Link
-            className="underline underline-offset-4 hover:text-[#F85252] hover:scale-125 ease-in-out duration-300"
-            href="/policy"
-          >
-            {language == "english" ? "Cookies Settings" : "Cookie-inställningar"}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>

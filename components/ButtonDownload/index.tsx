@@ -3,18 +3,19 @@ import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-interface DownloadProps {
-  linkHref: string;
+interface ButtonDownload {
   SWtext: string;
   ENtext: string;
+  textColor: string;
+  bgColor: string;
+  hoverEffect: string;
 }
 
-const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) => {
+const ButtonDownload: React.FC<ButtonDownload> = ({ SWtext, ENtext, textColor, bgColor, hoverEffect }) => {
   const { language } = useLanguage();
   const [appLink, setAppLink] = useState<string>('');
 
   useEffect(() => {
-    // Check if the code is running in the browser
     if (typeof navigator !== 'undefined') {
       const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
 
@@ -29,14 +30,15 @@ const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) =
       } else if (/Windows/i.test(userAgent)) {
         setAppLink('https://play.google.com/store/apps/details?id=se.parkingtime.app&hl=en_US');
       } else {
-        setAppLink('https://play.google.com/store/apps/details?id=se.parkingtime.app&hl=en_US'); // Default link
+        // Default link
+        setAppLink('https://play.google.com/store/apps/details?id=se.parkingtime.app&hl=en_US'); 
       }
     }
   }, []);
 
   return (
     <motion.button
-      className={`rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 bg-black text-white custom-hover-home-hero-download-button`}
+      className={`rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 ${textColor} ${bgColor} ${hoverEffect} mb-2 md:mb-0 md:me-3 ease-in-out box-hover-shadow`}
       variants={{
         hidden: { opacity: 0, scale: 0.5 },
         visible: {
@@ -53,21 +55,8 @@ const DownloadButton: React.FC<DownloadProps> = ({ linkHref, SWtext, ENtext }) =
       ) : (
         <Link href={appLink} target="_blank" rel="noopener noreferrer">{SWtext}</Link>
       )}
-       
     </motion.button>
   );
 };
 
-export default DownloadButton;
-
-
-
-
-
-
-
-
-
-
-
-
+export default ButtonDownload;

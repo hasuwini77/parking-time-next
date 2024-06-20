@@ -1,9 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import Link from "next/link";
-import DownloadButton from "../DownloadButton";
-import ContactButton from "../ContactButton";
+import ButtonEditable from "../ButtonEditable";
+import ButtonDownload from "../ButtonDownload";
 
 const HomeHero: React.FC = () => {
   const { language } = useLanguage();
@@ -62,12 +61,9 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ContactButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
-          <DownloadButton
-            linkHref="https://play.google.com/store/games"
-            SWtext="Ladda ner app"
-            ENtext="Download app"
-          />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-primary hover:text-white" />
+          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1 hover:text-white" />
+
         </div>
       </div>
       <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-green bg-opacity-80">
