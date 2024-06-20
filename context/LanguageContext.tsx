@@ -14,7 +14,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<string>("english"); // Default value is "english"
+  const [language, setLanguage] = useState<string>("swedish"); // Default value is "english"
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

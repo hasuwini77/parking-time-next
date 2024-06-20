@@ -24,14 +24,14 @@ export default function Footer() {
             <p className="mb-[12px] text-sm">info@parkingtime.se</p>
             <p className="flex gap-3 text-xl">
               <Link
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/parkingtimesweden?igsh=MTI5YzE4eTB1a3Vueg"
                 target="_blank"
                 className="hover:text-red hover:scale-125 ease-in-out duration-300"
               >
                 <RiInstagramFill />
               </Link>
               <Link
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/parking-time-sweden/"
                 target="_blank"
                 className="hover:text-red hover:scale-125 ease-in-out duration-300"
               >
@@ -44,9 +44,6 @@ export default function Footer() {
           <p className="mb-1 font-bold">{language == "english" ? "Links:" : "Länkar:"}</p>
           <ul className="flex flex-col sm:flex-row justify-between sm:items-center">
             <li className="sm:pe-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
-              <Link href="/contact">{language == "english" ? "Support" : "Support"}</Link>
-            </li>
-            <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
               <Link href="/contact">{language == "english" ? "Contact" : "Kontakt"}</Link>
             </li>
             <li className="sm:px-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
