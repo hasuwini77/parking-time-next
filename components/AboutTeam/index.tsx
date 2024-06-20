@@ -25,7 +25,7 @@ const AboutTeam: React.FC = () => {
     {
       name: "Matilda Öhman",
       role: "CEO",
-      imgSrc: "/images/mathildaohman.webp",
+      imgSrc: "/images/mathildaohman.jpeg",
     },
     {
       name: "Johan E. Bengtsson",

@@ -2,7 +2,7 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
-import matilda from "../../public/images/mathildaohman.webp";
+import matilda from "../../public/images/matilda.png";
 import ContactButton from "../ContactButton";
 
 const HomeKnow: React.FC = () => {
