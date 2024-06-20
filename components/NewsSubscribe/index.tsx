@@ -11,7 +11,10 @@ console.log(userEmail);
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault(); 
+<<<<<<< HEAD
 //
+=======
+>>>>>>> feature-95-subscribe-function
     const defaultEmail = "matilda@parkingtime.se";
     const subject = "Newsletter Subscription";
     const body = language === "english" 
