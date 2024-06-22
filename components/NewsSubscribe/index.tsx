@@ -53,6 +53,7 @@ Min e-post: "${userEmail}"`;
       toast.success(language === "english" ? "Opening email client..." : "Öppnar e-postklient...");
   
       emailInput.value = ""
+      setUserEmail("")
     }
     
   };
