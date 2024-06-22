@@ -3,12 +3,20 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 type ThemeType = "light" | "dark";
 
-const ThemeContext = createContext<ThemeType>("light");
+interface ThemeContextType {
+  theme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
+}
+
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: "light",
+  setTheme: () => {},
+});
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<ThemeType>("light");
+  const [theme, setThemeState] = useState<ThemeType>("light");
 
   useEffect(() => {
     const body = document.body;
@@ -21,9 +29,23 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [theme]);
 
+  const setTheme = (newTheme: ThemeType) => {
+    setThemeState(newTheme);
+  };
+
   return (
-    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  const { theme } = useContext(ThemeContext);
+  return theme;
+};
+
+export const useSetTheme = () => {
+  const { setTheme } = useContext(ThemeContext);
+  return setTheme;
+};

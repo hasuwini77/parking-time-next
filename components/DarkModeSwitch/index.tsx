@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useContext } from "react";
 import {
   Switch,
   useSwitch,
@@ -7,32 +8,16 @@ import {
 } from "@nextui-org/react";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const DarkModeSwitch = (props: SwitchProps) => {
-  const {
-    Component,
-    slots,
-    isSelected,
-    getBaseProps,
-    getInputProps,
-    getWrapperProps,
-  } = useSwitch(props);
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const bodyClassList = document.body.classList;
-    if (isDarkMode) {
-      bodyClassList.add("dark");
-      bodyClassList.remove("light");
-    } else {
-      bodyClassList.add("light");
-      bodyClassList.remove("dark");
-    }
-  }, [isDarkMode]);
+  const { Component, slots, getBaseProps, getInputProps, getWrapperProps } =
+    useSwitch(props);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    // Toggle theme between light and dark
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -51,7 +36,7 @@ const DarkModeSwitch = (props: SwitchProps) => {
             ],
           })}
         >
-          {isDarkMode ? <SunIcon /> : <MoonIcon />}
+          {theme === "dark" ? <SunIcon /> : <MoonIcon />}
         </div>
       </Component>
     </div>
