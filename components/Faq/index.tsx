@@ -61,10 +61,18 @@ const Faq: React.FC = () => {
   return (
     <>
       <div
-        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-heading2 text-center bg-background"
+        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
         id="faq"
       >
-        <h5 className={theme === "dark" ? "mb-2 text-white" : "mb-2"}>FAQ</h5>
+        <h5
+          className={
+            theme === "dark"
+              ? "mb-2 text-white text-heading2"
+              : "mb-2 text-heading2"
+          }
+        >
+          FAQ
+        </h5>
         <h1 className={theme === "dark" ? "text-4xl text-white" : "text-4xl"}>
           {language === "english"
             ? "Do you have a question?"
@@ -91,13 +99,13 @@ const Faq: React.FC = () => {
             aria-label="Accordion 1"
             title={content.Accordion1Title}
             classNames={{ title: "font-bold" }}
-            className={theme === "dark" ? "p-1.5 text-white" : "p-1.5"}
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
             <span
               className={
                 theme === "dark"
-                  ? "my-2 text-start text-white"
-                  : "my-2 text-start"
+                  ? "text-start text-sm text-white"
+                  : "text-start text-sm"
               }
             >
               {content?.Accordion1}
@@ -109,13 +117,13 @@ const Faq: React.FC = () => {
             aria-label="Accordion 2"
             title={content.Accordion2Title}
             classNames={{ title: "font-bold" }}
-            className={theme === "dark" ? "p-1.5 text-white" : "p-1.5"}
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
             <span
               className={
                 theme === "dark"
-                  ? "my-2 text-start text-white"
-                  : "my-2 text-start"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
               }
             >
               {content?.Accordion2}
@@ -127,13 +135,13 @@ const Faq: React.FC = () => {
             aria-label="Accordion 3"
             title={content.Accordion3Title}
             classNames={{ title: "font-bold" }}
-            className={theme === "dark" ? "p-1.5 text-white" : "p-1.5"}
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
             <span
               className={
                 theme === "dark"
-                  ? "my-2 text-start text-white"
-                  : "my-2 text-start"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
               }
             >
               {content?.Accordion3}
@@ -145,13 +153,13 @@ const Faq: React.FC = () => {
             aria-label="Accordion 4"
             title={content.Accordion4Title}
             classNames={{ title: "font-bold" }}
-            className={theme === "dark" ? "p-1.5 text-white" : "p-1.5"}
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
             <span
               className={
                 theme === "dark"
-                  ? "my-2 text-start text-white"
-                  : "my-2 text-start"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
               }
             >
               {content?.Accordion4}
@@ -163,13 +171,13 @@ const Faq: React.FC = () => {
             aria-label="Accordion 5"
             title={content.Accordion5Title}
             classNames={{ title: "font-bold" }}
-            className={theme === "dark" ? "p-1.5 text-white" : "p-1.5"}
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
             <span
               className={
                 theme === "dark"
-                  ? "my-2 text-start text-white"
-                  : "my-2 text-start"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
               }
             >
               {content?.Accordion5}
