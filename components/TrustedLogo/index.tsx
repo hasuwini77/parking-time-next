@@ -29,19 +29,19 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo1.svg"
+              src="/images/BrandedLogos/falkoping.png"
               alt="logo1"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo2.svg"
+              src="/images/BrandedLogos/skapa.png"
               alt="logo2"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
@@ -56,16 +56,16 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo4.svg"
+              src="/images/BrandedLogos/business.png"
               alt="logo4"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/lulea.svg"
+              src="/images/BrandedLogos/lulea.png"
               alt="lulea"
               width={100}
               height={100}
@@ -74,10 +74,28 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/nass.svg"
+              src="/images/BrandedLogos/nassjo.png"
               alt="nass"
               width={100}
               height={100}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/BrandedLogos/venture.png"
+              alt="nass"
+              width={150}
+              height={150}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/BrandedLogos/artic.png"
+              alt="nass"
+              width={150}
+              height={150}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
@@ -107,19 +125,19 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo1.svg"
+              src="/images/BrandedLogos/falkoping.png"
               alt="logo1"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo2.svg"
+              src="/images/BrandedLogos/skapa.png"
               alt="logo2"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
@@ -134,16 +152,16 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo4.svg"
+              src="/images/BrandedLogos/business.png"
               alt="logo4"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/lulea.svg"
+              src="/images/BrandedLogos/lulea.png"
               alt="lulea"
               width={100}
               height={100}
@@ -152,10 +170,28 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/nass.svg"
+              src="/images/BrandedLogos/nassjo.png"
               alt="nass"
               width={100}
               height={100}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/BrandedLogos/venture.png"
+              alt="nass"
+              width={150}
+              height={150}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/BrandedLogos/artic.png"
+              alt="nass"
+              width={150}
+              height={150}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
