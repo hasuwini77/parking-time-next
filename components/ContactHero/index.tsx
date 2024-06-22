@@ -7,7 +7,7 @@ const ContactHero: React.FC = () => {
     return (
         <section className="w-full min-h-[50vh] relative hidden xl:flex overflow-hidden">
             <Image
-                src="/images/contactHero.png"
+                src="/images/contactHero.webp"
                 alt="Contact Hero"
                 fill={true}
                 style={{objectFit: "cover"}}

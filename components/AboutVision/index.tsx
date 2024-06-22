@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import DownloadButton from '../DownloadButton';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
-import visionImg from '../../public/images/vision.png';
+import visionImg from '../../public/images/vision.webp';
 
 interface Data {
     title1: string;
