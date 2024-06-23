@@ -3,6 +3,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import 'animate.css';
 import { FC, useState } from 'react';
 import toast from 'react-hot-toast';
+import Swal from 'sweetalert2'
+import "./subscribe.css"
 
 const NewsSubscribe: FC = () => {
   const { language } = useLanguage();
@@ -10,25 +12,50 @@ const NewsSubscribe: FC = () => {
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault(); 
-    const emailInput = document.getElementById("email") as HTMLInputElement;
-    const defaultEmail = "matilda@parkingtime.se";
-    const subject = "Newsletter Subscription";
-    const body = language === "english" 
-      ? `Hi,
-
+    if (userEmail == "") {
+      Swal.fire({
+        title: "Oops...",
+        text: language == "english" ? "Please write your e-mail address" : "Vänligen skriv din e-postadress",
+        icon: "warning",
+        confirmButtonColor: "#06433E",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+    } else {
+      const emailInput = document.getElementById("email") as HTMLInputElement;
+      const defaultEmail = "matilda@parkingtime.se";
+      const subject = "Newsletter Subscription";
+      const body = language === "english" 
+        ? `Hi,
+  
 I would like to subscribe to the newsletter. 
 My email: "${userEmail}"`
-      : `Hej,
-
+        : `Hej,
+  
 Jag skulle vilja prenumerera på nyhetsbrevet. 
 Min e-post: "${userEmail}"`;
-
-    const mailtoLink = `mailto:${defaultEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoLink;
-    toast.success(language === "english" ? "Opening email client..." : "Öppnar e-postklient...");
-
-    emailInput.value = ""
+  
+      const mailtoLink = `mailto:${defaultEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+      window.location.href = mailtoLink;
+      toast.success(language === "english" ? "Opening email client..." : "Öppnar e-postklient...");
+  
+      emailInput.value = ""
+      setUserEmail("")
+    }
+    
   };
 
   return (
