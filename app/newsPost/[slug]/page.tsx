@@ -4,9 +4,8 @@ import { notFound } from "next/navigation";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@nextui-org/react";
-import styles from "../../../components/OurNews/loading.module.css"
-
+import styles from "../../../components/OurNews/loading.module.css";
+import { useLanguage } from "@/context/LanguageContext";
 
 const fetchNewsPost = async (slug: string) => {
   try {
@@ -29,6 +28,7 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [post, setPost] = useState<any>(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,9 +51,12 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   }, [params.slug]);
 
   if (loading) {
-    return <div className={styles.Ring}>Loading
-    <span className={styles.Span}></span>
-  </div>;
+    return (
+      <div className={styles.Ring}>
+        Loading
+        <span className={styles.Span}></span>
+      </div>
+    );
   }
 
   if (error) {
@@ -77,7 +80,11 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
             />
           </div>
         ) : (
-          <p>No Avatar available.</p>
+          <p>
+            {language === "english"
+              ? "No Avatar available."
+              : "Ingen Avatar tillgänglig."}
+          </p>
         )}
         <div className="flex flex-col">
           {post.fields.author && <p className="mb-1">{post.fields.author}</p>}
@@ -86,7 +93,9 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
           )}
         </div>
       </div>
-      <h1 className="text-3xl font-bold mb-4 p-2">{post.fields.bigTitle}</h1>
+      <h1 className="text-3xl font-bold mb-4 p-2">
+        {language === "english" ? post.fields.bigTitle : post.fields.bigTitleSe}
+      </h1>
       <div className="mb-4">
         {post.fields.featuredImage ? (
           <Image
@@ -97,13 +106,21 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
             className="p-3"
           />
         ) : (
-          <p>No Featured Image available.</p>
+          <p>
+            {language === "english"
+              ? "No Featured Image available."
+              : "Ingen utvald bild tillgänglig."}{" "}
+          </p>
         )}
       </div>
-      <p className="p-3 font-sans text-lg">{post.fields.paragraph1}</p>
+      <p className="p-3 font-sans text-lg">
+        {language === "english"
+          ? post.fields.paragraph1
+          : post.fields.paragraph1Se}
+      </p>
       <Link href="/newsPost" passHref>
         <span className="h-12 px-5 py-[12px] ml-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:from-secondary hover:to-primary transition duration-300">
-          See all news
+          {language === "english" ? "See all news" : "Se alla nyheter"}
         </span>
       </Link>
     </div>

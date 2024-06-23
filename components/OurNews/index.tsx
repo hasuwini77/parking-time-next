@@ -3,15 +3,19 @@ import React, { useEffect, useState } from "react";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Link from "next/link";
 import { Image } from "@nextui-org/image";
-import styles from "./loading.module.css"
+import styles from "./loading.module.css";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface NewsPost {
   id: string;
   title: string;
+  titleSe: string;
   bigTitle: string;
+  bigTitleSe: string;
   avatar: string;
   author: string;
   paragraph1: string;
+  paragraph1Se: string;
   featuredImage?: string;
   thumbnail?: string;
   readingTime?: number;
@@ -23,23 +27,27 @@ const OurNews: React.FC = () => {
   const [newsPosts, setNewsPosts] = useState<NewsPost[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-            // 3 saniyelik gecikme eklemek için setTimeout kullanın
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
+        // 3 saniyelik gecikme eklemek için setTimeout kullanın
+        await new Promise((resolve) => setTimeout(resolve, 500));
+
         const posts = await fetchNewsPosts();
         const formattedPosts = posts.map((post: any) => ({
           id: post.sys.id,
           title: post.fields.title,
+          titleSe: post.fields.titleSe,
           bigTitle: post.fields.bigTitle,
+          bigTitleSe: post.fields.bigTitleSe,
           avatar: post.fields.avatar?.fields?.file?.url
             ? `https:${post.fields.avatar.fields.file.url}`
             : "https://via.placeholder.com/60", // default placeholder or empty string
           author: post.fields.author,
           paragraph1: post.fields.paragraph1,
+          paragraph1Se: post.fields.paragraph1Se,
           thumbnail: post.fields.thumbnail?.fields?.file?.url
             ? `https:${post.fields.thumbnail.fields.file.url}`
             : undefined,
@@ -61,12 +69,13 @@ const OurNews: React.FC = () => {
     fetchData();
   }, []);
 
-
   if (loading) {
-    return <div className={styles.Ring}>Loading
-      <span className={styles.Span}></span>
-    </div>
-  ;
+    return (
+      <div className={styles.Ring}>
+        Loading
+        <span className={styles.Span}></span>
+      </div>
+    );
   }
 
   if (error) {
@@ -75,7 +84,9 @@ const OurNews: React.FC = () => {
 
   return (
     <section className="py-4 md:py-8">
-      <h1 className="text-4xl text-center mb-1">Our News</h1>
+      <h1 className="text-heading2 text-center mb-1">
+        {language === "english" ? "News" : "Nyheter"}
+      </h1>
       <div className="container mx-auto px-4 py-4 md:py-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {newsPosts.map((post) => (
@@ -96,13 +107,19 @@ const OurNews: React.FC = () => {
                 )}
               </Link>
               <div className="mt-3 px-2 py-2">
-                <h2 className="text-xl">{post.title}</h2>
-                <p className="text-base text-grey1 my-2 max-w-[90%]">{`${(post.paragraph1 ?? "No content available.").split(" ").slice(0, 18).join(" ")} ...`}</p>
+                <h2 className="text-xl">
+                  {language === "english" ? post.title : post.titleSe}
+                </h2>
+                <p className="text-base text-grey1 my-2 max-w-[90%]">
+                  {language === "english"
+                    ? `${(post.paragraph1 ?? "No content available.").split(" ").slice(0, 18).join(" ")} ...`
+                    : `${(post.paragraph1Se ?? "Inget innehåll tillgängligt.").split(" ").slice(0, 18).join(" ")} ...`}
+                </p>
                 <Link
                   href={`/newsPost/${post.slug ?? "nodata"}`}
                   className="hover:text-grey1 underline"
                 >
-                  Read more
+                  {language === "english" ? "Read more" : "Läs mer"}
                 </Link>
               </div>
             </div>
