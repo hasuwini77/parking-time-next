@@ -28,6 +28,7 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [post, setPost] = useState<any>(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,8 +66,6 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
   if (!post) {
     return <p>Post not found</p>;
   }
-
-  const { language } = useLanguage();
 
   return (
     <div className="container mx-auto w-full max-w-screen-lg flex flex-col justify-center items-start text-start py-3">
