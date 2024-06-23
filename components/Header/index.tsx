@@ -13,6 +13,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Languages from "./Languages";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
@@ -205,6 +206,9 @@ const Header: React.FC = () => {
                   <NavbarItem>
                     <Languages />
                   </NavbarItem>
+                  <NavbarItem>
+                    <DarkModeSwitch />
+                  </NavbarItem>
                 </NavbarContent>
               </Navbar>
             </motion.div>
@@ -369,7 +373,9 @@ const Header: React.FC = () => {
                     {language === "english" ? "Contact us" : "Kontakta oss"}
                   </Button>
                 </NavbarItem>
-                <NavbarItem></NavbarItem>
+                <NavbarItem>
+                  <DarkModeSwitch />
+                </NavbarItem>
               </NavbarContent>
               <Languages />
             </div>

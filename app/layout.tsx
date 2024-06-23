@@ -1,12 +1,16 @@
 import "@/styles/globals.css";
 import { Providers } from "./providers";
+import { ThemeProvider } from "@/context/ThemeContext"; // Assuming this is the correct path to your ThemeProvider
 import Header from "@/components/Header";
 import { LanguageProvider } from "../context/LanguageContext";
 import Footer from "@/components/Footer";
-import Popup from "@/components/Popup";
 import { Toaster } from "react-hot-toast";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
@@ -20,16 +24,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="light font-sans">
-        <Providers>
-          <LanguageProvider>
-            <div className="flex flex-col h-screen bg-background">
-              <Header />
-              <main className="pt-[64px] flex-grow relative">{children}</main>
-              <Footer />
-              <Toaster />
-            </div>
-          </LanguageProvider>
-        </Providers>
+        <ThemeProvider>
+          {" "}
+          {/* Add ThemeProvider here */}
+          <Providers>
+            <LanguageProvider>
+              <div className="flex flex-col h-screen bg-background">
+                <Header />
+                <main className="pt-[64px] flex-grow relative">{children}</main>
+                <Footer />
+                <Toaster />
+              </div>
+            </LanguageProvider>
+          </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
