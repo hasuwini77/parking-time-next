@@ -20,7 +20,7 @@ const DarkModeSwitch = (props: SwitchProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 betweenS:hidden">
       <Component {...getBaseProps()}>
         <VisuallyHidden>
           <input {...getInputProps()} onChange={toggleDarkMode} />
