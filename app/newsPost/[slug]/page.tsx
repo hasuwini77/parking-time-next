@@ -104,6 +104,7 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
             width={1000}
             height={600}
             className="p-3"
+            priority
           />
         ) : (
           <p>
