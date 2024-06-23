@@ -16,7 +16,6 @@ const DarkModeSwitch = (props: SwitchProps) => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleDarkMode = () => {
-    // Toggle theme between light and dark
     setTheme(theme === "light" ? "dark" : "light");
   };
 
@@ -32,7 +31,7 @@ const DarkModeSwitch = (props: SwitchProps) => {
             class: [
               "w-5 h-5",
               "flex items-center justify-center",
-              "rounded-lg bg-transparent text-white hover:bg-default-200 hover:text-black",
+              "bg-transparent text-white",
             ],
           })}
         >
