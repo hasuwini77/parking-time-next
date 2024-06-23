@@ -113,7 +113,8 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div
             ref={menuRef}
-            className="fixed top-0 left-0 w-full h-full bg-primary z-40 overflow-y-auto max-h-[100vh]"
+            className="fixed top-[-50px] left-0 w-full bg-primary z-40 overflow-y-auto"
+            style={{ height: "calc(100vh + 50px)" }}
           >
             <motion.div
               initial={{ y: "-100%" }}
@@ -204,10 +205,10 @@ const Header: React.FC = () => {
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <Languages />
+                    <DarkModeSwitch />
                   </NavbarItem>
                   <NavbarItem>
-                    <DarkModeSwitch />
+                    <Languages />
                   </NavbarItem>
                 </NavbarContent>
               </Navbar>
