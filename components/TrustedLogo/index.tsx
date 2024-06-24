@@ -11,91 +11,91 @@ const TrustedLogo: React.FC = () => {
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
           <li>
             <Image
-              src="/images/BrandedLogos/almi.svg"
+              src="/images/trusted/almi.webp"
               alt="almi"
-              width={100}
-              height={100}
+              height={128}
+              width={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/gobusiness.svg"
+              src="/images/trusted/go.webp"
               alt="gobusiness"
-              width={100}
-              height={100}
+              width={128}
+              height={69}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/falkoping2.png"
+              src="/images/trusted/falk.webp"
               alt="logo1"
-              width={130}
-              height={130}
+              width={250}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/skapa.png"
+              src="/images/trusted/skapa.webp"
               alt="logo2"
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo3.svg"
+              src="/images/trusted/arctic.webp"
               alt="logo3"
-              width={100}
-              height={100}
+              width={250}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/business.png"
+              src="/images/trusted/founders.webp"
               alt="logo4"
-              width={130}
-              height={130}
+              width={128}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/lulea.png"
+              src="/images/trusted/lulea.webp"
               alt="lulea"
-              width={100}
+              width={128}
+              height={128}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/trusted/nassjo.webp"
+              alt="nass"
+              width={128}
               height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/nassjo.png"
+              src="/images/trusted/ltu.webp"
               alt="nass"
-              width={100}
+              width={150}
               height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/venture.png"
+              src="/images/trusted/vc.webp"
               alt="nass"
-              width={150}
-              height={150}
-              style={{ width: "auto", height: "auto" }}
-            />
-          </li>
-          <li>
-            <Image
-              src="/images/BrandedLogos/artic.png"
-              alt="nass"
-              width={150}
-              height={150}
+              width={90}
+              height={90}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
@@ -107,91 +107,92 @@ const TrustedLogo: React.FC = () => {
         >
           <li>
             <Image
-              src="/images/BrandedLogos/almi.svg"
+              src="/images/trusted/almi.webp"
               alt="almi"
-              width={100}
-              height={100}
+              height={128}
+              width={128}
+
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/gobusiness.svg"
+              src="/images/trusted/go.webp"
               alt="gobusiness"
-              width={100}
-              height={100}
+              width={128}
+              height={69}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/falkoping2.png"
+              src="/images/trusted/falk.webp"
               alt="logo1"
-              width={130}
-              height={130}
+              width={250}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/skapa.png"
+              src="/images/trusted/skapa.webp"
               alt="logo2"
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/logo3.svg"
+              src="/images/trusted/arctic.webp"
               alt="logo3"
-              width={100}
-              height={100}
+              width={250}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/business.png"
+              src="/images/trusted/founders.webp"
               alt="logo4"
-              width={130}
-              height={130}
+              width={128}
+              height={128}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/lulea.png"
+              src="/images/trusted/lulea.webp"
               alt="lulea"
-              width={100}
+              width={128}
+              height={128}
+              style={{ width: "auto", height: "auto" }}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/trusted/nassjo.webp"
+              alt="nass"
+              width={128}
               height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/nassjo.png"
+              src="/images/trusted/ltu.webp"
               alt="nass"
-              width={100}
+              width={150}
               height={100}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/venture.png"
+              src="/images/trusted/vc.webp"
               alt="nass"
-              width={150}
-              height={150}
-              style={{ width: "auto", height: "auto" }}
-            />
-          </li>
-          <li>
-            <Image
-              src="/images/BrandedLogos/artic.png"
-              alt="nass"
-              width={150}
-              height={150}
+              width={90}
+              height={90}
               style={{ width: "auto", height: "auto" }}
             />
           </li>
