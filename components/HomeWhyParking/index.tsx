@@ -68,7 +68,7 @@ const HomeWhyParking: React.FC = () => {
       className="px-3 py-8 text-white bg-primary flex flex-col items-center "
       id="whyparking"
     >
-      <h1 className="text-3xl mb-6">{usedData?.mainTitle}</h1>
+      <h1 className="text-heading2 mb-6 text-center leading-[58px]">{usedData?.mainTitle}</h1>
       <div className="flex md:flex-row flex-col items-center justify-center mb-4">
         <div className="mb-4 sm:mb-0 min-h-[580px] md:min-h-[640px]">
           <div className="mb-4 betweenS:min-h-[300px] betweenS:mb-3 sm:min-w-64 min-h-68 sm:min-h-[260px] max-w-[530px] sm:mb-2 w-full px-3 flex flex-col items-start ">
@@ -112,8 +112,7 @@ const HomeWhyParking: React.FC = () => {
         </div>
       </div>
       <div className="w-full sm:max-w-[460px] text-center">
-        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-grey1 hover:text-white" />
-
+        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-black hover:text-white" />
       </div>
     </section>
   );
