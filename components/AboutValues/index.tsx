@@ -5,24 +5,33 @@ import Image from "next/image";
 import Box from "@/public/images/aboutbox.png";
 import Check from "@/public/images/abouthuman.png";
 import Light from "@/public/images/aboutlight.png";
+import { useTheme } from "@/context/ThemeContext";
 
 const Values: React.FC = () => {
   const { language } = useLanguage();
+  const theme = useTheme();
+
   return (
     <>
-      <section className="flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center py-20">
+      <section
+        className={
+          theme === "dark"
+            ? "bg-secondary flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center py-20"
+            : "flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center py-20"
+        }
+      >
         {language === "english" ? (
-          <span className="flex justify-center text-center flex-col">
+          <span className="flex text-textColor justify-center text-center flex-col">
             <h3 className="text-heading2 text-bold m-2.5">Our Values</h3>
             <p className="text-heading4 m-2.5">What we believe in.</p>
           </span>
         ) : (
-          <span className="flex justify-center text-center flex-col">
+          <span className="flex text-textColor justify-center text-center flex-col">
             <h3 className="text-heading2 text-bold m-2.5">Våra Värderingar</h3>
             <p className="text-heading4 m-2.5">Saker vi tror på</p>
           </span>
         )}
-        <div className="flex w-2/4 justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center">
+        <div className="flex w-2/4 text-textColor justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center">
           <div className="justify-between items-center md:justify-between md:items-center md:flex md:flex-col md:m-2.5 min-h-[320px]">
             <Image className="md:w-4/5" src={Box} alt="Box" rel="noreferrer" />
             {language === "english" ? (
