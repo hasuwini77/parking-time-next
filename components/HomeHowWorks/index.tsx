@@ -54,7 +54,7 @@ const HomeHowWorks = () => {
 
   return (
     <div className="w-full py-32 md:py-44 px-4 md:px-20 flex flex-col justify-between items-center bg-background">
-      <h2 className="mb-8 text-4xl">{content.heading}</h2>
+      <h2 className="mb-8 text-textColor text-4xl">{content.heading}</h2>
       <div className="flex flex-col flex-wrap justify-center md:justify-between items-center middleWidth:flex-row">
         <CardHowWorks
           title={content.card1.title}
@@ -84,7 +84,13 @@ const HomeHowWorks = () => {
         />
       </div>
       <span className="mt-8 w-full text-center">
-          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1 hover:text-white" />
+        <ButtonDownload
+          SWtext="Ladda ner app"
+          ENtext="Download app"
+          textColor="text-white"
+          bgColor="bg-black"
+          hoverEffect="hover:bg-grey1 hover:text-white"
+        />
       </span>
     </div>
   );
