@@ -17,20 +17,26 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [theme, setThemeState] = useState<ThemeType>(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return (storedTheme as ThemeType) || "light";
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      return (storedTheme as ThemeType) || "light";
+    } else {
+      return "light";
+    }
   });
 
   useEffect(() => {
-    const body = document.body;
-    if (theme === "dark") {
-      body.classList.remove("light");
-      body.classList.add("dark");
-    } else {
-      body.classList.remove("dark");
-      body.classList.add("light");
+    if (typeof window !== "undefined") {
+      const body = document.body;
+      if (theme === "dark") {
+        body.classList.remove("light");
+        body.classList.add("dark");
+      } else {
+        body.classList.remove("dark");
+        body.classList.add("light");
+      }
+      localStorage.setItem("theme", theme);
     }
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const setTheme = (newTheme: ThemeType) => {
