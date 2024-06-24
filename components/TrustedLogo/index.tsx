@@ -4,7 +4,7 @@ import Image from "next/image";
 const TrustedLogo: React.FC = () => {
   return (
     <>
-      <h3 className="text-center text-xl m-0 p-0 font-sans font-bold">
+      <h3 className="bg-background text-center text-xl m-0 p-0 font-sans font-bold">
         Trusted by
       </h3>
       <div className="w-full inline-flex flex-nowrap bg-white p-4 my-5 overflow-hidden ">

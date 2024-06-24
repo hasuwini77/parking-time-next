@@ -13,6 +13,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Languages from "./Languages";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
@@ -78,7 +79,7 @@ const Header: React.FC = () => {
         </div>
         <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
           <Button
-            className="text-white bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
+            className="text-darkblack bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
             onClick={toggleMobileMenu}
           >
             <AnimatePresence mode="wait">
@@ -112,7 +113,8 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div
             ref={menuRef}
-            className="fixed top-0 left-0 w-full h-full bg-primary z-40 overflow-y-auto max-h-[100vh]"
+            className="fixed top-[-50px] left-0 w-full bg-primary z-40 overflow-y-auto"
+            style={{ height: "calc(100vh + 50px)" }}
           >
             <motion.div
               initial={{ y: "-100%" }}
@@ -129,7 +131,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/#whyparking"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/#whyparking");
                         toggleMobileMenu();
@@ -143,7 +145,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/");
                         toggleMobileMenu();
@@ -155,7 +157,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/about"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/about");
                         toggleMobileMenu();
@@ -167,7 +169,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/newsPost"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/newsPost");
                         toggleMobileMenu();
@@ -179,7 +181,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-white text-buttonText hover:text-green2"
+                      className="text-darkblack text-buttonText hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/faq");
                         toggleMobileMenu();
@@ -189,10 +191,10 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
+                    <Button className="rounded-lg h-5 bg-darkblack hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
                       <Link
                         href="/contact"
-                        className="text-black hover:text-white text-buttonText"
+                        className="text-white hover:text-white text-buttonText"
                         onClick={() => {
                           handleSetActiveLink("/contact");
                           toggleMobileMenu();
@@ -202,6 +204,9 @@ const Header: React.FC = () => {
                       </Link>
                     </Button>
                   </NavbarItem>
+                  {/* <NavbarItem>
+                    <DarkModeSwitch />
+                  </NavbarItem> */}
                   <NavbarItem>
                     <Languages />
                   </NavbarItem>
@@ -233,7 +238,7 @@ const Header: React.FC = () => {
                   <Link
                     href="/#whyparking"
                     aria-current="page"
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/#whyparking" ? "active" : ""
                     }`}
                     onClick={() => handleSetActiveLink("/#whyparking")}
@@ -248,7 +253,7 @@ const Header: React.FC = () => {
                         ? "Why Parking Time?"
                         : "Varför Parking Time?"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/#whyparking" ||
                           hoveredLink === "/#whyparking"
                             ? "scale-x-100"
@@ -263,7 +268,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/" ? "active" : ""
                     }`}
                     href="/"
@@ -274,7 +279,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "Home" : "Hem"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/" || hoveredLink === "/"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -288,7 +293,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/about" ? "active" : ""
                     }`}
                     href="/about"
@@ -299,7 +304,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "About us" : "Om oss"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/about" || hoveredLink === "/about"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -313,7 +318,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/newsPost" ? "active" : ""
                     }`}
                     href="/newsPost"
@@ -324,7 +329,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "News" : "Nyheter"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/newsPost" ||
                           hoveredLink === "/newsPost"
                             ? "scale-x-100"
@@ -339,7 +344,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/faq" ? "active" : ""
                     }`}
                     href="/faq"
@@ -350,7 +355,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "FAQ" : "Vanliga frågor"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/faq" || hoveredLink === "/faq"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -363,13 +368,15 @@ const Header: React.FC = () => {
                   <Button
                     as={Link}
                     href="/contact"
-                    className="bg-white text-black h-5 w-[120px]  hover:bg-black hover:text-white"
+                    className="bg-darkblack text-white h-5 w-[120px]  hover:bg-lightgrayborder hover:text-white"
                     onClick={() => handleSetActiveLink("/contact")}
                   >
                     {language === "english" ? "Contact us" : "Kontakta oss"}
                   </Button>
                 </NavbarItem>
-                <NavbarItem></NavbarItem>
+                {/* <NavbarItem>
+                  <DarkModeSwitch />
+                </NavbarItem> */}
               </NavbarContent>
               <Languages />
             </div>

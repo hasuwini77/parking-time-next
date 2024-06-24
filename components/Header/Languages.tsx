@@ -215,7 +215,7 @@ const Languages = () => {
   };
 
   return (
-    <div ref={dropdownRef} className="relative text-white flex justify-between items-center">
+    <div ref={dropdownRef} className="relative text-darkblack flex justify-between items-center">
       <button onClick={toggleDropdown} className="flex items-center">
         <span className="w-[30px] h-[20px] text-[14px] font-bold ms-1">{selectedLanguage.shortName}</span>
         {isOpen ? <FaCaretUp className="ms-[3px]" /> : <FaCaretDown className="ms-[3px]" />}

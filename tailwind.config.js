@@ -22,21 +22,7 @@ module.exports = {
         sans: ["Lato", "sans-serif"],
         mono: ["Roboto", "monospace"],
       },
-      colors: {
-        primary: "#06433E",
-        secondary: "#0B051D",
-        red: "#F85252",
-        background: "#ECF2F1",
-        green: "#48937E",
-        green2: "#80da5f",
-        darkblue1: "#14243C",
-        darkblue2: "#2A394E",
-        grey1: "#868686",
-        lightgreyborder: "#E8E8E8",
-        grey2: "#F0F0F0",
-        grey3: "#F9F9F9",
-
-      },
+      colors: {},
       spacing: {
         1: "8px",
         2: "16px",
@@ -60,7 +46,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/homehero.webp')",
+        "home-hero": "url('/images/temp.png')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",
@@ -84,6 +70,58 @@ module.exports = {
           layout: {},
           colors: {
             background: "#ECF2F1",
+            primary: "#F9F9F9",
+            red: "#F85252",
+            white: "#FFFFFF",
+            gray: "#868686",
+            lightgreyborder: "#E8E8E8",
+            gray2: "#F9F9F9",
+            darkblue1: "#14243C",
+            darkblue2: "#2A394E",
+            textColor: "#0B051D",
+            darkblack: "#0B051D",
+          },
+            
+            /*background: "#ECF2F1",
+            primary: "#06433E",
+            secondary: "#0B051D",
+            ternary: "#FFFFFF",
+            red: "#F85252",
+            green: "#48937E",
+            green2: "#80da5f",
+            darkblue1: "#14243C",
+            darkblue2: "#2A394E",
+            grey1: "#868686",
+            lightgreyborder: "#E8E8E8",
+            grey2: "#F0F0F0",*/
+
+          fontFamily: {
+            sans: ["Lato", "sans-serif"],
+            mono: ["Roboto", "monospace"],
+          },
+        },
+        dark: {
+          layout: {},
+          colors: {
+          background: "#",
+          primary: "#",
+          red: "#",
+          white: "#",
+          gray: "#",
+          lightgreyborder: "#",
+          gray2: "#",
+          darkblue1: "#",
+          darkblue2: "#",
+          darkblack: "#",
+            /*
+            background: "#121212",
+            primary: "#1F1F1F",
+            secondary: "#242424",
+            ternary: "#333333",
+            grey: "#3A3A3A",
+            border: "#505050",
+            text: "#E0E0E0",
+            accent: "#BB86FC",*/
           },
           fontFamily: {
             sans: ["Lato", "sans-serif"],

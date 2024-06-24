@@ -66,11 +66,11 @@ const HomeHero: React.FC = () => {
 
         </div>
       </div>
-      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-grey3">
+      <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-primary">
         <ul className="flex flex-col md:flex-row gap-2 list-disc">
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-primary text-start font-mono"
+              className="text-darkblack text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -85,7 +85,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Easy to use" : "Lätt att använda"}
             </motion.li>
             <motion.li
-              className="text-primary text-start font-mono"
+              className="text-darkblack text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -102,7 +102,7 @@ const HomeHero: React.FC = () => {
           </div>
           <div className="flex justify-around basis-1/2">
             <motion.li
-              className="text-primary text-start font-mono"
+              className="text-darkblack text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
@@ -117,7 +117,7 @@ const HomeHero: React.FC = () => {
               {language === "english" ? "Free to download" : "Gratis att ladda ner"}
             </motion.li>
             <motion.li
-              className="text-primary text-start font-mono"
+              className="text-darkblack text-start"
               variants={{
                 hidden: { opacity: 0, y: "35px" },
                 visible: {
