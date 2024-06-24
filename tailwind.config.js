@@ -75,7 +75,7 @@ module.exports = {
             white: "#FFFFFF",
             gray: "#868686",
             lightgreyborder: "#E8E8E8",
-            gray2: "#F0F0F0",
+            gray2: "#F9F9F9",
             darkblue1: "#14243C",
             darkblue2: "#2A394E",
           },
@@ -92,7 +92,7 @@ module.exports = {
             grey1: "#868686",
             lightgreyborder: "#E8E8E8",
             grey2: "#F0F0F0",*/
-            
+
           fontFamily: {
             sans: ["Lato", "sans-serif"],
             mono: ["Roboto", "monospace"],
