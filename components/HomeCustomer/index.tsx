@@ -45,7 +45,7 @@ const HomeCustomer: React.FC = () => {
   const { language } = useLanguage();
 
   return (
-    <div className="flex flex-col items-center text-center my-8">
+    <div className="bg-background flex flex-col items-center text-center my-8">
       <div>
         <h2 className="font-bold text-heading2 leading-[48px] mb-3">
           {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
