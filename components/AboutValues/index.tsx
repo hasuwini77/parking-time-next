@@ -18,8 +18,8 @@ const Values: React.FC = () => {
           </span>
         ) : (
           <span className="flex justify-center text-center flex-col">
-            <h3 className="text-heading2 text-bold m-2.5">Våra Värderinga</h3>
-            <p className="text-heading4 m-2.5">De saker vi tror på</p>
+            <h3 className="text-heading2 text-bold m-2.5">Våra Värderingar</h3>
+            <p className="text-heading4 m-2.5">Saker vi tror på</p>
           </span>
         )}
         <div className="flex w-2/4 justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center">
@@ -60,7 +60,7 @@ const Values: React.FC = () => {
               <span className="text-center flex flex-col items-center justify-start  w-full md:flex-col md:m-2.5 h-[140px] ">
                 <b className="text-xl">Innovation</b>
                 <p className="md:max-w-[200px]">
-                  Alltid sträva efter att förbättra och göra vår app ledande
+                  Vi strävar alltid efter att förbättra och göra vår app ledande
                   inom sitt område.
                 </p>
               </span>
