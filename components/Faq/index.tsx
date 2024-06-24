@@ -61,14 +61,18 @@ const Faq: React.FC = () => {
   return (
     <>
       <div
-        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
+        className={
+          theme === "dark"
+            ? "container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-secondary"
+            : "container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
+        }
         id="faq"
       >
         <h5
           className={
             theme === "dark"
-              ? "mb-2 text-white text-heading2"
-              : "mb-2 text-heading2"
+              ? "mb-2 text-white text-heading4"
+              : "mb-2 text-heading4"
           }
         >
           FAQ
