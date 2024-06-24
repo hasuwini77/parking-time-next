@@ -19,8 +19,8 @@ const Values: React.FC = () => {
                 </span>
                 ) : (
                 <span> 
-                    <h3>Våra Värderinga</h3>
-                    <p>De saker vi tror på</p>
+                    <h3 className="text-heading2 text-bold m-2.5">Våra Värderinga</h3>
+                    <p className="text-heading4 m-2.5">De saker vi tror på</p>
                 </span>
                 )}    
             <div className="flex w-2/4 justify-center items-center flex-col md:flex-row md:w-4/5 md:justify-center"> 
