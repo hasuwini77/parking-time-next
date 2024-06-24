@@ -61,8 +61,8 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-primary hover:text-white" />
-          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1 hover:text-white" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
+          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
 
         </div>
       </div>
