@@ -31,11 +31,15 @@ const DarkModeSwitch = (props: SwitchProps) => {
             class: [
               "w-5 h-5",
               "flex items-center justify-center",
-              "bg-transparent text-white",
+              "bg-transparent",
             ],
           })}
         >
-          {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+          {theme === "dark" ? (
+            <SunIcon className="text-white" />
+          ) : (
+            <MoonIcon className="text-black" />
+          )}
         </div>
       </Component>
     </div>

@@ -81,19 +81,6 @@ module.exports = {
             textColor: "#0B051D",
             darkblack: "#0B051D",
           },
-            
-            /*background: "#ECF2F1",
-            primary: "#06433E",
-            secondary: "#0B051D",
-            ternary: "#FFFFFF",
-            red: "#F85252",
-            green: "#48937E",
-            green2: "#80da5f",
-            darkblue1: "#14243C",
-            darkblue2: "#2A394E",
-            grey1: "#868686",
-            lightgreyborder: "#E8E8E8",
-            grey2: "#F0F0F0",*/
 
           fontFamily: {
             sans: ["Lato", "sans-serif"],
@@ -103,25 +90,19 @@ module.exports = {
         dark: {
           layout: {},
           colors: {
-          background: "#",
-          primary: "#",
-          red: "#",
-          white: "#",
-          gray: "#",
-          lightgreyborder: "#",
-          gray2: "#",
-          darkblue1: "#",
-          darkblue2: "#",
-          darkblack: "#",
-            /*
-            background: "#121212",
-            primary: "#1F1F1F",
-            secondary: "#242424",
-            ternary: "#333333",
-            grey: "#3A3A3A",
-            border: "#505050",
-            text: "#E0E0E0",
-            accent: "#BB86FC",*/
+            background: "#191A24",
+            primary: "#070707",
+            secondary: "#FFC383",
+            ternary: "#475557",
+            red: "#F85252",
+            white: "#344247",
+            gray: "#161616",
+            lightgreyborder: "#E8E8E8",
+            gray2: "#737373",
+            darkblue1: "#14243C",
+            darkblue2: "#2A394E",
+            textColor: "#FFFFFF",
+            darkblack: "#0B051D",
           },
           fontFamily: {
             sans: ["Lato", "sans-serif"],
