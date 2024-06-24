@@ -13,6 +13,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Languages from "./Languages";
+import DarkModeSwitch from "../DarkModeSwitch";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
@@ -112,7 +113,8 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div
             ref={menuRef}
-            className="fixed top-0 left-0 w-full h-full bg-primary z-40 overflow-y-auto max-h-[100vh]"
+            className="fixed top-[-50px] left-0 w-full bg-primary z-40 overflow-y-auto"
+            style={{ height: "calc(100vh + 50px)" }}
           >
             <motion.div
               initial={{ y: "-100%" }}
@@ -202,6 +204,9 @@ const Header: React.FC = () => {
                       </Link>
                     </Button>
                   </NavbarItem>
+                  {/* <NavbarItem>
+                    <DarkModeSwitch />
+                  </NavbarItem> */}
                   <NavbarItem>
                     <Languages />
                   </NavbarItem>
@@ -369,7 +374,9 @@ const Header: React.FC = () => {
                     {language === "english" ? "Contact us" : "Kontakta oss"}
                   </Button>
                 </NavbarItem>
-                <NavbarItem></NavbarItem>
+                {/* <NavbarItem>
+                  <DarkModeSwitch />
+                </NavbarItem> */}
               </NavbarContent>
               <Languages />
             </div>

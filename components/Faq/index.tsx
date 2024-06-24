@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { useLanguage } from "@/context/LanguageContext";
-import DownloadButton from "../DownloadButton";
+import { useTheme } from "@/context/ThemeContext";
+import ContactButton from "../ContactButton";
 
 const Faq: React.FC = () => {
   const { language } = useLanguage();
+  const theme = useTheme();
 
   interface AccordionContent {
     Accordion1Title: string;
@@ -59,16 +61,30 @@ const Faq: React.FC = () => {
   return (
     <>
       <div
-        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center"
+        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
         id="faq"
       >
-        <h5 className="mb-2">FAQ</h5>
-        <h1 className="text-4xl">
+        <h5
+          className={
+            theme === "dark"
+              ? "mb-2 text-white text-heading2"
+              : "mb-2 text-heading2"
+          }
+        >
+          FAQ
+        </h5>
+        <h1 className={theme === "dark" ? "text-4xl text-white" : "text-4xl"}>
           {language === "english"
             ? "Do you have a question?"
             : "Har du någon fråga?"}
         </h1>
-        <p className="text-paragraph1 py-2 mb-2">
+        <p
+          className={
+            theme === "dark"
+              ? "text-paragraph1 py-2 mb-2 text-white"
+              : "text-paragraph1 py-2 mb-2"
+          }
+        >
           {language === "english"
             ? "Here are some common questions answered?"
             : "Här är några vanliga frågor besvarade?"}
@@ -83,9 +99,17 @@ const Faq: React.FC = () => {
             aria-label="Accordion 1"
             title={content.Accordion1Title}
             classNames={{ title: "font-bold" }}
-            className="p-1.5"
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
-            <span className="my-2 text-start">{content?.Accordion1}</span>
+            <span
+              className={
+                theme === "dark"
+                  ? "text-start text-sm text-white"
+                  : "text-start text-sm"
+              }
+            >
+              {content?.Accordion1}
+            </span>
           </AccordionItem>
           <AccordionItem
             isCompact={true}
@@ -93,9 +117,17 @@ const Faq: React.FC = () => {
             aria-label="Accordion 2"
             title={content.Accordion2Title}
             classNames={{ title: "font-bold" }}
-            className="p-1.5"
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
-            <span className="my-2 text-start">{content?.Accordion2}</span>
+            <span
+              className={
+                theme === "dark"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
+              }
+            >
+              {content?.Accordion2}
+            </span>
           </AccordionItem>
           <AccordionItem
             isCompact={true}
@@ -103,9 +135,17 @@ const Faq: React.FC = () => {
             aria-label="Accordion 3"
             title={content.Accordion3Title}
             classNames={{ title: "font-bold" }}
-            className="p-1.5"
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
-            <span className="my-2 text-start">{content?.Accordion3}</span>
+            <span
+              className={
+                theme === "dark"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
+              }
+            >
+              {content?.Accordion3}
+            </span>
           </AccordionItem>
           <AccordionItem
             isCompact={true}
@@ -113,9 +153,17 @@ const Faq: React.FC = () => {
             aria-label="Accordion 4"
             title={content.Accordion4Title}
             classNames={{ title: "font-bold" }}
-            className="p-1.5"
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
-            <span className="my-2 text-start">{content?.Accordion4}</span>
+            <span
+              className={
+                theme === "dark"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
+              }
+            >
+              {content?.Accordion4}
+            </span>
           </AccordionItem>
           <AccordionItem
             isCompact={true}
@@ -123,25 +171,41 @@ const Faq: React.FC = () => {
             aria-label="Accordion 5"
             title={content.Accordion5Title}
             classNames={{ title: "font-bold" }}
-            className="p-1.5"
+            className={theme === "dark" ? "p-1.2 text-white" : "p-1.2"}
           >
-            <span className="my-2 text-start">{content?.Accordion5}</span>
+            <span
+              className={
+                theme === "dark"
+                  ? "text-sm text-start text-white"
+                  : "text-sm text-start"
+              }
+            >
+              {content?.Accordion5}
+            </span>
           </AccordionItem>
         </Accordion>
-        <h3 className="text-3xl pt-4">
-          {" "}
+        <h3
+          className={
+            theme === "dark" ? "text-3xl pt-4 text-white" : "text-3xl pt-4"
+          }
+        >
           {language === "english"
             ? "Still have a question?"
             : "Har du fortfarande mer frågor?"}
         </h3>
-        <p className="m-0 py-2 text-paragraph1">
-          {" "}
+        <p
+          className={
+            theme === "dark"
+              ? "m-0 py-2 text-paragraph1 text-white"
+              : "m-0 py-2 text-paragraph1"
+          }
+        >
           {language === "english"
             ? "Feel free to contact us if you have any questions."
             : "Kontakta oss gärna om du har några frågor."}
         </p>
-        <span className="min-w-[300px]">
-          <DownloadButton
+        <span className="min-w-[300px] text-sm">
+          <ContactButton
             linkHref="/contact"
             SWtext="Kontakta oss"
             ENtext="Contact us"
