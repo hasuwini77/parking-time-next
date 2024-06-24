@@ -78,6 +78,7 @@ module.exports = {
             gray2: "#F9F9F9",
             darkblue1: "#14243C",
             darkblue2: "#2A394E",
+            textColor: "#0B051D",
             darkblack: "#0B051D",
           },
             
