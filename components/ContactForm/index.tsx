@@ -7,6 +7,7 @@ import SendEmailButton from "../SendEmailButton";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export type FormData = {
   name: string;
@@ -151,7 +152,15 @@ const ContactForm: FC = () => {
               {...register('terms', { required: true })}
             />
             <label htmlFor="terms" className="mr-2 text-sm font-medium text-darkblue2">
-              {language === "english" ? "I accept the terms" : "Jag accepterar villkoren"}
+              {language === "english" ? (
+                  <>
+                    I accept the <Link href="/terms" target="_blank" className='underline'>terms</Link>
+                  </>
+                ) : (
+                  <>
+                    Jag accepterar <Link href="/terms" target="_blank" className='underline'>villkoren</Link>
+                  </>
+                )}
             </label>
             {errors.terms && <span className="text-red text-xs">{language === "english" ? "You must accept the terms!" : "Du måste acceptera villkoren!"}</span>}
           </div>
