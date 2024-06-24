@@ -227,7 +227,7 @@ const Languages = () => {
               key={item.id}
               onClick={() => changeLanguage(item)}
               variants={itemVariants}
-              className="px-1 py-[4px] flex items-center gap-1 hover:bg-white hover:text-primary rounded-lg cursor-pointer"
+              className="px-1 py-[4px] flex items-center gap-1 hover:bg-black hover:text-white rounded-lg cursor-pointer"
             >
               <Image src={item.avatar} alt={item.shortName} className="w-[17px] h-[17px]" />
               <span className="text-[14px] font-bold">{item.shortName}</span>
