@@ -102,6 +102,17 @@ module.exports = {
         dark: {
           layout: {},
           colors: {
+          background: "#",
+          primary: "#",
+          red: "#",
+          white: "#",
+          gray: "#",
+          lightgreyborder: "#",
+          gray2: "#",
+          darkblue1: "#",
+          darkblue2: "#",
+          darkblack: "#",
+            /*
             background: "#121212",
             primary: "#1F1F1F",
             secondary: "#242424",
@@ -109,7 +120,7 @@ module.exports = {
             grey: "#3A3A3A",
             border: "#505050",
             text: "#E0E0E0",
-            accent: "#BB86FC",
+            accent: "#BB86FC",*/
           },
           fontFamily: {
             sans: ["Lato", "sans-serif"],
