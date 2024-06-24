@@ -13,7 +13,7 @@ const Values: React.FC = () => {
         <>
         <section className="flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center"> 
                 {language === "english" ? ( 
-                <span className="flex justify-center text-center flex-col mt-8">
+                <span className="flex justify-center text-center flex-col md:mt-6">
                     <b className="text-4xl m-2.5">Our Values</b>
                     <b className="m-2.5">The things we believe in.</b>
                 </span>
@@ -62,7 +62,7 @@ const Values: React.FC = () => {
                         <p className="md:max-w-[200px]">It's crucial that our service meets users needs and enhances their parking experience.</p>
                     </span>
                 ) : (
-                    <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10"> 
+                    <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:mt-6 md:mb-10"> 
                         <b className="text-xl">Användarvänlig</b>
                         <p className="md:max-w-[200px]">Det är avgörande att vår tjänst möter användarnas behov och förbättrar deras parkeringsupplevelse.</p>
                     </span>
