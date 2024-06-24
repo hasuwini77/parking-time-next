@@ -14,12 +14,12 @@ const Values: React.FC = () => {
         <section className="flex justify-center items-center w-full flex-col md:flex-col md:w-full md:items-center"> 
                 {language === "english" ? ( 
                 <span className="flex justify-center text-center flex-col md:mt-6">
-                    <b className="text-4xl m-2.5">Our Values</b>
-                    <b className="m-2.5">The things we believe in.</b>
+                    <h3 className="text-heading2 text-bold m-2.5">Our Values</h3>
+                    <p className="text-heading4 m-2.5">What we believe in.</p>
                 </span>
                 ) : (
                 <span> 
-                    <h1>Våra Värderinga</h1>
+                    <h3>Våra Värderinga</h3>
                     <p>De saker vi tror på</p>
                 </span>
                 )}    
