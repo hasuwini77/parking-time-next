@@ -95,7 +95,7 @@ module.exports = {
             secondary: "#FFC383",
             ternary: "#475557",
             red: "#F85252",
-            white: "#344247",
+            white: "#FFFFF",
             gray: "#161616",
             lightgreyborder: "#E8E8E8",
             gray2: "#737373",

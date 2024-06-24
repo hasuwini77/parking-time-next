@@ -14,9 +14,11 @@ import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Languages from "./Languages";
 import DarkModeSwitch from "../DarkModeSwitch";
+import { useTheme } from "@/context/ThemeContext";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
+  const theme = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<string | null>(null);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -67,6 +69,8 @@ const Header: React.FC = () => {
       setActiveLink(window.location.pathname);
     }
   }, []);
+
+  const linkHoverEffectColor = theme === "dark" ? "white" : "darkblack";
 
   return (
     <div className="mx-0 fixed w-full top-0 z-[9999]">
@@ -131,7 +135,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/#whyparking"
-                      className="text-darkblack text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/#whyparking");
                         toggleMobileMenu();
@@ -145,7 +149,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/"
-                      className="text-darkblack text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/");
                         toggleMobileMenu();
@@ -157,7 +161,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/about"
-                      className="text-darkblack text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/about");
                         toggleMobileMenu();
@@ -169,7 +173,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/newsPost"
-                      className="text-darkblack text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/newsPost");
                         toggleMobileMenu();
@@ -181,7 +185,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-darkblack text-buttonText hover:text-green2"
+                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/faq");
                         toggleMobileMenu();
@@ -238,7 +242,7 @@ const Header: React.FC = () => {
                   <Link
                     href="/#whyparking"
                     aria-current="page"
-                    className={`relative text-darkblack ${
+                    className={`relative text-darkblack text-textColor ${
                       activeLink === "/#whyparking" ? "active" : ""
                     }`}
                     onClick={() => handleSetActiveLink("/#whyparking")}
@@ -253,7 +257,7 @@ const Header: React.FC = () => {
                         ? "Why Parking Time?"
                         : "Varför Parking Time?"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-${linkHoverEffectColor} transform origin-left transition-transform duration-500 ${
                           activeLink === "/#whyparking" ||
                           hoveredLink === "/#whyparking"
                             ? "scale-x-100"
@@ -265,21 +269,21 @@ const Header: React.FC = () => {
                 </NavbarItem>
                 <NavbarItem className="transition-colors duration-500 px-[12px]">
                   <Link
-                    style={{
-                      transition: "color 0.5s ease-out",
-                    }}
-                    className={`relative text-darkblack ${
+                    href="/"
+                    className={`relative text-darkblack text-textColor ${
                       activeLink === "/" ? "active" : ""
                     }`}
-                    href="/"
                     onClick={() => handleSetActiveLink("/")}
                     onMouseEnter={() => setHoveredLink("/")}
                     onMouseLeave={() => setHoveredLink(null)}
+                    style={{
+                      transition: "color 0.5s ease-out",
+                    }}
                   >
                     <span className="group">
                       {language === "english" ? "Home" : "Hem"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-${linkHoverEffectColor} transform origin-left transition-transform duration-500 ${
                           activeLink === "/" || hoveredLink === "/"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -290,21 +294,21 @@ const Header: React.FC = () => {
                 </NavbarItem>
                 <NavbarItem className="transition-colors duration-500 px-[12px]">
                   <Link
-                    style={{
-                      transition: "color 0.5s ease-out",
-                    }}
-                    className={`relative text-darkblack ${
+                    href="/about"
+                    className={`relative text-darkblack text-textColor ${
                       activeLink === "/about" ? "active" : ""
                     }`}
-                    href="/about"
                     onClick={() => handleSetActiveLink("/about")}
                     onMouseEnter={() => setHoveredLink("/about")}
                     onMouseLeave={() => setHoveredLink(null)}
+                    style={{
+                      transition: "color 0.5s ease-out",
+                    }}
                   >
                     <span className="group">
                       {language === "english" ? "About us" : "Om oss"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-${linkHoverEffectColor} transform origin-left transition-transform duration-500 ${
                           activeLink === "/about" || hoveredLink === "/about"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -315,21 +319,21 @@ const Header: React.FC = () => {
                 </NavbarItem>
                 <NavbarItem className="transition-colors duration-500 px-[12px]">
                   <Link
-                    style={{
-                      transition: "color 0.5s ease-out",
-                    }}
-                    className={`relative text-darkblack ${
+                    href="/newsPost"
+                    className={`relative text-darkblack text-textColor ${
                       activeLink === "/newsPost" ? "active" : ""
                     }`}
-                    href="/newsPost"
                     onClick={() => handleSetActiveLink("/newsPost")}
                     onMouseEnter={() => setHoveredLink("/newsPost")}
                     onMouseLeave={() => setHoveredLink(null)}
+                    style={{
+                      transition: "color 0.5s ease-out",
+                    }}
                   >
                     <span className="group">
                       {language === "english" ? "News" : "Nyheter"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-${linkHoverEffectColor} transform origin-left transition-transform duration-500 ${
                           activeLink === "/newsPost" ||
                           hoveredLink === "/newsPost"
                             ? "scale-x-100"
@@ -341,21 +345,21 @@ const Header: React.FC = () => {
                 </NavbarItem>
                 <NavbarItem className="transition-colors duration-500 px-[12px]">
                   <Link
-                    style={{
-                      transition: "color 0.5s ease-out",
-                    }}
-                    className={`relative text-darkblack ${
+                    href="/faq"
+                    className={`relative text-darkblack text-textColor ${
                       activeLink === "/faq" ? "active" : ""
                     }`}
-                    href="/faq"
                     onClick={() => handleSetActiveLink("/faq")}
                     onMouseEnter={() => setHoveredLink("/faq")}
                     onMouseLeave={() => setHoveredLink(null)}
+                    style={{
+                      transition: "color 0.5s ease-out",
+                    }}
                   >
                     <span className="group">
                       {language === "english" ? "FAQ" : "Vanliga frågor"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-${linkHoverEffectColor} transform origin-left transition-transform duration-500 ${
                           activeLink === "/faq" || hoveredLink === "/faq"
                             ? "scale-x-100"
                             : "scale-x-0"
