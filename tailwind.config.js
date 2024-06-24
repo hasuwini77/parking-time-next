@@ -104,7 +104,7 @@ module.exports = {
             darkblue2: "#2A394E",
             textColor: "#FFFFFF",
             darkblack: "#FFFFFF",
-            darkgrey: "#1C1C1C",
+            darkgrey: "#191A24",
           },
           fontFamily: {
             sans: ["Lato", "sans-serif"],
