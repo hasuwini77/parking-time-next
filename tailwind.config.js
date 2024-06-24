@@ -80,6 +80,7 @@ module.exports = {
             darkblue2: "#2A394E",
             textColor: "#0B051D",
             darkblack: "#0B051D",
+            darkgrey: "#3b3b3b",
           },
             
             /*background: "#ECF2F1",

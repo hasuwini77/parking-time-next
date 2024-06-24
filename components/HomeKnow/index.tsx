@@ -9,7 +9,7 @@ const HomeKnow: React.FC = () => {
     const { language } = useLanguage();
 
     return (
-        <div className="bg-darkblack text-white flex justify-center">
+        <div className="bg-darkgrey text-white flex justify-center">
             <div className="flex flex-col items-center justify-center md:flex-row w-full md:max-w-[1440px] px-3 py-8 md:py-7">
                 <div className="mt-12 w-full max-w-80 m-2.5 flex flex-col justify-center items-center p-2 text-center md:flex-1 md:max-w-none md:pt-6 md:pb-12 md:m-0">
                     <div className="max-w-full h-auto mb-2 ">
