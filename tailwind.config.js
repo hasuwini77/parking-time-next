@@ -70,7 +70,7 @@ module.exports = {
           layout: {},
           colors: {
             background: "#ECF2F1",
-            primary: "#0B051D",
+            primary: "#F9F9F9",
             red: "#F85252",
             white: "#FFFFFF",
             gray: "#868686",
@@ -78,6 +78,7 @@ module.exports = {
             gray2: "#F9F9F9",
             darkblue1: "#14243C",
             darkblue2: "#2A394E",
+            darkblack: "#0B051D",
           },
             
             /*background: "#ECF2F1",

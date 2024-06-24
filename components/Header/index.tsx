@@ -79,7 +79,7 @@ const Header: React.FC = () => {
         </div>
         <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
           <Button
-            className="text-white bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
+            className="text-darkblack bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
             onClick={toggleMobileMenu}
           >
             <AnimatePresence mode="wait">
@@ -131,7 +131,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/#whyparking"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/#whyparking");
                         toggleMobileMenu();
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/");
                         toggleMobileMenu();
@@ -157,7 +157,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/about"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/about");
                         toggleMobileMenu();
@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/newsPost"
-                      className="text-white text-buttonText  hover:text-green2"
+                      className="text-darkblack text-buttonText  hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/newsPost");
                         toggleMobileMenu();
@@ -181,7 +181,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-white text-buttonText hover:text-green2"
+                      className="text-darkblack text-buttonText hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/faq");
                         toggleMobileMenu();
@@ -191,10 +191,10 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
+                    <Button className="rounded-lg h-5 bg-darkblack hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
                       <Link
                         href="/contact"
-                        className="text-black hover:text-white text-buttonText"
+                        className="text-white hover:text-white text-buttonText"
                         onClick={() => {
                           handleSetActiveLink("/contact");
                           toggleMobileMenu();
@@ -238,7 +238,7 @@ const Header: React.FC = () => {
                   <Link
                     href="/#whyparking"
                     aria-current="page"
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/#whyparking" ? "active" : ""
                     }`}
                     onClick={() => handleSetActiveLink("/#whyparking")}
@@ -268,7 +268,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/" ? "active" : ""
                     }`}
                     href="/"
@@ -293,7 +293,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/about" ? "active" : ""
                     }`}
                     href="/about"
@@ -318,7 +318,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/newsPost" ? "active" : ""
                     }`}
                     href="/newsPost"
@@ -344,7 +344,7 @@ const Header: React.FC = () => {
                     style={{
                       transition: "color 0.5s ease-out",
                     }}
-                    className={`relative text-white ${
+                    className={`relative text-darkblack ${
                       activeLink === "/faq" ? "active" : ""
                     }`}
                     href="/faq"
@@ -368,7 +368,7 @@ const Header: React.FC = () => {
                   <Button
                     as={Link}
                     href="/contact"
-                    className="bg-white text-black h-5 w-[120px]  hover:bg-black hover:text-white"
+                    className="bg-darkblack text-white h-5 w-[120px]  hover:bg-white hover:text-darkblack"
                     onClick={() => handleSetActiveLink("/contact")}
                   >
                     {language === "english" ? "Contact us" : "Kontakta oss"}
