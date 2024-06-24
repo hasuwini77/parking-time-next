@@ -5,6 +5,7 @@ import { BsPhoneFill } from "react-icons/bs";
 import { useLanguage } from "@/context/LanguageContext";
 import { PiBuildingApartmentFill } from "react-icons/pi";
 import ButtonEditable from "../ButtonEditable";
+import { useTheme } from "@/context/ThemeContext";
 
 // Data types
 interface Data {
@@ -54,6 +55,7 @@ const swedishData: Data = {
 const HomeWhyParking: React.FC = () => {
   const { language } = useLanguage();
   const [usedData, setUsedData] = useState<Data | null>(null);
+  const theme = useTheme();
 
   useEffect(() => {
     if (language === "english") {
@@ -65,7 +67,11 @@ const HomeWhyParking: React.FC = () => {
 
   return (
     <section
-      className="bg-white px-3 py-8 text-darkblack flex flex-col items-center "
+      className={
+        theme === "dark"
+          ? "bg-secondary px-3 py-8 text-darkblack flex flex-col items-center "
+          : "bg-white px-3 py-8 text-darkblack flex flex-col items-center "
+      }
       id="whyparking"
     >
       <h1 className="text-3xl mb-6">{usedData?.mainTitle}</h1>
@@ -112,8 +118,18 @@ const HomeWhyParking: React.FC = () => {
         </div>
       </div>
       <div className="w-full sm:max-w-[460px] text-center">
-        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-white" bgColor="bg-darkblack" hoverEffect="hover:bg-grey1 hover:text-white" />
-
+        <ButtonEditable
+          linkHref="/about"
+          SWtext="Läs mer"
+          ENtext="Learn more"
+          textColor={theme === "dark" ? "text-darkblue1" : "text-white"}
+          bgColor="bg-darkblack"
+          hoverEffect={
+            theme === "dark"
+              ? "hover:bg-grey1 hover:text-darkblue2"
+              : "hover:bg-grey1 hover:text-white"
+          }
+        />
       </div>
     </section>
   );
