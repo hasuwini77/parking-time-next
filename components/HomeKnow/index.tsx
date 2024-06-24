@@ -47,7 +47,7 @@ const HomeKnow: React.FC = () => {
                         </span>
                     )}
                         <span className="w-full sm:max-w-[460px] text-center pt-3 md:text-left mt-3">
-                            <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-grey1 hover:text-white" />
+                            <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
                         </span>
                 </div>
             </div>

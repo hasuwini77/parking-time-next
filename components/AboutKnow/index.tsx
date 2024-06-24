@@ -26,7 +26,7 @@ const AboutKnow: React.FC = () => {
                 </p>
             </div>
             <div className="p-3 pb-8 w-full sm:max-w-[460px]">
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
             </div>
         </div>
     );

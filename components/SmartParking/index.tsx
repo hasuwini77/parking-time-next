@@ -13,7 +13,7 @@ const SmartParking: React.FC = () => {
             <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4'>
                 <div className="mb-5 px-1 md:w-1/2">
                 <Image
-                    src="/images/smartparking.png"
+                    src="/images/smartparking.webp"
                     alt="Smart Parking"
                     width={700}
                     height={700}
@@ -63,7 +63,7 @@ const SmartParking: React.FC = () => {
                             }
                         </p>
                     </div>
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
 
                 </div>
             </div>

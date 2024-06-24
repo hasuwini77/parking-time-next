@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll": "infinite-scroll 45s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
@@ -46,7 +46,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/temp.png')",
+        "home-hero": "url('/images/homehero.webp')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",
@@ -78,6 +78,7 @@ module.exports = {
             gray2: "#F9F9F9",
             darkblue1: "#14243C",
             darkblue2: "#2A394E",
+            textColor: "#0B051D",
             darkblack: "#0B051D",
           },
             

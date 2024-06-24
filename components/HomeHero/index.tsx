@@ -9,7 +9,7 @@ const HomeHero: React.FC = () => {
 
   return (
     <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7">
+      <div className="absolute h-full text-white w-full flex-grow flex flex-col items-start short:top-[0] short:pt-2 top-[14%] md:items-start p-3 md:p-7 ">
         <motion.h1
           className="font-bold text-4xl md:text-7xl mb-4 short:text-5xl"
           variants={{
@@ -61,8 +61,8 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-primary hover:text-white" />
-          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1 hover:text-white" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
+          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
 
         </div>
       </div>

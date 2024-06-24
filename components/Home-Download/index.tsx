@@ -5,7 +5,7 @@ import Image from 'next/image';
 import AppStore from '@/public/images/AppStore.png'
 import GooglePlay from '@/public/images/GooglePlay.png'
 import QR from '@/public/images/QR.png'
-import Download from '@/public/images/dowload.png'
+import Download from '@/public/images/dowload.webp'
 
 const HomeDownload: React.FC = () => {
     const { language } = useLanguage();

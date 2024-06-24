@@ -112,8 +112,7 @@ const HomeWhyParking: React.FC = () => {
         </div>
       </div>
       <div className="w-full sm:max-w-[460px] text-center">
-        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-white" bgColor="bg-darkblack" hoverEffect="hover:bg-grey1 hover:text-white" />
-
+        <ButtonEditable linkHref="/about" SWtext="Läs mer" ENtext="Learn more" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
       </div>
     </section>
   );
