@@ -18,16 +18,16 @@ const HomeDownload: React.FC = () => {
             </div>
             <div className="w-4/5 md:w-3/6">
                 {language === "english" ? (                    
-                    <span className="text-4xl w-full flex justify-center font-mono text-center md:justify-center">
+                    <span className="font-bold text-4xl w-full flex justify-center font-mono text-center md:w-full md:justify-start md:m-2.5">
                         Download now
                     </span>
                 ) : (
-                    <span className="text-center  md:text-4xl w-4/5 flex justify-center"> 
+                    <span className="font-bold text-4xl w-full flex justify-center font-mono text-center md:w-full md:justify-start md:m-2.5"> 
                         Ladda Ner Nu!
                     </span>
                 )}
                     {language === "english" ? (               
-                    <span className="w-full m-2.5 flex md:w-full md:text-center md:m-2.5">
+                    <span className="w-full m-2.5 flex md:w-4/5">
                         The app is free to download for you as a user. However, your municipality must be registered as a customer with us for our app to be valid in your area. If our app is not available in your municipality, you are welcome to contact us or suggest us to your municipality!
                     </span>    
                     ) : (
@@ -35,13 +35,13 @@ const HomeDownload: React.FC = () => {
                         Appen är gratis att ladda ner för dig som användare. Din kommun måste dock vara registrerad som kund hos oss för att vår app ska vara giltig i ditt område. Om vår app inte är tillgänglig i din kommun är du välkommen att kontakta oss eller föreslå oss till din kommun!
                     </span>           
                     ) }
-                    <div className="flex flex-row justify-center w-full"><a href="https://app.parkingtime.se/" target='_blank'>
+                    <div className="flex flex-row justify-center w-full md:justify-start"><a href="https://apps.apple.com/us/app/parking-time/id1611019108" target='_blank' rel="noopener noreferrer">
                         <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={AppStore} alt="appstore"/>
-                        </a> <a href="https://app.parkingtime.se/" target='_blank'>
+                        </a> <a href="https://play.google.com/store/apps/details?id=se.parkingtime.app&hl=en_US" target='_blank'rel="noopener noreferrer">
                         <Image className="w-36 m-2.5 flex justify-center" width={100} height={100} src={GooglePlay} alt="goggleStore" />
                         </a>
                     </div>                                  
-                    <Image className="hidden md:block md:max-w-[100px] md:ml-2" src={QR} alt="qr-code" />
+                    <Image className="hidden md:block md:max-w-[100px] md:m-2.5 " src={QR} alt="qr-code" />
             </div>
             <div className="hidden md:block md:w-3/6 p-2">
                 <Image className="flex justify-center items-center w-full h-auto m-2.5" src={Download} alt="download" />

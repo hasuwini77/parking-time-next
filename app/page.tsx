@@ -9,20 +9,22 @@ import HomeWhyParking from "@/components/HomeWhyParking";
 import HomeDownload from "@/components/Home-Download";
 import OurNews from "@/components/OurNews";
 import HomeCustomer from "@/components/HomeCustomer";
+import NewsSubscribe from "@/components/NewsSubscribe";
 
 export default function Home() {
   return (
-    <section className="">
+    <section className="relative">
       <HomeHero />
       <SmartParking />
       <HomeHowWorks />
       <HomeWhyParking />      
       <HomeCustomer />
       <TrustedLogo />
-      <HomeStatistics />      
-      <OurNews />      
-      <HomeKnow />
+      <HomeStatistics />
       <HomeDownload />
+      <OurNews />
+      <NewsSubscribe />      
+      <HomeKnow />
       <Faq />      
     </section>
   );

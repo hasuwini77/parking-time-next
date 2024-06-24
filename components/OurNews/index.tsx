@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Link from "next/link";
 import { Image } from "@nextui-org/image";
+import styles from "./loading.module.css"
 
 interface NewsPost {
   id: string;
@@ -26,6 +27,9 @@ const OurNews: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+            // 3 saniyelik gecikme eklemek için setTimeout kullanın
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
         const posts = await fetchNewsPosts();
         const formattedPosts = posts.map((post: any) => ({
           id: post.sys.id,
@@ -57,8 +61,12 @@ const OurNews: React.FC = () => {
     fetchData();
   }, []);
 
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className={styles.Ring}>Loading
+      <span className={styles.Span}></span>
+    </div>
+  ;
   }
 
   if (error) {

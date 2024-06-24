@@ -1,20 +1,33 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Button,
+} from "@nextui-org/react";
 import Link from "next/link";
 import MyFlags from "./Flags";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Languages from "./Languages";
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleSetActiveLink = (link: string) => {
+    setActiveLink(link);
   };
 
   useEffect(() => {
@@ -47,17 +60,22 @@ const Header: React.FC = () => {
     };
   }, [isMobileMenuOpen]);
 
+
+
+  useEffect(() => {
+    setActiveLink("/");
+  }, []);
+
+
   return (
     <div className="mx-0 fixed w-full top-0 z-[9999]">
       {/* Mobile Header */}
       <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
-        {/* Navbar Brand */}
         <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
           <Link href="/" className="cursor-pointer p-0 m-0">
             <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
           </Link>
         </div>
-        {/* Navbar Hamburger Button */}
         <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
           <Button
             className="text-white bg-primary p-2 h-12 w-12 flex items-center justify-center border-none"
@@ -90,7 +108,6 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <div
@@ -104,66 +121,89 @@ const Header: React.FC = () => {
               transition={{ type: "tween", duration: 0.6 }}
               className="h-full flex flex-col justify-center items-center"
             >
-              <Navbar isBordered={!isMobileMenuOpen} className="bg-primary mb-10">
+              <Navbar
+                isBordered={!isMobileMenuOpen}
+                className="bg-primary mb-10"
+              >
                 <NavbarContent className="flex flex-col items-center gap-4">
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/#whyparking"
-                      className="text-white text-buttonText"
-                      onClick={toggleMobileMenu}
+                      className="text-white text-buttonText  hover:text-green2"
+                      onClick={() => {
+                        handleSetActiveLink("/#whyparking");
+                        toggleMobileMenu();
+                      }}
                     >
-                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
+                      {language === "english"
+                        ? "Why Parking Time?"
+                        : "Varför Parking Time?"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/"
-                      className="text-white text-buttonText"
-                      onClick={toggleMobileMenu}
+                      className="text-white text-buttonText  hover:text-green2"
+                      onClick={() => {
+                        handleSetActiveLink("/");
+                        toggleMobileMenu();
+                      }}
                     >
                       {language === "english" ? "Home" : "Hem"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/about"
-                      className="text-white text-buttonText"
-                      onClick={toggleMobileMenu}
+                      className="text-white text-buttonText  hover:text-green2"
+                      onClick={() => {
+                        handleSetActiveLink("/about");
+                        toggleMobileMenu();
+                      }}
                     >
                       {language === "english" ? "About us" : "Om oss"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/newsPost"
-                      className="text-white text-buttonText"
-                      onClick={toggleMobileMenu}
+                      className="text-white text-buttonText  hover:text-green2"
+                      onClick={() => {
+                        handleSetActiveLink("/newsPost");
+                        toggleMobileMenu();
+                      }}
                     >
                       {language === "english" ? "News" : "Nyheter"}
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-white text-buttonText"
-                      onClick={toggleMobileMenu}
+                      className="text-white text-buttonText hover:text-green2"
+                      onClick={() => {
+                        handleSetActiveLink("/faq");
+                        toggleMobileMenu();
+                      }}
                     >
                       {language === "english" ? "FAQ" : "FAQ"}
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white">
+                    <Button className="rounded-lg h-5 bg-white hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
                       <Link
                         href="/contact"
                         className="text-black hover:text-white text-buttonText"
-                        onClick={toggleMobileMenu}
+                        onClick={() => {
+                          handleSetActiveLink("/contact");
+                          toggleMobileMenu();
+                        }}
                       >
                         {language === "english" ? "Contact us" : "Kontakta oss"}
                       </Link>
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <MyFlags />
+                    <Languages />
                   </NavbarItem>
                 </NavbarContent>
               </Navbar>
@@ -171,65 +211,161 @@ const Header: React.FC = () => {
           </div>
         )}
       </AnimatePresence>
+
       {/* Desktop Header */}
-      <div className="hidden md:block w-full bg-primary">
+      <div className="hidden md:block w-full bg-primary ">
         <div className="w-full md:px-0">
-          <Navbar isBordered className="bg-primary w-full flex justify-center items-center">
-            {/* Logo Section */}
-            <div className="w-full flex justify-between items-center">
-              <NavbarBrand className="abc">
+          <Navbar
+            isBordered
+            className="bg-primary w-full"
+          >
+            <div className="w-full flex justify-between items-center ">
+              <NavbarBrand className="grow-0">
                 <Link href="/" className="cursor-pointer">
                   <Image
                     src="/images/logo-1.png"
                     alt="logo"
                     width={60}
                     height={60}
-                    className="min-w-[60px] min-h-[60px]"
+                    className="min-w-[60px] min-h-[60px] "
                   />
                 </Link>
               </NavbarBrand>
-              {/* Main Navigation */}
-              <div className="flex flex-row items-center justify-end">
-                <NavbarContent className="gap-4">
-                  <NavbarItem isActive>
-                    <Link href="/#whyparking" aria-current="page" className="text-white">
-                      {language === "english" ? "Why Parking Time?" : "Varför Parking Time?"}
+                <NavbarContent className="flex flex-row justify-between items-center gap-0 navbar-ul-basis">
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
+                    <Link
+                      href="/#whyparking"
+                      aria-current="page"
+                      className={`relative text-white ${activeLink === "/#whyparking" ? "active" : ""}`}
+                      onClick={() => handleSetActiveLink("/#whyparking")}
+                      onMouseEnter={() => setHoveredLink("/#whyparking")}
+                      onMouseLeave={() => setHoveredLink(null)}
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                    >
+                      <span className="group">
+                        {language === "english"
+                          ? "Why Parking Time?"
+                          : "Varför Parking Time?"}
+                        <span
+                          className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                            activeLink === "/#whyparking" ||
+                            hoveredLink === "/#whyparking"
+                              ? "scale-x-100"
+                              : "scale-x-0"
+                          }`}
+                        ></span>
+                      </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/">
-                      {language === "english" ? "Home" : "Hem"}
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className={`relative text-white ${activeLink === "/" ? "active" : ""}`}
+                      href="/"
+                      onClick={() => handleSetActiveLink("/")}
+                      onMouseEnter={() => setHoveredLink("/")}
+                      onMouseLeave={() => setHoveredLink(null)}
+                    >
+                      <span className="group">
+                        {language === "english" ? "Home" : "Hem"}
+                        <span
+                          className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                            activeLink === "/" || hoveredLink === "/"
+                              ? "scale-x-100"
+                              : "scale-x-0"
+                          }`}
+                        ></span>
+                      </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/about">
-                      {language === "english" ? "About us" : "Om oss"}
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className={`relative text-white ${activeLink === "/about" ? "active" : ""}`}
+                      href="/about"
+                      onClick={() => handleSetActiveLink("/about")}
+                      onMouseEnter={() => setHoveredLink("/about")}
+                      onMouseLeave={() => setHoveredLink(null)}
+                    >
+                      <span className="group">
+                        {language === "english" ? "About us" : "Om oss"}
+                        <span
+                          className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                            activeLink === "/about" || hoveredLink === "/about"
+                              ? "scale-x-100"
+                              : "scale-x-0"
+                          }`}
+                        ></span>
+                      </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/newsPost">
-                      {language === "english" ? "News" : "Nyheter"}
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className={`relative text-white ${activeLink === "/newsPost" ? "active" : ""}`}
+                      href="/newsPost"
+                      onClick={() => handleSetActiveLink("/newsPost")}
+                      onMouseEnter={() => setHoveredLink("/newsPost")}
+                      onMouseLeave={() => setHoveredLink(null)}
+                    >
+                      <span className="group">
+                        {language === "english" ? "News" : "Nyheter"}
+                        <span
+                          className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                            activeLink === "/newsPost" ||
+                            hoveredLink === "/newsPost"
+                              ? "scale-x-100"
+                              : "scale-x-0"
+                          }`}
+                        ></span>
+                      </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
-                    <Link className="text-white" href="/faq">
-                      {language === "english" ? "FAQ" : "Vanliga frågor"}
+                  <NavbarItem className="transition-colors duration-500 px-[12px]">
+                    <Link
+                      style={{
+                        transition: "color 0.5s ease-out",
+                      }}
+                      className={`relative text-white ${activeLink === "/faq" ? "active" : ""}`}
+                      href="/faq"
+                      onClick={() => handleSetActiveLink("/faq")}
+                      onMouseEnter={() => setHoveredLink("/faq")}
+                      onMouseLeave={() => setHoveredLink(null)}
+                    >
+                      <span className="group">
+                        {language === "english" ? "FAQ" : "Vanliga frågor"}
+                        <span
+                          className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                            activeLink === "/faq" || hoveredLink === "/faq"
+                              ? "scale-x-100"
+                              : "scale-x-0"
+                          }`}
+                        ></span>
+                      </span>
                     </Link>
                   </NavbarItem>
-                  <NavbarItem>
+                  <NavbarItem className=" transform transition-transform duration-500 px-[12px] hover:scale-105 ">
                     <Button
                       as={Link}
                       href="/contact"
-                      className="bg-white text-black size-2 h-5 w-[120px]"
+                      className="bg-white text-black h-5 w-[120px]  hover:bg-black hover:text-white"
+                      onClick={() => handleSetActiveLink("/contact")}
                     >
                       {language === "english" ? "Contact us" : "Kontakta oss"}
                     </Button>
                   </NavbarItem>
                   <NavbarItem>
-                    <MyFlags />
                   </NavbarItem>
                 </NavbarContent>
-              </div>
+              <Languages />
             </div>
           </Navbar>
         </div>

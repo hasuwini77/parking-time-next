@@ -3,6 +3,7 @@ import AboutVision from "@/components/AboutVision";
 import Quotes from "@/components/AboutQuotes";
 import AboutKnow from "@/components/AboutKnow";
 import Values from "@/components/AboutValues";
+import AboutTeam from "@/components/AboutTeam";
 
 export default function AboutPage() {
   return (
@@ -11,6 +12,7 @@ export default function AboutPage() {
       <AboutVision/>
       <Values />
       <Quotes />
+      <AboutTeam />
       <AboutKnow />
     </div>
   );

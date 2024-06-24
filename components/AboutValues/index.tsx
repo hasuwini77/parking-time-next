@@ -28,8 +28,7 @@ const Values: React.FC = () => {
                     <div className="justify-center items-center md:justify-content md:items-center md:flex md:flex-col md:m-2.5">
                     <Image className="md:w-4/5" src={Box} alt="Box" rel="noreferrer"/> 
                     {language === "english" ? (                    
-                    <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10">
-                        
+                    <span className="text-center mb-6 w-full justify-center items-center flex flex-col md:flex-col md:m-2.5 md:mb-10">                        
                         <b className="text-xl">Simplicity</b>
                         <p className="md:max-w-[200px]">We are striving to create simple and smooth experiences.</p>
                     </span>
