@@ -253,7 +253,7 @@ const Header: React.FC = () => {
                         ? "Why Parking Time?"
                         : "Varför Parking Time?"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/#whyparking" ||
                           hoveredLink === "/#whyparking"
                             ? "scale-x-100"
@@ -279,7 +279,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "Home" : "Hem"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/" || hoveredLink === "/"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -304,7 +304,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "About us" : "Om oss"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/about" || hoveredLink === "/about"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -329,7 +329,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "News" : "Nyheter"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/newsPost" ||
                           hoveredLink === "/newsPost"
                             ? "scale-x-100"
@@ -355,7 +355,7 @@ const Header: React.FC = () => {
                     <span className="group">
                       {language === "english" ? "FAQ" : "Vanliga frågor"}
                       <span
-                        className={`absolute left-0 top-3 w-full h-[2px] bg-white transform origin-left transition-transform duration-500 ${
+                        className={`absolute left-0 top-3 w-full h-[2px] bg-darkblack transform origin-left transition-transform duration-500 ${
                           activeLink === "/faq" || hoveredLink === "/faq"
                             ? "scale-x-100"
                             : "scale-x-0"
@@ -368,7 +368,7 @@ const Header: React.FC = () => {
                   <Button
                     as={Link}
                     href="/contact"
-                    className="bg-darkblack text-white h-5 w-[120px]  hover:bg-white hover:text-darkblack"
+                    className="bg-darkblack text-white h-5 w-[120px]  hover:bg-lightgrayborder hover:text-white"
                     onClick={() => handleSetActiveLink("/contact")}
                   >
                     {language === "english" ? "Contact us" : "Kontakta oss"}
