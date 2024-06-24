@@ -5,10 +5,12 @@ import { FC, useState } from "react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import "./subscribe.css";
+import { useTheme } from "@/context/ThemeContext";
 
 const NewsSubscribe: FC = () => {
   const { language } = useLanguage();
   const [userEmail, setUserEmail] = useState("");
+  const theme = useTheme();
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -66,7 +68,13 @@ Min e-post: "${userEmail}"`;
   };
 
   return (
-    <div className="bg-primary flex-col flex w-full items-center justify-between py-8 px-2 text-center">
+    <div
+      className={
+        theme === "dark"
+          ? "bg-secondary flex-col flex w-full items-center justify-between py-8 px-2 text-center"
+          : "bg-primary flex-col flex w-full items-center justify-between py-8 px-2 text-center"
+      }
+    >
       <p className="text-base text-textColor">
         {language === "english" ? "Newsletter" : "Nyhetsbrev"}
       </p>

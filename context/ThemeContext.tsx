@@ -16,7 +16,10 @@ export const ThemeContext = createContext<ThemeContextType>({
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setThemeState] = useState<ThemeType>("light");
+  const [theme, setThemeState] = useState<ThemeType>(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return (storedTheme as ThemeType) || "light";
+  });
 
   useEffect(() => {
     const body = document.body;
@@ -27,6 +30,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
       body.classList.remove("dark");
       body.classList.add("light");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const setTheme = (newTheme: ThemeType) => {
