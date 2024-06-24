@@ -204,9 +204,9 @@ const Header: React.FC = () => {
                       </Link>
                     </Button>
                   </NavbarItem>
-                  <NavbarItem>
+                  {/* <NavbarItem>
                     <DarkModeSwitch />
-                  </NavbarItem>
+                  </NavbarItem> */}
                   <NavbarItem>
                     <Languages />
                   </NavbarItem>
@@ -374,9 +374,9 @@ const Header: React.FC = () => {
                     {language === "english" ? "Contact us" : "Kontakta oss"}
                   </Button>
                 </NavbarItem>
-                <NavbarItem>
+                {/* <NavbarItem>
                   <DarkModeSwitch />
-                </NavbarItem>
+                </NavbarItem> */}
               </NavbarContent>
               <Languages />
             </div>
