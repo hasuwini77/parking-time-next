@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import Image from 'next/image';
-import Box from '@/public/images/aboutbox.png'
-import Check from '@/public/images/abouthuman.png'
-import Light from '@/public/images/aboutlight.png'
+import Image from "next/image";
+import Box from "@/public/images/aboutbox.png";
+import Check from "@/public/images/abouthuman.png";
+import Light from "@/public/images/aboutlight.png";
 
 const Values: React.FC = () => {
-    const { language } = useLanguage();
+  const { language } = useLanguage();
 
     return (
         <>
@@ -73,4 +73,4 @@ const Values: React.FC = () => {
     )
 }
 
-export default Values
+export default Values;
