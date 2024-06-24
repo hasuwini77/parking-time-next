@@ -83,11 +83,11 @@ const OurNews: React.FC = () => {
   }
 
   return (
-    <section className="py-4 md:py-8">
-      <h1 className="text-heading2 text-center mb-1">
+    <section className="py-4 md:py-8 bg-background">
+      <h1 className="text-heading2 text-textColor text-center mb-1">
         {language === "english" ? "News" : "Nyheter"}
       </h1>
-      <div className="container mx-auto px-4 py-4 md:py-4">
+      <div className="container text-textColor mx-auto px-4 py-4 md:py-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {newsPosts.map((post) => (
             <div key={post.id} className="shadow-md border-2 p-3 rounded-lg">
