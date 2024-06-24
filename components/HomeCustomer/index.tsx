@@ -13,12 +13,14 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "./styles.css";
+import { useTheme } from "@/context/ThemeContext";
 
 const testimonials = [
   {
     id: 1,
     imgAlt: "Logo Falkoping",
     logoSrc: "/images/falkoping.png",
+    logoDark: "/images/falk-dark.webp",
     text: {
       english:
         "“Parking Time has significantly improved our parking management and user satisfaction in the city center. The ease of use and intuitive interface have made it simple for residents and visitors to find and manage parking. We highly recommend Parking Time to other municipalities looking for a modern and efficient parking solution.”",
@@ -36,6 +38,7 @@ const testimonials = [
     id: 2,
     imgAlt: "Logo Nassjo",
     logoSrc: "/images/nassjokommun.png",
+    logoDark: "/images/nassjo-dark.webp",
     text: {
       english:
         "“Implementing Parking Time has been a game-changer for our urban planning efforts. The detailed usage data and behavior patterns provided by the app have given us valuable insights into parking trends and helped us optimize our parking resources. Parking Time has truly revolutionized the way we approach parking and urban development.”",
@@ -53,6 +56,7 @@ const testimonials = [
 
 const HomeCustomer: React.FC = () => {
   const { language } = useLanguage();
+  const theme = useTheme();
 
   return (
     <div className="bg-background flex flex-col items-center text-center py-20">
@@ -92,8 +96,13 @@ const HomeCustomer: React.FC = () => {
                 <CardHeader>
                   <Image
                     alt={testimonial.imgAlt}
-                    height={40}
-                    src={testimonial.logoSrc}
+                    height={100}
+                    width={100}
+                    src={
+                      theme === "dark"
+                        ? testimonial.logoDark
+                        : testimonial.logoSrc
+                    }
                     className="rounded-none"
                   />
                 </CardHeader>
