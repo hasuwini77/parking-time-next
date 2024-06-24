@@ -220,14 +220,14 @@ const Languages = () => {
         <span className="w-[30px] h-[20px] text-[14px] font-bold ms-1">{selectedLanguage.shortName}</span>
         {isOpen ? <FaCaretUp className="ms-[3px]" /> : <FaCaretDown className="ms-[3px]" />}
       </button>
-      <motion.div animate={isOpen ? "open" : "closed"} variants={menuVariants} className="absolute top-[24px] left-25 left-[-18px] bg-primary w-[100px] rounded-lg px-1 py-1">
+      <motion.div animate={isOpen ? "open" : "closed"} variants={menuVariants} className="absolute top-[45px] left-25 left-[-18px] bg-primary w-[100px] rounded-lg px-1 py-1">
         <motion.ul>
           {languages.map((item) => (
             <motion.li
               key={item.id}
               onClick={() => changeLanguage(item)}
               variants={itemVariants}
-              className="px-1 py-[4px] flex items-center gap-1 hover:bg-white hover:text-primary rounded-lg cursor-pointer"
+              className="px-1 py-[4px] flex items-center gap-1 hover:bg-black hover:text-white rounded-lg cursor-pointer"
             >
               <Image src={item.avatar} alt={item.shortName} className="w-[17px] h-[17px]" />
               <span className="text-[14px] font-bold">{item.shortName}</span>

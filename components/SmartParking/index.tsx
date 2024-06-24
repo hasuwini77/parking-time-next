@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext'; 
-import DownloadButton from '../DownloadButton';
 import Image from 'next/image';
+import ButtonEditable from '../ButtonEditable';
 
 const SmartParking: React.FC = () => {
     const { language } = useLanguage();
@@ -63,7 +63,8 @@ const SmartParking: React.FC = () => {
                             }
                         </p>
                     </div>
-                    <DownloadButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
+
                 </div>
             </div>
         </section>

@@ -16,7 +16,7 @@ const ButtonEditable: React.FC<ButtonEditable> = ({ linkHref, SWtext, ENtext, te
 
   return (
     <motion.button
-      className={`rounded-3xl md:w-48 w-full px-5 py-2 md:py-2 ${textColor} ${bgColor} ${hoverEffect} mb-2 md:mb-0 md:me-3 ease-in-out box-hover-shadow`}
+      className={`rounded-[2rem] md:w-48 w-full px-5 py-2 md:py-2 ${textColor} ${bgColor} ${hoverEffect} mb-2 md:mb-0 md:me-3 ease-in-out box-hover-shadow`}
       variants={{
         hidden: { opacity: 0, scale: 0.5 },
         visible: {
