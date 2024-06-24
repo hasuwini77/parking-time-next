@@ -234,7 +234,7 @@ const Header: React.FC = () => {
                     <Link
                       href="/#whyparking"
                       aria-current="page"
-                      className={`relative text-white ${
+                      className={`relative ${
                         activeLink === "/#whyparking" ? "active" : ""
                       }`}
                       onClick={() => handleSetActiveLink("/#whyparking")}
@@ -264,7 +264,7 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className={`relative text-white ${
+                      className={`relative ${
                         activeLink === "/" ? "active" : ""
                       }`}
                       href="/"
@@ -289,7 +289,7 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className={`relative text-white ${
+                      className={`relative ${
                         activeLink === "/about" ? "active" : ""
                       }`}
                       href="/about"
@@ -314,7 +314,7 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className={`relative text-white ${
+                      className={`relative ${
                         activeLink === "/newsPost" ? "active" : ""
                       }`}
                       href="/newsPost"
@@ -340,7 +340,7 @@ const Header: React.FC = () => {
                       style={{
                         transition: "color 0.5s ease-out",
                       }}
-                      className={`relative text-white ${
+                      className={`relative ${
                         activeLink === "/faq" ? "active" : ""
                       }`}
                       href="/faq"
