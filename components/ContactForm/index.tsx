@@ -61,10 +61,10 @@ const ContactForm: FC = () => {
       <div className="container mx-auto p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "Name" : "Namn"} <span className='text-red text-bold text-md'>*</span>
+            <label htmlFor="name" className="block text-sm font-medium text-darkblue2">
+              {language === "english" ? "Name" : "Namn"} <span className='text-darkblue2 text-bold text-md'>*</span>
             </label>
-            <input
+             <input
               type="text"
               id="name"
               placeholder={language === "english" ? "Name" : "Namn"}
@@ -74,7 +74,7 @@ const ContactForm: FC = () => {
             {errors.name && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
           </div>
           <div>
-            <label htmlFor="job" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="job" className="block text-sm font-medium text-darkblue2">
               {language === "english" ? "Job title" : "Jobbtitel"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
@@ -90,8 +90,8 @@ const ContactForm: FC = () => {
           {/* email & phone on the same line, min-width 1280px */}
           <div className="flex flex-col xl:flex-row gap-2">
             <div className="xl:w-8/12">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                {language === "english" ? "Email" : "E-post"} <span className='text-red text-bold text-md'>*</span>
+              <label htmlFor="email" className="block text-sm font-medium text-darkblue2">
+                {language === "english" ? "Email" : "E-post"} <span className='text-darkblue2 text-bold text-md'>*</span>
               </label>
               <input
                 type="email"
@@ -103,7 +103,7 @@ const ContactForm: FC = () => {
               {errors.email && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
             </div>
             <div className="xl:w-4/12">
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="phone" className="block text-sm font-medium text-darkblue2">
                 {language === "english" ? "Phone number" : "Telefonnummer"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
               </label>
               <input
@@ -118,7 +118,7 @@ const ContactForm: FC = () => {
           </div>
 
           <div>
-            <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="reason" className="block text-sm font-medium text-darkblue2">
               {language === "english" ? "Reason for contact" : "Orsak till kontakt"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
@@ -131,8 +131,8 @@ const ContactForm: FC = () => {
             {errors.reason && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "Write us a message" : "Skriv ett meddelande"} <span className='text-red text-bold text-md'>*</span>
+            <label htmlFor="message" className="block text-sm font-medium text-darkblue2">
+              {language === "english" ? "Write us a message" : "Skriv ett meddelande"} <span className='text-darkblue2 text-bold text-md'>*</span>
             </label>
             <textarea
               id="message"
@@ -150,7 +150,7 @@ const ContactForm: FC = () => {
               className="mr-2"
               {...register('terms', { required: true })}
             />
-            <label htmlFor="terms" className="mr-2 text-sm font-medium text-gray-700">
+            <label htmlFor="terms" className="mr-2 text-sm font-medium text-darkblue2">
               {language === "english" ? "I accept the terms" : "Jag accepterar villkoren"}
             </label>
             {errors.terms && <span className="text-red text-xs">{language === "english" ? "You must accept the terms!" : "Du måste acceptera villkoren!"}</span>}
