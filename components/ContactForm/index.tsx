@@ -37,7 +37,7 @@ const ContactForm: FC = () => {
     <section className="xl:gap-10 md:py-7 xl:max-w-7xl lg:max-w-3xl md:max-w-2xl mx-auto flex flex-col xl:flex-row items-center pt-5 pb-4">
       <div className="p-4 xl:p-5 self-start">
         <h1 className="font-bold text-5xl md:text-heading2 mb-3">
-          {language === "english" ? "Contact Us" : "Kontakta Oss"}
+          {language === "english" ? "Contact us" : "Kontakta oss"}
         </h1>
         <p className="mb-4 font-mono text-base leading-8 font-[500]">
           {language === "english" ? "Whether you have a question, feedback, or need assistance, please fill out the form below, and our team will get back to you as soon as possible." : "Om du har en fråga, feedback eller behöver hjälp, fyll i formuläret nedan så kommer vårt team att återkomma till dig så snart som möjligt."}
@@ -154,11 +154,11 @@ const ContactForm: FC = () => {
             <label htmlFor="terms" className="mr-2 text-sm font-medium text-darkblue2">
               {language === "english" ? (
                   <>
-                    I accept the <Link href="/terms" target="_blank" className='underline'>terms</Link>
+                    I accept the <Link href="/terms" target="_blank" className='underline'>Terms</Link>
                   </>
                 ) : (
                   <>
-                    Jag accepterar <Link href="/terms" target="_blank" className='underline'>villkoren</Link>
+                    Jag accepterar <Link href="/terms" target="_blank" className='underline'>Villkoren</Link>
                   </>
                 )}
             </label>
