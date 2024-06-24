@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Pagination } from "swiper/modules";
+import { useTheme } from "@/context/ThemeContext";
 
 // Import Swiper styles
 import "swiper/css";
@@ -20,6 +21,7 @@ interface TeamMember {
 
 const AboutTeam: React.FC = () => {
   const { language } = useLanguage();
+  const theme = useTheme();
 
   const teamMembers: TeamMember[] = [
     {
@@ -78,11 +80,17 @@ const AboutTeam: React.FC = () => {
   );
 
   return (
-    <div className="w-full py-3 flex flex-col px-4 md:px-20 md:py-2 justify-between items-center">
-      <h1 className="font-mono text-4xl md:text-5xl mb-4 short:text-5xl">
+    <div
+      className={
+        theme === "dark"
+          ? "w-full bg-background py-3 flex flex-col px-4 md:px-20 md:py-10 justify-between items-center"
+          : "w-full py-3 flex flex-col px-4 md:px-20 md:py-10 justify-between items-center"
+      }
+    >
+      <h1 className="font-mono text-textColor text-4xl md:text-5xl mb-4 short:text-5xl">
         {language === "english" ? "Meet our team" : "Möt vårt team"}
       </h1>
-      <p className="pb-3 text-center">
+      <p className="pb-3 text-textColor text-center">
         {language === "english"
           ? "Each member brings a unique blend of expertise, passion and forward-thinking mindset."
           : "Varje medlem tar med sig en unik blandning av expertis, passion och framåtanda."}
