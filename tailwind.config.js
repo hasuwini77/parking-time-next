@@ -92,7 +92,7 @@ module.exports = {
           colors: {
             background: "#191A24",
             primary: "#070707",
-            secondary: "#FFC383",
+            secondary: "#2A2B35",
             ternary: "#475557",
             red: "#F85252",
             white: "#FFFFF",
