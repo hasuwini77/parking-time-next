@@ -46,7 +46,7 @@ module.exports = {
         paragraph2: ["16px", { lineHeight: "26px" }],
       },
       backgroundImage: {
-        "home-hero": "url('/images/temp.png')",
+        "home-hero": "url('/images/homehero.webp')",
       },
       backgroundPosition: {
         "custom-center-50": "center 50%",
