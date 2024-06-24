@@ -28,9 +28,9 @@ const HomeKnow: React.FC = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center text-center mb-12 md:items-start p-2 md:mb-0 md:text-left md:pt-5 md:flex-1 md:max-w-none md:pb-12">
                     {language === "english" ? (
-                        <span className="font-bold text-4xl pb-3 md:text-heading2 mb-3">
+                        <h2 className="font-bold text-heading2 pb-3 md:text-heading2 mb-3">
                             Want to know more? <br/>
-                        </span>
+                        </h2>
                     ) : (
                         <span  className="font-bold text-4xl pb-3 md:text-heading2 mb-3">
                             Vill du veta mer? <br/>
@@ -47,7 +47,7 @@ const HomeKnow: React.FC = () => {
                         </span>
                     )}
                         <span className="w-full sm:max-w-[460px] text-center pt-3 md:text-left mt-3">
-                            <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-grey1 hover:text-white" />
+                            <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
                         </span>
                 </div>
             </div>

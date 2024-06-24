@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import DownloadButton from '../DownloadButton';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from 'next/image';
-import visionImg from '../../public/images/vision.png';
+import visionImg from '../../public/images/vision.webp';
+import ButtonEditable from '../ButtonEditable';
 
 interface Data {
     title1: string;
@@ -53,11 +53,8 @@ const AboutVision: React.FC = () => {
                 <p className="text-base pt-2 font-mono">{usedData?.text2}</p>
 
                 <span className="text-center p-3 py-6 md:p-0 md:py-4 md:text-left">
-                    <DownloadButton 
-                    linkHref="/contact" 
-                    SWtext="Boka ett möte" 
-                    ENtext="Book a meeting"
-                    />
+          <ButtonEditable linkHref="/contact" SWtext="Boka ett möte" ENtext="Book a meeting" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
+
                 </span>
             </div>
             <div className="w-full md:max-w-2xl flex justify-center">

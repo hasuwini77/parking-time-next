@@ -7,7 +7,7 @@ const NewsHero: React.FC = () => {
     return (
         <div className="w-full short:min-h-[60vh] relative flex justify-start items-start overflow-hidden">
             <Image
-                src="/images/newsHero.png"
+                src="/images/newshero3.webp"
                 alt="News Hero"
                 fill={true}
                 style={{objectFit: "cover"}}

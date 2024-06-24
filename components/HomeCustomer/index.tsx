@@ -12,7 +12,7 @@ const testimonials = [
     {
         id: 1,
         imgAlt: 'Logo Falkoping',
-        logoSrc: '/images/falkoping.png',
+        logoSrc: '/images/falkoping.webp',
         text: {
           english:'“Parking Time has significantly improved our parking management and user satisfaction in the city center. The ease of use and intuitive interface have made it simple for residents and visitors to find and manage parking. We highly recommend Parking Time to other municipalities looking for a modern and efficient parking solution.”',
           swedish: '“Parking Time har betydligt förbättrat vår parkeringshantering och användarnöjdhet i stadskärnan. Enkelheten och den intuitiva gränssnittet har gjort det enkelt för invånare och besökare att hitta och hantera parkering. Vi rekommenderar starkt Parking Time till andra kommuner som letar efter en modern och effektiv parkeringslösning.”'
@@ -27,7 +27,7 @@ const testimonials = [
     {
       id: 2,
       imgAlt: 'Logo Nassjo',
-      logoSrc: '/images/nassjokommun.png',
+      logoSrc: '/images/nassjokommun.webp',
       text: {
         english: '“Implementing Parking Time has been a game-changer for our urban planning efforts. The detailed usage data and behavior patterns provided by the app have given us valuable insights into parking trends and helped us optimize our parking resources. Parking Time has truly revolutionized the way we approach parking and urban development.”',
         swedish: '“Implementeringen av Parking Time har varit en verklig spelväxlare för våra stadsplaneringsinsatser. De detaljerade användningsdata och beteendemönster som appen tillhandahåller har gett oss värdefulla insikter i parkeringsmönster och hjälpt oss att optimera våra parkeringsresurser. Parking Time har verkligen revolutionerat vårt sätt att närma oss parkering och stadsutveckling.”'
@@ -47,7 +47,7 @@ const HomeCustomer: React.FC = () => {
   return (
     <div className="bg-background flex flex-col items-center text-center my-8">
       <div>
-        <h2 className="font-bold text-4xl md:text-heading2 mb-3">
+        <h2 className="font-bold text-heading2 leading-[48px] mb-3">
           {language === "english" ? ("Customer testimonials") : ("Kundreferenser")}
         </h2>
         <p className="font-mono text-base mx-3 md:pt-2 pb-2">
