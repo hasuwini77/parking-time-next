@@ -373,7 +373,6 @@ const Header: React.FC = () => {
                   <NavbarItem></NavbarItem>
                 </NavbarContent>
                 <Languages />
-
               </div>
             </div>
           </Navbar>
