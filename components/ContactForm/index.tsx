@@ -103,7 +103,7 @@ const ContactForm: FC = () => {
               />
               {errors.email && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
             </div>
-            <div className="xl:w-4/12">
+            <div className="w-[69%] sm:w-1/2 xl:w-4/12">
               <label htmlFor="phone" className="block text-sm font-medium text-darkblue2">
                 {language === "english" ? "Phone number" : "Telefonnummer"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
               </label>
