@@ -102,7 +102,7 @@ module.exports = {
             darkblue1: "#14243C",
             darkblue2: "#2A394E",
             textColor: "#FFFFFF",
-            darkblack: "#0B051D",
+            darkblack: "#FFFFFF",
           },
           fontFamily: {
             sans: ["Lato", "sans-serif"],

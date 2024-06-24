@@ -185,7 +185,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-darkblack text-buttonText text-textColor hover:text-green2"
+                      className="text-buttonText text-textColor hover:text-green2"
                       onClick={() => {
                         handleSetActiveLink("/faq");
                         toggleMobileMenu();
@@ -198,7 +198,11 @@ const Header: React.FC = () => {
                     <Button className="rounded-lg h-5 bg-darkblack hover:bg-green shadow-xs shadow-white transform transition-transform duration-400 hover:scale-105">
                       <Link
                         href="/contact"
-                        className="text-white hover:text-white text-buttonText"
+                        className={
+                          theme === "dark"
+                            ? "text-darkblue1 hover:text-darkblue2 text-buttonText"
+                            : "text-white hover:text-white text-buttonText"
+                        }
                         onClick={() => {
                           handleSetActiveLink("/contact");
                           toggleMobileMenu();
@@ -372,7 +376,11 @@ const Header: React.FC = () => {
                   <Button
                     as={Link}
                     href="/contact"
-                    className="bg-darkblack text-white h-5 w-[120px]  hover:bg-lightgrayborder hover:text-white"
+                    className={
+                      theme === "dark"
+                        ? "bg-darkblack text-darkblue1 h-5 w-[120px]  hover:bg-lightgrayborder hover:text-darkblue2"
+                        : "bg-darkblack text-white h-5 w-[120px] hover:bg-lightgrayborder hover:text-white"
+                    }
                     onClick={() => handleSetActiveLink("/contact")}
                   >
                     {language === "english" ? "Contact us" : "Kontakta oss"}
