@@ -29,7 +29,7 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/falkoping.png"
+              src="/images/BrandedLogos/falkoping2.png"
               alt="logo1"
               width={130}
               height={130}
@@ -125,7 +125,7 @@ const TrustedLogo: React.FC = () => {
           </li>
           <li>
             <Image
-              src="/images/BrandedLogos/falkoping.png"
+              src="/images/BrandedLogos/falkoping2.png"
               alt="logo1"
               width={130}
               height={130}
