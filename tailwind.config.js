@@ -70,6 +70,17 @@ module.exports = {
           layout: {},
           colors: {
             background: "#ECF2F1",
+            primary: "#0B051D",
+            red: "#F85252",
+            white: "#FFFFFF",
+            gray: "#868686",
+            lightgreyborder: "#E8E8E8",
+            gray2: "#F0F0F0",
+            darkblue1: "#14243C",
+            darkblue2: "#2A394E",
+          },
+            
+            /*background: "#ECF2F1",
             primary: "#06433E",
             secondary: "#0B051D",
             ternary: "#FFFFFF",
@@ -80,8 +91,8 @@ module.exports = {
             darkblue2: "#2A394E",
             grey1: "#868686",
             lightgreyborder: "#E8E8E8",
-            grey2: "#F0F0F0",
-          },
+            grey2: "#F0F0F0",*/
+            
           fontFamily: {
             sans: ["Lato", "sans-serif"],
             mono: ["Roboto", "monospace"],
