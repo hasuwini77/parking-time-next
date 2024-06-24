@@ -2,14 +2,15 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import DownloadButton from '../DownloadButton';
+import ButtonEditable from '../ButtonEditable';
 
 const AboutKnow: React.FC = () => {
     const { language } = useLanguage();
 
     return (
         <div className="bg-white text-center flex flex-col items-center">
-            <div className="px-6 pt-6 md:max-w-[550px]">
-                <h2 className="text-4xl font-semibold md:text-[44px] pb-2">
+            <div className="px-6 pt-6 md:max-w-[575px]">
+                <h2 className="text-heading2 font-semibold pb-2">
                     {language === "english" ? (
                         "Want to know more?"
                     ) : (
@@ -25,11 +26,7 @@ const AboutKnow: React.FC = () => {
                 </p>
             </div>
             <div className="p-3 pb-8 w-full sm:max-w-[460px]">
-                <DownloadButton 
-                linkHref="/contact" 
-                SWtext="Kontakta oss" 
-                ENtext="Contact us"
-                />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1" />
             </div>
         </div>
     );

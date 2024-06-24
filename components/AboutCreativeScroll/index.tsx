@@ -1,9 +1,9 @@
 "use client";
 import { useLanguage } from "@/context/LanguageContext";
-import ContactButton from "../ContactButton";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ButtonEditable from "../ButtonEditable";
 
 const AboutCreativeScroll: React.FC = () => {
   const { language } = useLanguage();
@@ -68,11 +68,8 @@ const AboutCreativeScroll: React.FC = () => {
             ? "Fill in the form below"
             : "Fyll i formuläret nedan"}
         </motion.p>
-        <ContactButton
-          linkHref="/contact"
-          SWtext="Kontakta oss"
-          ENtext="Contact us"
-        />
+        <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-black hover:text-white" />
+
       </div>
     </div>
   );

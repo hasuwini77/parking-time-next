@@ -75,7 +75,7 @@ const OurNews: React.FC = () => {
 
   return (
     <section className="py-4 md:py-8">
-      <h1 className="text-4xl text-center mb-1">Our News</h1>
+      <h2 className="text-heading2 text-center mb-1">News</h2>
       <div className="container mx-auto px-4 py-4 md:py-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {newsPosts.map((post) => (

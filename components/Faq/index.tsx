@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { useLanguage } from "@/context/LanguageContext";
-import DownloadButton from "../DownloadButton";
+import ButtonEditable from "../ButtonEditable";
 
 const Faq: React.FC = () => {
   const { language } = useLanguage();
@@ -63,7 +63,7 @@ const Faq: React.FC = () => {
         id="faq"
       >
         <h5 className="mb-2">FAQ</h5>
-        <h1 className="text-4xl">
+        <h1 className="text-heading2">
           {language === "english"
             ? "Do you have a question?"
             : "Har du någon fråga?"}
@@ -141,11 +141,8 @@ const Faq: React.FC = () => {
             : "Kontakta oss gärna om du har några frågor."}
         </p>
         <span className="min-w-[300px]">
-          <DownloadButton
-            linkHref="/contact"
-            SWtext="Kontakta oss"
-            ENtext="Contact us"
-          />
+        <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-grey1" />
+
         </span>
       </div>
     </>

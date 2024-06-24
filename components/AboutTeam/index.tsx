@@ -78,8 +78,8 @@ const AboutTeam: React.FC = () => {
   );
 
   return (
-    <div className="w-full py-3 flex flex-col px-4 md:px-20 md:py-2 justify-between items-center">
-      <h1 className="font-mono text-4xl md:text-5xl mb-4 short:text-5xl">
+    <div className="w-full py-8 flex flex-col px-4 md:px-20 justify-between items-center">
+      <h1 className="font-mono text-heading2 mb-4">
         {language === "english" ? "Meet our team" : "Möt vårt team"}
       </h1>
       <p className="pb-3 text-center">
