@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../../components/OurNews/loading.module.css";
 import { useLanguage } from "@/context/LanguageContext";
+import ButtonEditable from "@/components/ButtonEditable";
 
 const fetchNewsPost = async (slug: string) => {
   try {
@@ -98,14 +99,16 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
       </h1>
       <div className="mb-4">
         {post.fields.featuredImage ? (
-          <Image
-            src={`https:${post.fields.featuredImage.fields.file.url}`}
-            alt={post.fields.title}
-            width={1000}
-            height={600}
-            className="p-3"
-            priority
-          />
+          <div className="rounded-md overflow-hidden">
+            <Image
+              src={`https:${post.fields.featuredImage.fields.file.url}`}
+              alt={post.fields.title}
+              width={1000}
+              height={600}
+              className="p-3 rounded-md"
+              priority
+            />
+          </div>
         ) : (
           <p>
             {language === "english"
@@ -119,11 +122,14 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
           ? post.fields.paragraph1
           : post.fields.paragraph1Se}
       </p>
-      <Link href="/newsPost" passHref>
-        <span className="h-12 px-5 py-[12px] ml-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:from-secondary hover:to-primary transition duration-300">
-          {language === "english" ? "See all news" : "Se alla nyheter"}
-        </span>
-      </Link>
+      <ButtonEditable
+        linkHref="/newsPost"
+        SWtext="Se alla nyheter"
+        ENtext="See all news"
+        textColor="text-white"
+        bgColor="bg-black"
+        hoverEffect="hover:bg-white hover:text-black focus:outline-none focus:bg-white focus:text-black transition duration-300 ease-in-out shadow-md"
+      />
     </div>
   );
 };
