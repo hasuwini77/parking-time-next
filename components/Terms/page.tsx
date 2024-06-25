@@ -78,22 +78,22 @@ const Terms: React.FC = () => {
           <p className="mb-4">These terms regulate the use of all services provided by Parking Time Sweden AB (Parking Time), 559315-7547, to users (individuals over 18 years old) and parking operators (legal entities) in Sweden. For services that have specific conditions, the specific terms of the service shall take precedence over these general terms.</p>
 
           <h2 className="text-xl font-semibold mb-2">2. Use of Personal Data</h2>
-          <p className="mb-4">Parking Time collects and manages personal data to provide, manage, and charge for its services. For the use of the app, only the vehicle's registration number (license plate number) is required. The user's position is collected (if the user explicitly allows it) and stored during parking and for a short time thereafter, to offer the user good features during parking and receipt/proof of parking in case of parking ticket disputes.</p>
+          <p className="mb-4">Parking Time collects and manages personal data to provide, manage, and charge for its services. For the use of the app, only the vehicle&apos;s registration number (license plate number) is required. The user&apos;s position is collected (if the user explicitly allows it) and stored during parking and for a short time thereafter, to offer the user good features during parking and receipt/proof of parking in case of parking ticket disputes.</p>
 
           <h2 className="text-xl font-semibold mb-2">3. App Features</h2>
-          <p className="mb-4">Parking Time's app offers the user features to find parking spaces, and to start, manage, and end parking. During ongoing parking, the user sees the end time, and receives reminders in the app before the parking time expires.</p>
+          <p className="mb-4">Parking Time&apos;s app offers the user features to find parking spaces, and to start, manage, and end parking. During ongoing parking, the user sees the end time, and receives reminders in the app before the parking time expires.</p>
 
           <h2 className="text-xl font-semibold mb-2">4. Fees and Payment</h2>
-          <p className="mb-4">The use of Parking Time's app is free for users, but with agreed fees from the parking operators.</p>
+          <p className="mb-4">The use of Parking Time&apos;s app is free for users, but with agreed fees from the parking operators.</p>
 
           <h2 className="text-xl font-semibold mb-2">5. Data Protection and Security</h2>
-          <p className="mb-4">Parking Time manages users' and parking operators' data on secure servers and with secure encrypted communication with the app.</p>
+          <p className="mb-4">Parking Time manages users&apos; and parking operators&apos; data on secure servers and with secure encrypted communication with the app.</p>
 
           <h2 className="text-xl font-semibold mb-2">6. Disclaimer</h2>
-          <p className="mb-4">Users use Parking Time's app at their own risk. Parking Time is not responsible for any losses and damages due to the use, unless otherwise follows from Swedish law. Users must follow applicable road markings and other signage regarding the conditions for parking.</p>
+          <p className="mb-4">Users use Parking Time&apos;s app at their own risk. Parking Time is not responsible for any losses and damages due to the use, unless otherwise follows from Swedish law. Users must follow applicable road markings and other signage regarding the conditions for parking.</p>
 
-          <h2 className="text-xl font-semibold mb-2">7. Users' Rights</h2>
-          <p className="mb-4">Parking Time complies with the provisions of the Data Protection Act and the General Data Protection Regulation (GDPR) regarding users' rights. The user can exercise their rights by contacting Parking Time's support, see contact details at the end of these terms. Users have the right to</p>
+          <h2 className="text-xl font-semibold mb-2">7. Users&apos; Rights</h2>
+          <p className="mb-4">Parking Time complies with the provisions of the Data Protection Act and the General Data Protection Regulation (GDPR) regarding users&apos; rights. The user can exercise their rights by contacting Parking Time&apos;s support, see contact details at the end of these terms. Users have the right to</p>
           <ul className="list-disc list-inside mb-4">
             <li>obtain information about which personal data Parking Time has stored about them.</li>
             <li>have incorrect personal data corrected.</li>
@@ -102,7 +102,7 @@ const Terms: React.FC = () => {
             <li>have the personal data exported to a standard file format for use with another company.</li>
           </ul>
 
-          <h2 className="text-xl font-semibold mb-2">8. Users' Obligations</h2>
+          <h2 className="text-xl font-semibold mb-2">8. Users&apos; Obligations</h2>
           <p className="mb-4">Users shall</p>
           <ul className="list-disc list-inside mb-4">
             <li>Protect the app (mobile) from unauthorized use.</li>
@@ -116,11 +116,11 @@ const Terms: React.FC = () => {
           <h2 className="text-xl font-semibold mb-2">9. Changes to These Terms</h2>
           <p className="mb-4">Parking Time has the right to update these terms at any time. Such changes shall be announced via a news item on www.parkingtime.se and the latest version of these terms shall always be published on that website.</p>
 
-          <h2 className="text-xl font-semibold mb-2">10. Transfer of Parking Time's Rights</h2>
+          <h2 className="text-xl font-semibold mb-2">10. Transfer of Parking Time&apos;s Rights</h2>
           <p className="mb-4">Parking Time has the right to transfer all rights and obligations under these terms to a third party in their entirety. For example, this can occur in the event of a purchase of Parking Time. Such transfer shall be notified without undue delay via an amendment to these terms in accordance with section 9.</p>
 
           <h2 className="text-xl font-semibold mb-2">11. Intellectual Property</h2>
-          <p className="mb-4">Parking Time owns all intellectual property rights related to its services and apps. Users may not use features or source code of Parking Time's websites or apps, other than what is offered via their user interfaces.</p>
+          <p className="mb-4">Parking Time owns all intellectual property rights related to its services and apps. Users may not use features or source code of Parking Time&apos;s websites or apps, other than what is offered via their user interfaces.</p>
 
           <h2 className="text-xl font-semibold mb-2">12. Applicable Law and Disputes</h2>
           <p className="mb-4">Parking Time follows all recommendations of the National Board for Consumer Disputes, www.arn.se.</p>
