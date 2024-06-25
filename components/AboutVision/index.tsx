@@ -42,7 +42,7 @@ const AboutVision: React.FC = () => {
     }, [language]);
 
     return (
-        <div className="bg-white flex flex-col lg:flex-row items-center justify-center w-full px-5 lg:px-7 md:p-1">
+        <div className="bg-white text-center sm:text-start flex flex-col lg:flex-row items-center justify-center w-full px-3 lg:px-7 md:p-1">
             <div className="w-full md:max-w-2xl mt-12 flex flex-col md:px-3 md:pl-4 md:pr-1">
                 <h2 className="text-4xl font-semibold">{usedData?.title1}</h2>
                 <p className="text-base pt-2 font-mono">{usedData?.text1}</p>
@@ -52,9 +52,8 @@ const AboutVision: React.FC = () => {
                 <h2 className="text-4xl font-semibold pt-4">{usedData?.title2}</h2>
                 <p className="text-base pt-2 font-mono">{usedData?.text2}</p>
 
-                <span className="text-center p-3 py-6 md:p-0 md:py-4 md:text-left">
+                <span className="text-center py-6 md:p-0 md:py-4 md:text-left">
           <ButtonEditable linkHref="/contact" SWtext="Boka ett möte" ENtext="Book a meeting" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
-
                 </span>
             </div>
             <div className="w-full md:max-w-2xl flex justify-center">

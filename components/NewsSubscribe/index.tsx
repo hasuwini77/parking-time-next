@@ -65,8 +65,8 @@ Min e-post: "${userEmail}"`;
         <p className="text-base">{language === "english" ? "We are expanding rapidly, keep yourself updated via newsletter" : "Vi expanderar snabbt, håll dig uppdaterad via nyhetsbrevet"}</p>
         <div className="sm:relative w-[360px] sm:w-[420px] flex-col sm:flex-row items-center justify-center mt-3 max-w-[98%]">
           <form onSubmit={onSubmit} >
-            <input onChange={(e) => setUserEmail(e.target.value)} id="email" type="email" placeholder="example@gmail.com" className="sm:pe-32 ps-2 pe-2 py-[12px] w-full rounded-[40px] mb-2 sm:mb-0 text-primary focus-visible:outline-primary"/>
-            <button type="submit" className="sm:w-[110px] w-[360px] max-w-[98%] py-[14px] sm:py-[6px] rounded-[40px] text-center sm:absolute text-base sm:text-[12px] sm:right-[10px] sm:top-[6px] sm:rounded-[20px] bg-black text-white hover:bg-[#d2cfcf] hover:text-black hover:border">
+            <input onChange={(e) => setUserEmail(e.target.value)} id="email" type="email" placeholder="example@gmail.com" className="sm:pe-32 ps-2 pe-2 py-[12px] w-[342px] sm:w-full rounded-[40px] mb-2 sm:mb-0 text-primary focus-visible:outline-primary"/>
+            <button type="submit" className="sm:w-[110px] w-[342px] max-w-[98%] py-[14px] sm:py-[6px] rounded-[40px] text-center sm:absolute text-base sm:text-[12px] sm:right-[10px] sm:top-[6px] sm:rounded-[20px] bg-black text-white hover:bg-[#d2cfcf] hover:text-black hover:border">
               {language === "english" ? "Subscribe" : "Prenumerera"}
             </button>
           </form>
