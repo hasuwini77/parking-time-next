@@ -54,6 +54,8 @@ module.exports = {
       },
       screens: {
         short: { raw: "(max-height: 480px)" },
+        longW: { raw: "(min-width: 1124px)" },
+        bigScreen: { raw: "(min-width: 1424px)" },
         tall: { raw: "(min-height: 700px)" },
         middleWidth: { raw: "(min-width: 1024px)" },
         forFooter: { raw: "(min-width: 800px)" },

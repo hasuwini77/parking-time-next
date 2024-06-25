@@ -66,6 +66,7 @@ const HomeHero: React.FC = () => {
 
         </div>
       </div>
+      <div className="absoluute w-full short:w-[60%] longW:w-[52%] lg:w-[60%] bigScreen:w-[44%] l:w-[43%] h-full bg-[#00000054]"></div>
       <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-primary">
         <ul className="flex flex-col md:flex-row gap-2 list-disc">
           <div className="flex justify-around basis-1/2">
