@@ -1,3 +1,4 @@
+"use client"
 import HomeHero from "@/components/HomeHero";
 import HomeHowWorks from "@/components/HomeHowWorks";
 import HomeStatistics from "@/components/HomeStatistics";
@@ -10,6 +11,7 @@ import HomeDownload from "@/components/Home-Download";
 import OurNews from "@/components/OurNews";
 import HomeCustomer from "@/components/HomeCustomer";
 import NewsSubscribe from "@/components/NewsSubscribe";
+import ButtonEditable from "@/components/ButtonEditable";
 
 export default function Home() {
   return (
@@ -20,12 +22,15 @@ export default function Home() {
       <HomeWhyParking />      
       <HomeCustomer />
       <TrustedLogo />
-      <HomeStatistics />
-      <HomeDownload />
-      <OurNews />
       <NewsSubscribe />      
-      <HomeKnow />
+      <OurNews />
+      <div className="flex justify-center bg-primary pt-2 pb-6">
+      <span className="max-w-[90%] w-[342px] mx-auto text-center"><ButtonEditable linkHref="/newsPost" SWtext="Visa alla" ENtext="View all" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" /></span>
+      </div>
+      <HomeDownload />
+      <HomeStatistics />
       <Faq />      
+      <HomeKnow />
     </section>
   );
 }

@@ -29,6 +29,11 @@
 .box-hover-shadow:hover {
   box-shadow: rgba(251, 251, 251, 0.35) 0px 5px 15px;
 }
+
+.shadow-hoverWhite {
+  box-shadow: #ffffff9c 1px 1px 14px;
+
+}
 /* Tehe are Bedir's costum classes for Home-Hero aria */
 
 .bg-radial-gradient {
@@ -75,3 +80,7 @@ justify-content: center !important;
 .left-25 {
 left: -18px !important;
 }
+
+/* .active {
+  border-bottom:  3px solid black;
+} */

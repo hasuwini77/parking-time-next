@@ -2,15 +2,15 @@ import AboutHero from "@/components/AboutHero";
 import AboutVision from "@/components/AboutVision";
 import Quotes from "@/components/AboutQuotes";
 import AboutKnow from "@/components/AboutKnow";
+import Values from "@/components/AboutValues";
 import AboutTeam from "@/components/AboutTeam";
-import AboutCreativeScroll from "@/components/AboutCreativeScroll";
 
 export default function AboutPage() {
   return (
-    <div>
+    <div >
       <AboutHero />
-      <AboutVision />
-      <AboutCreativeScroll />
+      <AboutVision/>
+      <Values />
       <Quotes />
       <AboutTeam />
       <AboutKnow />

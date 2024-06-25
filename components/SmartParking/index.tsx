@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext'; 
-import DownloadButton from '../DownloadButton';
 import Image from 'next/image';
+import ButtonEditable from '../ButtonEditable';
 
 const SmartParking: React.FC = () => {
     const { language } = useLanguage();
@@ -13,7 +13,7 @@ const SmartParking: React.FC = () => {
             <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4'>
                 <div className="mb-5 px-1 md:w-1/2">
                 <Image
-                    src="/images/smartparking.png"
+                    src="/images/smartparking.webp"
                     alt="Smart Parking"
                     width={700}
                     height={700}
@@ -63,7 +63,8 @@ const SmartParking: React.FC = () => {
                             }
                         </p>
                     </div>
-                    <DownloadButton linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
+
                 </div>
             </div>
         </section>

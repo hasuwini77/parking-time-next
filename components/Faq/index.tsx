@@ -3,7 +3,7 @@ import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import ContactButton from "../ContactButton";
+import ButtonEditable from "../ButtonEditable";
 
 const Faq: React.FC = () => {
   const { language } = useLanguage();
@@ -61,7 +61,7 @@ const Faq: React.FC = () => {
   return (
     <>
       <div
-        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
+        className="container w-full min-w-full py-24 md:py-38 px-2 md:px-20 flex flex-col justify-center items-center text-center bg-primary"
         id="faq"
       >
         <h5
@@ -204,12 +204,9 @@ const Faq: React.FC = () => {
             ? "Feel free to contact us if you have any questions."
             : "Kontakta oss gärna om du har några frågor."}
         </p>
-        <span className="min-w-[300px] text-sm">
-          <ContactButton
-            linkHref="/contact"
-            SWtext="Kontakta oss"
-            ENtext="Contact us"
-          />
+        <span className="min-w-[300px] w-[342px]">
+        <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
+
         </span>
       </div>
     </>

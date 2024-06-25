@@ -10,7 +10,7 @@ export default function Footer() {
   const { language } = useLanguage();
 
   return (
-    <footer className="flex flex-col justify-between items-center py-6 px-3 bg-primary text-white">
+    <footer className="flex flex-col justify-between items-center py-6 px-3 bg-primary text-darkblack">
       <div className="flex flex-col forFooter:flex-row justify-between items-start ps-3 sm:ps-0 w-full border-b-4	pb-3 mb-3">
         <div className="left mb-3 sm:mb-3 flex flex-col sm:flex-row justify-between items-start ">
           <Image width={60} height={60} src={logo} alt="logo" className="mb-2 sm:mb-0" />
@@ -64,12 +64,6 @@ export default function Footer() {
           >
             {language == "english" ? "Privacy Policy" : "Integritetspolicy"}
           </Link>
-          {/* <Link
-            className="underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300"
-            href="/contact"
-          >
-            {language == "english" ? "Terms of Service" : "Användarvillkor"}
-          </Link> */}
         </div>
       </div>
     </footer>
