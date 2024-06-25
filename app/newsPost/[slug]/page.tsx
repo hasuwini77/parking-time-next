@@ -97,18 +97,16 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
       <h1 className="text-3xl font-bold mb-4 p-2">
         {language === "english" ? post.fields.bigTitle : post.fields.bigTitleSe}
       </h1>
-      <div className="mb-4">
+      <div className="mb-4 rounded-md">
         {post.fields.featuredImage ? (
-          <div className="rounded-md overflow-hidden">
-            <Image
-              src={`https:${post.fields.featuredImage.fields.file.url}`}
-              alt={post.fields.title}
-              width={1000}
-              height={600}
-              className="p-3 rounded-md"
-              priority
-            />
-          </div>
+          <Image
+            src={`https:${post.fields.featuredImage.fields.file.url}`}
+            alt={post.fields.title}
+            width={1000}
+            height={600}
+            className="p-3 rounded-md"
+            priority
+          />
         ) : (
           <p>
             {language === "english"
