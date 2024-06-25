@@ -15,7 +15,7 @@ module.exports = {
       boxShadow: {
         "glow-purple": "0 0 20px 5px rgba(128, 0, 128, 0.8)",
         "glow-green": "0 0 20px 5px rgba(0, 255, 0, 0.8)",
-        "glow-darkgreen": "0 0 20px 5px rgba(0, 200, 0, 0.8)",
+        "glow-darkgreen": "0 0 20px 5px rgba(0, 200, 0, 0.3)",
       },
       keyframes: {
         "infinite-scroll": {

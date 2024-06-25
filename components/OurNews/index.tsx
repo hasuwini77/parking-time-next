@@ -32,7 +32,7 @@ const OurNews: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // 3 saniyelik gecikme eklemek için setTimeout kullanın
+        // Adding a 500ms delay to simulate loading
         await new Promise((resolve) => setTimeout(resolve, 500));
 
         const posts = await fetchNewsPosts();
@@ -82,11 +82,15 @@ const OurNews: React.FC = () => {
     return <div>{error}</div>;
   }
 
+  const showHeading = window.location.pathname === "/newsPost";
+
   return (
     <section className="py-6 bg-primary">
-      <h1 className="text-heading2 text-center mb-1">
-        {language === "english" ? "News" : "Nyheter"}
-      </h1>
+      {showHeading && (
+        <h1 className="text-heading2 text-center mb-1">
+          {language === "english" ? "News" : "Nyheter"}
+        </h1>
+      )}
       <div className="container mx-auto px-4 py-4 md:py-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {newsPosts.map((post) => (
@@ -113,14 +117,16 @@ const OurNews: React.FC = () => {
                 <h2 className="text-xl">
                   {language === "english" ? post.title : post.titleSe}
                 </h2>
-                <p className="text-base text-grey1 my-2 max-w-[90%]">
-                  {language === "english"
-                    ? `${(post.paragraph1 ?? "No content available.").split(" ").slice(0, 18).join(" ")} ...`
-                    : `${(post.paragraph1Se ?? "Inget innehåll tillgängligt.").split(" ").slice(0, 18).join(" ")} ...`}
-                </p>
+                <Link href={`/newsPost/${post.slug ?? "nodata"}`}>
+                  <p className="text-base text-grey1 my-2 max-w-[90%]">
+                    {language === "english"
+                      ? `${(post.paragraph1 ?? "No content available.").split(" ").slice(0, 18).join(" ")} ...`
+                      : `${(post.paragraph1Se ?? "Inget innehåll tillgängligt.").split(" ").slice(0, 18).join(" ")} ...`}
+                  </p>
+                </Link>
                 <Link
                   href={`/newsPost/${post.slug ?? "nodata"}`}
-                  className="hover:text-grey1 underline"
+                  className="hover:text-gray underline"
                 >
                   {language === "english" ? "Read more" : "Läs mer"}
                 </Link>
