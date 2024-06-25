@@ -90,7 +90,10 @@ const OurNews: React.FC = () => {
       <div className="container mx-auto px-4 py-4 md:py-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {newsPosts.map((post) => (
-            <div key={post.id} className="shadow-md border-2 p-3 rounded-lg">
+            <div
+              key={post.id}
+              className="shadow-md p-3 rounded-lg transition duration-500 ease-in-out hover:shadow-glow-darkgreen"
+            >
               <Link href={`/newsPost/${post.slug ?? "nodata"}`}>
                 {post.thumbnail ? (
                   <Image
