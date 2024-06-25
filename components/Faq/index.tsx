@@ -67,8 +67,8 @@ const Faq: React.FC = () => {
         <h5
           className={
             theme === "dark"
-              ? "mb-2 text-white text-heading2"
-              : "mb-2 text-heading2"
+              ? "mb-2 text-white text-heading5"
+              : "mb-2 text-heading5"
           }
         >
           FAQ
@@ -205,8 +205,14 @@ const Faq: React.FC = () => {
             : "Kontakta oss gärna om du har några frågor."}
         </p>
         <span className="min-w-[300px] w-[342px]">
-        <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray" />
-
+          <ButtonEditable
+            linkHref="/contact"
+            SWtext="Kontakta oss"
+            ENtext="Contact us"
+            textColor="text-white"
+            bgColor="bg-black"
+            hoverEffect="hover:bg-gray"
+          />
         </span>
       </div>
     </>

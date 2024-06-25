@@ -12,6 +12,11 @@ module.exports = {
       animation: {
         "infinite-scroll": "infinite-scroll 45s linear infinite",
       },
+      boxShadow: {
+        "glow-purple": "0 0 20px 5px rgba(128, 0, 128, 0.8)",
+        "glow-green": "0 0 20px 5px rgba(0, 255, 0, 0.8)",
+        "glow-darkgreen": "0 0 20px 5px rgba(0, 200, 0, 0.3)",
+      },
       keyframes: {
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
@@ -84,8 +89,8 @@ module.exports = {
             textColor: "#0B051D",
             darkblack: "#0B051D",
           },
-            
-            /*background: "#ECF2F1",
+
+          /*background: "#ECF2F1",
             primary: "#06433E",
             secondary: "#0B051D",
             ternary: "#FFFFFF",
@@ -106,16 +111,16 @@ module.exports = {
         dark: {
           layout: {},
           colors: {
-          background: "#",
-          primary: "#",
-          red: "#",
-          white: "#",
-          gray: "#",
-          lightgreyborder: "#",
-          gray2: "#",
-          darkblue1: "#",
-          darkblue2: "#",
-          darkblack: "#",
+            background: "#",
+            primary: "#",
+            red: "#",
+            white: "#",
+            gray: "#",
+            lightgreyborder: "#",
+            gray2: "#",
+            darkblue1: "#",
+            darkblue2: "#",
+            darkblack: "#",
             /*
             background: "#121212",
             primary: "#1F1F1F",
