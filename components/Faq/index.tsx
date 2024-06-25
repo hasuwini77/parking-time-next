@@ -73,10 +73,10 @@ const Faq: React.FC = () => {
         >
           FAQ
         </h5>
-        <h1 className={theme === "dark" ? "text-4xl text-white" : "text-4xl"}>
+        <h1 className={theme === "dark" ? "font-bold text-4xl md:text-heading2 text-white" : "font-bold text-4xl md:text-heading2 "}>
           {language === "english"
             ? "Do you have a question?"
-            : "Har du någon fråga?"}
+            : "Har du en fråga?"}
         </h1>
         <p
           className={
@@ -191,7 +191,7 @@ const Faq: React.FC = () => {
         >
           {language === "english"
             ? "Still have a question?"
-            : "Har du fortfarande mer frågor?"}
+            : "Har du fortfarande en fråga?"}
         </h3>
         <p
           className={
@@ -202,7 +202,7 @@ const Faq: React.FC = () => {
         >
           {language === "english"
             ? "Feel free to contact us if you have any questions."
-            : "Kontakta oss gärna om du har några frågor."}
+            : "Tveka inte att kontakta oss om du har några frågor."}
         </p>
         <span className="min-w-[300px] w-[342px]">
           <ButtonEditable

@@ -77,13 +77,13 @@ const AboutTeam: React.FC = () => {
 
   return (
     <div className="w-full py-8 flex flex-col px-4 md:px-20 justify-between items-center">
-      <h1 className="font-mono text-heading2 mb-4">
+      <h1 className="font-mono font-bold text-4xl md:text-heading2 mb-4">
         {language === "english" ? "Meet our team" : "Möt vårt team"}
       </h1>
       <p className="pb-3 text-center">
         {language === "english"
           ? "Each member brings a unique blend of expertise, passion and forward-thinking mindset."
-          : "Varje medlem tar med sig en unik blandning av expertis, passion och framåtanda."}
+          : "Varje medlem bidrar med en unik blandning av expertis, passion och framtidstänkande."}
       </p>
 
       {/* Swiper for mobile view */}

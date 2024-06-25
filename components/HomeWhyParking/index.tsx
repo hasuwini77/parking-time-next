@@ -34,10 +34,10 @@ const englishData: Data = {
 };
 const swedishData: Data = {
   mainTitle: "Varför Parking Time?",
-  subtitle1: "Ökad intäkt och minskad stress",
+  subtitle1: "Undvik böter och minska stressen",
   subtitle2: "Förenklad parkering för användare",
   subtitle3: "Integration med befintliga system",
-  subtitle4: "Datadriven stadsplanering",
+  subtitle4: "Datastyrd stadsplanering",
   text1:
     "Vår digitala lösning lockar fler besökare genom att eliminera fysiska skivor och minska böter. Detta förenklar parkeringen, ökar fottrafik, ekonomisk aktivitet och stadens livlighet samtidigt som stressen minskar.",
   text2:
@@ -65,7 +65,7 @@ const HomeWhyParking: React.FC = () => {
       className="bg-white px-3 py-8 text-darkblack flex flex-col items-center "
       id="whyparking"
     >
-      <h1 className="text-heading2 mb-6 text-center leading-[58px]">
+      <h1 className="font-bold text-4xl md:text-heading2 mb-6 text-center leading-[58px]">
         {usedData?.mainTitle}
       </h1>
       <div className="flex md:flex-row flex-col items-center justify-center mb-4">

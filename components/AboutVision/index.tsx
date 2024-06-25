@@ -26,7 +26,7 @@ const englishData: Data = {
 
 const swedishData: Data = {
   title1: "Vår Vision",
-  title2: "Vår berättelse",
+  title2: "Vår historia",
   text1:
     "Parking Time Sweden är ett teknik-startup som syftar till att revolutionera parkeringsupplevelsen för samtliga parter - parkören, parkeringsvakten, kommunen och (eller) fastighetsägaren.",
   text1_2:
@@ -60,8 +60,8 @@ const AboutVision: React.FC = () => {
         <span className="text-center py-6 md:p-0 md:py-4 md:text-left">
           <ButtonEditable
             linkHref="/contact"
-            SWtext="Boka ett möte"
-            ENtext="Book a meeting"
+            SWtext="Kontakta oss"
+            ENtext="Contact us"
             textColor="text-white"
             bgColor="bg-black"
             hoverEffect="hover:bg-gray"

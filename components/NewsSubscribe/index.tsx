@@ -70,13 +70,13 @@ Min e-post: "${userEmail}"`;
       <p className="text-base">
         {language === "english" ? "Newsletter" : "Nyhetsbrev"}
       </p>
-      <h2 className="text-heading2 my-4 text-bold">
-        {language === "english" ? "Don't Miss" : "Missar inte"}
+      <h2 className="font-bold text-4xl md:text-heading2  my-4 text-bold">
+        {language === "english" ? "Don't Miss" : "Missa inte"}
       </h2>
       <p className="text-base">
         {language === "english"
           ? "We are expanding rapidly, keep yourself updated via newsletter"
-          : "Vi expanderar snabbt, håll dig uppdaterad via nyhetsbrevet"}
+          : "Vi expanderar snabbt, prenumerera på vårt nyhetsbrev"}
       </p>
       <div className="sm:relative w-[360px] sm:w-[420px] flex-col sm:flex-row items-center justify-center mt-3 max-w-[98%]">
         <form onSubmit={onSubmit}>
