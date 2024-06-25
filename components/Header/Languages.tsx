@@ -41,7 +41,7 @@ const Languages = () => {
       // Set default language in localStorage if not present
       localStorage.setItem("selectedLanguage", JSON.stringify(languages[1]));
     }
-  }, [setLanguage]);
+  }, [setLanguage, selectedLanguage]);
 
   const changeLanguage = (language: any) => {
     setSelectedLanguage(language);
