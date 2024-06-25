@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { notFound } from "next/navigation";
 import { fetchNewsPosts } from "@/utils/fetchContentful";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../../../components/OurNews/loading.module.css";
 import { useLanguage } from "@/context/LanguageContext";
 import ButtonEditable from "@/components/ButtonEditable";
@@ -97,37 +96,41 @@ const NewsDetail = ({ params }: { params: { slug: string } }) => {
       <h1 className="text-3xl font-bold mb-4 p-2">
         {language === "english" ? post.fields.bigTitle : post.fields.bigTitleSe}
       </h1>
-      <div className="mb-4 rounded-md">
-        {post.fields.featuredImage ? (
+
+      {post.fields.featuredImage ? (
+        <div className="mb-4 rounded-lg p-2">
           <Image
             src={`https:${post.fields.featuredImage.fields.file.url}`}
             alt={post.fields.title}
             width={1000}
             height={600}
-            className="p-3 rounded-md"
+            className="rounded-lg shadow-md"
             priority
           />
-        ) : (
-          <p>
-            {language === "english"
-              ? "No Featured Image available."
-              : "Ingen utvald bild tillgänglig."}{" "}
-          </p>
-        )}
-      </div>
+        </div>
+      ) : (
+        <p>
+          {language === "english"
+            ? "No Featured Image available."
+            : "Ingen utvald bild tillgänglig."}{" "}
+        </p>
+      )}
+
       <p className="p-3 font-sans text-lg">
         {language === "english"
           ? post.fields.paragraph1
           : post.fields.paragraph1Se}
       </p>
-      <ButtonEditable
-        linkHref="/newsPost"
-        SWtext="Se alla nyheter"
-        ENtext="See all news"
-        textColor="text-white"
-        bgColor="bg-black"
-        hoverEffect="hover:bg-white hover:text-black focus:outline-none focus:bg-white focus:text-black transition duration-300 ease-in-out shadow-md"
-      />
+      <div className="p-2">
+        <ButtonEditable
+          linkHref="/newsPost"
+          SWtext="Se alla nyheter"
+          ENtext="See all news"
+          textColor="text-white"
+          bgColor="bg-black"
+          hoverEffect="hover:bg-white hover:text-black focus:outline-none focus:bg-white focus:text-black  shadow-md"
+        />
+      </div>
     </div>
   );
 };
