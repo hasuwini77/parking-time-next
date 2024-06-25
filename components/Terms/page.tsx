@@ -129,7 +129,7 @@ const Terms: React.FC = () => {
           <p className="mb-2">Parking Time can be contacted via:</p>
           <p className="mb-2">Email: info@parkingtime.se</p>
           <p className="mb-2">Phone: 072-722 44 00</p>
-          <p className="mb-2">Web: www.parkingtime.se</p>
+          <p>Web: www.parkingtime.se</p>
         </>
       )}
     </section>
