@@ -7,6 +7,7 @@ import SendEmailButton from "../SendEmailButton";
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 export type FormData = {
   name: string;
@@ -35,8 +36,8 @@ const ContactForm: FC = () => {
   return (
     <section className="xl:gap-10 md:py-7 xl:max-w-7xl lg:max-w-3xl md:max-w-2xl mx-auto flex flex-col xl:flex-row items-center pt-5 pb-4">
       <div className="p-4 xl:p-5 self-start">
-        <h1 className="font-bold text-heading2 md:text-heading2 mb-3">
-          {language === "english" ? "Contact Us" : "Kontakta Oss"}
+        <h1 className="font-bold text-5xl md:text-heading2 mb-3">
+          {language === "english" ? "Contact us" : "Kontakta oss"}
         </h1>
         <p className="mb-4 font-mono text-base leading-8 font-[500]">
           {language === "english" ? "Whether you have a question, feedback, or need assistance, please fill out the form below, and our team will get back to you as soon as possible." : "Om du har en fråga, feedback eller behöver hjälp, fyll i formuläret nedan så kommer vårt team att återkomma till dig så snart som möjligt."}
@@ -44,15 +45,15 @@ const ContactForm: FC = () => {
         <ul className="list-none">
           <li className="mb-2 flex items-center">
             <FaEnvelope className="mr-2" />
-            <a href="mailto:info@parkingtime.se" className="underline">info@parkingtime.se</a>
+            <a href="mailto:info@parkingtime.se" className="hover:underline">info@parkingtime.se</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaPhone className="mr-2" />
-            <a href="tel:+46723991515" className="text-blue-600 underline">+46 72 399 15 15</a>
+            <a href="tel:+46723991515" className="hover:underline">+46 72 399 15 15</a>
           </li>
           <li className="mb-2 flex items-center">
             <FaLocationDot className="mr-2" />
-            <a href="https://maps.google.com/?q=Nyköpingsvägen 52, 611 50 NYKÖPING" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+            <a href="https://maps.google.com/?q=Nyköpingsvägen 52, 611 50 NYKÖPING" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Nyköpingsvägen 52 | 611 50 NYKÖPING
             </a>
           </li>
@@ -61,20 +62,20 @@ const ContactForm: FC = () => {
       <div className="container mx-auto p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "First and last name" : "För- och efternamn"} <span className='text-red text-bold text-md'>*</span>
+            <label htmlFor="name" className="block text-sm font-medium text-darkblue2">
+              {language === "english" ? "Name" : "Namn"} <span className='text-darkblue2 text-bold text-md'>*</span>
             </label>
-            <input
+             <input
               type="text"
               id="name"
-              placeholder={language === "english" ? "First and last name" : "För- och efternamn"}
+              placeholder={language === "english" ? "Name" : "Namn"}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-[10px]"
               {...register('name', { required: true })}
             />
             {errors.name && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
           </div>
           <div>
-            <label htmlFor="job" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="job" className="block text-sm font-medium text-darkblue2">
               {language === "english" ? "Job title" : "Jobbtitel"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
@@ -90,8 +91,8 @@ const ContactForm: FC = () => {
           {/* email & phone on the same line, min-width 1280px */}
           <div className="flex flex-col xl:flex-row gap-2">
             <div className="xl:w-8/12">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                {language === "english" ? "Email" : "E-post"} <span className='text-red text-bold text-md'>*</span>
+              <label htmlFor="email" className="block text-sm font-medium text-darkblue2">
+                {language === "english" ? "Email" : "E-post"} <span className='text-darkblue2 text-bold text-md'>*</span>
               </label>
               <input
                 type="email"
@@ -102,8 +103,8 @@ const ContactForm: FC = () => {
               />
               {errors.email && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
             </div>
-            <div className="xl:w-4/12">
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+            <div className="w-[69%] sm:w-1/2 xl:w-4/12">
+              <label htmlFor="phone" className="block text-sm font-medium text-darkblue2">
                 {language === "english" ? "Phone number" : "Telefonnummer"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
               </label>
               <input
@@ -118,7 +119,7 @@ const ContactForm: FC = () => {
           </div>
 
           <div>
-            <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="reason" className="block text-sm font-medium text-darkblue2">
               {language === "english" ? "Reason for contact" : "Orsak till kontakt"} <span className='ps-[4px] text-[12px] text-grey1'>{language === "english" ? "(optional)" : "(valfritt)"}</span>
             </label>
             <input
@@ -131,8 +132,8 @@ const ContactForm: FC = () => {
             {errors.reason && <span className="text-red text-xs">{language === "english" ? "This field is required" : "Detta fält är obligatoriskt"}</span>}
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              {language === "english" ? "Write us a message" : "Skriv ett meddelande"} <span className='text-red text-bold text-md'>*</span>
+            <label htmlFor="message" className="block text-sm font-medium text-darkblue2">
+              {language === "english" ? "Write us a message" : "Skriv ett meddelande"} <span className='text-darkblue2 text-bold text-md'>*</span>
             </label>
             <textarea
               id="message"
@@ -150,8 +151,16 @@ const ContactForm: FC = () => {
               className="mr-2"
               {...register('terms', { required: true })}
             />
-            <label htmlFor="terms" className="mr-2 text-sm font-medium text-gray-700">
-              {language === "english" ? "I accept the terms" : "Jag accepterar villkoren"}
+            <label htmlFor="terms" className="mr-2 text-sm font-medium text-darkblue2">
+              {language === "english" ? (
+                  <>
+                    I accept the <Link href="/terms" target="_blank" className='underline'>Terms</Link>
+                  </>
+                ) : (
+                  <>
+                    Jag accepterar <Link href="/terms" target="_blank" className='underline'>Villkoren</Link>
+                  </>
+                )}
             </label>
             {errors.terms && <span className="text-red text-xs">{language === "english" ? "You must accept the terms!" : "Du måste acceptera villkoren!"}</span>}
           </div>
