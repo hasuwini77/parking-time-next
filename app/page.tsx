@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import HomeHero from "@/components/HomeHero";
 import HomeHowWorks from "@/components/HomeHowWorks";
 import HomeStatistics from "@/components/HomeStatistics";
@@ -19,17 +19,26 @@ export default function Home() {
       <HomeHero />
       <SmartParking />
       <HomeHowWorks />
-      <HomeWhyParking />      
+      <HomeWhyParking />
       <HomeCustomer />
       <TrustedLogo />
-      <NewsSubscribe />      
+      <NewsSubscribe />
       <OurNews />
       <div className="flex justify-center bg-primary pt-2 pb-6">
-      <span className="max-w-[90%] w-[342px] mx-auto text-center"><ButtonEditable linkHref="/newsPost" SWtext="Visa alla" ENtext="View all" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" /></span>
+        <span className="max-w-[90%] w-[342px] mx-auto text-center">
+          <ButtonEditable
+            linkHref="/newsPost"
+            SWtext="Visa alla"
+            ENtext="View all"
+            textColor="text-white"
+            bgColor="bg-black"
+            hoverEffect="hover:bg-gray hover:text-white"
+          />
+        </span>
       </div>
       <HomeDownload />
       <HomeStatistics />
-      <Faq />      
+      <Faq />
       <HomeKnow />
     </section>
   );

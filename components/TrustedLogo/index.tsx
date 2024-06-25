@@ -111,7 +111,6 @@ const TrustedLogo: React.FC = () => {
               alt="almi"
               height={128}
               width={128}
-
               style={{ width: "auto", height: "auto" }}
             />
           </li>

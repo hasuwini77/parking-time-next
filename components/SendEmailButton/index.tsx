@@ -4,9 +4,12 @@ import { useLanguage } from "@/context/LanguageContext";
 interface SendEmailButtonProps {
   SWtext: string;
   ENtext: string;
-} 
+}
 
-const SendEmailButton: React.FC<SendEmailButtonProps> = ({ SWtext, ENtext }) => {
+const SendEmailButton: React.FC<SendEmailButtonProps> = ({
+  SWtext,
+  ENtext,
+}) => {
   const { language } = useLanguage();
 
   return (

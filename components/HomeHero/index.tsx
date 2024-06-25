@@ -49,8 +49,8 @@ const HomeHero: React.FC = () => {
           {language === "english" ? (
             <span>
               Digital parking disc - directly on your mobile.{" "}
-              <br className="hidden md:inline-block" /> A winning concepts in a new, digitalized
-              format
+              <br className="hidden md:inline-block" /> A winning concepts in a
+              new, digitalized format
             </span>
           ) : (
             <span>
@@ -61,9 +61,21 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
-
+          <ButtonDownload
+            SWtext="Ladda ner app"
+            ENtext="Download app"
+            textColor="text-white"
+            bgColor="bg-black"
+            hoverEffect="hover:bg-gray hover:text-white"
+          />
+          <ButtonEditable
+            linkHref="/contact"
+            SWtext="Kontakta oss"
+            ENtext="Contact us"
+            textColor="text-black"
+            bgColor="bg-white"
+            hoverEffect="hover:bg-gray hover:text-white"
+          />
         </div>
       </div>
       <div className="absoluute w-full short:w-[60%] longW:w-[52%] lg:w-[60%] bigScreen:w-[44%] l:w-[43%] h-full bg-[#00000054]"></div>
@@ -115,7 +127,9 @@ const HomeHero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {language === "english" ? "Free to download" : "Gratis att ladda ner"}
+              {language === "english"
+                ? "Free to download"
+                : "Gratis att ladda ner"}
             </motion.li>
             <motion.li
               className="text-darkblack text-start"

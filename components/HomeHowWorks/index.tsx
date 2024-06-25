@@ -84,7 +84,13 @@ const HomeHowWorks = () => {
         />
       </div>
       <span className="mt-8 w-full text-center">
-          <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
+        <ButtonDownload
+          SWtext="Ladda ner app"
+          ENtext="Download app"
+          textColor="text-white"
+          bgColor="bg-black"
+          hoverEffect="hover:bg-gray hover:text-white"
+        />
       </span>
     </div>
   );

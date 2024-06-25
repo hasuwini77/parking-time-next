@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import NewsHero from "@/components/NewsHero";
 import OurNews from "@/components/OurNews";
 import NewsSubscribe from "@/components/NewsSubscribe";

@@ -25,8 +25,6 @@ export default function RootLayout({
       </head>
       <body className="light font-sans">
         <ThemeProvider>
-          {" "}
-          {/* Add ThemeProvider here */}
           <Providers>
             <LanguageProvider>
               <div className="flex flex-col h-screen bg-background">

@@ -8,7 +8,11 @@ interface ContactProps {
   ENtext: string;
 }
 
-const ContactButton: React.FC<ContactProps> = ({ linkHref, SWtext, ENtext }) => {
+const ContactButton: React.FC<ContactProps> = ({
+  linkHref,
+  SWtext,
+  ENtext,
+}) => {
   const { language } = useLanguage();
 
   return (
