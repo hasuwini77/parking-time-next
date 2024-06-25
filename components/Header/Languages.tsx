@@ -23,8 +23,9 @@ const languages = [
 
 const Languages = () => {
   const { language, setLanguage } = useLanguage();
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[1]); // Default to Swedish
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[1]); 
   const [isOpen, setIsOpen] = useState(false);
+  const [langCode, setlangCode] = useState('SV');
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -37,19 +38,26 @@ const Languages = () => {
       const parsedLanguage = JSON.parse(storedLanguage);
       setSelectedLanguage(parsedLanguage);
       setLanguage(parsedLanguage.longName);
+      setlangCode(parsedLanguage.shortName)
     } else {
       // Set default language in localStorage if not present
       localStorage.setItem("selectedLanguage", JSON.stringify(languages[1]));
+      setlangCode(languages[1].shortName)
     }
-  }, [setLanguage, selectedLanguage]);
+    
+  }, [setLanguage, setlangCode]);
 
   const changeLanguage = (language: any) => {
     setSelectedLanguage(language);
     setIsOpen(false);
     setLanguage(language.longName);
+    setlangCode(language.shortName)
     // Update localStorage with the new selected language
     localStorage.setItem("selectedLanguage", JSON.stringify(language));
+    
   };
+
+  
 
   // This is for closing the menu when clicking anywhere outside of this component
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -99,7 +107,7 @@ const Languages = () => {
   return (
     <div ref={dropdownRef} className="relative text-darkblack flex justify-between items-center">
       <button onClick={toggleDropdown} className="flex items-center">
-        <span className="w-[30px] h-[20px] text-[14px] font-bold ms-1">{selectedLanguage.shortName}</span>
+        <span className="w-[30px] h-[20px] text-[14px] font-bold ms-1">{langCode}</span>
         {isOpen ? <FaCaretUp className="ms-[3px]" /> : <FaCaretDown className="ms-[3px]" />}
       </button>
       <motion.div animate={isOpen ? "open" : "closed"} variants={menuVariants} className="absolute top-[45px] left-25 left-[-18px] bg-primary w-[100px] rounded-lg px-1 py-1">
