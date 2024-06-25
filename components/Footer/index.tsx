@@ -64,12 +64,6 @@ export default function Footer() {
           >
             {language == "english" ? "Privacy Policy" : "Integritetspolicy"}
           </Link>
-          {/* <Link
-            className="underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300"
-            href="/contact"
-          >
-            {language == "english" ? "Terms of Service" : "Användarvillkor"}
-          </Link> */}
         </div>
       </div>
     </footer>
