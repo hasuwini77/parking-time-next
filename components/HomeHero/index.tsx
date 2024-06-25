@@ -61,14 +61,14 @@ const HomeHero: React.FC = () => {
           )}
         </motion.p>
         <div className="mt-14 short:mt-2 md:mt-6 w-full flex flex-col md:flex-row ">
-          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
           <ButtonDownload SWtext="Ladda ner app" ENtext="Download app" textColor="text-white" bgColor="bg-black" hoverEffect="hover:bg-gray hover:text-white" />
+          <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-gray hover:text-white" />
 
         </div>
       </div>
       <div className="absoluute w-full short:w-[60%] longW:w-[52%] lg:w-[60%] bigScreen:w-[44%] l:w-[43%] h-full bg-[#00000054]"></div>
       <div className="absolute short:p-1 p-1 md:p-3 bottom-0 left-0 w-full bg-primary">
-        <ul className="flex flex-col md:flex-row gap-2 list-disc">
+        <ul className="flex flex-col md:flex-row gap-2 list-none">
           <div className="flex justify-around basis-1/2">
             <motion.li
               className="text-darkblack text-start"

@@ -61,7 +61,7 @@ const Faq: React.FC = () => {
   return (
     <>
       <div
-        className="container w-full min-w-full py-28 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-background"
+        className="container w-full min-w-full py-24 md:py-38 px-4 md:px-20 flex flex-col justify-center items-center text-center bg-primary"
         id="faq"
       >
         <h5
