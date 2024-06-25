@@ -204,8 +204,8 @@ const PrivatePolicy: React.FC = () => {
                   Information regarding the parking zones comes from the
                   municipalities that use the app. The information is imported
                   from the municipalities own parking maps, such as Katrineholm
-                  municipalitys parking zones here. Parking Time Sweden AB is
-                  an independent limited company and does not represent any
+                  municipalitys parking zones here. Parking Time Sweden AB is an
+                  independent limited company and does not represent any
                   government authority.
                 </p>
               </span>
@@ -231,7 +231,9 @@ const PrivatePolicy: React.FC = () => {
                   Personal data we collect about you if we require them
                 </b>
                 <li className="m-2.5">First and last name</li>
-                <li className="m-2.5">User&apos;s vehicle registration number</li>
+                <li className="m-2.5">
+                  User&apos;s vehicle registration number
+                </li>
                 <li className="m-2.5">
                   User&apos;s GPS location at the time of parking
                 </li>
@@ -319,8 +321,8 @@ const PrivatePolicy: React.FC = () => {
                   continuously send and publish information and marketing via
                   various digital channels based on your profile. You may opt
                   out of receiving marketing communications from us at any time
-                  by clicking unsubscribe in the email or SMS communication
-                  that we send you. You can also contact Parking Time via
+                  by clicking unsubscribe in the email or SMS communication that
+                  we send you. You can also contact Parking Time via
                   matildaohman@parkingtime.se for assistance in declining our
                   communication.
                 </p>
@@ -383,8 +385,8 @@ const PrivatePolicy: React.FC = () => {
                   Your personal data may be shared with other companies. These
                   are Parking Time&apos;s data processors. A data processor is a
                   company that processes information on our behalf and according
-                  to our instructions. Parking Time&apos;s data processors perform
-                  services on our behalf, such as sending newsletters or
+                  to our instructions. Parking Time&apos;s data processors
+                  perform services on our behalf, such as sending newsletters or
                   delivering ordered goods. All disclosures will be made in
                   accordance with the law, and your personal data will not be
                   used for purposes other than those we have informed you about.
@@ -394,11 +396,11 @@ const PrivatePolicy: React.FC = () => {
                   requirements as well as limitations and requirements regarding
                   the international transfer of personal data. When your
                   personal data is shared with a company that is an independent
-                  data controller, the counterparty&apos;s privacy policy and data
-                  processing apply. We share your personal data with certain
-                  companies that are independent data controllers. Examples of
-                  independent data controllers with whom we share your personal
-                  data include:
+                  data controller, the counterparty&apos;s privacy policy and
+                  data processing apply. We share your personal data with
+                  certain companies that are independent data controllers.
+                  Examples of independent data controllers with whom we share
+                  your personal data include:
                 </p>
                 <li className="m-2.5">
                   Government agencies in case of suspected crime.
@@ -466,8 +468,9 @@ const PrivatePolicy: React.FC = () => {
                   statutory rights as an individual in relation to the personal
                   data we process about you. If you encounter information about
                   yourself or related individuals that you for any reason do not
-                  want to be published on Parking Timeapos;s website, we appreciate
-                  it if you contact us via matildaohman@parkingtime.se
+                  want to be published on Parking Timeapos;s website, we
+                  appreciate it if you contact us via
+                  matildaohman@parkingtime.se
                 </p>
                 <p className="m-2.5">
                   You also have the right to lodge a complaint with the national
@@ -509,7 +512,7 @@ const PrivatePolicy: React.FC = () => {
                 </p>
               </span>
             ) : (
-              <span className="flex justify-center flex-col m-2.5 p-2.5">   
+              <span className="flex justify-center flex-col m-2.5 p-2.5">
                 <b className="text-2xl m-2.5">Dina rättigheter</b>
                 <p className="m-2.5">
                   Enligt EU dataskyddslagstiftning har du vissa lagstadgade
@@ -600,7 +603,7 @@ const PrivatePolicy: React.FC = () => {
             )}
 
             {language === "english" ? (
-              <span className="flex justify-center flex-col m-2.5 p-2.5 md:m-2.5">  
+              <span className="flex justify-center flex-col m-2.5 p-2.5 md:m-2.5">
                 <b className="text-2xl m-2.5">
                   Purpose and legal basis for processing your personal data
                 </b>
@@ -623,9 +626,13 @@ const PrivatePolicy: React.FC = () => {
                 </li>
                 <br />
                 <b className="ml-2.5">Targeted Marketing</b>
-                <li className="ml-2.5">Upon your consent, we send newsletters</li>
+                <li className="ml-2.5">
+                  Upon your consent, we send newsletters
+                </li>
                 <li className="ml-2.5">Legal Basis</li>
-                <li className="ml-2.5">Consent provided by you for this type of processing</li>
+                <li className="ml-2.5">
+                  Consent provided by you for this type of processing
+                </li>
                 <li className="ml-2.5">Balancing of interests</li>
                 <br />
                 <b className="ml-2.5">Correspondence Regarding Inquiries</b>
@@ -643,7 +650,9 @@ const PrivatePolicy: React.FC = () => {
                   other digital channels, including social media
                 </li>
                 <li className="ml-2.5">Legal Basis</li>
-                <li className="ml-2.5">Performance of a contract of which you are a party</li>
+                <li className="ml-2.5">
+                  Performance of a contract of which you are a party
+                </li>
                 <li className="ml-2.5">Balancing of interests</li>
                 <br />
                 <b className="ml-2.5">
@@ -653,7 +662,9 @@ const PrivatePolicy: React.FC = () => {
                   Utilization of your transactions for our accounting and
                   reporting purposes
                 </li>
-                <li className="ml-2.5">Legal Basis: Fulfillment of legal obligations</li>
+                <li className="ml-2.5">
+                  Legal Basis: Fulfillment of legal obligations
+                </li>
                 <br />
                 <p className="ml-2.5">
                   For each purpose, a distinct legal basis is identified,
@@ -686,9 +697,13 @@ const PrivatePolicy: React.FC = () => {
                 </li>
                 <br />
                 <b className="ml-2.5">Riktad marknadsföring</b>
-                <li className="ml-2.5">Vid ditt samtycke skickar vi nyhetsbrev</li>
+                <li className="ml-2.5">
+                  Vid ditt samtycke skickar vi nyhetsbrev
+                </li>
                 <li className="ml-2.5">Rättslig grund</li>
-                <li className="ml-2.5">Samtycke som du har lämnat för denna typ av behandling</li>
+                <li className="ml-2.5">
+                  Samtycke som du har lämnat för denna typ av behandling
+                </li>
                 <li className="ml-2.5">Avvägning av intressen</li>
                 <br />
                 <b>Korrespondens angående förfrågningar</b>
@@ -698,7 +713,9 @@ const PrivatePolicy: React.FC = () => {
                   personer på Parking Time, mottagna via e-post, telefon eller
                   digitala kanaler, inklusive alla sociala plattformar
                 </li>
-                <li className="ml-2.5">Rättslig grund: Avvägning av intressen</li>
+                <li className="ml-2.5">
+                  Rättslig grund: Avvägning av intressen
+                </li>
                 <br />
                 <b className="ml-2.5">Utredning av klagomål</b>
                 <li className="ml-2.5">
@@ -706,15 +723,21 @@ const PrivatePolicy: React.FC = () => {
                   digitala kanaler, inklusive sociala medier
                 </li>
                 <li className="ml-2.5">Rättslig grund</li>
-                <li className="ml-2.5">Uppfyllelse av ett avtal där du är en part</li>
+                <li className="ml-2.5">
+                  Uppfyllelse av ett avtal där du är en part
+                </li>
                 <li className="ml-2.5">Avvägning av intressen</li>
                 <br />
-                <b className="ml-2.5">Finansiell förvaltning, redovisning och rapportering</b>
+                <b className="ml-2.5">
+                  Finansiell förvaltning, redovisning och rapportering
+                </b>
                 <li className="ml-2.5">
                   Användning av dina transaktioner för våra redovisnings- och
                   rapporteringsändamål
                 </li>
-                <li className="ml-2.5">Rättslig grund: Uppfyllelse av lagliga förpliktelser</li>
+                <li className="ml-2.5">
+                  Rättslig grund: Uppfyllelse av lagliga förpliktelser
+                </li>
                 <br />
                 <p className="ml-2.5">
                   För varje ändamål identifieras en tydlig rättslig grund,

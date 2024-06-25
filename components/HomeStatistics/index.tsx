@@ -48,9 +48,18 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp start={startCount1 ? 0 : undefined} end={5340} separator="" duration={4} delay={0.3} />+
+            <CountUp
+              start={startCount1 ? 0 : undefined}
+              end={5340}
+              separator=""
+              duration={4}
+              delay={0.3}
+            />
+            +
           </p>
-          <p className="text-xl">{language === "english" ? "Downloads" : "Nedladdningar"} </p>
+          <p className="text-xl">
+            {language === "english" ? "Downloads" : "Nedladdningar"}{" "}
+          </p>
         </div>
       </motion.div>
       <motion.div
@@ -67,10 +76,19 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp start={startCount2 ? 0 : undefined} end={4321} separator="" duration={4} delay={0.3} />+
+            <CountUp
+              start={startCount2 ? 0 : undefined}
+              end={4321}
+              separator=""
+              duration={4}
+              delay={0.3}
+            />
+            +
           </p>
           <p className="text-xl">
-            {language === "english" ? "Parking sessions" : "Parkeringstillfällen"}
+            {language === "english"
+              ? "Parking sessions"
+              : "Parkeringstillfällen"}
           </p>
         </div>
       </motion.div>
@@ -88,9 +106,18 @@ const HomeStatistics: React.FC = () => {
         </span>
         <div className="w-[160px] text-start">
           <p className="text-3xl mb-2 font-bold">
-            <CountUp start={startCount3 ? 0 : undefined} end={30} separator="" duration={7} delay={0.3} />+
+            <CountUp
+              start={startCount3 ? 0 : undefined}
+              end={30}
+              separator=""
+              duration={7}
+              delay={0.3}
+            />
+            +
           </p>
-          <p className="text-xl">{language === "english" ? "Parking zones" : "Parkeringszoner"}</p>
+          <p className="text-xl">
+            {language === "english" ? "Parking zones" : "Parkeringszoner"}
+          </p>
         </div>
       </motion.div>
     </section>

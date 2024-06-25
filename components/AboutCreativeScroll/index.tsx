@@ -68,8 +68,14 @@ const AboutCreativeScroll: React.FC = () => {
             ? "Fill in the form below"
             : "Fyll i formuläret nedan"}
         </motion.p>
-        <ButtonEditable linkHref="/contact" SWtext="Kontakta oss" ENtext="Contact us" textColor="text-black" bgColor="bg-white" hoverEffect="hover:bg-black hover:text-white" />
-
+        <ButtonEditable
+          linkHref="/contact"
+          SWtext="Kontakta oss"
+          ENtext="Contact us"
+          textColor="text-black"
+          bgColor="bg-white"
+          hoverEffect="hover:bg-black hover:text-white"
+        />
       </div>
     </div>
   );

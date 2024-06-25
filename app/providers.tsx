@@ -11,9 +11,5 @@ export interface ProvidersProps {
 export function Providers({ children }: ProvidersProps) {
   const router = useRouter();
 
-  return (
-    <NextUIProvider navigate={router.push}>
-      {children}
-    </NextUIProvider>
-  );
+  return <NextUIProvider navigate={router.push}>{children}</NextUIProvider>;
 }

@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `Parking Time <${user}>`,
-      to: "test.smartparking12@gmail.com",
+      to: "info@parkingtime.se",
       subject: "New message from Parking Time",
       text: `Name: ${name}\nJob title: ${jobtitle}\nEmail: ${email}\nPhone: ${phone}\nReason: ${reason}\nMessage: ${message}`,
     };

@@ -6,8 +6,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Pagination } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 

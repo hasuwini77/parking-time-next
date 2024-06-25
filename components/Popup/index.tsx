@@ -1,33 +1,32 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import Image from 'next/image';
-import free from '@/public/images/free.png';
+import Image from "next/image";
+import free from "@/public/images/free.png";
 
 const Popup: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const { language } = useLanguage();
 
-     const closePopup = () => {
+  const closePopup = () => {
     setShowPopup(false);
   };
 
   useEffect(() => {
-       const openTimer = setTimeout(() => {
-        setShowPopup(true);
-      }, 500);
-  
-      
-      const closeTimer = setTimeout(() => {
-        setShowPopup(false);
-      }, 6000);
-  
-      return () => {
-        clearTimeout(openTimer);
-        clearTimeout(closeTimer);
-      };
-    }, []);
+    const openTimer = setTimeout(() => {
+      setShowPopup(true);
+    }, 500);
+
+    const closeTimer = setTimeout(() => {
+      setShowPopup(false);
+    }, 6000);
+
+    return () => {
+      clearTimeout(openTimer);
+      clearTimeout(closeTimer);
+    };
+  }, []);
 
   return (
     <AnimatePresence>
@@ -42,29 +41,38 @@ const Popup: React.FC = () => {
                 scale: 1,
                 transition: { type: "spring", delay: 0.4, duration: 1.3 },
               },
-              exit: { opacity: 0, scale: 0.2, transition: { duration: 0.5 } }, 
+              exit: { opacity: 0, scale: 0.2, transition: { duration: 0.5 } },
             }}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
             <h2 className="text-4xl mb-4 short:text-2xl">
-              {language === "english" ? "Here is some good news!" : "Här är en god nyhet!"}
+              {language === "english"
+                ? "Here is some good news!"
+                : "Här är en god nyhet!"}
             </h2>
             <div className="mb-4 text-xl short:text-base short:mb-0">
               {language === "english" ? (
                 <div>
                   <p className="">Using the Parking Time App is</p>
-                  <p className="text-white text-4xl sm:text-5xl short:text-2xl py-2 font-black scale-animation">Completely Free</p>
+                  <p className="text-white text-4xl sm:text-5xl short:text-2xl py-2 font-black scale-animation">
+                    Completely Free
+                  </p>
                 </div>
               ) : (
                 <div>
                   <p>Att använda Parking Time-Appen</p>
-                  <p className="text-white text-4xl sm:text-5xl short:text-xl py-2 font-black scale-animation">Helt Gratis</p>
+                  <p className="text-white text-4xl sm:text-5xl short:text-xl py-2 font-black scale-animation">
+                    Helt Gratis
+                  </p>
                 </div>
               )}
             </div>
-            <button onClick={closePopup} className="px-6 py-[12px] bg-black text-white rounded-[20px] hover:bg-white hover:text-black">
+            <button
+              onClick={closePopup}
+              className="px-6 py-[12px] bg-black text-white rounded-[20px] hover:bg-white hover:text-black"
+            >
               {language === "english" ? "Close" : "stänga"}
             </button>
             <Image

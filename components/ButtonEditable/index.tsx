@@ -11,7 +11,14 @@ interface ButtonEditable {
   hoverEffect: string;
 }
 
-const ButtonEditable: React.FC<ButtonEditable> = ({ linkHref, SWtext, ENtext, textColor, bgColor, hoverEffect }) => {
+const ButtonEditable: React.FC<ButtonEditable> = ({
+  linkHref,
+  SWtext,
+  ENtext,
+  textColor,
+  bgColor,
+  hoverEffect,
+}) => {
   const { language } = useLanguage();
 
   return (
