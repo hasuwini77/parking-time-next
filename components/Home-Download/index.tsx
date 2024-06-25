@@ -21,8 +21,8 @@ const HomeDownload: React.FC = () => {
           />
         </div>
         <div className="w-[90%] md:w-3/6 flex flex-col items-center md:block">
-          <h2 className="font-bold text-heading2 mb-2 w-full flex justify-center font-mono text-center md:w-full md:justify-start">
-            {language === "english" ? "Download now" : "Ladda Ner Nu!"}
+          <h2 className="font-bold text-4xl md:text-heading2 mb-2 w-full flex justify-center font-mono text-center md:w-full md:justify-start">
+            {language === "english" ? "Download now" : "Ladda ned nu"}
           </h2>
 
           {language === "english" ? (

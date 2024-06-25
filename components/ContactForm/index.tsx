@@ -55,7 +55,7 @@ const ContactForm: FC = () => {
         <p className="mb-4 font-mono text-base leading-8 font-[500]">
           {language === "english"
             ? "Whether you have a question, feedback, or need assistance, please fill out the form below, and our team will get back to you as soon as possible."
-            : "Om du har en fråga, feedback eller behöver hjälp, fyll i formuläret nedan så kommer vårt team att återkomma till dig så snart som möjligt."}
+            : "Oavsett om du har en fråga, feedback eller behöver hjälp, fyll i formuläret nedan så återkommer vårt team till dig så snart som möjligt."}
         </p>
         <ul className="list-none">
           <li className="mb-2 flex items-center">

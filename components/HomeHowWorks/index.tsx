@@ -54,7 +54,7 @@ const HomeHowWorks = () => {
 
   return (
     <div className="w-full py-24 px-3 md:px-20 flex flex-col justify-between items-center">
-      <h2 className="mb-8 text-heading2 text-cente">{content.heading}</h2>
+      <h2 className="mb-8 font-bold text-4xl md:text-heading2 text-center">{content.heading}</h2>
       <div className="flex flex-col flex-wrap justify-center md:justify-between items-center middleWidth:flex-row">
         <CardHowWorks
           title={content.card1.title}

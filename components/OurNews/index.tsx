@@ -87,7 +87,7 @@ const OurNews: React.FC = () => {
   return (
     <section className="py-6 bg-primary">
       {showHeading && (
-        <h1 className="text-heading2 text-center mb-1">
+        <h1 className="font-bold text-4xl md:text-heading2 text-center mb-1">
           {language === "english" ? "News" : "Nyheter"}
         </h1>
       )}

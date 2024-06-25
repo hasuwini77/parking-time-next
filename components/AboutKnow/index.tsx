@@ -9,7 +9,7 @@ const AboutKnow: React.FC = () => {
   return (
     <div className="bg-white text-center flex flex-col items-center">
       <div className="px-6 pt-6 md:max-w-[575px]">
-        <h2 className="text-heading2 font-semibold pb-2">
+        <h2 className="font-bold text-4xl md:text-heading2 pb-2">
           {language === "english" ? "Want to know more?" : "Vill du veta mer?"}
         </h2>
         <p className="text-base font-mono">

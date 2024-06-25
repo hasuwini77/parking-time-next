@@ -34,7 +34,7 @@ const HomeKnow: React.FC = () => {
         </div>
         <div className="w-full flex flex-col justify-center items-center text-center mb-12 md:items-start py-2 md:mb-0 md:text-left md:pt-5 md:flex-1 md:max-w-none md:pb-12">
           {language === "english" ? (
-            <h2 className="font-bold text-heading2 pb-3 md:text-heading2 mb-3">
+            <h2 className="font-bold text-4xl md:text-heading2 pb-3 mb-3">
               Want to know more? <br />
             </h2>
           ) : (

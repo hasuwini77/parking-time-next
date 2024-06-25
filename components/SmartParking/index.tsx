@@ -11,7 +11,7 @@ const SmartParking: React.FC = () => {
   return (
     <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center pt-5 pb-4">
-        <div className="mb-5 px-1 md:w-1/2">
+        <div className="mb-5 px-1 md:w-1/2 sm:me-3">
           <Image
             src="/images/smartparking.webp"
             alt="Smart Parking"
