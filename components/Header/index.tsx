@@ -30,6 +30,10 @@ const Header: React.FC = () => {
     setActiveLink(link);
   };
 
+  const resetActiveLink = () => {
+    setActiveLink(null);
+  };
+
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -73,7 +77,11 @@ const Header: React.FC = () => {
       {/* Mobile Header */}
       <div className="md:hidden bg-primary relative flex items-center h-16 z-50">
         <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
-          <Link href="/" className="cursor-pointer p-0 m-0">
+          <Link
+            href="/"
+            className="cursor-pointer p-0 m-0"
+            onClick={resetActiveLink}
+          >
             <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
           </Link>
         </div>
@@ -169,7 +177,7 @@ const Header: React.FC = () => {
                   <NavbarItem className="transition-colors duration-400">
                     <Link
                       href="/faq"
-                      className="text-darkblack text-buttonText  hover:border-b hover:dorder-gray" 
+                      className="text-darkblack text-buttonText  hover:border-b hover:dorder-gray"
                       onClick={() => {
                         handleSetActiveLink("/faq");
                         toggleMobileMenu();
@@ -179,16 +187,16 @@ const Header: React.FC = () => {
                     </Link>
                   </NavbarItem>
                   <NavbarItem>
-                      <Link
-                        href="/contact"
-                        className="px-4 py-[12px] text-buttonText rounded-xl border h-5 bg-black text-white hover:bg-white hover:text-black shadow-xs shadow-white transform transition-transform duration-400"
-                        onClick={() => {
-                          handleSetActiveLink("/contact");
-                          toggleMobileMenu();
-                        }}
-                      >
-                        {language === "english" ? "Contact us" : "Kontakta oss"}
-                      </Link>
+                    <Link
+                      href="/contact"
+                      className="px-4 py-[12px] text-buttonText rounded-xl border h-5 bg-black text-white hover:bg-white hover:text-black shadow-xs shadow-white transform transition-transform duration-400"
+                      onClick={() => {
+                        handleSetActiveLink("/contact");
+                        toggleMobileMenu();
+                      }}
+                    >
+                      {language === "english" ? "Contact us" : "Kontakta oss"}
+                    </Link>
                   </NavbarItem>
                   <NavbarItem>
                     <Languages />
@@ -206,7 +214,11 @@ const Header: React.FC = () => {
           <Navbar isBordered className="bg-primary w-full">
             <div className="w-full flex justify-between items-center ">
               <NavbarBrand className="grow-0">
-                <Link href="/" className="cursor-pointer">
+                <Link
+                  href="/"
+                  className="cursor-pointer"
+                  onClick={resetActiveLink}
+                >
                   <Image
                     src="/images/logo-1.png"
                     alt="logo"
