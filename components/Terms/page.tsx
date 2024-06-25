@@ -126,10 +126,10 @@ const Terms: React.FC = () => {
           <p className="mb-4">Parking Time follows all recommendations of the National Board for Consumer Disputes, www.arn.se.</p>
 
           <h2 className="text-xl font-semibold mb-2">13. Contact Information</h2>
-          <p className="mb-4">Parking Time can be contacted via</p>
-          <p className="mb-4">Email: info@parkingtime.se</p>
-          <p className="mb-4">Phone: 072-722 44 00</p>
-          <p className="mb-4">Web: www.parkingtime.se</p>
+          <p className="mb-2">Parking Time can be contacted via:</p>
+          <p className="mb-2">Email: info@parkingtime.se</p>
+          <p className="mb-2">Phone: 072-722 44 00</p>
+          <p className="mb-2">Web: www.parkingtime.se</p>
         </>
       )}
     </section>
