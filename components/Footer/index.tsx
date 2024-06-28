@@ -69,7 +69,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="sm:ps-2 mb-1 sm:mb-0 text-sm underline underline-offset-4 hover:text-red hover:scale-125 ease-in-out duration-300">
-              <Link href="/news">
+              <Link href="/newsPost">
                 {language == "english" ? "News" : "Nyheter"}
               </Link>
             </li>
