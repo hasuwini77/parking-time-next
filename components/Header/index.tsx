@@ -407,7 +407,7 @@ const NewHeader: React.FC = () => {
   };
 
   return (
-    <header className="bg-primary fixed w-full h-16 flex items-center justify-between px-4 shadow-md z-50">
+    <header className="bg-primary fixed w-full h-16 flex items-center justify-between px-4 shadow-md z-50 max-w-[1750px]">
       <Link onClick={handleLogoClick} href="/" className="text-xl font-bold sticky z-50">
         <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
       </Link>
@@ -417,7 +417,7 @@ const NewHeader: React.FC = () => {
             key={link.href}
             href={link.href}
             id={link.href}
-            className={`relative text-gray-600 hover:text-black transition-all hover-nav-link-costum ${
+            className={`relative text-gray-600 hover:text-black transition-all  ${
               isLinkActive(link.href) || hoveredLink === link.href ? 'active' : ''
             }`}
             onMouseEnter={() => setHoveredLink(link.href)}
@@ -439,10 +439,7 @@ const NewHeader: React.FC = () => {
         >
           Contact
         </Link>
-        <span className='flex'>
-          <span className="text-gray-600 cursor-pointer">🌐</span>
-          <Languages />
-        </span>
+        <Languages />
       </nav>
       <div className="md:hidden sticky z-50">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -481,10 +478,7 @@ const NewHeader: React.FC = () => {
                   ></span>
                 </Link>
               ))}
-              <span className="flex">
-                <span className="text-gray-600 cursor-pointer">🌐</span>
                 <Languages />
-              </span>
             </nav>
           </motion.div>
         )}
