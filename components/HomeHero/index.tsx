@@ -9,7 +9,7 @@ const HomeHero: React.FC = () => {
 
   return (
     <div className="relative w-full bg-cover bg-center bg-home-hero custom-height-home-hero ">
-      <div className="absolute h-full text-white w-full sm:w-[42%] md:w-[38%] short:w-[61%] flex-grow flex flex-col items-start short:top-[0]  top-[0] bg-[#0000007d] md:items-start pt-[16vh] short:-[5vh] ps-1 md:ps-4 ">
+      <div className="absolute h-full text-white w-full sm:w-[42%] betweenS2:w-full short:w-[61%] flex-grow flex flex-col items-start short:top-[0]  top-[0] bg-[#0000007d] md:items-start pt-[16vh] short:-[5vh] ps-1 md:ps-4 ">
         <motion.h1
           className="font-bold text-5xl md:text-5xl mb-1 short:text-4xl"
           variants={{
@@ -72,7 +72,7 @@ const HomeHero: React.FC = () => {
             </span>
           )}
         </motion.p>
-        <div className="mt-[24px] short:mt-1 md:mt-6 px-2 w-full flex flex-col md:flex-row ">
+        <div className="mt-[24px] short:mt-1 md:mt-6 px-2 sm:ps-0 w-full flex flex-col md:flex-row ">
           <ButtonDownload
             SWtext="Ladda ner app"
             ENtext="Download app"
