@@ -427,7 +427,7 @@ const NewHeader: React.FC = () => {
             {link.name}
             <span
             id={`${link.href}span`}
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-transform duration-300 transform ${
+              className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#6e6e6e] transition-transform duration-300 transform ${
                 isLinkActive(link.href) || hoveredLink === link.href ? 'scale-x-100' : 'scale-x-0'
               }`}
             ></span>
@@ -463,7 +463,7 @@ const NewHeader: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative text-gray-600 hover:text-black transition-all ${
+                  className={`relative text-gray-600 hover:text-black transition-all max-w-[137px] ${
                     isLinkActive(link.href) || hoveredLink === link.href ? 'active' : ''
                   }`}
                   onMouseEnter={() => setHoveredLink(link.href)}
@@ -472,7 +472,7 @@ const NewHeader: React.FC = () => {
                 >
                   {link.name}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-transform duration-300 transform ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#6e6e6e] transition-transform duration-300 transform ${
                       isLinkActive(link.href) || hoveredLink === link.href ? 'scale-x-100' : 'scale-x-0'
                     }`}
                   ></span>
