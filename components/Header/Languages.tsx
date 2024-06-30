@@ -105,7 +105,7 @@ const Languages = () => {
       className="relative text-darkblack flex justify-between items-center"
     >
       <button onClick={toggleDropdown} className="flex items-center">
-        <span className="w-[50px] h-[20px] text-[14px] font-bold ms-1">
+        <span className="w-[44px] h-[20px] text-[14px] font-bold md:ms-1">
         <span className="text-gray-600 cursor-pointer pe-1">🌐</span>
           {selectedLanguage.shortName}
         </span>
@@ -118,7 +118,7 @@ const Languages = () => {
       <motion.div
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
-        className="absolute top-[40px] left-25 left-[-18px] bg-primary w-[100px] rounded-b-lg px-1 py-1"
+        className="absolute top-[23px] md:top-[40px] left-25444 left-[-12px] bg-primary w-[100px] rounded-b-lg px-1 py-1"
       >
         <motion.ul>
           {languages.map((item) => (
