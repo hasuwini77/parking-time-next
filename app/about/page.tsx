@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div >
       <AboutHero />
-      <AboutVision/>
+      <AboutVision />
       <Values />
       <Quotes />
       <AboutTeam />

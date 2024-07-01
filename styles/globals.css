@@ -81,6 +81,6 @@ justify-content: center !important;
 left: -18px !important;
 }
 
-/* .active {
-  border-bottom:  3px solid black;
-} */
+a.active {
+  font-weight: 600;
+}
