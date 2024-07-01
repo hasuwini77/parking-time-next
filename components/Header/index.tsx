@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
 
-const NewHeader: React.FC = () => {
+const NewHeader: React.FunctionComponent = () => {
   const { language } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
