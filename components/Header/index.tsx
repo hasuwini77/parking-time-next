@@ -150,9 +150,9 @@ const NewHeader: React.FunctionComponent = () => {
                   <motion.li
                   className="list-none"
                   variants={itemVariants}
+                    key={link.href}
                   >
                   <Link
-                    key={link.href}
                     href={link.href}
                     className={`relative text-gray-600 hover:text-black transition-all max-w-[155px] ${
                       isLinkActive(link.href) || hoveredLink === link.href ? 'active' : ''
