@@ -81,6 +81,6 @@ justify-content: center !important;
 left: -18px !important;
 }
 
-a.active {
-  color: #6e6e6e;
+.active {
+  font-weight: 600;
 }
