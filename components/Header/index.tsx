@@ -1,10 +1,10 @@
 "use client";
-import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { usePathname } from 'next/navigation';
-import Languages from '../Header/Languages';
-import Image from 'next/image';
+import { usePathname } from "next/navigation";
+import Languages from "../Header/Languages";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, Variants } from "framer-motion";
 
@@ -16,15 +16,19 @@ const NewHeader: React.FunctionComponent = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const links = [
-    { name: language === "english" ? "Why Parking Time?" : "Varför Parking Time?", href: '/#whyparking' },
-    { name: language === "english" ? "About us" : "Om oss", href: '/about' },
-    { name: language === "english" ? "News" : "Nyheter", href: '/newsPost' },
-    { name: language === "english" ? "FAQ" : "Vanliga frågor", href: '/faq' },
+    {
+      name:
+        language === "english" ? "Why Parking Time?" : "Varför Parking Time?",
+      href: "/#whyparking",
+    },
+    { name: language === "english" ? "About us" : "Om oss", href: "/about" },
+    { name: language === "english" ? "News" : "Nyheter", href: "/newsPost" },
+    { name: language === "english" ? "FAQ" : "Vanliga frågor", href: "/faq" },
   ];
 
   const isLinkActive = (href: string) => {
-    if (href.includes('#')) {
-      return pathname === href.split('#')[0];
+    if (href.includes("#")) {
+      return pathname === href.split("#")[0];
     }
     return pathname === href;
   };
@@ -62,7 +66,6 @@ const NewHeader: React.FunctionComponent = () => {
     };
   }, [isMenuOpen]);
 
-
   const itemVariants: Variants = {
     open: {
       opacity: 1,
@@ -93,11 +96,17 @@ const NewHeader: React.FunctionComponent = () => {
     },
   };
 
-
   return (
-    <header id="myHeader" className="bg-primary fixed flex justify-center w-full h-[64px] z-50 shadow-md">
-        <div className=" bg-primary fixed w-full h-16 flex items-center justify-between px-4 z-50 max-w-[1750px]">
-        <Link onClick={handleLogoClick} href="/" className="text-xl font-bold sticky z-50">
+    <header
+      id="myHeader"
+      className="bg-primary fixed flex justify-center w-full h-[64px] z-50 shadow-md"
+    >
+      <div className=" bg-primary fixed w-full h-16 flex items-center justify-between px-4 z-50 max-w-[1750px]">
+        <Link
+          onClick={handleLogoClick}
+          href="/"
+          className="text-xl font-bold sticky z-50"
+        >
           <Image src="/images/logo-1.png" alt="logo" width={60} height={60} />
         </Link>
         <nav className="hidden md:flex items-center miniWidth:space-x-2.5 md:space-x-3">
@@ -107,17 +116,21 @@ const NewHeader: React.FunctionComponent = () => {
               href={link.href}
               id={link.href}
               className={`relative text-gray-600 hover:text-black transition-all  ${
-                isLinkActive(link.href) || hoveredLink === link.href ? 'active' : ''
+                isLinkActive(link.href) || hoveredLink === link.href
+                  ? "active"
+                  : ""
               }`}
               onMouseEnter={() => setHoveredLink(link.href)}
               onMouseLeave={() => setHoveredLink(null)}
-              onClick={() => setHoveredLink(null)} 
+              onClick={() => setHoveredLink(null)}
             >
               {link.name}
               <span
                 id={`${link.href}span`}
                 className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-transform duration-300 transform ${
-                  isLinkActive(link.href) || hoveredLink === link.href ? 'scale-x-100' : 'scale-x-0'
+                  isLinkActive(link.href) || hoveredLink === link.href
+                    ? "scale-x-100"
+                    : "scale-x-0"
                 }`}
               ></span>
             </Link>
@@ -139,55 +152,59 @@ const NewHeader: React.FunctionComponent = () => {
             )}
           </button>
         </div>
-            <motion.div
-              ref={menuRef}
-              animate={isMenuOpen ? "open" : "closed"}
-              variants={menuVariants}
-              className="fixed flex flex-col top-[64px] left-0 w-full h-[400px] bg-primary shadow-md p-3 md:hidden"
-            >
-              <motion.nav className="flex flex-col space-y-3">
-                {links.map((link) => (
-                  <motion.li
-                  className="list-none"
-                  variants={itemVariants}
-                    key={link.href}
-                  >
-                  <Link
-                    href={link.href}
-                    className={`relative text-gray-600 hover:text-black transition-all max-w-[155px] ${
-                      isLinkActive(link.href) || hoveredLink === link.href ? 'active' : ''
-                    }`}
-                    onMouseEnter={() => setHoveredLink(link.href)}
-                    onMouseLeave={() => setHoveredLink(null)}
-                    onClick={() => clickedLink()} 
-                  >
-                    {link.name}
-                    <span
-                      className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-transform duration-300 transform ${
-                        isLinkActive(link.href) || hoveredLink === link.href ? 'scale-x-100' : 'scale-x-0'
-                      }`}
-                    ></span>
-                  </Link>
-
-                  </motion.li>
-                ))}
-                <motion.li
+        <motion.div
+          ref={menuRef}
+          animate={isMenuOpen ? "open" : "closed"}
+          variants={menuVariants}
+          className="fixed flex flex-col top-[64px] left-0 w-full h-[400px] bg-primary shadow-md p-3 md:hidden"
+        >
+          <motion.nav className="flex flex-col space-y-3">
+            {links.map((link) => (
+              <motion.li
+                key={link.href} // Add the key prop here
                 className="list-none"
                 variants={itemVariants}
-                >
+              >
                 <Link
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  href="/contact"
-                  className="px-3 py-[12px] leading-3 text-buttonText rounded-xl border h-5 bg-black text-white hover:bg-white hover:text-black shadow-xs shadow-white transform transition-transform duration-400"
+                  href={link.href}
+                  className={`relative text-gray-600 hover:text-black transition-all max-w-[155px] ${
+                    isLinkActive(link.href) || hoveredLink === link.href
+                      ? "active"
+                      : ""
+                  }`}
+                  onMouseEnter={() => setHoveredLink(link.href)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                  onClick={() => clickedLink()}
                 >
-                  {language === "english" ? "Contact us" : "Kontakta oss"}
+                  {link.name}
+                  <span
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-black transition-transform duration-300 transform ${
+                      isLinkActive(link.href) || hoveredLink === link.href
+                        ? "scale-x-100"
+                        : "scale-x-0"
+                    }`}
+                  ></span>
                 </Link>
-                </motion.li>
-                <Languages />
-              </motion.nav>
-            </motion.div>
-    </div>
-      </header>
+              </motion.li>
+            ))}
+            <motion.li
+              key="contact" // Add a key here for the contact link
+              className="list-none"
+              variants={itemVariants}
+            >
+              <Link
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                href="/contact"
+                className="px-3 py-[12px] leading-3 text-buttonText rounded-xl border h-5 bg-black text-white hover:bg-white hover:text-black shadow-xs shadow-white transform transition-transform duration-400"
+              >
+                {language === "english" ? "Contact us" : "Kontakta oss"}
+              </Link>
+            </motion.li>
+            <Languages />
+          </motion.nav>
+        </motion.div>
+      </div>
+    </header>
   );
 };
 
